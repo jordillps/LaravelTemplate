@@ -20,3 +20,12 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+Route::resource('post', App\Http\Controllers\PostController::class)->only('index', 'store');
+
+Route::resource('categoy', App\Http\Controllers\CategoyController::class)->only('index');
+
+Route::resource('tag', App\Http\Controllers\TagController::class)->only('index');
+
+
