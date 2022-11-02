@@ -26,14 +26,12 @@ Route::get('language/{locale}', function ($locale) {
 
 Auth::routes();
 
-// Route::get('locale/{locale}', [App\Http\Controllers\LocalizationController::class, 'setLocale'])->name('setLocale');
-
 Route::get('/admin', [HomeController::class, 'index'])->name('admin');
 
 
 Route::resource('post', App\Http\Controllers\PostController::class)->only('index', 'store');
 
-Route::resource('categoy', App\Http\Controllers\CategoyController::class)->only('index');
+Route::resource('category', App\Http\Controllers\CategoryController::class)->only('index');
 
 Route::resource('tag', App\Http\Controllers\TagController::class)->only('index');
 

@@ -14,10 +14,6 @@
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" href="{{ asset('css/admin/fontawesome-free/all.min.css') }}">
 
-    <!-- Styles -->
-    <!-- Theme style -->
-    <link rel="stylesheet" href="{{ asset('css/admin/adminlte.css') }}">
-
     <!-- Tempusdominus Bootstrap 4 -->
     <link rel="stylesheet" href="{{ asset('pluguins/css/tempusdominus-bootstrap-4.min.css') }}">
     <!-- iCheck -->
@@ -30,6 +26,10 @@
     <link rel="stylesheet" href="{{ asset('pluguins/css/daterangepicker.css') }}">
     <!-- summernote -->
     <link rel="stylesheet" href="{{ asset('pluguins/css/summernote-bs4.min.css') }}">
+
+    <!-- Styles -->
+    <!-- Theme style -->
+    <link rel="stylesheet" href="{{ asset('css/admin/adminlte.css') }}">
 
 </head>
 <body>
@@ -62,13 +62,13 @@
     <script src="{{ asset('pluguins/js/jquery.knob.min.js') }}"></script>
     <!-- daterangepicker -->
     <script src="{{ asset('pluguins/js/moment.min.js') }}"></script>
-    <script src="{{ asset('pluguins/js/daterangepicker.js') }}"></script>
+    <script src="{{ asset('plugins/js/daterangepicker.js') }}"></script>
     <!-- Tempusdominus Bootstrap 4 -->
     <script src="{{ asset('pluguins/js/tempusdominus-bootstrap-4.min.js') }}"></script>
     <!-- Summernote -->
     <script src="{{ asset('pluguins/js/summernote-bs4.min.js') }}"></script>
     <!-- overlayScrollbars -->
-    <script src="{{ asset('pluguins/js/jquery.overlayScrollbars.min.js') }}"></script>
+    <script src="{{ asset('plugins/js/jquery.overlayScrollbars.min.js') }}"></script>
     <!-- AdminLTE App -->
     <script src="{{ asset('js/adminlte.js') }}" defer></script>
 </body>
