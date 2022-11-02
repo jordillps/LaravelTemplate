@@ -42,9 +42,10 @@ return [
     'action'=> 'Acción',
     'No users' =>'No hay usuarios para mostrar',
     'select language'=>'Idioma',
-    'spanish' =>'Español',
-    'english'=>'Inglés',
-    'catalan' => 'Catalán',
+    'es' => 'Español',
+    'Spanish' =>'Español',
+    'English'=>'Inglés',
+    'Catalan' => 'Catalán',
     'search' => 'Buscar...',
     'exportToExcel' => 'Exportar a Excel',
 

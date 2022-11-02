@@ -9,7 +9,6 @@ return [
     |
     |
     */
-
     'login' => 'Accés',
     'register' => 'Registrar-se',
     'home' => 'Inici',
@@ -42,9 +41,10 @@ return [
     'action'=> 'Acció',
     'No users' =>'No hi ha usuaris per a mostrar',
     'select language'=>'Idioma',
-    'spanish' =>'Espanyol',
-    'english'=>'Anglès',
-    'catalan' => 'Català',
+    'ca' => 'Català',
+    'Spanish' =>'Espanyol',
+    'English'=>'Anglès',
+    'Catalan' => 'Català',
     'search' => 'Cercar...',
     'exportToExcel' => 'Exportar a Excel',
 

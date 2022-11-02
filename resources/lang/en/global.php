@@ -42,9 +42,10 @@ return [
     'action'=> 'Action',
     'No users' =>'There is no users to show',
     'select language'=>'Language',
-    'spanish' =>'Spanish',
-    'english'=>'English',
-    'catalan' => 'Catalan',
+    'en' => 'English',
+    'Spanish' =>'Spanish',
+    'English'=>'English',
+    'Catalan' => 'Catalan',
     'exportToExcel' => 'Export to Excel',
 
     //Calendar
