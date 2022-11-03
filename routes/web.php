@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\HomeController;
+use App\Http\Controllers\Admin\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,7 +27,16 @@ Route::get('language/{locale}', function ($locale) {
 
 Auth::routes();
 
-Route::get('/admin', [HomeController::class, 'index'])->name('admin');
+//Admin
+Route::group(['middleware' => ['auth']], function () {
+
+    // Route::get('/emailverification', 'HomeController@emailverification')->name('emailverification');
+
+	Route::group(["prefix" => "admin"], function() {
+        Route::get('/', [HomeController::class, 'index'])->name('admin');
+        Route::get('/users', [UserController::class, 'index'])->name('users');
+    });
+});
 
 
 Route::resource('post', App\Http\Controllers\PostController::class)->only('index', 'store');

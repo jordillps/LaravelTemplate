@@ -10,6 +10,8 @@ class Post extends Model
 {
     use HasFactory, SoftDeletes;
 
+    protected $table = 'posts';
+
     /**
      * The attributes that are mass assignable.
      *
