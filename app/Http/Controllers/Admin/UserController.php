@@ -21,9 +21,8 @@ class UserController extends Controller
     public function index()
     {
         $users = User::paginate();
-        $title = 'Users';
 
-        return view('admin.users.index', compact('users', 'title'))
+        return view('admin.users.index', compact('users'))
             ->with('i', (request()->input('page', 1) - 1) * $users->perPage());
     }
 
@@ -35,9 +34,8 @@ class UserController extends Controller
     public function create()
     {
         $user = new User();
-        $title = 'Users';
 
-        return view('admin.users.create', compact('user', 'title'));
+        return view('admin.users.create', compact('user'));
     }
 
     /**
@@ -59,29 +57,27 @@ class UserController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int $id
+     * @param  User $user
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($user)
     {
-        $user = User::find($id);
-        $title = 'Users';
+        // $user = User::find($id);
 
-        return view('admin.users.show', compact('user', 'title'));
+        return view('admin.users.show', compact('user'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int $id
+     * @param  User $user
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($user)
     {
-        $user = User::find($id);
-        $title = 'Users';
+        // $user = User::find($id);
 
-        return view('admin.users.edit', compact('user','title'));
+        return view('admin.users.edit', compact('user'));
     }
 
     /**
@@ -102,13 +98,13 @@ class UserController extends Controller
     }
 
     /**
-     * @param int $id
+     * @param User $user
      * @return \Illuminate\Http\RedirectResponse
      * @throws \Exception
      */
-    public function destroy($id)
+    public function destroy($user)
     {
-        $user = User::find($id)->delete();
+        $user->delete();
 
         return redirect()->route('users.index')
             ->with('success', 'User deleted successfully');
