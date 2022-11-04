@@ -50,8 +50,12 @@ class UserController extends Controller
 
         $user = User::create($request->all());
 
-        return redirect()->route('users.index')
-            ->with('success', 'User created successfully.');
+        $user->password = bcrypt($request->password);
+        $user->save();
+
+        flash()->overlay('User created successfully', 'Create User');
+
+        return redirect()->route('users.index');
     }
 
     /**
@@ -93,8 +97,9 @@ class UserController extends Controller
 
         $user->update($request->all());
 
-        return redirect()->route('users.index')
-            ->with('success', 'User updated successfully');
+        flash()->overlay('User updated successfully', 'Update User');
+
+        return redirect()->route('users.index');
     }
 
     /**
@@ -106,7 +111,8 @@ class UserController extends Controller
     {
         $user->delete();
 
-        return redirect()->route('users.index')
-            ->with('success', 'User deleted successfully');
+        flash()->overlay('User updated successfully', 'Delete User');
+
+        return redirect()->route('users.index');
     }
 }

@@ -23,11 +23,12 @@
                         </div>
                     </div>
                 </div>
-                @if ($message = Session::get('success'))
+                {{-- @if ($message = Session::get('success'))
                     <div class="alert alert-success">
                         <p>{{ $message }}</p>
                     </div>
-                @endif
+                @endif --}}
+                @include('flash::message')
 
                 <div class="card-body">
                     <div class="table-responsive">
@@ -70,3 +71,9 @@
     </section>    
 </div>
 @endsection
+
+@push('scripts')
+<script>
+    $('#flash-overlay-modal').modal();
+</script>
+@endpush
