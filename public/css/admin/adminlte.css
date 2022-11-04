@@ -53010,3 +53010,9 @@ a.text-muted:hover {
   border-color: #4b545c !important;
 }
 /*# sourceMappingURL=adminlte.css.map */
+
+/* Customize Styles */
+
+.hidden.sm\:flex-1.sm\:flex.sm\:items-center.sm\:justify-between {
+  display: none;
+}

@@ -34,7 +34,7 @@ Route::group(['middleware' => ['auth']], function () {
 
 	Route::group(["prefix" => "admin"], function() {
         Route::get('/', [HomeController::class, 'index'])->name('admin');
-        Route::get('/users', [UserController::class, 'index'])->name('users');
+        Route::resource('/users', UserController::class);
     });
 });
 
