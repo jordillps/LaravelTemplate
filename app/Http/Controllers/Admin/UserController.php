@@ -3,7 +3,10 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\StoreUserRequest;
+use App\Http\Requests\UpdateUserRequest;
 use App\Models\User;
+use App\Models\Role;
 use Illuminate\Http\Request;
 
 /**
@@ -20,10 +23,11 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = User::paginate();
+        // $users = User::paginate();
+        $users = User::all();
 
-        return view('admin.users.index', compact('users'))
-            ->with('i', (request()->input('page', 1) - 1) * $users->perPage());
+        return view('admin.users.index', compact('users'));
+            // ->with('i', (request()->input('page', 1) - 1) * $users->perPage());
     }
 
     /**
@@ -35,7 +39,9 @@ class UserController extends Controller
     {
         $user = new User();
 
-        return view('admin.users.create', compact('user'));
+        $roles = Role::all()->pluck('name', 'id');
+
+        return view('admin.users.create', compact('user', 'roles'));
     }
 
     /**
@@ -44,14 +50,19 @@ class UserController extends Controller
      * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreUserRequest $request)
     {
-        request()->validate(User::$rules);
+        //dd($request);
+        // request()->validate(User::$rules);
+        $request->validated();
 
-        $user = User::create($request->all());
-
-        $user->password = bcrypt($request->password);
-        $user->save();
+        $user = User::create([
+            'name' => $request->get('name'),
+            'role_id' => $request->get('role_id'),
+            'date_birth' => $request->get('date_birth'), 
+            'email' => $request->get('email'),
+            'password' => $request->get('password'),
+        ]);
 
         flash()->overlay('User created successfully', 'Create User');
 
@@ -64,7 +75,7 @@ class UserController extends Controller
      * @param  User $user
      * @return \Illuminate\Http\Response
      */
-    public function show($user)
+    public function show(User $user)
     {
         // $user = User::find($id);
 
@@ -77,11 +88,12 @@ class UserController extends Controller
      * @param  User $user
      * @return \Illuminate\Http\Response
      */
-    public function edit($user)
+    public function edit(User $user)
     {
         // $user = User::find($id);
+        $roles = Role::all()->pluck('name', 'id');
 
-        return view('admin.users.edit', compact('user'));
+        return view('admin.users.edit', compact('user', 'roles'));
     }
 
     /**
@@ -91,11 +103,13 @@ class UserController extends Controller
      * @param  User $user
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, User $user)
+    public function update(UpdateUserRequest $request, User $user)
     {
-        request()->validate(User::$rules);
-
+        // request()->validate(User::$rules);
+        
+        $request->validated();
         $user->update($request->all());
+
 
         flash()->overlay('User updated successfully', 'Update User');
 
@@ -107,7 +121,7 @@ class UserController extends Controller
      * @return \Illuminate\Http\RedirectResponse
      * @throws \Exception
      */
-    public function destroy($user)
+    public function destroy(User $user)
     {
         $user->delete();
 

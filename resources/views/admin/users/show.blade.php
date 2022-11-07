@@ -37,6 +37,10 @@
                                 {{ $user->email }}
                             </div>
                             <div class="form-group">
+                                <strong>Date of Birth:</strong>
+                                {{ $user->date_birth }}
+                            </div>
+                            <div class="form-group">
                                 <strong>Password:</strong>
                                 {{ $user->password }}
                             </div>

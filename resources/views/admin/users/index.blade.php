@@ -1,5 +1,9 @@
 @extends('layouts.admin')
 
+@push('styles')
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
+@endpush
+
 @section('content')
 
 <div class="content-wrapper">
@@ -23,16 +27,11 @@
                         </div>
                     </div>
                 </div>
-                {{-- @if ($message = Session::get('success'))
-                    <div class="alert alert-success">
-                        <p>{{ $message }}</p>
-                    </div>
-                @endif --}}
                 @include('flash::message')
 
                 <div class="card-body">
                     <div class="table-responsive">
-                        <table class="table table-striped table-hover">
+                        <table id="user_datatable" class="display" style="width:100%">
                             <thead class="thead">
                                 <tr>
                                     <th>No</th>
@@ -66,14 +65,39 @@
                     </div>
                 </div>
             </div>
-            {!! $users->links() !!}
+            {{-- {!! $users->links() !!} --}}
         </div>
     </section>    
 </div>
 @endsection
 
 @push('scripts')
-<script>
-    $('#flash-overlay-modal').modal();
-</script>
+    <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+    <script>
+        $('#flash-overlay-modal').modal();
+
+        $(document).ready( function () {
+            var locale_lang = "{{app()->getLocale()}}";
+            switch(locale_lang) {
+                case 'en':
+                    var language_datatable = "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/English.json";
+                    break;
+                case 'es':
+                    var language_datatable = "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Spanish.json";
+                    break;
+                case 'ca':
+                    var language_datatable = "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Catalan.json";
+                    break;
+                default:
+                    var language_datatable = "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/English.json";
+            }
+            $('#user_datatable').DataTable({
+                    "language": {
+                        "url": language_datatable
+                    },
+            });
+
+        });
+
+    </script>
 @endpush

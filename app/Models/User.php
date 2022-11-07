@@ -32,20 +32,21 @@ class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
-    static $rules = [
-		'name' => 'required',
-		'email' => 'required',
-		'password' => 'required',
-    ];
+    // static $rules = [
+	// 	'name' => 'required',
+	// 	'email' => 'required',
+	// 	'password' => 'required',
+    // ];
 
     protected $perPage = 10;
+
 
     /**
      * Attributes that should be mass-assignable.
      *
      * @var array
      */
-    protected $fillable = ['name','email','password'];
+    protected $fillable = ['name','role_id','email','date_birth','password'];
 
     /**
      * The attributes that should be hidden for serialization.

@@ -18,6 +18,7 @@ class UserFactory extends Factory
             'name' => $this->faker->name(),
             'role_id' => 2,
             'email' => $this->faker->unique()->safeEmail(),
+            'date_birth' => $this->faker->dateTimeThisCentury($max = 'now', $timezone = null),
             'email_verified_at' => now(),
             'password' => bcrypt('password'),
             'remember_token' => Str::random(10),
