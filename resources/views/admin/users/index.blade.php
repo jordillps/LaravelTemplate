@@ -38,6 +38,7 @@
                                     <th>Name</th>
                                     <th>Role</th>
                                     <th>Email</th>
+                                    <th>Date of Birth</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
@@ -49,6 +50,7 @@
                                         <td>{{ $user->name }}</td>
                                         <td>{{ $user->role->name }}</td>
                                         <td>{{ $user->email }}</td>
+                                        <th>{{ Carbon\Carbon::parse($user->date_birth)->format('d-m-Y')}}</th>
                                         <td>
                                             <form action="{{ route('users.destroy',$user->id) }}" method="POST">
                                                 <a class="btn btn-sm btn-primary " href="{{ route('users.show',$user->id) }}"><i class="fa fa-fw fa-eye"></i> Show</a>
