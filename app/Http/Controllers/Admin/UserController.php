@@ -125,7 +125,7 @@ class UserController extends Controller
     {
         $user->delete();
 
-        flash()->overlay('User updated successfully', 'Delete User');
+        flash()->overlay($user->name . ' deleted successfully', 'Delete User');
 
         return redirect()->route('users.index');
     }
