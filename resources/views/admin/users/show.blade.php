@@ -38,7 +38,7 @@
                             </div>
                             <div class="form-group">
                                 <strong>Date of Birth:</strong>
-                                {{ $user->date_birth }}
+                                {{ Carbon\Carbon::parse($user->date_birth)->format('d-m-Y') }}
                             </div>
                             <div class="form-group">
                                 <strong>Password:</strong>

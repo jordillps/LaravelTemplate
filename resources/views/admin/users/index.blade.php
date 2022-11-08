@@ -31,7 +31,7 @@
 
                 <div class="card-body">
                     <div class="table-responsive">
-                        <table id="user_datatable" class="display" style="width:100%">
+                        <table id="user_datatable" class="table table-striped" style="width:100%">
                             <thead class="thead">
                                 <tr>
                                     <th>No</th>
@@ -75,6 +75,7 @@
 
 @push('scripts')
     <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+
     <script>
         $('#flash-overlay-modal').modal();
 
