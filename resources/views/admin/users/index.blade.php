@@ -52,12 +52,12 @@
                                         <td>{{ $user->email }}</td>
                                         <th>{{ Carbon\Carbon::parse($user->date_birth)->format('d-m-Y')}}</th>
                                         <td>
-                                            <form action="{{ route('users.destroy',$user->id) }}" method="POST">
-                                                <a class="btn btn-sm btn-primary " href="{{ route('users.show',$user->id) }}"><i class="fa fa-fw fa-eye"></i> Show</a>
-                                                <a class="btn btn-sm btn-success" href="{{ route('users.edit',$user->id) }}"><i class="fa fa-fw fa-edit"></i> Edit</a>
+                                            <form action="{{ route('users.destroy',$user) }}" method="POST">
+                                                <a class="btn btn-sm btn-primary " href="{{ route('users.show',$user) }}"><i class="fa fa-fw fa-eye"></i> Show</a>
+                                                <a class="btn btn-sm btn-success" href="{{ route('users.edit',$user) }}"><i class="fa fa-fw fa-edit"></i> Edit</a>
                                                 @csrf
                                                 @method('DELETE')
-                                                <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Delete</button>
+                                                <button type="submit" class="btn btn-sm btn-danger"><i class="fa fa-fw fa-trash"></i> Delete</button>
                                             </form>
                                         </td>
                                     </tr>
