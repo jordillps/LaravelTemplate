@@ -44,6 +44,8 @@
         <main class="py-4">
             @yield('content')
         </main>
+        
+        @include('admin.partials.footer')
     </div>
 
     <!-- jQuery -->
