@@ -31,8 +31,7 @@ class PostUpdateRequest extends FormRequest
             'body' => ['string'],
             'published_at' => [''],
             'user_id' => ['required', 'integer', 'exists:users,id'],
-            'category_id' => ['required', 'integer', 'exists:categories,id'],
-            'softdeletes' => ['required'],
+            'category_id' => ['required', 'integer', 'exists:categories,id']
         ];
     }
 }

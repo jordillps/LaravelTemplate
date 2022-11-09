@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\Admin\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,6 +36,7 @@ Route::group(['middleware' => ['auth']], function () {
 	Route::group(["prefix" => "admin"], function() {
         Route::get('/', [HomeController::class, 'index'])->name('admin');
         Route::resource('/users', UserController::class);
+        Route::resource('/posts', PostController::class);
     });
 });
 

@@ -29,7 +29,7 @@ class PostFactory extends Factory
             'url' => $this->faker->url,
             'excerpt' => $this->faker->text,
             'iframe' => $this->faker->text,
-            'body' => $this->faker->text,
+            'body' => $this->faker->text($maxNbChars = 400),
             'published_at' => $this->faker->dateTime(),
             'user_id' => User::all()->random()->id,
             'category_id' => Category::all()->random()->id,
