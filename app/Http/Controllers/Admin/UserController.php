@@ -64,7 +64,7 @@ class UserController extends Controller
             'password' => $request->get('password'),
         ]);
 
-        flash()->overlay('User created successfully', 'Create User');
+        flash()->overlay($user->name . ' created successfully', 'Create User');
 
         return redirect()->route('users.index');
     }
@@ -111,7 +111,7 @@ class UserController extends Controller
         $user->update($request->all());
 
 
-        flash()->overlay('User updated successfully', 'Update User');
+        flash()->overlay($user->name . ' updated successfully', 'Update User');
 
         return redirect()->route('users.index');
     }
