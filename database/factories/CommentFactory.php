@@ -27,7 +27,7 @@ class CommentFactory extends Factory
             'body' => $this->faker->text,
             'author' => $this->faker->word,
             'author_email' => $this->faker->word,
-            'post_id' => Post::factory(),
+            'post_id' => Post::all()->random()->id,
         ];
     }
 }

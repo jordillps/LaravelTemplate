@@ -25,7 +25,7 @@ class PhotoFactory extends Factory
     {
         return [
             'url' => $this->faker->url,
-            'post_id' => Post::factory(),
+            'post_id' => Post::all()->random()->id,
         ];
     }
 }

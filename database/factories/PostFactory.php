@@ -31,8 +31,8 @@ class PostFactory extends Factory
             'iframe' => $this->faker->text,
             'body' => $this->faker->text,
             'published_at' => $this->faker->dateTime(),
-            'user_id' => User::factory(),
-            'category_id' => Category::factory(),
+            'user_id' => User::all()->random()->id,
+            'category_id' => Category::all()->random()->id,
         ];
     }
 }
