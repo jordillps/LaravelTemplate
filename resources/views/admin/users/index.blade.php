@@ -55,7 +55,7 @@
                                             
                                                 <a class="btn btn-sm btn-primary " href="{{ route('users.show',$user) }}"><i class="fa fa-fw fa-eye"></i> Show</a>
                                                 <a class="btn btn-sm btn-success" href="{{ route('users.edit',$user) }}"><i class="fa fa-fw fa-edit"></i> Edit</a>
-                                                <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-user-id="{{ $user->id }}" data-user-name="{{ $user->name }}" data-target="#modal-delete"><i class="fa fa-fw fa-trash"></i>
+                                                <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-item-id="{{ $user->id }}" data-item-name="{{ $user->name }}" data-target="#modal-delete"><i class="fa fa-fw fa-trash"></i>
                                                     Delete
                                                   </button>
                                         </td>
@@ -71,7 +71,7 @@
     </section>    
 </div>
 
-<form id="deleteUserForm" action="" method="POST">
+<form id="deleteItemForm" action="" method="POST">
     <div class="modal fade" id="modal-delete">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -126,14 +126,13 @@
                     },
             });
 
-            $('#deleteUserForm').on('show.bs.modal', function (event) {
+            $('#deleteItemForm').on('show.bs.modal', function (event) {
                 var button = $(event.relatedTarget);
                 const id = 'id';
-                console.log((button.data('user-name')));
-                $('.modal-title').text('Delete ' + button.data('user-name'));
+                $('.modal-title').text('Delete ' + button.data('item-name'));
                 var route = "{{ route('users.destroy',  'id' ) }}";
-                route = route.replace('id',button.data('user-id'));
-                $('#deleteUserForm').attr('action', route);
+                route = route.replace('id',button.data('item-id'));
+                $('#deleteItemForm').attr('action', route);
             });
 
         });

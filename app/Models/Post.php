@@ -2,66 +2,79 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\SoftDeletes;
 
+/**
+ * Class Post
+ *
+ * @property $id
+ * @property $title
+ * @property $url
+ * @property $excerpt
+ * @property $iframe
+ * @property $body
+ * @property $published_at
+ * @property $user_id
+ * @property $category_id
+ * @property $created_at
+ * @property $updated_at
+ *
+ * @property Category $category
+ * @property Comment[] $comments
+ * @property Photo[] $photos
+ * @property User $user
+ * @package App
+ * @mixin \Illuminate\Database\Eloquent\Builder
+ */
 class Post extends Model
 {
-    use HasFactory;
+    
+    static $rules = [
+		'title' => 'required',
+		'user_id' => 'required',
+		'category_id' => 'required',
+    ];
 
-    protected $table = 'posts';
+    protected $perPage = 20;
 
     /**
-     * The attributes that are mass assignable.
+     * Attributes that should be mass-assignable.
      *
      * @var array
      */
-    protected $fillable = [
-        'title',
-        'url',
-        'excerpt',
-        'iframe',
-        'body',
-        'published_at',
-        'user_id',
-        'category_id',
-    ];
+    protected $fillable = ['title','url','excerpt','iframe','body','published_at','user_id','category_id'];
 
-    /**
-     * The attributes that should be cast to native types.
-     *
-     * @var array
+
+     /**
+     * @return \Illuminate\Database\Eloquent\Relations\belongsTo
      */
-    protected $casts = [
-        'id' => 'integer',
-        'published_at' => 'timestamp',
-        'user_id' => 'integer',
-        'category_id' => 'integer',
-    ];
-
-    public function tags()
+    public function category()
     {
-        return $this->belongsToMany(Tag::class);
+        return $this->belongsTo(Category::class);
     }
-
-    public function photos()
-    {
-        return $this->hasMany(Photo::class);
-    }
-
+    
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
     public function comments()
     {
-        return $this->hasMany(Comment::class);
+        return $this->hasMany('App\Models\Comment', 'post_id', 'id');
     }
-
+    
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function photos()
+    {
+        return $this->hasMany('App\Models\Photo', 'post_id', 'id');
+    }
+    
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\belongsTo
+     */
     public function user()
     {
         return $this->belongsTo(User::class);
     }
 
-    public function category()
-    {
-        return $this->belongsTo(Category::class);
-    }
 }
