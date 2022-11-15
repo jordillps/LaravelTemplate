@@ -7,11 +7,11 @@
 
     <section class="content container-fluid">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-6">
 
                 @includeif('partials.errors')
 
-                <div class="card card-default">
+                <div class="card card-primary">
                     <div class="card-header">
                       <div class="float-left">
                         <span class="card-title">Create User</span>
