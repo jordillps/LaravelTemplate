@@ -3,7 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 /**
  * Class Post
  *
@@ -28,7 +28,8 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Post extends Model
 {
-    
+    use HasFactory;
+
     static $rules = [
 		'title' => 'required',
 		'user_id' => 'required',
