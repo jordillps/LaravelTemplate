@@ -5,7 +5,7 @@
     <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
         @foreach($available_locales as $locale_name => $available_locale)
             @if($available_locale != $current_locale)
-                <a class="dropdown-item" href="language/{{ $available_locale }}">
+                <a class="dropdown-item" href="{{ route('setLocale', $available_locale) }}">
                     {{ __('global.'. $locale_name)}}
                 </a>
             @endif

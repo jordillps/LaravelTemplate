@@ -24,7 +24,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         //
-        view()->composer('partials.language_switcher', function ($view) {
+        view()->composer(['partials.language_switcher', 'admin.partials.navbar'], function ($view) {
             $current_locale = app()->getLocale();
             $view->with('current_locale', $current_locale);
             $view->with('current_locale_name', trans('global.' . $current_locale));

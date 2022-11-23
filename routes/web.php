@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\PostController;
+use App\Http\Controllers\LocalizationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,11 +21,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('language/{locale}', function ($locale) {
-    app()->setLocale($locale);
-    session()->put('locale', $locale);
-    return redirect()->back();
-});
+// Route::get('{locale}', function ($locale) {
+//     app()->setLocale($locale);
+//     session()->put('locale', $locale);
+//     return redirect()->back();
+// })->name('languages');
+
+Route::get('locale/{locale}', [LocalizationController::class,'setLocale'])->name('setLocale');
 
 Auth::routes();
 
