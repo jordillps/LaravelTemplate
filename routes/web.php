@@ -37,6 +37,8 @@ Route::group(['middleware' => ['auth']], function () {
         Route::get('/', [HomeController::class, 'index'])->name('admin');
         Route::resource('/users', UserController::class);
         Route::resource('/posts', PostController::class);
+        Route::post('/posts/storeMedia', [PostController::class, 'storeMedia'])->name('posts.storeMedia');
+        Route::delete('/media/{media}/deleteMedia', [PostController::class, 'deleteMedia'])->name('media.deleteMedia');
     });
 });
 

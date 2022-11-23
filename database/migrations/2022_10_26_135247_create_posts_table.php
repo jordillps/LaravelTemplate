@@ -22,7 +22,7 @@ class CreatePostsTable extends Migration
             $table->mediumText('excerpt')->nullable();
             $table->text('iframe')->nullable();
             $table->longText('body')->nullable();
-            $table->timestamp('published_at')->nullable();
+            $table->date('published_at')->nullable();
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->foreignId('category_id')->constrained()->onDelete('cascade');
             $table->timestamps();

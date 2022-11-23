@@ -43,14 +43,24 @@
                             {{ $post->published_at }}
                         </div>
                         <div class="form-group">
-                            <strong>User Id:</strong>
-                            {{ $post->user_id }}
+                            <strong>User:</strong>
+                            {{ $post->user->name }}
                         </div>
                         <div class="form-group">
-                            <strong>Category Id:</strong>
-                            {{ $post->category_id }}
+                            <strong>Category:</strong>
+                            {{ $post->category->name }}
                         </div>
-
+                        <div class="form-group">
+                            <strong>Pictures:</strong>
+                            <div class="row">
+                                @foreach ($post->getMedia('images') as $media)
+                                    <div class="col-12 col-md-4 col-lg-2">
+                                        <img src="{{ $media->getUrl() }}" alt="" style="max-width: 100%;">
+                                    </div>
+                                @endforeach
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

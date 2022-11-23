@@ -4,6 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Spatie\MediaLibrary\HasMedia;
+use Spatie\MediaLibrary\InteractsWithMedia;
 /**
  * Class Post
  *
@@ -26,15 +28,11 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
  * @package App
  * @mixin \Illuminate\Database\Eloquent\Builder
  */
-class Post extends Model
+class Post extends Model implements HasMedia
 {
     use HasFactory;
 
-    static $rules = [
-		'title' => 'required',
-		'user_id' => 'required',
-		'category_id' => 'required',
-    ];
+    use InteractsWithMedia;
 
     protected $perPage = 20;
 
@@ -76,6 +74,11 @@ class Post extends Model
     public function user()
     {
         return $this->belongsTo(User::class);
+    }
+
+    public function medias()
+    {
+        return $this->morphMany(Media::class, 'mediable');
     }
 
 }

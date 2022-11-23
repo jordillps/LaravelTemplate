@@ -25,13 +25,13 @@ class PostUpdateRequest extends FormRequest
     {
         return [
             'title' => ['required', 'string', 'max:400'],
-            'url' => ['string', 'unique:posts,url'],
+            'url' => 'string', 'unique:posts,url,'.$this->id,
             'excerpt' => [''],
             'iframe' => ['string'],
             'body' => ['string'],
             'published_at' => [''],
             'user_id' => ['required', 'integer', 'exists:users,id'],
-            'category_id' => ['required', 'integer', 'exists:categories,id']
+            'category_id' => ['required', 'integer', 'exists:categories,id'],
         ];
     }
 }

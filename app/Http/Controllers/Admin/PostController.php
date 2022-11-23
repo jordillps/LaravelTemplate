@@ -6,7 +6,11 @@ use App\Http\Controllers\Controller;
 use App\Models\Post;
 use App\Models\User;
 use App\Models\Category;
+use App\Models\Media;
 use Illuminate\Http\Request;
+use App\Http\Requests\PostStoreRequest;
+use App\Http\Requests\PostUpdateRequest;
+use Illuminate\Support\Facades\File;
 
 /**
  * Class PostController
@@ -45,11 +49,15 @@ class PostController extends Controller
      * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(PostStoreRequest $request)
     {
-        request()->validate(Post::$rules);
+        $request->validated();
 
         $post = Post::create($request->all());
+
+        foreach ($request->input('images', []) as $file) {
+            $post->addMedia(storage_path('tmp/uploads/' . $file))->toMediaCollection('images', 'posts-media');
+        }
 
         flash()->overlay($post->title . ' created successfully', 'Create Post');
 
@@ -64,7 +72,6 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
-
         return view('admin.posts.show', compact('post'));
     }
 
@@ -76,6 +83,7 @@ class PostController extends Controller
      */
     public function edit(Post $post)
     {
+        
         $users = User::all()->pluck('name', 'id');
         $categories = Category::all()->pluck('name', 'id');
         return view('admin.posts.edit', compact('post', 'users', 'categories'));
@@ -88,12 +96,29 @@ class PostController extends Controller
      * @param  Post $post
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Post $post)
+    public function update(PostUpdateRequest $request, Post $post)
     {
-        request()->validate(Post::$rules);
+        $request->validated();
 
         $post->update($request->all());
 
+        if (($post->getMedia('images'))) {
+            foreach ($post->getMedia() as $media) {
+                if (!in_array($media->file_name, $request->input('images', []))) {
+                    $media->delete();
+                }
+            }
+        }
+    
+        $media = $post->getMedia()->pluck('file_name')->toArray();
+    
+        foreach ($request->input('images', []) as $file) {
+            if (count($media) === 0 || !in_array($file, $media)) {
+                $post->addMedia(storage_path('tmp/uploads/' . $file))->toMediaCollection('images','posts-media');
+            }
+        }
+    
+        
         flash()->overlay($post->title . ' updated successfully', 'Update Post');
 
         return redirect()->route('posts.index');
@@ -111,5 +136,40 @@ class PostController extends Controller
         flash()->overlay($post->title . ' deleted successfully', 'Delete Post');
 
         return redirect()->route('posts.index');
+    }
+
+
+
+    public function storeMedia(Request $request)
+    {
+        $path = storage_path('tmp/uploads');
+
+        if (!file_exists($path)) {
+            mkdir($path, 0777, true);
+        }
+
+        $file = $request->file('file');
+
+        $name = uniqid() . '_' . trim($file->getClientOriginalName());
+
+        $file->move($path, $name);
+
+        return response()->json([
+            'name'          => $name,
+            'original_name' => $file->getClientOriginalName(),
+        ]);
+    }
+
+    public function deleteMedia(Media $media)
+    {
+        //Borrem del servidor        
+        File::delete('media/posts' . "/" . $media->model_id . "/" . $media->file_name);
+        
+        //Borrem de la base de dades
+        $media->delete();
+
+        flash()->overlay('Deleted successfully', 'Delete Image');
+
+        return redirect()->back();
     }
 }
