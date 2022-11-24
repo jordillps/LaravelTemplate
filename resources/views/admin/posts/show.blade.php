@@ -20,23 +20,23 @@
                         
                         <div class="form-group">
                             <strong>Title:</strong>
-                            {{ $post->title }}
+                            {{ $post->{'title:'. app()->getLocale()} }}
                         </div>
                         <div class="form-group">
                             <strong>Url:</strong>
-                            {{ $post->url }}
+                            {{ $post->{'url:'. app()->getLocale()} }}
                         </div>
                         <div class="form-group">
                             <strong>Excerpt:</strong>
-                            {{ $post->excerpt }}
+                            {{ $post->{'excerpt:'. app()->getLocale()} }}
                         </div>
                         <div class="form-group">
                             <strong>Iframe:</strong>
-                            {{ $post->iframe }}
+                            {{ $post->{'iframe:'. app()->getLocale()} }}
                         </div>
                         <div class="form-group">
                             <strong>Body:</strong>
-                            {{ $post->body }}
+                            {{ $post->{'body:'. app()->getLocale()} }}
                         </div>
                         <div class="form-group">
                             <strong>Published At:</strong>

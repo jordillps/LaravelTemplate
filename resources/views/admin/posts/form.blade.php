@@ -7,27 +7,22 @@
         
         <div class="form-group">
             {{ Form::label('title') }}
-            {{ Form::text('title', $post->title, ['class' => 'form-control' . ($errors->has('title') ? ' is-invalid' : ''), 'placeholder' => 'Title']) }}
+            {{ Form::text('title', $post->{'title:'. app()->getLocale()}, ['class' => 'form-control' . ($errors->has('title') ? ' is-invalid' : ''), 'placeholder' => 'Title']) }}
             {!! $errors->first('title', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('url') }}
-            {{ Form::text('url', $post->url, ['class' => 'form-control' . ($errors->has('url') ? ' is-invalid' : ''), 'placeholder' => 'Url']) }}
-            {!! $errors->first('url', '<div class="invalid-feedback">:message</div>') !!}
-        </div>
-        <div class="form-group">
             {{ Form::label('excerpt') }}
-            {{ Form::text('excerpt', $post->excerpt, ['class' => 'form-control' . ($errors->has('excerpt') ? ' is-invalid' : ''), 'placeholder' => 'Excerpt']) }}
+            {{ Form::text('excerpt', $post->{'excerpt:'. app()->getLocale()}, ['class' => 'form-control' . ($errors->has('excerpt') ? ' is-invalid' : ''), 'placeholder' => 'Excerpt']) }}
             {!! $errors->first('excerpt', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
             {{ Form::label('iframe') }}
-            {{ Form::text('iframe', $post->iframe, ['class' => 'form-control' . ($errors->has('iframe') ? ' is-invalid' : ''), 'placeholder' => 'Iframe']) }}
+            {{ Form::text('iframe', $post->{'iframe:'. app()->getLocale()}, ['class' => 'form-control' . ($errors->has('iframe') ? ' is-invalid' : ''), 'placeholder' => 'Iframe']) }}
             {!! $errors->first('iframe', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
             {{ Form::label('body') }}
-            {{ Form::textarea('body', $post->body, ['class' => 'form-control' . ($errors->has('body') ? ' is-invalid' : ''), 'placeholder' => 'Body']) }}
+            {{ Form::textarea('body', $post->{'body:'. app()->getLocale()}, ['class' => 'form-control' . ($errors->has('body') ? ' is-invalid' : ''), 'placeholder' => 'Body']) }}
             {!! $errors->first('body', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="row">

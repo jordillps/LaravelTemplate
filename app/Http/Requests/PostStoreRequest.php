@@ -25,7 +25,6 @@ class PostStoreRequest extends FormRequest
     {
         return [
             'title' => ['required', 'string', 'max:400'],
-            'url' => ['string', 'unique:posts,url'],
             'excerpt' => [''],
             'body' => ['string'],
             'published_at' => [''],

@@ -52,13 +52,17 @@ Breadcrumbs::for('posts.create', function (BreadcrumbTrail $trail) {
 // Posts > Show Post
 Breadcrumbs::for('posts.show', function (BreadcrumbTrail $trail, Post $post) {
     $trail->parent('posts.index');
-    $trail->push($post->title, route('posts.show', $post));
+    if($post->title != null){
+        $trail->push($post->title, route('posts.show', $post));
+    }
 });
 
 // Posts > Edit Post
 Breadcrumbs::for('posts.edit', function (BreadcrumbTrail $trail, Post $post) {
     $trail->parent('posts.index');
-    $trail->push($post->title, route('posts.edit', $post));
+    if($post->title != null){
+        $trail->push($post->title, route('posts.edit', $post));
+    }
 });
 
 

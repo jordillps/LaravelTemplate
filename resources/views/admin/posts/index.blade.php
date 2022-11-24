@@ -47,7 +47,7 @@
                                     @foreach ($posts as $post)
                                         <tr>
                                             <td>{{ $post->id }}</td>
-											<td>{{ $post->title }}</td>
+											<td>{{ $post->{'title:'. app()->getLocale()} }}</td>
 											<td>{{ Carbon\Carbon::parse($post->published_at)->format('d-m-Y')}}</td>
 											<td>{{ $post->user->name }}</td>
 											<td>{{ $post->category->name }}</td>

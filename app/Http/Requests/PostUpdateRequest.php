@@ -25,7 +25,6 @@ class PostUpdateRequest extends FormRequest
     {
         return [
             'title' => ['required', 'string', 'max:400'],
-            'url' => 'string', 'unique:posts,url,'.$this->id,
             'excerpt' => [''],
             'iframe' => ['string'],
             'body' => ['string'],

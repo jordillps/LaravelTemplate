@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
+use Astrotomic\Translatable\Contracts\Translatable as TranslatableContract;
+use Astrotomic\Translatable\Translatable;
 /**
  * Class Post
  *
@@ -28,20 +30,23 @@ use Spatie\MediaLibrary\InteractsWithMedia;
  * @package App
  * @mixin \Illuminate\Database\Eloquent\Builder
  */
-class Post extends Model implements HasMedia
+class Post extends Model implements HasMedia, TranslatableContract
 {
     use HasFactory;
+    use Translatable;
 
     use InteractsWithMedia;
 
     protected $perPage = 20;
+
+    public $translatedAttributes = ['title','url','excerpt', 'iframe','body'];
 
     /**
      * Attributes that should be mass-assignable.
      *
      * @var array
      */
-    protected $fillable = ['title','url','excerpt','iframe','body','published_at','user_id','category_id'];
+    protected $fillable = ['published_at','user_id','category_id'];
 
 
      /**
