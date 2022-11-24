@@ -55,23 +55,7 @@ class PostController extends Controller
     {
         $request->validated();
 
-
-        $post = Post::create([
-            'published_at' => $request->get('published_at'),
-            'user_id' => $request->get('user_id'),
-            'category_id' => $request->get('category_id'), 
-        ]);
-
-        $post_translation = PostTranslation::create([
-            'post_id' => $post->id,
-            'locale' => app()->getLocale(),
-            'title' => $request->get('title'),
-            'url' => Str::slug($request->get('title')),
-            'excerpt' => $request->get('excerpt'),
-            'iframe' => $request->get('iframe'),
-            'body' => $request->get('body'),
-        ]);
-
+        $post = Post::create($request->all());
 
         foreach ($request->input('images', []) as $file) {
             $post->addMedia(storage_path('tmp/uploads/' . $file))->toMediaCollection('images', 'posts-media');
@@ -119,36 +103,7 @@ class PostController extends Controller
 
         $request->validated();
 
-
-        //Update Post Fields
-        $post->published_at = $request->get('published_at');
-        $post->user_id = $request->get('user_id');
-        $post->category_id = $request->get('category_id');
-        
-        //Update Translatable fields
-        $post_translation = PostTranslation::where('post_id', $post->id)
-        ->where('locale', app()->getLocale())->first();
-
-        if($post_translation != null){
-            $post_translation->title = $request->get('title');
-            $post_translation->url = Str::slug($post_translation->title);
-            $post_translation->excerpt = $request->get('excerpt');
-            $post_translation->iframe = $request->get('iframe');
-            $post_translation->body = $request->get('body');
-            $post_translation->save();
-        }else{
-            $post_translation = PostTranslation::create([
-                'post_id' => $post->id,
-                'locale' => app()->getLocale(),
-                'title' => $request->get('title'),
-                'url' => Str::slug($request->get('title')),
-                'excerpt' => $request->get('excerpt'),
-                'iframe' => $request->get('iframe'),
-                'body' => $request->get('body'),
-            ]);
-        }
-
-        
+        $post->update($request->all());
 
         if (($post->getMedia('images'))) {
             foreach ($post->getMedia() as $media) {

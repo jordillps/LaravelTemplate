@@ -7,23 +7,23 @@
         
         <div class="form-group">
             {{ Form::label('title') }}
-            {{ Form::text('title', $post->{'title:'. app()->getLocale()}, ['class' => 'form-control' . ($errors->has('title') ? ' is-invalid' : ''), 'placeholder' => 'Title']) }}
-            {!! $errors->first('title', '<div class="invalid-feedback">:message</div>') !!}
+            {{ Form::text('title:'.app()->getLocale(), $post->{'title:'. app()->getLocale()}, ['class' => 'form-control' . ($errors->has('title:'.app()->getLocale()) ? ' is-invalid' : ''), 'placeholder' => 'Title']) }}
+            {!! $errors->first('title:'.app()->getLocale(), '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
             {{ Form::label('excerpt') }}
-            {{ Form::text('excerpt', $post->{'excerpt:'. app()->getLocale()}, ['class' => 'form-control' . ($errors->has('excerpt') ? ' is-invalid' : ''), 'placeholder' => 'Excerpt']) }}
-            {!! $errors->first('excerpt', '<div class="invalid-feedback">:message</div>') !!}
+            {{ Form::text('excerpt:'.app()->getLocale(), $post->{'excerpt:'. app()->getLocale()}, ['class' => 'form-control' . ($errors->has('excerpt:'.app()->getLocale()) ? ' is-invalid' : ''), 'placeholder' => 'Excerpt']) }}
+            {!! $errors->first('excerpt:'.app()->getLocale(), '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
             {{ Form::label('iframe') }}
-            {{ Form::text('iframe', $post->{'iframe:'. app()->getLocale()}, ['class' => 'form-control' . ($errors->has('iframe') ? ' is-invalid' : ''), 'placeholder' => 'Iframe']) }}
-            {!! $errors->first('iframe', '<div class="invalid-feedback">:message</div>') !!}
+            {{ Form::text('iframe:'.app()->getLocale(), $post->{'iframe:'. app()->getLocale()}, ['class' => 'form-control' . ($errors->has('iframe:'.app()->getLocale()) ? ' is-invalid' : ''), 'placeholder' => 'Iframe']) }}
+            {!! $errors->first('iframe:'.app()->getLocale(), '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
             {{ Form::label('body') }}
-            {{ Form::textarea('body', $post->{'body:'. app()->getLocale()}, ['class' => 'form-control' . ($errors->has('body') ? ' is-invalid' : ''), 'placeholder' => 'Body']) }}
-            {!! $errors->first('body', '<div class="invalid-feedback">:message</div>') !!}
+            {{ Form::textarea('body:'.app()->getLocale(), $post->{'body:'. app()->getLocale()}, ['class' => 'form-control' . ($errors->has('body:'.app()->getLocale()) ? ' is-invalid' : ''), 'placeholder' => 'Body']) }}
+            {!! $errors->first('body:'.app()->getLocale(), '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="row">
           <div class="col-12 col-md-4">
