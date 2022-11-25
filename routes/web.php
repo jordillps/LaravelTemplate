@@ -18,7 +18,7 @@ use App\Http\Controllers\LocalizationController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
 // Route::get('{locale}', function ($locale) {
