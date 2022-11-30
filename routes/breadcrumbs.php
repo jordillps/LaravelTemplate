@@ -66,4 +66,13 @@ Breadcrumbs::for('posts.edit', function (BreadcrumbTrail $trail, Post $post) {
 });
 
 
+// Pages
+Breadcrumbs::for('pages.index', function (BreadcrumbTrail $trail) {
+    $trail->parent('admin');
+    $trail->push('Pages', route('pages.index'));
+});
+
+
+
+
 

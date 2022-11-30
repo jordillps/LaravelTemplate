@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\PostController;
 use App\Http\Controllers\LocalizationController;
+use App\Http\Controllers\Admin\PageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -42,6 +43,8 @@ Route::group(['middleware' => ['auth']], function () {
         Route::resource('/posts', PostController::class);
         Route::post('/posts/storeMedia', [PostController::class, 'storeMedia'])->name('posts.storeMedia');
         Route::delete('/media/{media}/deleteMedia', [PostController::class, 'deleteMedia'])->name('media.deleteMedia');
+
+        Route::resource('/pages', PageController::class);
     });
 });
 

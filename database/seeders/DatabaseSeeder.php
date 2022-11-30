@@ -36,5 +36,7 @@ class DatabaseSeeder extends Seeder
         $this->call(TagSeeder::class);
         $this->call(PostSeeder::class);
         $this->call(CommentSeeder::class);
+
+        \App\Models\Page::factory()->create(['name' => 'Home']);
     }
 }
