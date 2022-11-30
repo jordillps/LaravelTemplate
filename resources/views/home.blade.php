@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+    @include('partials.navbar')
 
     <!--/ Intro Skew Star /-->
     <div
@@ -831,5 +832,7 @@
       </div>
     </section>
     <!--/ Section Contact-footer End /-->
+
+    @include('partials.footer')
 
 @endsection

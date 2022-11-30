@@ -30,11 +30,7 @@
 <body id="page-top">
     <div id="app">
         
-        @include('partials.navbar')
-
-        @yield('content')
-
-        @include('partials.footer')
+        @yield('content')  
 
     </div>
 
