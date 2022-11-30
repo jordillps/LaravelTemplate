@@ -31,7 +31,7 @@
 
                 <div class="card-body">
                     <div class="table-responsive">
-                        <table id="user_datatable" class="table table-striped" style="width:100%">
+                        <table id="item_datatable" class="table table-striped" style="width:100%">
                             <thead class="thead">
                                 <tr>
                                     <th>No</th>
@@ -120,7 +120,7 @@
                 default:
                     var language_datatable = "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/English.json";
             }
-            $('#user_datatable').DataTable({
+            $('#item_datatable').DataTable({
                     "language": {
                         "url": language_datatable
                     },
