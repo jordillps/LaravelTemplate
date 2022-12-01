@@ -65,13 +65,6 @@ class Post extends Model implements HasMedia, TranslatableContract
         return $this->hasMany('App\Models\Comment', 'post_id', 'id');
     }
     
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     */
-    public function photos()
-    {
-        return $this->hasMany('App\Models\Photo', 'post_id', 'id');
-    }
     
     /**
      * @return \Illuminate\Database\Eloquent\Relations\belongsTo
