@@ -16,7 +16,7 @@
                     <div class="card card-default">
                         <div class="card-header">
                             <div class="float-left">
-                                <span class="card-title">Update User</span>
+                                <span class="card-title">Update Post</span>
                             </div>
                             <div class="float-right">
                                 <a class="btn btn-primary" href="{{ route('posts.index') }}"> Back</a>

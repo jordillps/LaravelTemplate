@@ -55,8 +55,6 @@
                                             <td>
                                                     <a class="btn btn-sm btn-primary " href="{{ route('posts.show',$post->id) }}"><i class="fa fa-fw fa-eye"></i> Show</a>
                                                     <a class="btn btn-sm btn-success" href="{{ route('posts.edit',$post->id) }}"><i class="fa fa-fw fa-edit"></i> Edit</a>
-                                                    @csrf
-                                                    @method('DELETE')
                                                     <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-item-id="{{ $post->id }}" data-item-name="{{ $post->title }}" data-target="#modal-delete"><i class="fa fa-fw fa-trash"></i>
                                                         Delete
                                                       </button>
