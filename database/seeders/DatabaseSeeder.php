@@ -5,6 +5,8 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\DB;
+use App\Models\Header;
+use App\Models\HeaderTranslation;
 
 
 class DatabaseSeeder extends Seeder
@@ -38,5 +40,12 @@ class DatabaseSeeder extends Seeder
         $this->call(CommentSeeder::class);
 
         \App\Models\Page::factory()->create(['name' => 'Home']);
+
+        Header::factory()->count(1)->create(['page_id' => 1])->each(function (Header $header) {
+            HeaderTranslation::factory()->count(1)->create(['header_id' => $header->id, 'locale' => 'es']);
+            HeaderTranslation::factory()->count(1)->create(['header_id' => $header->id,'locale' => 'en']);
+            HeaderTranslation::factory()->count(1)->create(['header_id' => $header->id,'locale' => 'ca']);
+        });
+
     }
 }

@@ -3,22 +3,20 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\Post;
-use App\Models\User;
-use App\Models\Category;
+use App\Http\Requests\HeaderStoreRequest;
+use App\Http\Requests\HeaderUpdateRequest;
+use App\Models\Header;
+use App\Models\Page;
 use App\Models\Media;
 use Illuminate\Http\Request;
-use App\Http\Requests\PostStoreRequest;
-use App\Http\Requests\PostUpdateRequest;
-use App\Models\PostTranslation;
 use Illuminate\Support\Facades\File;
-use Illuminate\Support\Str;
+
 
 /**
- * Class PostController
+ * Class HeaderController
  * @package App\Http\Controllers
  */
-class PostController extends Controller
+class HeaderController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -27,9 +25,9 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::all();
+        $headers = Header::all();
 
-        return view('admin.posts.index', compact('posts'));
+        return view('admin.headers.index', compact('headers'));
     }
 
     /**
@@ -39,10 +37,8 @@ class PostController extends Controller
      */
     public function create()
     {
-        $post = new Post();
-        $users = User::all()->pluck('name', 'id');
-        $categories = Category::all()->pluck('name', 'id');
-        return view('admin.posts.create', compact('post','users', 'categories'));
+        // $header = new Header();
+        // return view('header.create', compact('header'));
     }
 
     /**
@@ -51,19 +47,19 @@ class PostController extends Controller
      * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
-    public function store(PostStoreRequest $request)
+    public function store(HeaderStoreRequest $request)
     {
         $request->validated();
 
-        $post = Post::create($request->all());
+        $header = Header::create($request->all());
 
         foreach ($request->input('images', []) as $file) {
-            $post->addMedia(storage_path('tmp/uploads/' . $file))->toMediaCollection('images', 'posts-media');
+            $header->addMedia(storage_path('tmp/uploads/' . $file))->toMediaCollection('images', 'headers-media');
         }
 
-        flash()->overlay($post->title . ' created successfully', 'Create Post');
+        flash()->overlay($header->id . ' created successfully', 'Saved Header');
 
-        return redirect()->route('posts.index');
+        return redirect()->route('headers.index');
     }
 
     /**
@@ -72,9 +68,10 @@ class PostController extends Controller
      * @param  int $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Post $post)
+    public function show(Header $header)
     {
-        return view('admin.posts.show', compact('post'));
+        return view('admin.headers.show', compact('header'));
+
     }
 
     /**
@@ -83,47 +80,45 @@ class PostController extends Controller
      * @param  int $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Post $post)
+    public function edit(Header $header)
     {
-        
-        $users = User::all()->pluck('name', 'id');
-        $categories = Category::all()->pluck('name', 'id');
-        return view('admin.posts.edit', compact('post', 'users', 'categories'));
+        $pages = Page::all()->pluck('name', 'id');
+        return view('admin.headers.edit', compact('header', 'pages'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request $request
-     * @param  Post $post
+     * @param  Header $header
      * @return \Illuminate\Http\Response
      */
-    public function update(PostUpdateRequest $request, Post $post)
+    public function update(HeaderUpdateRequest $request, Header $header)
     {
         $request->validated();
 
-        $post->update($request->all());
+        $header->update($request->all());
 
-        if (($post->getMedia('images'))) {
-            foreach ($post->getMedia() as $media) {
+        if (($header->getMedia('images'))) {
+            foreach ($header->getMedia() as $media) {
                 if (!in_array($media->file_name, $request->input('images', []))) {
                     $media->delete();
                 }
             }
         }
     
-        $media = $post->getMedia()->pluck('file_name')->toArray();
+        $media = $header->getMedia()->pluck('file_name')->toArray();
     
         foreach ($request->input('images', []) as $file) {
             if (count($media) === 0 || !in_array($file, $media)) {
-                $post->addMedia(storage_path('tmp/uploads/' . $file))->toMediaCollection('images','posts-media');
+                $header->addMedia(storage_path('tmp/uploads/' . $file))->toMediaCollection('images','headers-media');
             }
         }
     
         
-        flash()->overlay($post->title . ' updated successfully', 'Update Post');
+        flash()->overlay($header->id . ' updated successfully', 'Update Header');
 
-        return redirect()->route('posts.index');
+        return redirect()->route('headers.index');
     }
 
     /**
@@ -131,13 +126,13 @@ class PostController extends Controller
      * @return \Illuminate\Http\RedirectResponse
      * @throws \Exception
      */
-    public function destroy(Post $post)
+    public function destroy(Header $header)
     {
-        $post ->delete();
+        $header ->delete();
 
-        flash()->overlay($post->title . ' deleted successfully', 'Delete Post');
+        flash()->overlay($header->id . ' deleted successfully', 'Delete Header');
 
-        return redirect()->route('posts.index');
+        return redirect()->route('headers.index');
     }
 
 
@@ -165,7 +160,7 @@ class PostController extends Controller
     public function deleteMedia(Media $media)
     {
         //Borrem del servidor        
-        File::delete('media/posts' . "/" . $media->model_id . "/" . $media->file_name);
+        File::delete('media/headers' . "/" . $media->model_id . "/" . $media->file_name);
         
         //Borrem de la base de dades
         $media->delete();

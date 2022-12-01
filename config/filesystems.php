@@ -49,6 +49,13 @@ return [
             'visibility' => 'public',
         ],
 
+        'headers-media' => [
+            'driver' => 'local',
+            'root' => public_path('/media/headers'),
+            'url' => env('APP_URL').'/media/headers',
+            'visibility' => 'public',
+        ],
+
         'public' => [
             'driver' => 'local',
             'root' => storage_path('app/public'),

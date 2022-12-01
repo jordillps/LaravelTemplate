@@ -7,8 +7,6 @@
 @section('content')
 <div class="content-wrapper">
     
-    @include('admin.partials.header')
-
     <section class="content container-fluid">
         <div class="row">
             <div class="col-sm-12">
@@ -17,14 +15,8 @@
                         <div style="display: flex; justify-content: space-between; align-items: center;">
 
                             <span id="card_title">
-                                {{ __('Page') }}
+                                {{ __('Header') }}
                             </span>
-
-                             {{-- <div class="float-right">
-                                <a href="{{ route('pages.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
-                                  {{ __('Create New') }}
-                                </a>
-                              </div> --}}
                         </div>
                     </div>
                     @include('flash::message')
@@ -36,26 +28,28 @@
                                     <tr>
                                         <th>No</th>
                                         
-										<th>Name</th>
+										<th>Page</th>
+
+                                        <th>Title</th>
 
                                         <th></th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($pages as $page)
+                                    @foreach ($headers as $header)
                                         <tr>
-                                            <td>{{ $page->id }}</td>
-                                            <td>{{ $page->name }}</td>
+                                            <td>{{ $header->id }}</td>
+                                            
+											<td>{{ $header->page->name }}</td>
+
+                                            <td>{{ $header->{'title:'. app()->getLocale()}  }}</td>
+
                                             <td>
-                                                <form action="{{ route('pages.destroy',$page->id) }}" method="POST">
-                                                    {{-- <a class="btn btn-sm btn-primary " href="{{ route('pages.show',$page->id) }}"><i class="fa fa-fw fa-eye"></i> Show</a> --}}
-                                                    {{-- <a class="btn btn-sm btn-success" href="{{ route('pages.edit',$page->id) }}"><i class="fa fa-fw fa-edit"></i> Edit</a> --}}
-                                                    @csrf
-                                                    @method('DELETE')
-                                                    <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-item-id="{{ $page->id }}" data-item-name="{{ $page->name }}" data-target="#modal-delete"><i class="fa fa-fw fa-trash"></i>
+                                                <a class="btn btn-sm btn-primary " href="{{ route('headers.show',$header->id) }}"><i class="fa fa-fw fa-eye"></i> Show</a>
+                                                    <a class="btn btn-sm btn-success" href="{{ route('headers.edit',$header->id) }}"><i class="fa fa-fw fa-edit"></i> Edit</a>
+                                                    <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-item-id="{{ $header->id }}" data-target="#modal-delete"><i class="fa fa-fw fa-trash"></i>
                                                         Delete
                                                       </button>
-                                                </form>
                                             </td>
                                         </tr>
                                     @endforeach
@@ -67,8 +61,6 @@
             </div>
         </div>
     </section>
-</div>
-
 <form id="deleteItemForm" action="" method="POST">
     <div class="modal fade" id="modal-delete">
         <div class="modal-dialog">
@@ -127,8 +119,8 @@
             $('#deleteItemForm').on('show.bs.modal', function (event) {
                 var button = $(event.relatedTarget);
                 const id = 'id';
-                $('.modal-title').text('Delete ' + button.data('item-name'));
-                var route = "{{ route('pages.destroy',  'id' ) }}";
+                $('.modal-title').text('Delete');
+                var route = "{{ route('headers.destroy',  'id' ) }}";
                 route = route.replace('id',button.data('item-id'));
                 $('#deleteItemForm').attr('action', route);
             });

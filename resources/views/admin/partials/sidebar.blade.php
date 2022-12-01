@@ -100,15 +100,13 @@
                 </p>
               </a>
               <ul class="nav nav-treeview">
-                <li class="nav-item">
+                <li class="nav-item ml-5">
                   <a href="{{ route('users.index') }}" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
                     <p>List</p>
                   </a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item ml-5">
                   <a href="{{ route('users.create') }}" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
                     <p>Create</p>
                   </a>
                 </li>
@@ -123,15 +121,13 @@
                 </p>
               </a>
               <ul class="nav nav-treeview">
-                <li class="nav-item">
+                <li class="nav-item ml-5">
                   <a href="{{ route('posts.index') }}" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
                     <p>List</p>
                   </a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item ml-5">
                   <a href="{{ route('posts.create') }}" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
                     <p>Create</p>
                   </a>
                 </li>
@@ -146,9 +142,8 @@
                 </p>
               </a>
               <ul class="nav nav-treeview">
-                <li class="nav-item">
+                <li class="nav-item ml-5">
                   <a href="{{ route('pages.index') }}" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
                     <p>List</p>
                   </a>
                 </li>
@@ -158,7 +153,7 @@
               <a href="#" class="nav-link">
                 <i class="nav-icon far fa-plus-square"></i>
                 <p>
-                  Extras
+                  PAGE COMPONENTS
                   <i class="fas fa-angle-left right"></i>
                 </p>
               </a>
@@ -167,33 +162,14 @@
                   <a href="#" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
                     <p>
-                      Login & Register v1
+                      Headers
                       <i class="fas fa-angle-left right"></i>
                     </p>
                   </a>
                   <ul class="nav nav-treeview">
-                    <li class="nav-item">
-                      <a href="pages/examples/login.html" class="nav-link">
-                        <i class="far fa-circle nav-icon"></i>
-                        <p>Login v1</p>
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a href="pages/examples/register.html" class="nav-link">
-                        <i class="far fa-circle nav-icon"></i>
-                        <p>Register v1</p>
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a href="pages/examples/forgot-password.html" class="nav-link">
-                        <i class="far fa-circle nav-icon"></i>
-                        <p>Forgot Password v1</p>
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a href="pages/examples/recover-password.html" class="nav-link">
-                        <i class="far fa-circle nav-icon"></i>
-                        <p>Recover Password v1</p>
+                    <li class="nav-item ml-5">
+                      <a href="{{ route('headers.index') }}" class="nav-link">
+                        <p>List</p>
                       </a>
                     </li>
                   </ul>

@@ -4,7 +4,6 @@
 
 <div class="box box-info padding-1">
     <div class="box-body">
-        
         <div class="form-group">
             {{ Form::label('title') }}
             {{ Form::text('title:'.app()->getLocale(), $post->{'title:'. app()->getLocale()}, ['class' => 'form-control' . ($errors->has('title:'.app()->getLocale()) ? ' is-invalid' : ''), 'placeholder' => 'Title']) }}
@@ -63,9 +62,9 @@
             </div>
         </div>
     </div>
-    <div class="box-footer mt20">
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </div>
+  <div class="box-footer mt20">
+      <button type="submit" class="btn btn-primary">Submit</button>
+  </div>
 </div>
 
 @push('scripts')

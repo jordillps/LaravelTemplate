@@ -37,8 +37,6 @@ class Post extends Model implements HasMedia, TranslatableContract
 
     use InteractsWithMedia;
 
-    protected $perPage = 20;
-
     public $translatedAttributes = ['title','url','excerpt', 'iframe','body'];
 
     /**
