@@ -21,7 +21,7 @@ use App\Http\Controllers\Admin\HeaderController;
 
 Route::get('/', function () {
     return view('home');
-});
+})->name('home');
 
 // Route::get('{locale}', function ($locale) {
 //     app()->setLocale($locale);

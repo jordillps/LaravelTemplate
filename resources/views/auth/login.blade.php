@@ -68,6 +68,9 @@
                                         {{ __('Forgot Your Password?') }}
                                     </a>
                                     @endif
+                                    <a class="btn btn-outline-primary" href="{{ route('home') }}">
+                                        {{ __('Home') }}
+                                    </a>
                                 </div>
                             </div>
                         </form>

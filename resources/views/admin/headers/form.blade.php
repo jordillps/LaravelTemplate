@@ -21,7 +21,7 @@
             {!! $errors->first('text:'.app()->getLocale(), '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
-            <label for="document">Documents</label>
+            <label for="document">Header Image (Upload only one image, min dimensions 1920x1055)</label>
             <div class="needsclick dropzone" id="document-dropzone">
     
             </div>
@@ -39,19 +39,22 @@
         var uploadedDocumentMap = {}
         Dropzone.options.documentDropzone = {
           url: '{{ route('headers.storeMedia') }}',
-          maxFilesize: 2, // MB
+          maxFilesize: 1, // MB
+          acceptedFiles: ".png,.jpg,.gif",
           addRemoveLinks: true,
+          maxFiles:1,
+          uploadMultiple: false,
+          // resizeWidth: 1920,
+          // resizeHeight: 1055,
           headers: {
             'X-CSRF-TOKEN': "{{ csrf_token() }}"
           },
-          dictDefaultMessage : 'Arrastrar para subir las fotografías',
+          dictDefaultMessage : 'Arrastrar para subir la fotografía',
           success: function (file, response) {
-            console.log(response);
             $('form').append('<input type="hidden" name="images[]" value="' + response.name + '">')
             uploadedDocumentMap[file.name] = response.name
           },
           removedfile: function (file) {
-            console.log(file);
             file.previewElement.remove()
             var name = ''
             if (typeof file.file_name !== 'undefined') {
