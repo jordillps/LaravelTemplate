@@ -34,7 +34,7 @@
                             <div class="row p-3">
                                 @foreach ($header->getMedia('images') as $media)
                                     <div class="col-12 col-md-6 col-lg-3">
-                                        <img src="{{ $media->getUrl() }}" alt="" style="max-width: 100%;">
+                                        <img src="{{ $media->getUrl('thumb') }}" alt="" style="max-width: 100%;">
                                     </div>
                                 @endforeach
                                 </div>

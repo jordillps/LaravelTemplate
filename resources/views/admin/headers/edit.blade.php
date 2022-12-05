@@ -32,14 +32,14 @@
 
                         </form>
                         <hr>
-                            <label for="document">Images Uploaded</label>
+                            <label for="document">Image Uploaded</label>
                             <div class="row">
                                 @foreach ($header->getMedia('images') as $media)
-                                    <div class="col-12 col-md-4 col-lg-2">
+                                    <div class="col-12 col-md-6 col-lg-4">
                                         <form action="{{ route('media.deleteMedia', ['media' => $media])}}" method="POST">
                                             {{ @method_field('DELETE')}}
                                             @csrf
-                                            <img src="{{ $media->getUrl() }}" alt="" style="max-width: 100%; position:relative;">
+                                            <img src="{{ $media->getUrl('thumb') }}" alt="" style="max-width: 100%; position:relative;">
                                             <button class="btn btn-danger" style="position:absolute; top:0; left:0;"><i class="far fa-trash-alt xs"></i></button>
                                         </form>
                                     </div>

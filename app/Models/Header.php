@@ -57,12 +57,11 @@ class Header extends Model implements HasMedia, TranslatableContract
         return $this->morphMany(Media::class, 'mediable');
     }
 
-    // public function registerMediaConversions(Media $media = null): void
-    // {
-    //     $this->addMediaConversion('thumb')
-    //           ->width(1920)
-    //           ->height(1055);
-    // }
+    public function registerMediaConversions(Media $media = null): void
+    {
+        $this->addMediaConversion('thumb')
+              ->width(1920);
+    }
 
 
 }
