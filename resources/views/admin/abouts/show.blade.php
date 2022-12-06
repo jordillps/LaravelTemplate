@@ -32,7 +32,7 @@
                         </div>
                         <div class="form-group">
                             <strong>About Me:</strong>
-                            {{ $about->{'about_me:'. app()->getLocale()} }}
+                            {!! $about->{'about_me:'. app()->getLocale()} !!}
                         </div>
                         <div class="form-group">
                             <strong>Email:</strong>

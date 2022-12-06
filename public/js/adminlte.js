@@ -3065,5 +3065,25 @@
 
   Object.defineProperty(exports, '__esModule', { value: true });
 
+ /**
+   * SummerNote
+   * ====================================================
+   */
+  $('#summernote').summernote({
+    tabsize: 2,
+    height: 315,
+    toolbar: [
+      ['style', ['bold', 'italic', 'underline', 'clear']],
+      ['font', ['strikethrough', 'superscript', 'subscript']],
+      ['color', ['color']],
+      ['para', ['ul', 'ol', 'paragraph']],
+      ['view', ['fullscreen', 'codeview', 'help']]
+    ]
+  });
+
+  $('#body_editor').summernote('removeFormat');
+
+
+
 }));
 //# sourceMappingURL=adminlte.js.map

@@ -36,7 +36,7 @@
                         </div>
                         <div class="form-group">
                             <strong>Body:</strong>
-                            {{ $post->{'body:'. app()->getLocale()} }}
+                            {!! $post->{'body:'. app()->getLocale()} !!}
                         </div>
                         <div class="form-group">
                             <strong>Published At:</strong>

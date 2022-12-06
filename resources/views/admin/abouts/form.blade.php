@@ -22,7 +22,7 @@
         </div>
         <div class="form-group">
             {{ Form::label('about_me') }}
-            {{ Form::textarea('about_me:'.app()->getLocale(), $about->{'about_me:'. app()->getLocale()}, ['class' => 'form-control' . ($errors->has('about_me:'.app()->getLocale()) ? ' is-invalid' : ''), 'placeholder' => 'About Me']) }}
+            {{ Form::textarea('about_me:'.app()->getLocale(), $about->{'about_me:'. app()->getLocale()}, ['id'=> 'summernote','class' => 'form-control' . ($errors->has('about_me:'.app()->getLocale()) ? ' is-invalid' : ''), 'placeholder' => 'About Me']) }}
             {!! $errors->first('about_me:'.app()->getLocale(), '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">

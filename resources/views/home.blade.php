@@ -135,7 +135,7 @@
                       <h5 class="title-left">About me</h5>
                     </div>
                     <p class="lead">
-                      {{ $about->{'about_me:'. app()->getLocale()}  }}
+                      {!! $about->{'about_me:'. app()->getLocale()}  !!}
                     </p>
                   </div>
                 </div>

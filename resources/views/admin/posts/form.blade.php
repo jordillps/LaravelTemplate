@@ -21,7 +21,7 @@
         </div>
         <div class="form-group">
             {{ Form::label('body') }}
-            {{ Form::textarea('body:'.app()->getLocale(), $post->{'body:'. app()->getLocale()}, ['class' => 'form-control' . ($errors->has('body:'.app()->getLocale()) ? ' is-invalid' : ''), 'placeholder' => 'Body']) }}
+            {{ Form::textarea('body:'.app()->getLocale(), $post->{'body:'. app()->getLocale()}, ['id'=> "summernote",'class' => 'form-control' . ($errors->has('body:'.app()->getLocale()) ? ' is-invalid' : ''), 'placeholder' => 'Body']) }}
             {!! $errors->first('body:'.app()->getLocale(), '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="row">
@@ -70,7 +70,6 @@
 @push('scripts')
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/min/dropzone.min.js"></script>
     <script>
-        
         var uploadedDocumentMap = {}
         Dropzone.options.documentDropzone = {
           url: '{{ route('posts.storeMedia') }}',
