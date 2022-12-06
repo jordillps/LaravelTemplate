@@ -17,19 +17,19 @@
                     </div>
 
                     <div class="card-body">
-                        <div class="form-group">
+                        <div class="callout callout-primary">
                             <strong>Page:</strong>
                             {{ $header->page->name }}
                         </div>
-                        <div class="form-group">
+                        <div class="callout callout-primary">
                             <strong>Title:</strong>
                             {{ $header->{'title:'. app()->getLocale()} }}
                         </div>
-                        <div class="form-group">
+                        <div class="callout callout-primary">
                             <strong>Text:</strong>
                             {{ $header->{'text:'. app()->getLocale()} }}
                         </div>
-                        <div class="form-group">
+                        <div class="callout callout-primary">
                             <strong>Picture:</strong>
                             <div class="row p-3">
                                 @foreach ($header->getMedia('images') as $media)

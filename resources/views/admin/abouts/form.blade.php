@@ -10,50 +10,72 @@
           {!! Form::select('page_id', $pages, $about->page_id, ['class' => 'form-control' . ($errors->has('page_id') ? ' is-invalid' : '')]) !!}
           {!! $errors->first('page_id', '<div class="invalid-feedback">:message</div>') !!}
         </div>
-        <div class="form-group">
-            {{ Form::label('name') }}
-            {{ Form::text('name', $about->name, ['class' => 'form-control' . ($errors->has('name') ? ' is-invalid' : ''), 'placeholder' => 'Name']) }}
-            {!! $errors->first('name', '<div class="invalid-feedback">:message</div>') !!}
-        </div>
-        <div class="form-group">
-            {{ Form::label('profession') }}
-            {{ Form::text('profession:'.app()->getLocale(), $about->{'profession:'. app()->getLocale()}, ['class' => 'form-control' . ($errors->has('profession:'.app()->getLocale()) ? ' is-invalid' : ''), 'placeholder' => 'Profession']) }}
-            {!! $errors->first('profession:'.app()->getLocale(), '<div class="invalid-feedback">:message</div>') !!}
-        </div>
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <div class="form-group">
+              {{ Form::label('name') }}
+              {{ Form::text('name', $about->name, ['class' => 'form-control' . ($errors->has('name') ? ' is-invalid' : ''), 'placeholder' => 'Name']) }}
+              {!! $errors->first('name', '<div class="invalid-feedback">:message</div>') !!}
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="form-group">
+              {{ Form::label('profession') }}
+              {{ Form::text('profession:'.app()->getLocale(), $about->{'profession:'. app()->getLocale()}, ['class' => 'form-control' . ($errors->has('profession:'.app()->getLocale()) ? ' is-invalid' : ''), 'placeholder' => 'Profession']) }}
+              {!! $errors->first('profession:'.app()->getLocale(), '<div class="invalid-feedback">:message</div>') !!}
+            </div>
+          </div>
+        </div>   
         <div class="form-group">
             {{ Form::label('about_me') }}
             {{ Form::textarea('about_me:'.app()->getLocale(), $about->{'about_me:'. app()->getLocale()}, ['id'=> 'summernote','class' => 'form-control' . ($errors->has('about_me:'.app()->getLocale()) ? ' is-invalid' : ''), 'placeholder' => 'About Me']) }}
             {!! $errors->first('about_me:'.app()->getLocale(), '<div class="invalid-feedback">:message</div>') !!}
         </div>
-        <div class="form-group">
-            {{ Form::label('email') }}
-            {{ Form::text('email', $about->email, ['class' => 'form-control' . ($errors->has('email') ? ' is-invalid' : ''), 'placeholder' => 'Email']) }}
-            {!! $errors->first('email', '<div class="invalid-feedback">:message</div>') !!}
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <div class="form-group">
+              {{ Form::label('email') }}
+              {{ Form::text('email', $about->email, ['class' => 'form-control' . ($errors->has('email') ? ' is-invalid' : ''), 'placeholder' => 'Email']) }}
+              {!! $errors->first('email', '<div class="invalid-feedback">:message</div>') !!}
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="form-group">
+              {{ Form::label('phone') }}
+              {{ Form::text('phone', $about->phone, ['class' => 'form-control' . ($errors->has('phone') ? ' is-invalid' : ''), 'placeholder' => 'Phone']) }}
+              {!! $errors->first('phone', '<div class="invalid-feedback">:message</div>') !!}
+            </div>
+          </div>
         </div>
-        <div class="form-group">
-            {{ Form::label('phone') }}
-            {{ Form::text('phone', $about->phone, ['class' => 'form-control' . ($errors->has('phone') ? ' is-invalid' : ''), 'placeholder' => 'Phone']) }}
-            {!! $errors->first('phone', '<div class="invalid-feedback">:message</div>') !!}
-        </div>
-        <div class="form-group">
-            {{ Form::label('html') }}
-            {{ Form::text('html', $about->html, ['class' => 'form-control' . ($errors->has('html') ? ' is-invalid' : ''), 'placeholder' => 'Html']) }}
-            {!! $errors->first('html', '<div class="invalid-feedback">:message</div>') !!}
-        </div>
-        <div class="form-group">
-            {{ Form::label('css') }}
-            {{ Form::text('css', $about->css, ['class' => 'form-control' . ($errors->has('css') ? ' is-invalid' : ''), 'placeholder' => 'Css']) }}
-            {!! $errors->first('css', '<div class="invalid-feedback">:message</div>') !!}
-        </div>
-        <div class="form-group">
-            {{ Form::label('php') }}
-            {{ Form::text('php', $about->php, ['class' => 'form-control' . ($errors->has('php') ? ' is-invalid' : ''), 'placeholder' => 'Php']) }}
-            {!! $errors->first('php', '<div class="invalid-feedback">:message</div>') !!}
-        </div>
-        <div class="form-group">
-            {{ Form::label('javascript') }}
-            {{ Form::text('javascript', $about->javascript, ['class' => 'form-control' . ($errors->has('javascript') ? ' is-invalid' : ''), 'placeholder' => 'Javascript']) }}
-            {!! $errors->first('javascript', '<div class="invalid-feedback">:message</div>') !!}
+        <div class="row">
+          <div class="col-12 col-md-3">
+              <div class="form-group">
+                  {{ Form::label('html') }}
+                  {{ Form::text('html', $about->html, ['class' => 'form-control' . ($errors->has('html') ? ' is-invalid' : ''), 'placeholder' => 'Html']) }}
+                  {!! $errors->first('html', '<div class="invalid-feedback">:message</div>') !!}
+              </div>
+          </div>
+          <div class="col-12 col-md-3">
+            <div class="form-group">
+                {{ Form::label('css') }}
+                {{ Form::text('css', $about->css, ['class' => 'form-control' . ($errors->has('css') ? ' is-invalid' : ''), 'placeholder' => 'Css']) }}
+                {!! $errors->first('css', '<div class="invalid-feedback">:message</div>') !!}
+            </div>
+          </div>
+          <div class="col-12 col-md-3">
+            <div class="form-group">
+                {{ Form::label('php') }}
+                {{ Form::text('php', $about->php, ['class' => 'form-control' . ($errors->has('php') ? ' is-invalid' : ''), 'placeholder' => 'Php']) }}
+                {!! $errors->first('php', '<div class="invalid-feedback">:message</div>') !!}
+            </div>
+          </div>
+          <div class="col-12 col-md-3">
+            <div class="form-group">
+                {{ Form::label('javascript') }}
+                {{ Form::text('javascript', $about->javascript, ['class' => 'form-control' . ($errors->has('javascript') ? ' is-invalid' : ''), 'placeholder' => 'Javascript']) }}
+                {!! $errors->first('javascript', '<div class="invalid-feedback">:message</div>') !!}
+            </div>
+          </div>
         </div>
         <div class="form-group">
           <label for="document">Header Image (Upload only one image, max dimensions 1000x1000)</label>

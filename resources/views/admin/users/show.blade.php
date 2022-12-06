@@ -23,24 +23,35 @@
                         </div>
 
                         <div class="card-body">
-                            
-                            <div class="form-group">
-                                <strong>Name:</strong>
-                                {{ $user->name }}
+                            <div class="row">
+                                <div class="col-12 col-md-6">
+                                    <div class="callout callout-primary">
+                                        <strong>Name:</strong>
+                                        {{ $user->name }}
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="callout callout-primary">
+                                        <strong>Role:</strong>
+                                        {{ $user->role->name }}
+                                    </div>
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <strong>Role:</strong>
-                                {{ $user->role->name }}
+                            <div class="row">
+                                <div class="col-12 col-md-6">
+                                    <div class="callout callout-primary">
+                                        <strong>Email:</strong>
+                                        {{ $user->email }}
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="callout callout-primary">
+                                        <strong>Date of Birth:</strong>
+                                        {{ Carbon\Carbon::parse($user->date_birth)->format('d-m-Y') }}
+                                    </div>
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <strong>Email:</strong>
-                                {{ $user->email }}
-                            </div>
-                            <div class="form-group">
-                                <strong>Date of Birth:</strong>
-                                {{ Carbon\Carbon::parse($user->date_birth)->format('d-m-Y') }}
-                            </div>
-                            <div class="form-group">
+                            <div class="callout callout-primary">
                                 <strong>Password:</strong>
                                 {{ $user->password }}
                             </div>

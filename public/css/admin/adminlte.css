@@ -32715,6 +32715,10 @@ html.maximized-card {
   border-left-color: #1e7e34;
 }
 
+.callout.callout-primary {
+  border-left-color: #007bff;
+}
+
 .dark-mode .callout {
   background-color: #3f474e;
 }

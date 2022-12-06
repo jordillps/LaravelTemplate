@@ -17,48 +17,69 @@
                     </div>
 
                     <div class="card-body">
-                        
-                        <div class="form-group">
+                        <div class="callout callout-primary">
                             <strong>Page:</strong>
                             {{ $about->page->name }}
                         </div>
-                        <div class="form-group">
-                            <strong>Name:</strong>
-                            {{ $about->name }}
+                        <div class="row">
+                            <div class="col-12 col-md-6">
+                                <div class="callout callout-primary">
+                                    <strong>Name:</strong>
+                                    {{ $about->name }}
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="callout callout-primary">
+                                    <strong>Profession:</strong>
+                                    {{ $about->{'profession:'. app()->getLocale()} }}
+                                </div>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <strong>Profession:</strong>
-                            {{ $about->{'profession:'. app()->getLocale()} }}
-                        </div>
-                        <div class="form-group">
+                        <div class="callout callout-primary">
                             <strong>About Me:</strong>
                             {!! $about->{'about_me:'. app()->getLocale()} !!}
                         </div>
-                        <div class="form-group">
-                            <strong>Email:</strong>
-                            {{ $about->email }}
+                        <div class="row">
+                            <div class="col-12 col-md-6">
+                                <div class="callout callout-primary">
+                                    <strong>Email:</strong>
+                                    {{ $about->email }}
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="callout callout-primary">
+                                    <strong>Phone:</strong>
+                                    {{ $about->phone }}
+                                </div>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <strong>Phone:</strong>
-                            {{ $about->phone }}
-                        </div>
-                        <div class="form-group">
-                            <strong>Html:</strong>
-                            {{ $about->html }}
-                        </div>
-                        <div class="form-group">
-                            <strong>Css:</strong>
-                            {{ $about->css }}
-                        </div>
-                        <div class="form-group">
-                            <strong>Php:</strong>
-                            {{ $about->php }}
-                        </div>
-                        <div class="form-group">
-                            <strong>Javascript:</strong>
-                            {{ $about->javascript }}
-                        </div>
-                        <div class="form-group">
+                        <div class="row">
+                            <div class="col-12 col-md-3">
+                                <div class="callout callout-primary">
+                                    <strong>Html:</strong>
+                                    {{ $about->html }}
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-3">
+                                <div class="callout callout-primary">
+                                    <strong>Css:</strong>
+                                    {{ $about->css }}
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-3">
+                                <div class="callout callout-primary">
+                                    <strong>Php:</strong>
+                                    {{ $about->php }}
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-3">
+                                <div class="callout callout-primary">
+                                    <strong>Javascript:</strong>
+                                    {{ $about->javascript }}
+                                </div>
+                            </div>
+                        </div>    
+                        <div class="callout callout-primary">
                             <strong>Picture:</strong>
                             <div class="row p-3">
                                 @foreach ($about->getMedia('images') as $media)

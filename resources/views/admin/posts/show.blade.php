@@ -18,39 +18,47 @@
 
                     <div class="card-body">
                         
-                        <div class="form-group">
+                        <div class="callout callout-primary">
                             <strong>Title:</strong>
                             {{ $post->{'title:'. app()->getLocale()} }}
                         </div>
-                        <div class="form-group">
+                        <div class="callout callout-primary">
                             <strong>Url:</strong>
                             {{ $post->{'url:'. app()->getLocale()} }}
                         </div>
-                        <div class="form-group">
+                        <div class="callout callout-primary">
                             <strong>Excerpt:</strong>
                             {{ $post->{'excerpt:'. app()->getLocale()} }}
                         </div>
-                        <div class="form-group">
+                        <div class="callout callout-primary">
                             <strong>Iframe:</strong>
                             {{ $post->{'iframe:'. app()->getLocale()} }}
                         </div>
-                        <div class="form-group">
+                        <div class="callout callout-primary">
                             <strong>Body:</strong>
                             {!! $post->{'body:'. app()->getLocale()} !!}
                         </div>
-                        <div class="form-group">
-                            <strong>Published At:</strong>
-                            {{ $post->published_at }}
+                        <div class="row">
+                            <div class="col-12 col-md-4">
+                                <div class="callout callout-primary">
+                                    <strong>Published At:</strong>
+                                    {{ $post->published_at }}
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4">
+                                <div class="callout callout-primary">
+                                    <strong>User:</strong>
+                                    {{ $post->user->name }}
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4">
+                                <div class="callout callout-primary">
+                                    <strong>Category:</strong>
+                                    {{ $post->category->name }}
+                                </div>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <strong>User:</strong>
-                            {{ $post->user->name }}
-                        </div>
-                        <div class="form-group">
-                            <strong>Category:</strong>
-                            {{ $post->category->name }}
-                        </div>
-                        <div class="form-group">
+                        <div class="callout callout-primary">
                             <strong>Pictures:</strong>
                             <div class="row">
                                 @foreach ($post->getMedia('images') as $media)
