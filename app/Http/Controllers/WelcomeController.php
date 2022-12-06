@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Page;
 use App\Models\Header;
+use App\Models\About;
 
 class WelcomeController extends Controller
 {
@@ -18,8 +19,12 @@ class WelcomeController extends Controller
         //
         $page = Page::where('name', 'home')->first('id');
         $header = Header::where('page_id', $page->id)->first();
-        $images = $header->getMedia('images');
-        return view('home', compact('header','images'));
+        $imagesHeader = $header->getMedia('images');
+
+        $about = About::where('page_id', $page->id)->first();
+        $imagesAbout = $about->getMedia('images');
+
+        return view('home', compact('header','imagesHeader','about','imagesAbout'));
     }
 
     /**

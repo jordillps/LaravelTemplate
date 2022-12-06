@@ -56,6 +56,13 @@ return [
             'visibility' => 'public',
         ],
 
+        'abouts-media' => [
+            'driver' => 'local',
+            'root' => public_path('/media/abouts'),
+            'url' => env('APP_URL').'/media/abouts',
+            'visibility' => 'public',
+        ],
+
         'public' => [
             'driver' => 'local',
             'root' => storage_path('app/public'),

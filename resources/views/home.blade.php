@@ -4,11 +4,19 @@
     @include('partials.navbar')
 
     <!--/ Intro Skew Star /-->
-    <div
-      id="home"
-      class="intro route bg-image"
-      style="background-image: url({{ $images[0]->getUrl('thumb') }})"
-    >
+    @if(count($imagesHeader)>0)
+      <div
+        id="home"
+        class="intro route bg-image"
+        style="background-image: url({{ $imagesHeader[0]->getUrl('thumb') }})"
+      >
+    @else
+      <div
+        id="home"
+        class="intro route bg-image"
+        style="background-image: url({{ asset('img/web/intro-bg.jpg') }})"
+      >
+    @endif
       <div class="overlay-itro"></div>
       <div class="intro-content display-table">
         <div class="table-cell">
@@ -37,76 +45,84 @@
                   <div class="row">
                     <div class="col-sm-6 col-md-5">
                       <div class="about-img">
-                        <img
-                          src="{{ asset('img/web/testimonial-2.jpg') }}"
-                          class="img-fluid rounded b-shadow-a"
-                          alt=""
-                        />
+                        @if(count($imagesAbout)>0)
+                          <img
+                            src="{{ $imagesAbout[0]->getUrl('thumb') }}"
+                            class="img-fluid rounded b-shadow-a"
+                            alt=""
+                          />
+                        @else
+                          <img
+                            src="{{ asset('img/web/testimonial-2.jpg') }}"
+                            class="img-fluid rounded b-shadow-a"
+                            alt=""
+                          />
+                        @endif
                       </div>
                     </div>
                     <div class="col-sm-6 col-md-7">
                       <div class="about-info">
                         <p>
                           <span class="title-s">Name: </span>
-                          <span>Morgan Freeman</span>
+                          <span>{{ $about->name }}</span>
                         </p>
                         <p>
                           <span class="title-s">Profile: </span>
-                          <span>full stack developer</span>
+                          <span>{{ $about->{'profession:'. app()->getLocale()}  }}</span>
                         </p>
                         <p>
                           <span class="title-s">Email: </span>
-                          <span>contact@example.com</span>
+                          <span>{{ $about->email }}</span>
                         </p>
                         <p>
                           <span class="title-s">Phone: </span>
-                          <span>(617) 557-0089</span>
+                          <span>{{ $about->phone }}</span>
                         </p>
                       </div>
                     </div>
                   </div>
                   <div class="skill-mf">
                     <p class="title-s">Skill</p>
-                    <span>HTML</span> <span class="pull-right">85%</span>
+                    <span>HTML</span> <span class="pull-right">{{ $about->html }}%</span>
                     <div class="progress">
                       <div
                         class="progress-bar"
                         role="progressbar"
-                        style="width: 85%"
-                        aria-valuenow="85"
+                        style="width:{{{ $about->html }}}%;"
+                        aria-valuenow="{{ $about->html }}"
                         aria-valuemin="0"
                         aria-valuemax="100"
                       ></div>
                     </div>
-                    <span>CSS3</span> <span class="pull-right">75%</span>
+                    <span>CSS3</span> <span class="pull-right">{{ $about->css }}%</span>
                     <div class="progress">
                       <div
                         class="progress-bar"
                         role="progressbar"
-                        style="width: 75%"
-                        aria-valuenow="75"
+                        style="width:{{{ $about->css }}}%;"
+                        aria-valuenow="{{ $about->css }}"
                         aria-valuemin="0"
                         aria-valuemax="100"
                       ></div>
                     </div>
-                    <span>PHP</span> <span class="pull-right">50%</span>
+                    <span>PHP</span> <span class="pull-right">{{ $about->php }}%</span>
                     <div class="progress">
                       <div
                         class="progress-bar"
                         role="progressbar"
-                        style="width: 50%"
-                        aria-valuenow="50"
+                        style="width:{{{ $about->php }}}%;"
+                        aria-valuenow="{{ $about->php }}"
                         aria-valuemin="0"
                         aria-valuemax="100"
                       ></div>
                     </div>
-                    <span>JAVASCRIPT</span> <span class="pull-right">90%</span>
+                    <span>JAVASCRIPT</span> <span class="pull-right">{{ $about->javascript }}%</span>
                     <div class="progress">
                       <div
                         class="progress-bar"
                         role="progressbar"
-                        style="width: 90%"
-                        aria-valuenow="90"
+                        style="width:{{{ $about->javascript }}}%;"
+                        aria-valuenow="{{ $about->javascript }}"
                         aria-valuemin="0"
                         aria-valuemax="100"
                       ></div>
@@ -119,23 +135,7 @@
                       <h5 class="title-left">About me</h5>
                     </div>
                     <p class="lead">
-                      Curabitur non nulla sit amet nisl tempus convallis quis ac
-                      lectus. Curabitur arcu erat, accumsan id imperdiet et,
-                      porttitor at sem. Praesent sapien massa, convallis a
-                      pellentesque nec, egestas non nisi. Nulla porttitor
-                      accumsan tincidunt.
-                    </p>
-                    <p class="lead">
-                      Mauris blandit aliquet elit, eget tincidunt nibh pulvinar
-                      a. Vivamus suscipit tortor eget felis porttitor volutpat.
-                      Vestibulum ac diam sit amet quam vehicula elementum sed
-                      sit amet dui. porttitor at sem.
-                    </p>
-                    <p class="lead">
-                      Nulla porttitor accumsan tincidunt. Quisque velit nisi,
-                      pretium ut lacinia in, elementum id enim. Nulla porttitor
-                      accumsan tincidunt. Mauris blandit aliquet elit, eget
-                      tincidunt nibh pulvinar a.
+                      {{ $about->{'about_me:'. app()->getLocale()}  }}
                     </p>
                   </div>
                 </div>
