@@ -18,5 +18,21 @@ return [
     'sent' => '¡Recordatorio de contraseña enviado!',
     'token' => 'Este token de restablecimiento de contraseña es inválido.',
     'user' => 'No se ha encontrado un usuario con esa dirección de correo.',
+    'change_password' => 'El :attribute introducido no coincide con el password actual.',
+
+    /*
+    |--------------------------------------------------------------------------
+    | Custom Validation Attributes
+    |--------------------------------------------------------------------------
+    |
+    | The following language lines are used to swap our attribute placeholder
+    | with something more reader friendly such as "E-Mail Address" instead
+    | of "email". This simply helps us make our message more expressive.
+    |
+    */
+
+    'attributes' => [
+        'current_password' => 'password'
+    ],
 
 ];

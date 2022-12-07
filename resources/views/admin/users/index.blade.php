@@ -19,12 +19,13 @@
                         <span id="card_title">
                             {{ __('User') }}
                         </span>
-
-                        <div class="float-right">
-                            <a href="{{ route('users.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
-                            {{ __('Create New') }}
-                            </a>
-                        </div>
+                        @if(Auth::user()->isAdmin())
+                            <div class="float-right">
+                                <a href="{{ route('users.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
+                                {{ __('Create New') }}
+                                </a>
+                            </div>
+                        @endif
                     </div>
                 </div>
                 @include('flash::message')

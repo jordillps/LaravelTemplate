@@ -36,17 +36,30 @@
                 </div>
             </div>
         </div>
-        <div class="form-group">
-            {{ Form::label('password') }}
-            {{ Form::text('password', $user->password, ['class' => 'form-control' . ($errors->has('password') ? ' is-invalid' : ''), 'placeholder' => 'Password']) }}
-            {!! $errors->first('password', '<div class="invalid-feedback">:message</div>') !!}
-        </div>
-
+        @if(Route::is('users.create'))       
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class="form-group">
+                        {{ Form::label('Password') }}
+                        {{ Form::password('password', ['class' => 'form-control' . ($errors->has('password') ? ' is-invalid' : ''), 'placeholder' => 'New Password']) }}
+                        {!! $errors->first('password', '<div class="invalid-feedback">:message</div>') !!}
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="form-group">
+                        {{ Form::label('confirm password') }}
+                        {{ Form::password('password_confirmation', ['class' => 'form-control' . ($errors->has('password_confirmation') ? ' is-invalid' : ''), 'placeholder' => 'Confirm New Password']) }}
+                        {!! $errors->first('password_confirmation', '<div class="invalid-feedback">:message</div>') !!}
+                    </div>
+                </div>
+            </div>                      
+        @endif
     </div>
     <div class="box-footer mt20">
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary">Save</button>
     </div>
 </div>
+
 
     
 

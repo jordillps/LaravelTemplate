@@ -8,6 +8,10 @@ use App\Http\Requests\UpdateUserRequest;
 use App\Models\User;
 use App\Models\Role;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
+use App\Rules\MatchOldPassword;
+
 
 /**
  * Class UserController
@@ -61,7 +65,7 @@ class UserController extends Controller
             'role_id' => $request->get('role_id'),
             'date_birth' => $request->get('date_birth'), 
             'email' => $request->get('email'),
-            'password' => $request->get('password'),
+            'password' => Hash::make($request->get('password')),
         ]);
 
         flash()->overlay($user->name . ' created successfully', 'Create User');
@@ -127,6 +131,20 @@ class UserController extends Controller
 
         flash()->overlay($user->name . ' deleted successfully', 'Delete User');
 
+        return redirect()->route('users.index');
+    }
+
+    public function changePasswordSave(Request $request){
+        
+        $request->validate([
+            'current_password' => ['required', new MatchOldPassword],
+            'new_password' => ['required','min:8','string'],
+            'new_confirm_password' => ['same:new_password'],
+        ]);
+
+        User::find(auth()->user()->id)->update(['password'=> Hash::make($request->new_password)]);
+
+        flash()->overlay('Password changed successfully', 'Change Password');
         return redirect()->route('users.index');
     }
 }

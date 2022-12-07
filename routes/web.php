@@ -35,10 +35,16 @@ Route::group(['middleware' => ['auth']], function () {
 
 	Route::group(["prefix" => "admin"], function() {
         Route::get('/', [HomeController::class, 'index'])->name('admin');
+
+        //Users
         Route::resource('/users', UserController::class);
+        Route::post('/change-password', [UserController::class, 'changePasswordSave'])->name('users.changePassword');
+
+        //Posts
         Route::resource('/posts', PostController::class);
         Route::post('/posts/storeMedia', [PostController::class, 'storeMedia'])->name('posts.storeMedia');
         Route::delete('/media/{media}/deleteMedia', [PostController::class, 'deleteMedia'])->name('media.deleteMedia');
+
         //Pages
         Route::resource('/pages', PageController::class);
 

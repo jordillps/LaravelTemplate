@@ -51,11 +51,6 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="callout callout-primary">
-                                <strong>Password:</strong>
-                                {{ $user->password }}
-                            </div>
-
                         </div>
                     </div>
                 </div>
