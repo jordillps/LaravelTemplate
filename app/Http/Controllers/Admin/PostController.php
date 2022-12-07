@@ -164,14 +164,15 @@ class PostController extends Controller
 
     public function deleteMedia(Media $media)
     {
-        //Borrem del servidor        
-        File::delete('media/posts' . "/" . $media->model_id . "/" . $media->file_name);
+        //Delete on the server 
+        File::delete(public_path('media/posts/' . $media->model_id . "/" . $media->file_name));
+       
         
-        //Borrem de la base de dades
+        //Delete on the database
         $media->delete();
 
         flash()->overlay('Deleted successfully', 'Delete Image');
 
-        return redirect()->back();
+        return redirect()->route('posts.index');
     }
 }

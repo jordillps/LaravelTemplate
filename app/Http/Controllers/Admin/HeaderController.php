@@ -159,10 +159,14 @@ class HeaderController extends Controller
 
     public function deleteMedia(Media $media)
     {
-        //Borrem del servidor        
-        File::delete('media/headers' . "/" . $media->model_id . "/" . $media->file_name);
+        //Delete on the server         
+        File::delete(public_path('media/headers/' . $media->model_id . '/' . $media->file_name));
+
+        //Delete on the server conversion
+        $file_name = str_replace(".","-thumb.",$media->file_name);       
+        File::delete(public_path('media/headers/' . $media->model_id . '/' . 'conversions/' . $file_name));
         
-        //Borrem de la base de dades
+        //Delete on the database
         $media->delete();
 
         flash()->overlay('Deleted successfully', 'Delete Image');

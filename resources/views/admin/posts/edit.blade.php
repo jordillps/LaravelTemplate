@@ -37,7 +37,7 @@
                             <div class="row">
                                 @foreach ($post->getMedia('images') as $media)
                                     <div class="col-12 col-md-4 col-lg-2">
-                                        <form action="{{ route('media.deleteMedia', ['media' => $media])}}" method="POST">
+                                        <form action="{{ route('posts.deleteMedia', ['media' => $media])}}" method="POST">
                                             {{ @method_field('DELETE')}}
                                             @csrf
                                             <img src="{{ $media->getUrl() }}" alt="" style="max-width: 100%; position:relative;">

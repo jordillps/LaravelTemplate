@@ -43,7 +43,7 @@ Route::group(['middleware' => ['auth']], function () {
         //Posts
         Route::resource('/posts', PostController::class);
         Route::post('/posts/storeMedia', [PostController::class, 'storeMedia'])->name('posts.storeMedia');
-        Route::delete('/media/{media}/deleteMedia', [PostController::class, 'deleteMedia'])->name('media.deleteMedia');
+        Route::delete('/posts/{media}/deleteMedia', [PostController::class, 'deleteMedia'])->name('posts.deleteMedia');
 
         //Pages
         Route::resource('/pages', PageController::class);
@@ -51,11 +51,11 @@ Route::group(['middleware' => ['auth']], function () {
         //Pages Components
         Route::resource('/headers', HeaderController::class);
         Route::post('/headers/storeMedia', [HeaderController::class, 'storeMedia'])->name('headers.storeMedia');
-        Route::delete('/media/{media}/deleteMedia', [HeaderController::class, 'deleteMedia'])->name('media.deleteMedia');
+        Route::delete('/headers/{media}/deleteMedia', [HeaderController::class, 'deleteMedia'])->name('headers.deleteMedia');
 
         Route::resource('/abouts', AboutController::class);
         Route::post('/abouts/storeMedia', [AboutController::class, 'storeMedia'])->name('abouts.storeMedia');
-        Route::delete('/media/{media}/deleteMedia', [AboutController::class, 'deleteMedia'])->name('media.deleteMedia');
+        Route::delete('/abouts/{media}/deleteMedia', [AboutController::class, 'deleteMedia'])->name('abouts.deleteMedia');
 
     });
 });
