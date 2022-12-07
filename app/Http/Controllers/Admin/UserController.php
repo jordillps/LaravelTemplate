@@ -11,7 +11,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use App\Rules\MatchOldPassword;
-
+use Illuminate\Routing\Route;
 
 /**
  * Class UserController
@@ -56,7 +56,6 @@ class UserController extends Controller
      */
     public function store(StoreUserRequest $request)
     {
-        //dd($request);
         // request()->validate(User::$rules);
         $request->validated();
 
@@ -94,7 +93,6 @@ class UserController extends Controller
      */
     public function edit(User $user)
     {
-        // $user = User::find($id);
         $roles = Role::all()->pluck('name', 'id');
 
         return view('admin.users.edit', compact('user', 'roles'));
@@ -112,6 +110,7 @@ class UserController extends Controller
         // request()->validate(User::$rules);
         
         $request->validated();
+
         $user->update($request->all());
 
 

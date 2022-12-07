@@ -24,12 +24,10 @@ class UpdateUserRequest extends FormRequest
     public function rules()
     {
         return [
-            //
             'name' => ['required', 'regex:/^[A-ZÀÁÇÉÈËÏÍÌÓÒÚÙÜÚÑa-zàáçéèëïíóòúüñ. ]+$/','min:4'],
             'role_id' => 'required',
             'date_birth' => 'required|date',
             'email' =>  'required','unique:users,email_address,'.$this->id,
-            'password' => 'required'
         ];
     }
 }
