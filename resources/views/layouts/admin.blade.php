@@ -36,16 +36,21 @@
 </head>
 <body>
     <div id="app">
+        @if(!Route::is('login'))
+            @include('admin.partials.navbar')
 
-        @include('admin.partials.navbar')
+            @include('admin.partials.sidebar')
 
-        @include('admin.partials.sidebar')
-
-        <main class="py-4">
-            @yield('content')
-        </main>
+            <main class="py-4">
+        @endif
         
-        @include('admin.partials.footer')
+            @yield('content')
+        
+        @if(!Route::is('login'))
+            </main>
+
+            @include('admin.partials.footer')
+        @endif
     </div>
 
     <!-- jQuery -->
