@@ -6,7 +6,6 @@
 
 @section('content')
 <div class="content-wrapper">
-    
     <section class="content container-fluid">
         <div class="row">
             <div class="col-sm-12">
@@ -15,8 +14,14 @@
                         <div style="display: flex; justify-content: space-between; align-items: center;">
 
                             <span id="card_title">
-                                {{ __('Header') }}
+                                {{ __('Service') }}
                             </span>
+
+                             <div class="float-right">
+                                <a href="{{ route('services.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
+                                  {{ __('Create New') }}
+                                </a>
+                              </div>
                         </div>
                     </div>
                     @include('flash::message')
@@ -36,20 +41,20 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($headers as $header)
+                                    @foreach ($services as $service)
                                         <tr>
-                                            <td>{{ $header->id }}</td>
+                                            <td>{{ $service->id }}</td>
                                             
-											<td>{{ $header->page->name }}</td>
+                                            <td>{{ $service->page->name }}</td>
 
-                                            <td>{{ $header->{'title:'. app()->getLocale()}  }}</td>
+                                            <td>{{ $service->{'title:'. app()->getLocale()}  }}</td>
 
                                             <td>
-                                                <a class="btn btn-sm btn-primary " href="{{ route('headers.show',$header->id) }}"><i class="fa fa-fw fa-eye"></i> Show</a>
-                                                    <a class="btn btn-sm btn-success" href="{{ route('headers.edit',$header->id) }}"><i class="fa fa-fw fa-edit"></i> Edit</a>
-                                                    <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-item-id="{{ $header->id }}" data-target="#modal-delete"><i class="fa fa-fw fa-trash"></i>
+                                                <a class="btn btn-sm btn-primary " href="{{ route('services.show',$service->id) }}"><i class="fa fa-fw fa-eye"></i> Show</a>
+                                                    <a class="btn btn-sm btn-success" href="{{ route('services.edit',$service->id) }}"><i class="fa fa-fw fa-edit"></i> Edit</a>
+                                                    <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-item-id="{{ $service->id }}" data-target="#modal-delete"><i class="fa fa-fw fa-trash"></i>
                                                         Delete
-                                                      </button>
+                                                    </button>
                                             </td>
                                         </tr>
                                     @endforeach
@@ -121,7 +126,7 @@
                 var button = $(event.relatedTarget);
                 const id = 'id';
                 $('.modal-title').text('Delete');
-                var route = "{{ route('headers.destroy',  'id' ) }}";
+                var route = "{{ route('services.destroy',  'id' ) }}";
                 route = route.replace('id',button.data('item-id'));
                 $('#deleteItemForm').attr('action', route);
             });

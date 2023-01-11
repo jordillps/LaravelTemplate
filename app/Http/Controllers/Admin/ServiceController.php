@@ -3,20 +3,19 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\HeaderStoreRequest;
-use App\Http\Requests\HeaderUpdateRequest;
-use App\Models\Header;
+use App\Http\Requests\ServiceStoreRequest;
+use App\Http\Requests\ServiceUpdateRequest;
+use App\Models\Service;
+use Illuminate\Http\Request;
 use App\Models\Page;
 use App\Models\Media;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
 
-
 /**
- * Class HeaderController
+ * Class ServiceController
  * @package App\Http\Controllers
  */
-class HeaderController extends Controller
+class ServiceController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -25,9 +24,8 @@ class HeaderController extends Controller
      */
     public function index()
     {
-        $headers = Header::all();
-
-        return view('admin.headers.index', compact('headers'));
+        $services = Service::all();
+        return view('admin.services.index', compact('services'));
     }
 
     /**
@@ -35,10 +33,11 @@ class HeaderController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        // $header = new Header();
-        // return view('header.create', compact('header'));
+    public function create(){
+
+        $service = new Service();
+        $pages = Page::all()->pluck('name', 'id');
+        return view('admin.services.create', compact('service', 'pages'));
     }
 
     /**
@@ -47,19 +46,19 @@ class HeaderController extends Controller
      * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
-    public function store(HeaderStoreRequest $request)
+    public function store(ServiceStoreRequest $request)
     {
         $request->validated();
 
-        $header = Header::create($request->all());
+        $service = Service::create($request->all());
 
         foreach ($request->input('images', []) as $file) {
-            $header->addMedia(storage_path('tmp/uploads/' . $file))->toMediaCollection('images', 'headers-media');
+            $service->addMedia(storage_path('tmp/uploads/' . $file))->toMediaCollection('images', 'services-media');
         }
 
-        flash()->overlay($header->id . ' created successfully', 'Saved Header');
+        flash()->overlay($service->id . ' created successfully', 'Saved Service');
 
-        return redirect()->route('headers.index');
+        return redirect()->route('services.index');
     }
 
     /**
@@ -68,10 +67,9 @@ class HeaderController extends Controller
      * @param  int $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Header $header)
-    {
-        return view('admin.headers.show', compact('header'));
+    public function show(Service $service){
 
+        return view('admin.services.show', compact('service'));
     }
 
     /**
@@ -80,45 +78,45 @@ class HeaderController extends Controller
      * @param  int $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Header $header)
-    {
+    public function edit(Service $service){
+
         $pages = Page::all()->pluck('name', 'id');
-        return view('admin.headers.edit', compact('header', 'pages'));
+        return view('admin.services.edit', compact('service', 'pages'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request $request
-     * @param  Header $header
+     * @param  Service $service
      * @return \Illuminate\Http\Response
      */
-    public function update(HeaderUpdateRequest $request, Header $header)
-    {
+    public function update(ServiceUpdateRequest $request, Service $service){
+
         $request->validated();
 
-        $header->update($request->all());
+        $service->update($request->all());
 
-        if (($header->getMedia('images'))) {
-            foreach ($header->getMedia() as $media) {
+        if (($service->getMedia('images'))) {
+            foreach ($service->getMedia() as $media) {
                 if (!in_array($media->file_name, $request->input('images', []))) {
                     $media->delete();
                 }
             }
         }
     
-        $media = $header->getMedia()->pluck('file_name')->toArray();
+        $media = $service->getMedia()->pluck('file_name')->toArray();
     
         foreach ($request->input('images', []) as $file) {
             if (count($media) === 0 || !in_array($file, $media)) {
-                $header->addMedia(storage_path('tmp/uploads/' . $file))->toMediaCollection('images','headers-media');
+                $service->addMedia(storage_path('tmp/uploads/' . $file))->toMediaCollection('images','services-media');
             }
         }
     
         
-        flash()->overlay($header->id . ' updated successfully', 'Update Header');
+        flash()->overlay($service->id . ' updated successfully', 'Update Service');
 
-        return redirect()->route('headers.index');
+        return redirect()->route('services.index');
     }
 
     /**
@@ -126,19 +124,18 @@ class HeaderController extends Controller
      * @return \Illuminate\Http\RedirectResponse
      * @throws \Exception
      */
-    public function destroy(Header $header)
-    {
-        $header->delete();
+    public function destroy(Service $service){
 
-        flash()->overlay($header->id . ' deleted successfully', 'Delete Header');
+        $service->delete();
 
-        return redirect()->route('headers.index');
+        flash()->overlay($service->id . ' deleted successfully', 'Delete Service');
+
+        return redirect()->route('services.index');
     }
 
 
 
-    public function storeMedia(Request $request)
-    {
+    public function storeMedia(Request $request){
         $path = storage_path('tmp/uploads');
 
         if (!file_exists($path)) {
@@ -157,14 +154,14 @@ class HeaderController extends Controller
         ]);
     }
 
-    public function deleteMedia(Media $media)
-    {
+    public function deleteMedia(Media $media){
+
         //Delete on the server         
-        File::delete(public_path('media/headers/' . $media->model_id . '/' . $media->file_name));
+        File::delete(public_path('media/services/' . $media->model_id . '/' . $media->file_name));
 
         //Delete on the server conversion
         $file_name = str_replace(".","-thumb.",$media->file_name);       
-        File::delete(public_path('media/headers/' . $media->model_id . '/' . 'conversions/' . $file_name));
+        File::delete(public_path('media/services/' . $media->model_id . '/' . 'conversions/' . $file_name));
         
         //Delete on the database
         $media->delete();

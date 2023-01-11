@@ -191,10 +191,20 @@
                   </ul>
                 </li>
                 <li class="nav-item">
-                  <a href="pages/examples/lockscreen.html" class="nav-link">
+                  <a href="#" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
-                    <p>Lockscreen</p>
+                    <p>
+                      Services
+                      <i class="fas fa-angle-left right"></i>
+                    </p>
                   </a>
+                  <ul class="nav nav-treeview">
+                    <li class="nav-item ml-5">
+                      <a href="{{ route('services.index') }}" class="nav-link">
+                        <p>List</p>
+                      </a>
+                    </li>
+                  </ul>
                 </li>
                 <li class="nav-item">
                   <a href="pages/examples/legacy-user-menu.html" class="nav-link">

@@ -63,6 +63,13 @@ return [
             'visibility' => 'public',
         ],
 
+        'services-media' => [
+            'driver' => 'local',
+            'root' => public_path('/media/services'),
+            'url' => env('APP_URL').'/media/services',
+            'visibility' => 'public',
+        ],
+
         'public' => [
             'driver' => 'local',
             'root' => storage_path('app/public'),

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Page;
 use App\Models\Header;
 use App\Models\About;
+use App\Models\Service;
 
 class WelcomeController extends Controller
 {
@@ -24,7 +25,9 @@ class WelcomeController extends Controller
         $about = About::where('page_id', $page->id)->first();
         $imagesAbout = $about->getMedia('images');
 
-        return view('home', compact('header','imagesHeader','about','imagesAbout'));
+        $services = Service::where('page_id', $page->id)->get();
+
+        return view('home', compact('header','imagesHeader','about','imagesAbout', 'services'));
     }
 
     /**

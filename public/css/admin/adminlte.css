@@ -53020,3 +53020,16 @@ a.text-muted:hover {
 .hidden.sm\:flex-1.sm\:flex.sm\:items-center.sm\:justify-between {
   display: none;
 }
+
+.ico-circle {
+  font-size: 4rem;
+  margin-left: 0.2em;
+}
+
+.form-group-icons{
+  display: flex;
+  flex-wrap: wrap;
+  gap:5em;
+  justify-content: center;
+  align-items: center;
+}

@@ -9,6 +9,7 @@ use App\Http\Controllers\LocalizationController;
 use App\Http\Controllers\Admin\PageController;
 use App\Http\Controllers\Admin\HeaderController;
 use App\Http\Controllers\Admin\AboutController;
+use App\Http\Controllers\Admin\ServiceController;
 
 
 /*
@@ -56,6 +57,10 @@ Route::group(['middleware' => ['auth']], function () {
         Route::resource('/abouts', AboutController::class);
         Route::post('/abouts/storeMedia', [AboutController::class, 'storeMedia'])->name('abouts.storeMedia');
         Route::delete('/abouts/{media}/deleteMedia', [AboutController::class, 'deleteMedia'])->name('abouts.deleteMedia');
+
+        Route::resource('/services', ServiceController::class);
+        Route::post('/services/storeMedia', [ServiceController::class, 'storeMedia'])->name('services.storeMedia');
+        Route::delete('/services/{media}/deleteMedia', [ServiceController::class, 'deleteMedia'])->name('services.deleteMedia');
 
     });
 });
