@@ -53033,3 +53033,12 @@ a.text-muted:hover {
   justify-content: center;
   align-items: center;
 }
+
+
+.modal.fade.success .modal-content {
+  border: 4px solid var(--success);
+  color: var(--success);
+}
+
+
+
