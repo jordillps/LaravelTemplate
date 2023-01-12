@@ -207,46 +207,20 @@
                   </ul>
                 </li>
                 <li class="nav-item">
-                  <a href="pages/examples/legacy-user-menu.html" class="nav-link">
+                  <a href="#" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
-                    <p>Legacy User Menu</p>
+                    <p>
+                      Titles
+                      <i class="fas fa-angle-left right"></i>
+                    </p>
                   </a>
-                </li>
-                <li class="nav-item">
-                  <a href="pages/examples/language-menu.html" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Language Menu</p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="pages/examples/404.html" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Error 404</p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="pages/examples/500.html" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Error 500</p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="pages/examples/pace.html" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Pace</p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="pages/examples/blank.html" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Blank Page</p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="starter.html" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Starter Page</p>
-                  </a>
+                  <ul class="nav nav-treeview">
+                    <li class="nav-item ml-5">
+                      <a href="{{ route('titles.index') }}" class="nav-link">
+                        <p>List</p>
+                      </a>
+                    </li>
+                  </ul>
                 </li>
               </ul>
             </li>

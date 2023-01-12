@@ -152,9 +152,9 @@
         <div class="row">
           <div class="col-sm-12">
             <div class="title-box text-center">
-              <h3 class="title-a">Services</h3>
+              <h3 class="title-a">{{ $titles[0]->{'title:'. app()->getLocale()} }}</h3>
               <p class="subtitle-a">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                {{ $titles[0]->{'text:'. app()->getLocale()} }}
               </p>
               <div class="line-mf"></div>
             </div>
@@ -246,9 +246,9 @@
         <div class="row">
           <div class="col-sm-12">
             <div class="title-box text-center">
-              <h3 class="title-a">Portfolio</h3>
+              <h3 class="title-a">{{ $titles[1]->{'title:'. app()->getLocale()} }}</h3>
               <p class="subtitle-a">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                {{ $titles[1]->{'text:'. app()->getLocale()} }}
               </p>
               <div class="line-mf"></div>
             </div>
@@ -468,9 +468,9 @@
         <div class="row">
           <div class="col-sm-12">
             <div class="title-box text-center">
-              <h3 class="title-a">Blog</h3>
+              <h3 class="title-a">{{ $titles[2]->{'title:'. app()->getLocale()} }}</h3>
               <p class="subtitle-a">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                {{ $titles[2]->{'text:'. app()->getLocale()} }}
               </p>
               <div class="line-mf"></div>
             </div>

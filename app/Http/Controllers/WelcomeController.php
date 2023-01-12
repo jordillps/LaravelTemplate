@@ -7,6 +7,7 @@ use App\Models\Page;
 use App\Models\Header;
 use App\Models\About;
 use App\Models\Service;
+use App\Models\Title;
 
 class WelcomeController extends Controller
 {
@@ -27,7 +28,9 @@ class WelcomeController extends Controller
 
         $services = Service::where('page_id', $page->id)->get();
 
-        return view('home', compact('header','imagesHeader','about','imagesAbout', 'services'));
+        $titles = Title::where('page_id', $page->id)->get();
+
+        return view('home', compact('header','imagesHeader','about','imagesAbout', 'services', 'titles'));
     }
 
     /**
