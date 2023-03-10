@@ -46,7 +46,10 @@
                                 @enderror
                             </div>
 
-                            <div class="row m-0 mb-3 justify-content-between align-items-center">
+                            <div class="row m-0 mb-5 justify-content-between align-items-center">
+                                <button type="submit" class="btn btn-block btn btn-primary mb-2">
+                                    {{ __('Login') }}
+                                </button>
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" name="remember" id="remember" {{
                                         old('remember') ? 'checked' : '' }}>
@@ -55,9 +58,6 @@
                                         {{ __('Remember Me') }}
                                     </label>
                                 </div>
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Login') }}
-                                </button>
                             </div>
                             <div class="row mb-3">
                                 <div class="col-12">

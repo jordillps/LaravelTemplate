@@ -4,22 +4,25 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Astrotomic\Translatable\Contracts\Translatable as TranslatableContract;
+use Astrotomic\Translatable\Translatable;
 
-class Category extends Model
-{
+class Category extends Model implements TranslatableContract{
+
     use HasFactory;
+    use Translatable;
 
     protected $table = 'categories';
+
+    public $translatedAttributes = ['name','url'];
 
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
-    protected $fillable = [
-        'name',
-        'url',
-    ];
+    protected $fillable = [];
+
 
     /**
      * The attributes that should be cast to native types.
@@ -30,8 +33,11 @@ class Category extends Model
         'id' => 'integer',
     ];
 
-    public function posts()
-    {
+    public function posts(){
         return $this->hasMany(Post::class);
+    }
+
+    public function projects(){
+        return $this->hasMany(Project::class);
     }
 }

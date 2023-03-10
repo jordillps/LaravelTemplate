@@ -9,6 +9,8 @@ use App\Models\Header;
 use App\Models\HeaderTranslation;
 use App\Models\About;
 use App\Models\AboutTranslation;
+use App\Models\Category;
+use App\Models\CategoryTranslation;
 
 
 class DatabaseSeeder extends Seeder
@@ -36,7 +38,16 @@ class DatabaseSeeder extends Seeder
         ]);
 
         \App\Models\User::factory(10)->create();
-        $this->call(CategorySeeder::class);
+        
+        Category::factory(5)->create();
+
+
+        for ($i = 0; $i <= 5; $i++) {
+            CategoryTranslation::factory()->count(1)->create(['category_id' => $i, 'locale' => 'es']);
+            CategoryTranslation::factory()->count(1)->create(['category_id' => $i,'locale' => 'en']);
+            CategoryTranslation::factory()->count(1)->create(['category_id' => $i,'locale' => 'ca']);
+        }
+
         $this->call(TagSeeder::class);
         $this->call(PostSeeder::class);
         $this->call(CommentSeeder::class);

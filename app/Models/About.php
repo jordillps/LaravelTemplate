@@ -34,14 +34,7 @@ class About extends Model implements HasMedia, TranslatableContract
 
   use InteractsWithMedia;
     
-    static $rules = [
-		'page_id' => 'required',
-    'name' => 'required',
-		'email' => 'required',
-		'phone' => 'required',
-    ];
-
-
+    
     public $translatedAttributes = ['profession', 'about_me'];
 
     /**
