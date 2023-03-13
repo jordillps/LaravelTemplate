@@ -2,6 +2,7 @@
 
 use App\Models\User;
 use App\Models\Post;
+use App\Models\Project;
 use Diglactic\Breadcrumbs\Breadcrumbs;
 use Diglactic\Breadcrumbs\Generator as BreadcrumbTrail;
 
@@ -70,6 +71,34 @@ Breadcrumbs::for('posts.edit', function (BreadcrumbTrail $trail, Post $post) {
 Breadcrumbs::for('pages.index', function (BreadcrumbTrail $trail) {
     $trail->parent('admin');
     $trail->push('Pages', route('pages.index'));
+});
+
+// Projects
+Breadcrumbs::for('projects.index', function (BreadcrumbTrail $trail) {
+    $trail->parent('admin');
+    $trail->push('Projects', route('projects.index'));
+});
+
+// Projects > Create Project
+Breadcrumbs::for('projects.create', function (BreadcrumbTrail $trail) {
+    $trail->parent('projects.index');
+    $trail->push('Create Project', route('projects.create'));
+});
+
+// Projects > Show Project
+Breadcrumbs::for('projects.show', function (BreadcrumbTrail $trail, Project $project) {
+    $trail->parent('projects.index');
+    if($project->title != null){
+        $trail->push($project->title, route('projects.show', $project));
+    }
+});
+
+// Projects > Edit Project
+Breadcrumbs::for('projects.edit', function (BreadcrumbTrail $trail, Project $project) {
+    $trail->parent('projects.index');
+    if($project->title != null){
+        $trail->push($project->title, route('projects.edit', $project));
+    }
 });
 
 

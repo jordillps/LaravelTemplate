@@ -10,6 +10,7 @@ use App\Http\Controllers\Admin\PageController;
 use App\Http\Controllers\Admin\HeaderController;
 use App\Http\Controllers\Admin\AboutController;
 use App\Http\Controllers\Admin\ServiceController;
+use App\Http\Controllers\Admin\ProjectController;
 use App\Http\Controllers\Admin\TitleController;
 
 
@@ -64,6 +65,11 @@ Route::group(['middleware' => ['auth']], function () {
         Route::delete('/services/{media}/deleteMedia', [ServiceController::class, 'deleteMedia'])->name('services.deleteMedia');
 
         Route::resource('/titles', TitleController::class);
+
+        //Projects
+        Route::resource('/projects', ProjectController::class);
+        Route::post('/projects/storeMedia', [ProjectController::class, 'storeMedia'])->name('projects.storeMedia');
+        Route::delete('/projects/{media}/deleteMedia', [ProjectController::class, 'deleteMedia'])->name('projects.deleteMedia');
 
     });
 });

@@ -11,6 +11,10 @@ use App\Models\About;
 use App\Models\AboutTranslation;
 use App\Models\Category;
 use App\Models\CategoryTranslation;
+use App\Models\Title;
+use App\Models\TitleTranslation;
+use App\Models\Service;
+use App\Models\ServiceTranslation;
 
 
 class DatabaseSeeder extends Seeder
@@ -22,6 +26,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        //Admin
         \App\Models\Role::factory()->create(['name' => 'Admin','description' =>'Administrador']);
         \App\Models\Role::factory()->create(['name' => 'User','description' =>'Usuario de la aplicación']);
 
@@ -37,8 +42,11 @@ class DatabaseSeeder extends Seeder
             'updated_at' => now(),
         ]);
 
+        //Users
         \App\Models\User::factory(10)->create();
         
+
+        //Categories
         Category::factory(5)->create();
 
 
@@ -50,10 +58,13 @@ class DatabaseSeeder extends Seeder
 
         $this->call(TagSeeder::class);
         $this->call(PostSeeder::class);
+        $this->call(ProjectSeeder::class);
         $this->call(CommentSeeder::class);
 
+        //Pages
         \App\Models\Page::factory()->create(['name' => 'Home']);
 
+        //Header home page
         Header::factory()->count(1)->create(['page_id' => 1])->each(function (Header $header) {
             HeaderTranslation::factory()->count(1)->create([
                 'header_id' => $header->id, 
@@ -75,10 +86,97 @@ class DatabaseSeeder extends Seeder
             ]);
         });
 
+        //Titles Home Page
+        Title::factory()->count(1)->create(['page_id' => 1])->each(function (Title $title) {
+            TitleTranslation::factory()->count(1)->create([
+                'title_id' => $title->id, 
+                'locale' => 'es',
+                'title' => 'Servicios',
+                'text' => 'Descripción Servicios'
+            ]);
+            TitleTranslation::factory()->count(1)->create([
+                'title_id' => $title->id,
+                'locale' => 'en',
+                'title' => 'Services',
+                'text' => 'Services Description'
+            ]);
+            TitleTranslation::factory()->count(1)->create([
+                'title_id' => $title->id,
+                'locale' => 'ca',
+                'title' => 'Serveis',
+                'text' => 'Descripció Serveis'
+            ]);
+        });
+
+        Title::factory()->count(1)->create(['page_id' => 1])->each(function (Title $title) {
+            TitleTranslation::factory()->count(1)->create([
+                'title_id' => $title->id, 
+                'locale' => 'es',
+                'title' => 'Proyectos',
+                'text' => 'Descripción Proyectos'
+            ]);
+            TitleTranslation::factory()->count(1)->create([
+                'title_id' => $title->id,
+                'locale' => 'en',
+                'title' => 'Projects',
+                'text' => 'Projects Description'
+            ]);
+            TitleTranslation::factory()->count(1)->create([
+                'title_id' => $title->id,
+                'locale' => 'ca',
+                'title' => 'Projectes',
+                'text' => 'Descripció Projectes'
+            ]);
+        });
+
+        Title::factory()->count(1)->create(['page_id' => 1])->each(function (Title $title) {
+            TitleTranslation::factory()->count(1)->create([
+                'title_id' => $title->id, 
+                'locale' => 'es',
+                'title' => 'Publicaciones',
+                'text' => 'Descripción Publicaciones'
+            ]);
+            TitleTranslation::factory()->count(1)->create([
+                'title_id' => $title->id,
+                'locale' => 'en',
+                'title' => 'Posts',
+                'text' => 'Posts Description'
+            ]);
+            TitleTranslation::factory()->count(1)->create([
+                'title_id' => $title->id,
+                'locale' => 'ca',
+                'title' => 'Publicacions',
+                'text' => 'Descripció Publicacions'
+            ]);
+        });
+
+        //About home page
         About::factory()->count(1)->create(['page_id' => 1])->each(function (About $about) {
             AboutTranslation::factory()->count(1)->create(['about_id' => $about->id, 'locale' => 'es']);
             AboutTranslation::factory()->count(1)->create(['about_id' => $about->id,'locale' => 'en']);
             AboutTranslation::factory()->count(1)->create(['about_id' => $about->id,'locale' => 'ca']);
+        });
+
+        //Services
+        Service::factory()->count(1)->create(['page_id' => 1])->each(function (Service $service) {
+            ServiceTranslation::factory()->count(1)->create([
+                'service_id' => $service->id, 
+                'locale' => 'es',
+                'title' => 'Desarrollo web',
+                'text' => 'Descripción desarolloro web'
+            ]);
+            ServiceTranslation::factory()->count(1)->create([
+                'service_id' => $service->id,
+                'locale' => 'en',
+                'title' => 'Web development',
+                'text' => 'Web development Description'
+            ]);
+            ServiceTranslation::factory()->count(1)->create([
+                'service_id' => $service->id,
+                'locale' => 'ca',
+                'title' => 'Desenvolupament web',
+                'text' => 'Descripció desenvolupament web'
+            ]);
         });
 
     }

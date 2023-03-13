@@ -2,21 +2,32 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Spatie\MediaLibrary\MediaCollections\Models\Media;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 use Astrotomic\Translatable\Contracts\Translatable as TranslatableContract;
 use Astrotomic\Translatable\Translatable;
 
-class Project extends Model implements HasMedia, TranslatableContract{
+/**
+ * Class Project
+ *
+ * @property $id
+ * @property $created_at
+ * @property $updated_at
+ *
+ * @package App
+ * @mixin \Illuminate\Database\Eloquent\Builder
+ */
+class Project extends Model  implements HasMedia, TranslatableContract{
 
-    use Translatable;
-    use InteractsWithMedia;
     use HasFactory;
+    use Translatable;
 
-    public $translatedAttributes = ['title','text'];
+    use InteractsWithMedia;
+
+    public $translatedAttributes = ['title', 'text'];
+
 
     /**
      * Attributes that should be mass-assignable.
@@ -32,4 +43,9 @@ class Project extends Model implements HasMedia, TranslatableContract{
         
         return $this->belongsTo(Category::class);
     }
+
+    public function medias(){
+        return $this->morphMany(Media::class, 'mediable');
+    }
+
 }

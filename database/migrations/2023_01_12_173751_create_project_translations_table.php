@@ -15,6 +15,11 @@ return new class extends Migration
     {
         Schema::create('project_translations', function (Blueprint $table) {
             $table->id();
+            $table->integer('project_id')->constrained()->onDelete('cascade');
+            $table->string('locale')->index();
+            $table->string('title', 400);
+            $table->mediumText('text')->nullable();
+            $table->unique(['project_id', 'locale']);
             $table->timestamps();
         });
     }

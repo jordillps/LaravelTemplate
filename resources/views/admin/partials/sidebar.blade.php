@@ -137,6 +137,27 @@
               <a href="#" class="nav-link">
                 <i class="nav-icon far fa-envelope"></i>
                 <p>
+                  PROJECTS
+                  <i class="fas fa-angle-left right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item ml-5">
+                  <a href="{{ route('projects.index') }}" class="nav-link">
+                    <p>List</p>
+                  </a>
+                </li>
+                <li class="nav-item ml-5">
+                  <a href="{{ route('projects.create') }}" class="nav-link">
+                    <p>Create</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="nav-icon far fa-envelope"></i>
+                <p>
                   PAGES
                   <i class="fas fa-angle-left right"></i>
                 </p>

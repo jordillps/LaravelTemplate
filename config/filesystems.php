@@ -70,6 +70,13 @@ return [
             'visibility' => 'public',
         ],
 
+        'projects-media' => [
+            'driver' => 'local',
+            'root' => public_path('/media/projects'),
+            'url' => env('APP_URL').'/media/projects',
+            'visibility' => 'public',
+        ],
+
         'public' => [
             'driver' => 'local',
             'root' => storage_path('app/public'),
