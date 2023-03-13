@@ -9,6 +9,7 @@ use App\Models\About;
 use App\Models\Service;
 use App\Models\Title;
 use App\Models\Project;
+use App\Models\Post;
 
 class WelcomeController extends Controller
 {
@@ -19,13 +20,11 @@ class WelcomeController extends Controller
      */
     public function index()
     {
-        //
         $page = Page::where('name', 'home')->first('id');
+
         $header = Header::where('page_id', $page->id)->first();
-        $imagesHeader = $header->getMedia('images');
 
         $about = About::where('page_id', $page->id)->first();
-        $imagesAbout = $about->getMedia('images');
 
         $services = Service::where('page_id', $page->id)->get();
 
@@ -33,7 +32,9 @@ class WelcomeController extends Controller
 
         $projects = Project::all();
 
-        return view('home', compact('header','imagesHeader','about','imagesAbout', 'services', 'titles', 'projects'));
+        $posts = Post::take(3)->get();
+
+        return view('home', compact('header','about','services', 'titles', 'projects', 'posts'));
     }
 
     /**

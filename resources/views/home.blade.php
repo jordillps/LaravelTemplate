@@ -4,11 +4,11 @@
     @include('partials.navbar')
 
     <!--/ Intro Skew Star /-->
-    @if(count($imagesHeader)>0)
+    @if(count($header->getMedia('images'))>0)
       <div
         id="home"
         class="intro route bg-image"
-        style="background-image: url({{ $imagesHeader[0]->getUrl('thumb') }})"
+        style="background-image: url({{ $header->getMedia('images')[0]->getUrl('thumb') }})"
       >
     @else
       <div
@@ -45,9 +45,9 @@
                   <div class="row">
                     <div class="col-sm-6 col-md-5">
                       <div class="about-img">
-                        @if(count($imagesAbout)>0)
+                        @if(count($about->getMedia('images'))>0)
                           <img
-                            src="{{ $imagesAbout[0]->getUrl('thumb') }}"
+                            src="{{ $about->getMedia('images')[0]->getUrl('thumb') }}"
                             class="img-fluid rounded b-shadow-a"
                             alt=""
                           />
@@ -258,9 +258,9 @@
           @foreach ($projects as  $project)
             <div class="col-md-4">
               <div class="work-box">
-                <a href="{{ asset('img/web/work-1.jpg') }}" data-lightbox="gallery-mf">
+                <a href="{{ $project->getMedia('images')[0]->getUrl() }}" data-lightbox="gallery-mf">
                   <div class="work-img">
-                    <img src="{{ asset('img/web/work-1.jpg') }}" alt="" class="img-fluid" />
+                    <img src="{{ $project->getMedia('images')[0]->getUrl() }}" alt="" class="img-fluid" />
                   </div>
                   <div class="work-content">
                     <div class="row">
@@ -354,26 +354,25 @@
           </div>
         </div>
         <div class="row">
+          @foreach ($posts as $post)
           <div class="col-md-4">
             <div class="card card-blog">
               <div class="card-img">
                 <a href="blog-single.html"
-                  ><img src="{{ asset('img/web/post-1.jpg') }}" alt="" class="img-fluid"
+                  ><img src="{{ $post->getMedia('images')[0]->getUrl() }}" alt="" class="img-fluid"
                 /></a>
               </div>
               <div class="card-body">
                 <div class="card-category-box">
                   <div class="card-category">
-                    <h6 class="category">Travel</h6>
+                    <h6 class="category">{{ $post->category->name }}</h6>
                   </div>
                 </div>
                 <h3 class="card-title">
-                  <a href="blog-single.html">See more ideas about Travel</a>
+                  <a href="blog-single.html">{{ $post->title }}</a>
                 </h3>
                 <p class="card-description">
-                  Proin eget tortor risus. Pellentesque in ipsum id orci porta
-                  dapibus. Praesent sapien massa, convallis a pellentesque nec,
-                  egestas non nisi.
+                  {{ $post->excerpt }}
                 </p>
               </div>
               <div class="card-footer">
@@ -384,93 +383,16 @@
                       alt=""
                       class="avatar rounded-circle"
                     />
-                    <span class="author">Morgan Freeman</span>
+                    <span class="author">{{ $post->user->name }}</span>
                   </a>
                 </div>
                 <div class="post-date">
-                  <span class="ion-ios-clock-outline"></span> 10 min
+                  <span class="ion-ios-calendar"></span>{{ Carbon\Carbon::parse($post->published_at)->format('d-m-Y') }}
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="card card-blog">
-              <div class="card-img">
-                <a href="blog-single.html"
-                  ><img src="{{ asset('img/web/post-2.jpg') }}" alt="" class="img-fluid"
-                /></a>
-              </div>
-              <div class="card-body">
-                <div class="card-category-box">
-                  <div class="card-category">
-                    <h6 class="category">Web Design</h6>
-                  </div>
-                </div>
-                <h3 class="card-title">
-                  <a href="blog-single.html">See more ideas about Travel</a>
-                </h3>
-                <p class="card-description">
-                  Proin eget tortor risus. Pellentesque in ipsum id orci porta
-                  dapibus. Praesent sapien massa, convallis a pellentesque nec,
-                  egestas non nisi.
-                </p>
-              </div>
-              <div class="card-footer">
-                <div class="post-author">
-                  <a href="#">
-                    <img
-                      src="{{ asset('img/web/testimonial-2.jpg') }}"
-                      alt=""
-                      class="avatar rounded-circle"
-                    />
-                    <span class="author">Morgan Freeman</span>
-                  </a>
-                </div>
-                <div class="post-date">
-                  <span class="ion-ios-clock-outline"></span> 10 min
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card card-blog">
-              <div class="card-img">
-                <a href="blog-single.html"
-                  ><img src="{{ asset('img/web/post-3.jpg') }}" alt="" class="img-fluid"
-                /></a>
-              </div>
-              <div class="card-body">
-                <div class="card-category-box">
-                  <div class="card-category">
-                    <h6 class="category">Web Design</h6>
-                  </div>
-                </div>
-                <h3 class="card-title">
-                  <a href="blog-single.html">See more ideas about Travel</a>
-                </h3>
-                <p class="card-description">
-                  Proin eget tortor risus. Pellentesque in ipsum id orci porta
-                  dapibus. Praesent sapien massa, convallis a pellentesque nec,
-                  egestas non nisi.
-                </p>
-              </div>
-              <div class="card-footer">
-                <div class="post-author">
-                  <a href="#">
-                    <img
-                      src="{{ asset('img/web/testimonial-2.jpg') }}"
-                      alt=""
-                      class="avatar rounded-circle"
-                    />
-                    <span class="author">Morgan Freeman</span>
-                  </a>
-                </div>
-                <div class="post-date">
-                  <span class="ion-ios-clock-outline"></span> 10 min
-                </div>
-              </div>
-            </div>
-          </div>
+          @endforeach
         </div>
       </div>
     </section>

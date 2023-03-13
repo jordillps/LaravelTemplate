@@ -25,7 +25,7 @@ class ProjectUpdateRequest extends FormRequest
     {
         return [
             'title:'. app()->getLocale() => ['required', 'string', 'max:400'],
-            'text'. app()->getLocale() => ['required'],
+            'text:'. app()->getLocale() => ['required'],
             'published_at' => ['required'],
             'category_id' => ['required', 'integer', 'exists:categories,id'],
         ];
