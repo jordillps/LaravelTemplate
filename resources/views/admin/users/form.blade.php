@@ -68,14 +68,14 @@
                         <form action="{{ route('users.deleteMedia', ['media' => $user->getMedia('images')[0]])}}" method="POST">
                             {{ @method_field('DELETE')}}
                             @csrf
-                            <img src="{{ $user->getMedia('images')[0]->getUrl() }}" alt="">
+                            <img src="{{ $user->getMedia('images')[0]->getUrl() }}" alt="" style="max-width: 100%;">
                             <button class="btn btn-danger" style="position: absolute; left:20px;"><i class="far fa-trash-alt xs"></i></button>
                         </form>
                         </div>
                     </div>
                 @else
                     <div class="form-group">
-                        <label for="document">Image</label>
+                        <label for="document">Image <small>(Imagen cuadrada)</small></label>
                         <div class="needsclick dropzone" id="document-dropzone">
                         </div>
                     </div>  
