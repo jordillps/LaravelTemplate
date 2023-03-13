@@ -8,6 +8,8 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use Spatie\MediaLibrary\HasMedia;
+use Spatie\MediaLibrary\InteractsWithMedia;
 use Carbon\Carbon;
 
 /**
@@ -28,11 +30,10 @@ use Carbon\Carbon;
  * @package App
  * @mixin \Illuminate\Database\Eloquent\Builder
  */
-class User extends Authenticatable
-{
+class User extends Authenticatable implements HasMedia{
     use HasApiTokens, HasFactory, Notifiable;
 
-
+    use InteractsWithMedia;
     /**
      * Attributes that should be mass-assignable.
      *
@@ -83,6 +84,11 @@ class User extends Authenticatable
             return true;
         }
         return false;
+    }
+
+    public function medias()
+    {
+        return $this->morphMany(Media::class, 'mediable');
     }
     
 

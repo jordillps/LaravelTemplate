@@ -36,10 +36,10 @@
                             <thead class="thead">
                                 <tr>
                                     <th>No</th>
+                                    <th>Image</th>
                                     <th>Name</th>
                                     <th>Role</th>
                                     <th>Email</th>
-                                    <th>Date of Birth</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
@@ -47,11 +47,14 @@
                                 @foreach ($users as $user)
                                     <tr>
                                         <td>{{ $user->id }}</td>
-                                        
+                                        @if(count($user->getMedia('images'))>0)
+                                            <td><img src="{{ $user->getMedia('images')[0]->getUrl() }}" alt="" style="width:40px;"></td>
+                                        @else
+                                            <td></td>
+                                        @endif
                                         <td>{{ $user->name }}</td>
                                         <td>{{ $user->role->name }}</td>
                                         <td>{{ $user->email }}</td>
-                                        <th>{{ Carbon\Carbon::parse($user->date_birth)->format('d-m-Y')}}</th>
                                         <td>
                                             
                                                 <a class="btn btn-sm btn-primary " href="{{ route('users.show',$user) }}"><i class="fa fa-fw fa-eye"></i> Show</a>

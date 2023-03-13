@@ -42,6 +42,8 @@ Route::group(['middleware' => ['auth']], function () {
         //Users
         Route::resource('/users', UserController::class);
         Route::post('/change-password', [UserController::class, 'changePasswordSave'])->name('users.changePassword');
+        Route::post('/users/storeMedia', [UserController::class, 'storeMedia'])->name('users.storeMedia');
+        Route::delete('/users/{media}/deleteMedia', [UserController::class, 'deleteMedia'])->name('users.deleteMedia');
 
         //Posts
         Route::resource('/posts', PostController::class);

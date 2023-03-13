@@ -77,6 +77,13 @@ return [
             'visibility' => 'public',
         ],
 
+        'users-media' => [
+            'driver' => 'local',
+            'root' => public_path('/media/users'),
+            'url' => env('APP_URL').'/media/users',
+            'visibility' => 'public',
+        ],
+
         'public' => [
             'driver' => 'local',
             'root' => storage_path('app/public'),

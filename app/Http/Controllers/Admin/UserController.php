@@ -7,11 +7,14 @@ use App\Http\Requests\StoreUserRequest;
 use App\Http\Requests\UpdateUserRequest;
 use App\Models\User;
 use App\Models\Role;
+use App\Models\Media;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use App\Rules\MatchOldPassword;
+use Illuminate\Support\Facades\File;
 use Illuminate\Routing\Route;
+
 
 /**
  * Class UserController
@@ -31,7 +34,6 @@ class UserController extends Controller
         $users = User::all();
 
         return view('admin.users.index', compact('users'));
-            // ->with('i', (request()->input('page', 1) - 1) * $users->perPage());
     }
 
     /**
@@ -66,6 +68,10 @@ class UserController extends Controller
             'email' => $request->get('email'),
             'password' => Hash::make($request->get('password')),
         ]);
+
+        foreach ($request->input('images', []) as $file) {
+            $user->addMedia(storage_path('tmp/uploads/' . $file))->toMediaCollection('images', 'users-media');
+        }
 
         flash()->overlay($user->name . ' created successfully', 'Create User');
 
@@ -113,6 +119,23 @@ class UserController extends Controller
 
         $user->update($request->all());
 
+        if (($user->getMedia('images'))) {
+            foreach ($user->getMedia() as $media) {
+                if (!in_array($media->file_name, $request->input('images', []))) {
+                    $media->delete();
+                }
+            }
+        }
+    
+        $media = $user->getMedia()->pluck('file_name')->toArray();
+    
+        foreach ($request->input('images', []) as $file) {
+            if (count($media) === 0 || !in_array($file, $media)) {
+                $user->addMedia(storage_path('tmp/uploads/' . $file))->toMediaCollection('images','users-media');
+            }
+        }
+    
+
 
         flash()->overlay($user->name . ' updated successfully', 'Update User');
 
@@ -144,6 +167,40 @@ class UserController extends Controller
         User::find(auth()->user()->id)->update(['password'=> Hash::make($request->new_password)]);
 
         flash()->overlay('Password changed successfully', 'Change Password');
+        return redirect()->route('users.index');
+    }
+
+    public function storeMedia(Request $request)
+    {
+        $path = storage_path('tmp/uploads');
+
+        if (!file_exists($path)) {
+            mkdir($path, 0777, true);
+        }
+
+        $file = $request->file('file');
+
+        $name = uniqid() . '_' . trim($file->getClientOriginalName());
+
+        $file->move($path, $name);
+
+        return response()->json([
+            'name'          => $name,
+            'original_name' => $file->getClientOriginalName(),
+        ]);
+    }
+
+    public function deleteMedia(Media $media)
+    {
+        //Delete on the server 
+        File::delete(public_path('media/users/' . $media->model_id . "/" . $media->file_name));
+       
+        
+        //Delete on the database
+        $media->delete();
+
+        flash()->overlay('Deleted successfully', 'Delete Image');
+
         return redirect()->route('users.index');
     }
 }
