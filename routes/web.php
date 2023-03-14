@@ -12,7 +12,7 @@ use App\Http\Controllers\Admin\AboutController;
 use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\Admin\ProjectController;
 use App\Http\Controllers\Admin\TitleController;
-use App\Http\Controllers\Admin\ContactController;
+use App\Http\Controllers\ContactFormController;
 
 
 /*
@@ -30,6 +30,9 @@ Route::get('/', [WelcomeController::class,'index'])->name('home');
 
 Route::get('locale/{locale}', [LocalizationController::class,'setLocale'])->name('setLocale');
 
+//Web Contacts
+Route::resource('/contacts', ContactFormController::class);
+
 Auth::routes(['register' => false]);
 
 //Admin
@@ -45,10 +48,6 @@ Route::group(['middleware' => ['auth']], function () {
         Route::post('/change-password', [UserController::class, 'changePasswordSave'])->name('users.changePassword');
         Route::post('/users/storeMedia', [UserController::class, 'storeMedia'])->name('users.storeMedia');
         Route::delete('/users/{media}/deleteMedia', [UserController::class, 'deleteMedia'])->name('users.deleteMedia');
-
-        //Web Contacts
-        Route::resource('/contacts', ContactController::class);
-        // Route::post('/contact-form', [ContactController::class, 'storeContactForm']);
 
         //Posts
         Route::resource('/posts', PostController::class);
@@ -77,6 +76,8 @@ Route::group(['middleware' => ['auth']], function () {
         Route::resource('/projects', ProjectController::class);
         Route::post('/projects/storeMedia', [ProjectController::class, 'storeMedia'])->name('projects.storeMedia');
         Route::delete('/projects/{media}/deleteMedia', [ProjectController::class, 'deleteMedia'])->name('projects.deleteMedia');
+
+        //Contacts
 
     });
 });
