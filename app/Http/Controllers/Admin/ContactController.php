@@ -1,15 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 use App\Models\Contact;
-use Illuminate\Support\Facades\Mail;
-use App\Mail\ContactMail;
-use Illuminate\Support\Facades\Validator;
 
-class ContactFormController extends Controller
+class ContactController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,7 +15,8 @@ class ContactFormController extends Controller
      */
     public function index()
     {
-        //
+        $contacts = Contact::all();
+        return view('admin.contacts.index', compact('contacts'));
     }
 
     /**
@@ -37,36 +35,9 @@ class ContactFormController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    // public function store(StoreContactForm $request)
     public function store(Request $request)
     {
-        
-        $validator = Validator::make($request->all(), [
-            'name' => 'required',
-            'email' => 'required|email',
-            'phone' => 'required|digits:9',
-            'subject' => 'required',
-            'message' => 'required',
-        ]);
- 
-        if ($validator->fails()) {
-            return redirect(url()->previous() .'#contact')
-                        ->withErrors($validator)
-                        ->withInput();
-        }
-
-
-        $mailData = Contact::create([
-            'name' => $request->get('name'),
-            'email' => $request->get('email'),
-            'phone' => $request->get('phone'),
-            'subject' => $request->get('subject'),
-            'message' => $request->get('message'),
-        ]);
-
-        Mail::to('hola@formalweb.cat')->send(new ContactMail($mailData));
-
-        return redirect(url()->previous() .'#contact')->with(['success' => 'Contact Form Submit Successfully']);
+        //
     }
 
     /**
@@ -109,8 +80,14 @@ class ContactFormController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
-    {
-        //
+    public function destroy($id){
+
+        $contact = Contact::find($id);
+
+        $contact->delete();
+
+        flash()->overlay($contact->name . ' deleted successfully', 'Delete Contact');
+
+        return redirect()->route('contacts-list.index');
     }
 }

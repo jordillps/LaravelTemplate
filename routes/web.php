@@ -13,6 +13,7 @@ use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\Admin\ProjectController;
 use App\Http\Controllers\Admin\TitleController;
 use App\Http\Controllers\ContactFormController;
+use App\Http\Controllers\Admin\ContactController;
 
 
 /*
@@ -78,7 +79,10 @@ Route::group(['middleware' => ['auth']], function () {
         Route::delete('/projects/{media}/deleteMedia', [ProjectController::class, 'deleteMedia'])->name('projects.deleteMedia');
 
         //Contacts
-
+        Route::group(["prefix" => "contacts-list"], function() {
+            Route::get('/', [ContactController::class, 'index'])->name('contacts-list.index');
+            Route::delete('/{id}', [ContactController::class, 'destroy'])->name('contacts-list.destroy');
+        });
     });
 });
 
