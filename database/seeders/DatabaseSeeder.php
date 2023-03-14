@@ -15,6 +15,8 @@ use App\Models\Title;
 use App\Models\TitleTranslation;
 use App\Models\Service;
 use App\Models\ServiceTranslation;
+use App\Models\Post;
+use App\Models\Tag;
 
 
 class DatabaseSeeder extends Seeder
@@ -60,6 +62,15 @@ class DatabaseSeeder extends Seeder
         $this->call(PostSeeder::class);
         $this->call(ProjectSeeder::class);
         $this->call(CommentSeeder::class);
+
+        //Posts Tag
+        foreach(range(1, 20) as $index){
+            DB::table('post_tag')->insert([
+                'id' => $index,
+                'post_id' => rand(1,5),
+                'tag_id' => rand(1, 10)
+            ]);
+        }
 
         //Pages
         \App\Models\Page::factory()->create(['name' => 'Home']);

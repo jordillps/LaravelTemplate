@@ -25,14 +25,14 @@
           {!! $errors->first('body:'.app()->getLocale(), '<div class="invalid-feedback">:message</div>') !!}
       </div>
       <div class="row">
-        <div class="col-12 col-md-4">
+        <div class="col-12 col-md-6">
           <div class="form-group">
             {{ Form::label('published_at') }}
             {{ Form::date('published_at', $post->published_at, ['class' => 'form-control' . ($errors->has('published_at') ? ' is-invalid' : ''), 'placeholder' => 'Published At']) }}
             {!! $errors->first('published_at', '<div class="invalid-feedback">:message</div>') !!}
           </div>
         </div>
-        <div class="col-12 col-md-4">
+        <div class="col-12 col-md-6">
           <div class="form-group">
               {{ Form::label('user') }}
               @if(Route::is('posts.create'))
@@ -43,7 +43,9 @@
               {!! $errors->first('user_id', '<div class="invalid-feedback">:message</div>') !!}
           </div>
         </div>
-        <div class="col-12 col-md-4">
+      </div>
+      <div class="row">
+        <div class="col-12 col-md-6">
           <div class="form-group">
               {{ Form::label('category') }}
               @if(Route::is('posts.create'))
@@ -52,6 +54,17 @@
                   {!! Form::select('category_id', $categories, $post->category_id, ['class' => 'form-control' . ($errors->has('category_id') ? ' is-invalid' : '')]) !!}
               @endif
               {!! $errors->first('category_id', '<div class="invalid-feedback">:message</div>') !!}
+          </div>
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="form-group">
+            {{Form::label('tags')}}
+            @if(Route::is('posts.create'))
+              {!! Form::select('tags[]', $tags, null, ['id' => 'tags', 'multiple' => 'multiple', 'class' => 'form-control' . ($errors->has('category_id') ? ' is-invalid' : '')]) !!}
+            @else
+              {!! Form::select('tags[]', $tags, $post->tags->pluck('id'), ['id' => 'tags', 'multiple' => 'multiple', 'class' => 'form-control' . ($errors->has('category_id') ? ' is-invalid' : '')]) !!}
+            @endif
+            {!! $errors->first('tag_id', '<div class="invalid-feedback">:message</div>') !!}
           </div>
         </div>
       </div>

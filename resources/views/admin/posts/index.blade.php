@@ -50,7 +50,7 @@
 											<td>{{ $post->{'title:'. app()->getLocale()} }}</td>
 											<td>{{ Carbon\Carbon::parse($post->published_at)->format('d-m-Y')}}</td>
 											<td>{{ $post->user->name }}</td>
-											<td>{{ $post->category->name }}</td>
+											<td>{{ $post->category->{'name:'. app()->getLocale()} }}</td>
 
                                             <td>
                                                     <a class="btn btn-sm btn-primary " href="{{ route('posts.show',$post->id) }}"><i class="fa fa-fw fa-eye"></i> Show</a>

@@ -54,7 +54,17 @@
                             <div class="col-12 col-md-4">
                                 <div class="callout callout-primary">
                                     <strong>Category:</strong>
-                                    {{ $post->category->name }}
+                                    {{ $post->category->{'name:'. app()->getLocale()} }}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="callout callout-primary">
+                                    <strong>Tags:</strong>
+                                    @foreach ($post->tags as $tag)
+                                    <button type="button" class="btn btn btn-warning mr-3">{{ $tag->name }}</button>     
+                                    @endforeach
                                 </div>
                             </div>
                         </div>

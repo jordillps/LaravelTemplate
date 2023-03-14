@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Post;
 use App\Models\User;
 use App\Models\Category;
+use App\Models\Tag;
 use App\Models\Media;
 use Illuminate\Http\Request;
 use App\Http\Requests\PostStoreRequest;
@@ -42,7 +43,8 @@ class PostController extends Controller
         $post = new Post();
         $users = User::all()->pluck('name', 'id');
         $categories = Category::all()->pluck('name', 'id');
-        return view('admin.posts.create', compact('post','users', 'categories'));
+        $tags = Tag::all()->pluck('name', 'id');
+        return view('admin.posts.create', compact('post','users', 'categories', 'tags'));
     }
 
     /**
@@ -88,7 +90,8 @@ class PostController extends Controller
         
         $users = User::all()->pluck('name', 'id');
         $categories = Category::all()->pluck('name', 'id');
-        return view('admin.posts.edit', compact('post', 'users', 'categories'));
+        $tags = Tag::all()->pluck('name', 'id');
+        return view('admin.posts.edit', compact('post', 'users', 'categories', 'tags'));
     }
 
     /**
@@ -103,6 +106,13 @@ class PostController extends Controller
         $request->validated();
 
         $post->update($request->all());
+
+        $tags = collect($request->get('tags'))->map(function($tag){
+            return Tag::find($tag) ? $tag : '';
+                // : Tag::create(['name'=> $tag])->id;
+        });
+
+        $post->tags()->sync($tags);
 
         if (($post->getMedia('images'))) {
             foreach ($post->getMedia() as $media) {
