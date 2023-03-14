@@ -49,9 +49,6 @@
     <script src="{{ asset('js/web/lightbox.min.js') }}"></script>
     <script src="{{ asset('js/web/typed.min.js') }}"></script>
 
-    <!-- Contact Form JavaScript File -->
-    <script src="{{ asset('js/web/contactform/contactform.js') }}"></script>
-
     <!-- Template Main Javascript File -->
     <script src="{{ asset('js/web/main.js') }}"></script>
 

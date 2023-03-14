@@ -12,6 +12,7 @@ use App\Http\Controllers\Admin\AboutController;
 use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\Admin\ProjectController;
 use App\Http\Controllers\Admin\TitleController;
+use App\Http\Controllers\Admin\ContactController;
 
 
 /*
@@ -44,6 +45,10 @@ Route::group(['middleware' => ['auth']], function () {
         Route::post('/change-password', [UserController::class, 'changePasswordSave'])->name('users.changePassword');
         Route::post('/users/storeMedia', [UserController::class, 'storeMedia'])->name('users.storeMedia');
         Route::delete('/users/{media}/deleteMedia', [UserController::class, 'deleteMedia'])->name('users.deleteMedia');
+
+        //Web Contacts
+        Route::resource('/contacts', ContactController::class);
+        // Route::post('/contact-form', [ContactController::class, 'storeContactForm']);
 
         //Posts
         Route::resource('/posts', PostController::class);

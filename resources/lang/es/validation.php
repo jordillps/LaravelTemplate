@@ -153,6 +153,8 @@ return [
         'phone' => 'teléfono',
         'postalcode' => 'código postal',
         'city' => 'ciudad',
+        'subject' => 'asunto',
+        'message' => 'mensaje',
     ],
 
 ];
