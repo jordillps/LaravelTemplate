@@ -2,42 +2,53 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Astrotomic\Translatable\Contracts\Translatable as TranslatableContract;
 use Astrotomic\Translatable\Translatable;
 
-class Category extends Model implements TranslatableContract{
+/**
+ * Class Category
+ *
+ * @property $id
+ * @property $created_at
+ * @property $updated_at
+ *
+ * @property Post[] $posts
+ * @property Project[] $projects
+ * @package App
+ * @mixin \Illuminate\Database\Eloquent\Builder
+ */
+class Category extends Model{
 
     use HasFactory;
     use Translatable;
 
-    protected $table = 'categories';
-
-    public $translatedAttributes = ['name','url'];
-
+    public $translatedAttributes = ['name', 'url'];
+    
     /**
-     * The attributes that are mass assignable.
+     * Attributes that should be mass-assignable.
      *
      * @var array
      */
-    protected $fillable = [];
+    protected $guarded = [];
 
 
     /**
-     * The attributes that should be cast to native types.
-     *
-     * @var array
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    protected $casts = [
-        'id' => 'integer',
-    ];
-
-    public function posts(){
-        return $this->hasMany(Post::class);
+    public function posts()
+    {
+        return $this->hasMany('App\Models\Post', 'category_id', 'id');
     }
-
-    public function projects(){
-        return $this->hasMany(Project::class);
+    
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function projects()
+    {
+        return $this->hasMany('App\Models\Project', 'category_id', 'id');
     }
+    
+
 }

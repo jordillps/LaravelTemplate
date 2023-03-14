@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('locale')->index();
             $table->string('name')->nullable();
             $table->string('url')->nullable();
+            $table->unique(['category_id', 'locale']);
             $table->timestamps();
         });
     }

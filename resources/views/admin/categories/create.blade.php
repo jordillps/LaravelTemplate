@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
 @section('template_title')
-    Create Header
+    Create Category
 @endsection
 
 @section('content')
@@ -14,13 +14,13 @@
 
                 <div class="card card-default">
                     <div class="card-header">
-                        <span class="card-title">Create Header</span>
+                        <span class="card-title">Create Category</span>
                     </div>
                     <div class="card-body">
-                        <form method="POST" action="{{ route('headers.store') }}"  role="form" enctype="multipart/form-data">
+                        <form method="POST" action="{{ route('categories.store') }}"  role="form" enctype="multipart/form-data">
                             @csrf
 
-                            @include('header.form')
+                            @include('admin.categories.form')
 
                         </form>
                     </div>

@@ -14,6 +14,7 @@ use App\Http\Controllers\Admin\ProjectController;
 use App\Http\Controllers\Admin\TitleController;
 use App\Http\Controllers\ContactFormController;
 use App\Http\Controllers\Admin\ContactController;
+use App\Http\Controllers\Admin\CategoryController;
 
 
 /*
@@ -83,6 +84,9 @@ Route::group(['middleware' => ['auth']], function () {
             Route::get('/', [ContactController::class, 'index'])->name('contacts-list.index');
             Route::delete('/{id}', [ContactController::class, 'destroy'])->name('contacts-list.destroy');
         });
+
+        //Categories
+        Route::resource('/categories', CategoryController::class);
     });
 });
 
