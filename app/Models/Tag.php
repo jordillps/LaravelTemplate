@@ -5,6 +5,17 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * Class Tag
+ *
+ * @property $id
+ * @property $name
+ * @property $created_at
+ * @property $updated_at
+ *
+ * @package App
+ * @mixin \Illuminate\Database\Eloquent\Builder
+ */
 class Tag extends Model
 {
     use HasFactory;
@@ -12,22 +23,13 @@ class Tag extends Model
     protected $table = 'tags';
 
     /**
-     * The attributes that are mass assignable.
+     * Attributes that should be mass-assignable.
      *
      * @var array
      */
-    protected $fillable = [
-        'name',
-    ];
+    protected $fillable = ['name'];
 
-    /**
-     * The attributes that should be cast to native types.
-     *
-     * @var array
-     */
-    protected $casts = [
-        'id' => 'integer',
-    ];
+
 
     public function posts()
     {

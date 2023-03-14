@@ -15,6 +15,7 @@ use App\Http\Controllers\Admin\TitleController;
 use App\Http\Controllers\ContactFormController;
 use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\TagController;
 
 
 /*
@@ -87,6 +88,9 @@ Route::group(['middleware' => ['auth']], function () {
 
         //Categories
         Route::resource('/categories', CategoryController::class);
+
+        //Tags
+        Route::resource('/tags', TagController::class);
     });
 });
 
