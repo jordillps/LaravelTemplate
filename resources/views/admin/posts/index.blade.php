@@ -107,17 +107,17 @@
         $(document).ready( function () {
             var locale_lang = "{{app()->getLocale()}}";
             switch(locale_lang) {
-                case 'en':
-                    var language_datatable = "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/English.json";
+               case 'en':
+                    var language_datatable = "{{asset('lang/en/dataTables.json')}}";
                     break;
                 case 'es':
-                    var language_datatable = "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Spanish.json";
+                    var language_datatable = "{{asset('lang/es/dataTables.json')}}";
                     break;
                 case 'ca':
-                    var language_datatable = "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Catalan.json";
+                    var language_datatable = "{{asset('lang/ca/dataTables.json')}}";
                     break;
                 default:
-                    var language_datatable = "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/English.json";
+                    var language_datatable = "{{asset('lang/en/dataTables.json')}}";
             }
             $('#item_datatable').DataTable({
                     "language": {
