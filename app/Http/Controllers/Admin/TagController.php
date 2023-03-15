@@ -82,9 +82,9 @@ class TagController extends Controller
      * @param  Tag $tag
      * @return \Illuminate\Http\Response
      */
-    public function update(TagStoreRequest $request, Tag $tag)
+    public function update(TagUpdateRequest $request, Tag $tag)
     {
-        request()->validate();
+        $request->validated();
 
         $tag->update($request->all());
 

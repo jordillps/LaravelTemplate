@@ -1,11 +1,13 @@
 @extends('layouts.admin')
 
-@section('template_title')
-    Tag
-@endsection
+@push('styles')
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
+@endpush
 
 @section('content')
-    <div class="container-fluid">
+<div class="content-wrapper">
+
+    <section class="content container-fluid">
         <div class="row">
             <div class="col-sm-12">
                 <div class="card">
@@ -23,11 +25,7 @@
                               </div>
                         </div>
                     </div>
-                    @if ($message = Session::get('success'))
-                        <div class="alert alert-success">
-                            <p>{{ $message }}</p>
-                        </div>
-                    @endif
+                    @include('flash::message')
 
                     <div class="card-body">
                         <div class="table-responsive">
@@ -44,18 +42,15 @@
                                 <tbody>
                                     @foreach ($tags as $tag)
                                         <tr>
-                                            <td>{{ ++$i }}</td>
+                                            <td>{{ $tag->id }}</td>
                                             
 											<td>{{ $tag->name }}</td>
 
                                             <td>
-                                                <form action="{{ route('tags.destroy',$tag->id) }}" method="POST">
-                                                    <a class="btn btn-sm btn-primary " href="{{ route('tags.show',$tag->id) }}"><i class="fa fa-fw fa-eye"></i> Show</a>
-                                                    <a class="btn btn-sm btn-success" href="{{ route('tags.edit',$tag->id) }}"><i class="fa fa-fw fa-edit"></i> Edit</a>
-                                                    @csrf
-                                                    @method('DELETE')
-                                                    <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Delete</button>
-                                                </form>
+                                                <a class="btn btn-sm btn-success" href="{{ route('tags.edit',$tag->id) }}"><i class="fa fa-fw fa-edit"></i> Edit</a>
+                                                <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-item-id="{{ $tag->id }}" data-target="#modal-delete"><i class="fa fa-fw fa-trash"></i>
+                                                    Delete
+                                                </button>
                                             </td>
                                         </tr>
                                     @endforeach
@@ -64,8 +59,75 @@
                         </div>
                     </div>
                 </div>
-                {!! $tags->links() !!}
             </div>
         </div>
-    </div>
+    </section>
+    <form id="deleteItemForm" action="" method="POST">
+        <div class="modal fade" id="modal-delete">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title"></h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    @csrf
+                    @method('DELETE')
+                    <div class="modal-body">
+                        <p>Are you sure?</p>
+                    </div>
+                    <div class="modal-footer justify-content-between">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Delete</button>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+    </form>
+</div>
 @endsection
+
+@push('scripts')
+    <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+
+    <script>
+        $('#flash-overlay-modal').modal();
+
+        $(document).ready( function () {
+            var locale_lang = "{{app()->getLocale()}}";
+            switch(locale_lang) {
+                case 'en':
+                    var language_datatable = "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/English.json";
+                    break;
+                case 'es':
+                    var language_datatable = "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Spanish.json";
+                    break;
+                case 'ca':
+                    var language_datatable = "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Catalan.json";
+                    break;
+                default:
+                    var language_datatable = "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/English.json";
+            }
+            $('#item_datatable').DataTable({
+                    "language": {
+                        "url": language_datatable
+                    },
+            });
+
+            $('#deleteItemForm').on('show.bs.modal', function (event) {
+                var button = $(event.relatedTarget);
+                const id = 'id';
+                $('.modal-title').text('Delete');
+                var route = "{{ route('tags.destroy',  'id' ) }}";
+                route = route.replace('id',button.data('item-id'));
+                $('#deleteItemForm').attr('action', route);
+            });
+
+        });
+
+    </script>
+@endpush
