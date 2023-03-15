@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
 @push('styles')
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="{{asset('css/admin/dataTables.min.css')}}">
 @endpush
 
 @section('content')
@@ -29,7 +29,7 @@
 
                     <div class="card-body">
                         <div class="table-responsive">
-                            <table class="table table-striped table-hover">
+                            <table id="item_datatable" class="table table-striped table-hover">
                                 <thead class="thead">
                                     <tr>
                                         <th>No</th>
@@ -92,7 +92,7 @@
 @endsection
 
 @push('scripts')
-    <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+    <script src="{{asset('js/dataTables.min.js')}}"></script>
 
     <script>
         $('#flash-overlay-modal').modal();

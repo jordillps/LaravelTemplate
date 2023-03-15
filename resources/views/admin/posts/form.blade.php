@@ -1,5 +1,5 @@
 @push('styles')
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/min/dropzone.min.css" rel="stylesheet" />
+    <link href="{{asset('css/admin/dropzone.min.css')}}" rel="stylesheet" />
 @endpush
 
 <div class="box box-info padding-1">
@@ -80,7 +80,7 @@
 </div>
 
 @push('scripts')
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/min/dropzone.min.js"></script>
+    <script src="{{asset('js/dropzone.min.js')}}"></script>
     <script>
         var uploadedDocumentMap = {}
         Dropzone.options.documentDropzone = {
