@@ -6,6 +6,8 @@
 
 @section('content')
 <div class="content-wrapper">
+
+    @include('admin.partials.header')
     
     <section class="content container-fluid">
         <div class="row">
@@ -14,8 +16,8 @@
                     <div class="card-header">
                         <div style="display: flex; justify-content: space-between; align-items: center;">
 
-                            <span id="card_title">
-                                {{ __('Contact') }}
+                            <span class="card_title">
+                                {{ __('global.contacts') }}
                             </span>
                         </div>
                     </div>

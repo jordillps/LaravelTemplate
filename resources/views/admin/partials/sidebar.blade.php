@@ -3,7 +3,7 @@
     <!-- Brand Logo -->
     <a href="{{ route('admin') }}" class="brand-link">
       <img src="{{ asset('img/admin/logoFormalWeb.png') }}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <div class="brand-text font-weight-light">Admin Template</div>
+      <div class="brand-text font-weight-light">Formal Web</div>
     </a>
 
     <!-- Sidebar -->
@@ -18,134 +18,97 @@
         </div>
       </div>
 
-      <!-- SidebarSearch Form -->
-      <div class="form-inline">
-        <div class="input-group" data-widget="sidebar-search">
-          <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
-          <div class="input-group-append">
-            <button class="btn btn-sidebar">
-              <i class="fas fa-search fa-fw"></i>
-            </button>
-          </div>
-        </div>
-      </div>
-
      @if(Auth::user()->isAdmin())
         <!-- Sidebar Menu -->
         <nav class="mt-2">
           <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
             <!-- Add icons to the links using the .nav-icon class
                 with font-awesome or any other icon font library -->
-            <li class="nav-header">ITEMS</li>
-            <li class="nav-item">
-              <a href="pages/calendar.html" class="nav-link">
-                <i class="nav-icon far fa-calendar-alt"></i>
-                <p>
-                  Calendar
-                  <span class="badge badge-info right">2</span>
-                </p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="pages/gallery.html" class="nav-link">
-                <i class="nav-icon far fa-image"></i>
-                <p>
-                  Gallery
-                </p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="pages/kanban.html" class="nav-link">
-                <i class="nav-icon fas fa-columns"></i>
-                <p>
-                  Kanban Board
-                </p>
-              </a>
-            </li>
+            <li class="nav-header">{{ __('global.items') }}</li>
             <li class="nav-item">
               <a href="#" class="nav-link">
-                <i class="nav-icon far fa-envelope"></i>
+                <i class="nav-icon fas fa-users"></i>
                 <p>
-                  USERS
+                  {{ __('global.users') }}
                   <i class="fas fa-angle-left right"></i>
                 </p>
               </a>
               <ul class="nav nav-treeview">
                 <li class="nav-item ml-5">
                   <a href="{{ route('users.index') }}" class="nav-link">
-                    <p>List</p>
+                    <p>{{ __('global.list') }}</p>
                   </a>
                 </li>
                 <li class="nav-item ml-5">
                   <a href="{{ route('users.create') }}" class="nav-link">
-                    <p>Create</p>
+                    <p>{{ __('global.create') }}</p>
                   </a>
                 </li>
               </ul>
             </li>
             <li class="nav-item">
               <a href="#" class="nav-link">
-                <i class="nav-icon far fa-envelope"></i>
+                <i class="nav-icon fas fa-book"></i>
                 <p>
-                  POSTS
+                  {{ __('global.posts') }}
                   <i class="fas fa-angle-left right"></i>
                 </p>
               </a>
               <ul class="nav nav-treeview">
                 <li class="nav-item ml-5">
                   <a href="{{ route('posts.index') }}" class="nav-link">
-                    <p>List</p>
+                    <p>{{ __('global.list') }}</p>
                   </a>
                 </li>
                 <li class="nav-item ml-5">
                   <a href="{{ route('posts.create') }}" class="nav-link">
-                    <p>Create</p>
+                    <p>{{ __('global.create') }}</p>
                   </a>
                 </li>
               </ul>
             </li>
             <li class="nav-item">
               <a href="#" class="nav-link">
-                <i class="nav-icon far fa-envelope"></i>
+                <i class="nav-icon fas fa-project-diagram"></i>
                 <p>
-                  PROJECTS
+                  {{ __('global.projects') }}
                   <i class="fas fa-angle-left right"></i>
                 </p>
               </a>
               <ul class="nav nav-treeview">
                 <li class="nav-item ml-5">
                   <a href="{{ route('projects.index') }}" class="nav-link">
-                    <p>List</p>
+                    <p>{{ __('global.list') }}</p>
                   </a>
                 </li>
                 <li class="nav-item ml-5">
                   <a href="{{ route('projects.create') }}" class="nav-link">
-                    <p>Create</p>
+                    <p>{{ __('global.create') }}</p>
                   </a>
                 </li>
               </ul>
             </li>
             <li class="nav-item">
               <a href="#" class="nav-link">
-                <i class="nav-icon far fa-envelope"></i>
+                <i class="nav-icon fas fa-copy"></i>
                 <p>
-                  PAGES
+                  {{ __('global.pages') }}
                   <i class="fas fa-angle-left right"></i>
                 </p>
               </a>
               <ul class="nav nav-treeview">
                 <li class="nav-item ml-5">
                   <a href="{{ route('pages.index') }}" class="nav-link">
-                    <p>List</p>
+                    <p>{{ __('global.list') }}</p>
                   </a>
                 </li>
               </ul>
             </li>
             <li class="nav-item">
               <a href="#" class="nav-link">
-                <i class="nav-icon far fa-plus-square"></i>
+                <i class="nav-icon fas fa-columns"></i>
                 <p>
-                  PAGE COMPONENTS
+                  {{ __('global.page-components') }}
                   <i class="fas fa-angle-left right"></i>
                 </p>
               </a>
@@ -154,14 +117,14 @@
                   <a href="#" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
                     <p>
-                      Headers
+                      {{ __('global.headers') }}
                       <i class="fas fa-angle-left right"></i>
                     </p>
                   </a>
                   <ul class="nav nav-treeview">
                     <li class="nav-item ml-5">
                       <a href="{{ route('headers.index') }}" class="nav-link">
-                        <p>List</p>
+                        <p>{{ __('global.list') }}</p>
                       </a>
                     </li>
                   </ul>
@@ -170,14 +133,14 @@
                   <a href="#" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
                     <p>
-                      About
+                      {{ __('global.about') }}
                       <i class="fas fa-angle-left right"></i>
                     </p>
                   </a>
                   <ul class="nav nav-treeview">
                     <li class="nav-item ml-5">
                       <a href="{{ route('abouts.index') }}" class="nav-link">
-                        <p>List</p>
+                        <p>{{ __('global.list') }}</p>
                       </a>
                     </li>
                   </ul>
@@ -186,14 +149,19 @@
                   <a href="#" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
                     <p>
-                      Services
+                      {{ __('global.services') }}
                       <i class="fas fa-angle-left right"></i>
                     </p>
                   </a>
                   <ul class="nav nav-treeview">
                     <li class="nav-item ml-5">
                       <a href="{{ route('services.index') }}" class="nav-link">
-                        <p>List</p>
+                        <p>{{ __('global.list') }}</p>
+                      </a>
+                    </li>
+                    <li class="nav-item ml-5">
+                      <a href="{{ route('services.create') }}" class="nav-link">
+                        <p>{{ __('global.create') }}</p>
                       </a>
                     </li>
                   </ul>
@@ -202,14 +170,19 @@
                   <a href="#" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
                     <p>
-                      Titles
+                      {{ __('global.titles') }}
                       <i class="fas fa-angle-left right"></i>
                     </p>
                   </a>
                   <ul class="nav nav-treeview">
                     <li class="nav-item ml-5">
                       <a href="{{ route('titles.index') }}" class="nav-link">
-                        <p>List</p>
+                        <p>{{ __('global.list') }}</p>
+                      </a>
+                    </li>
+                    <li class="nav-item ml-5">
+                      <a href="{{ route('titles.create') }}" class="nav-link">
+                        <p>{{ __('global.create') }}</p>
                       </a>
                     </li>
                   </ul>
@@ -218,71 +191,58 @@
             </li>
             <li class="nav-item">
               <a href="#" class="nav-link">
-                <i class="nav-icon far fa-envelope"></i>
+                <i class="nav-icon fas fa-phone"></i>
                 <p>
-                  CONTACTS
+                  {{ __('global.contacts') }}
                   <i class="fas fa-angle-left right"></i>
                 </p>
               </a>
               <ul class="nav nav-treeview">
                 <li class="nav-item ml-5">
                   <a href="{{ route('contacts-list.index') }}" class="nav-link">
-                    <p>List</p>
+                    <p>{{ __('global.list') }}</p>
                   </a>
                 </li>
               </ul>
             </li>
             <li class="nav-item">
               <a href="#" class="nav-link">
-                <i class="nav-icon far fa-envelope"></i>
+                <i class="nav-icon fas fa-th"></i>
                 <p>
-                  CATEGORIES
+                  {{ __('global.categories') }}
                   <i class="fas fa-angle-left right"></i>
                 </p>
               </a>
               <ul class="nav nav-treeview">
                 <li class="nav-item ml-5">
                   <a href="{{ route('categories.index') }}" class="nav-link">
-                    <p>List</p>
+                    <p>{{ __('global.list') }}</p>
+                  </a>
+                </li>
+                <li class="nav-item ml-5">
+                  <a href="{{ route('categories.create') }}" class="nav-link">
+                    <p>{{ __('global.create') }}</p>
                   </a>
                 </li>
               </ul>
             </li>
             <li class="nav-item">
               <a href="#" class="nav-link">
-                <i class="nav-icon far fa-envelope"></i>
+                <i class="nav-icon fas fa-tags"></i>
                 <p>
-                  TAGS
+                  {{ __('global.tags') }}
                   <i class="fas fa-angle-left right"></i>
                 </p>
               </a>
               <ul class="nav nav-treeview">
                 <li class="nav-item ml-5">
                   <a href="{{ route('tags.index') }}" class="nav-link">
-                    <p>List</p>
+                    <p>{{ __('global.list') }}</p>
                   </a>
                 </li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">
-                <i class="nav-icon fas fa-search"></i>
-                <p>
-                  Search
-                  <i class="fas fa-angle-left right"></i>
-                </p>
-              </a>
-              <ul class="nav nav-treeview">
-                <li class="nav-item">
-                  <a href="pages/search/simple.html" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Simple Search</p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="pages/search/enhanced.html" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Enhanced</p>
+                <li class="nav-item ml-5">
+                  <a href="{{ route('tags.create') }}" class="nav-link">
+                    <p>{{ __('global.create') }}</p>
                   </a>
                 </li>
               </ul>

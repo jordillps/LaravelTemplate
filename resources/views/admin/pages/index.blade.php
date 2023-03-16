@@ -16,8 +16,8 @@
                     <div class="card-header">
                         <div style="display: flex; justify-content: space-between; align-items: center;">
 
-                            <span id="card_title">
-                                {{ __('Page') }}
+                            <span class="card_title">
+                                {{ __('global.pages') }}
                             </span>
 
                              {{-- <div class="float-right">

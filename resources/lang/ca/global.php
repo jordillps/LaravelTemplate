@@ -13,7 +13,7 @@ return [
     'register' => 'Registrar-se',
     'home' => 'Inici',
     'reserve' => 'Reservar',
-    'dashboard' => 'Tauler de gestió personal',
+    'dashboard' => 'Tauler de control',
     'logged' => 'Sessió iniciada',
     'logout' => 'Tancar sessió',
     'back' => 'Tornar',
@@ -27,7 +27,6 @@ return [
     'profile'=>'El meu perfil',
     'activity'=>'Activitats',
     'welcome' =>'Benvingut   ',
-    'dashboard'=>'Tauler de resultats',
     'pages'=>'Pàgines',
     'charts'=>'Gràfics',
     'tables'=>'Taules',
@@ -172,5 +171,25 @@ return [
     'order' => 'Demanar',
     'addproducts' => 'Afegir productes a la comanda',
     'addproduct' => 'Afegir',
+
+    //Sidebar
+    'items' => 'ITEMS',
+    'posts' => 'Publicacions',
+    'projects' => 'Projectes',
+    'page-components' => 'Components',
+    'contacts' => 'Contactes',
+    'categories' => 'Categories',
+    'tags' => 'Etiquetes',
+    'list' => 'Llista',
+    'create' => 'Crear',
+    'headers' => 'Encapçalaments',
+    'about' => 'Sobre nosaltres',
+    'services' => 'Serveis',
+    'titles' => 'Títols',
+
+    //Breadcrumbs
+    'create-user' => 'Crear usuari',
+    'create-project' => 'Crear projecte',
+    'create-post' => 'Crear publicació',
 
 ];

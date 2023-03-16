@@ -9,20 +9,20 @@ use Diglactic\Breadcrumbs\Generator as BreadcrumbTrail;
 
 //Admin
 Breadcrumbs::for('admin', function ($trail) {
-    $trail->push('Dashboard', route('admin'));
+    $trail->push(trans('global.dashboard'), route('admin'));
 });
 
 
 // Users
 Breadcrumbs::for('users.index', function (BreadcrumbTrail $trail) {
     $trail->parent('admin');
-    $trail->push('Users', route('users.index'));
+    $trail->push(trans('global.users'), route('users.index'));
 });
 
 // Users > Create User
 Breadcrumbs::for('users.create', function (BreadcrumbTrail $trail) {
     $trail->parent('users.index');
-    $trail->push('Create User', route('users.create'));
+    $trail->push(trans('global.create-user'), route('users.create'));
 });
 
 // Users > Show User
@@ -41,13 +41,13 @@ Breadcrumbs::for('users.edit', function (BreadcrumbTrail $trail, User $user) {
 // Posts
 Breadcrumbs::for('posts.index', function (BreadcrumbTrail $trail) {
     $trail->parent('admin');
-    $trail->push('Posts', route('posts.index'));
+    $trail->push(trans('global.posts'), route('posts.index'));
 });
 
 // Posts > Create Post
 Breadcrumbs::for('posts.create', function (BreadcrumbTrail $trail) {
     $trail->parent('posts.index');
-    $trail->push('Create Post', route('posts.create'));
+    $trail->push(trans('global.create-post'), route('posts.create'));
 });
 
 // Posts > Show Post
@@ -70,19 +70,61 @@ Breadcrumbs::for('posts.edit', function (BreadcrumbTrail $trail, Post $post) {
 // Pages
 Breadcrumbs::for('pages.index', function (BreadcrumbTrail $trail) {
     $trail->parent('admin');
-    $trail->push('Pages', route('pages.index'));
+    $trail->push(trans('global.pages'), route('pages.index'));
+});
+
+// Headers
+Breadcrumbs::for('headers.index', function (BreadcrumbTrail $trail) {
+    $trail->parent('admin');
+    $trail->push(trans('global.headers'), route('headers.index'));
+});
+
+// Abouts
+Breadcrumbs::for('abouts.index', function (BreadcrumbTrail $trail) {
+    $trail->parent('admin');
+    $trail->push(trans('global.about'), route('abouts.index'));
+});
+
+// Services
+Breadcrumbs::for('services.index', function (BreadcrumbTrail $trail) {
+    $trail->parent('admin');
+    $trail->push(trans('global.services'), route('services.index'));
+});
+
+// Titles
+Breadcrumbs::for('titles.index', function (BreadcrumbTrail $trail) {
+    $trail->parent('admin');
+    $trail->push(trans('global.titles'), route('titles.index'));
+});
+
+// Contacts
+Breadcrumbs::for('contacts-list.index', function (BreadcrumbTrail $trail) {
+    $trail->parent('admin');
+    $trail->push(trans('global.contacts'), route('contacts-list.index'));
+});
+
+// Tags
+Breadcrumbs::for('tags.index', function (BreadcrumbTrail $trail) {
+    $trail->parent('admin');
+    $trail->push(trans('global.tags'), route('tags.index'));
+});
+
+// Categories
+Breadcrumbs::for('categories.index', function (BreadcrumbTrail $trail) {
+    $trail->parent('admin');
+    $trail->push(trans('global.categories'), route('categories.index'));
 });
 
 // Projects
 Breadcrumbs::for('projects.index', function (BreadcrumbTrail $trail) {
     $trail->parent('admin');
-    $trail->push('Projects', route('projects.index'));
+    $trail->push(trans('global.projects'), route('projects.index'));
 });
 
 // Projects > Create Project
 Breadcrumbs::for('projects.create', function (BreadcrumbTrail $trail) {
     $trail->parent('projects.index');
-    $trail->push('Create Project', route('projects.create'));
+    $trail->push(trans('global.create-project'), route('projects.create'));
 });
 
 // Projects > Show Project

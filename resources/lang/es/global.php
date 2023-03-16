@@ -14,7 +14,7 @@ return [
     'register' => 'Registrarse',
     'home' => 'Inicio',
     'reserve' => 'Reservar',
-    'dashboard' => 'Panel de gestión personal',
+    'dashboard' => 'Panel de control',
     'logged' => 'Sesión iniciada',
     'logout' => 'Cerrar sesión',
     'back' => 'Volver',
@@ -28,7 +28,6 @@ return [
     'profile'=>'Mi Perfil',
     'activity'=>'Actividades',
     'welcome' =>'Bienvenido   ',
-    'dashboard'=>'Panel de resultados',
     'pages'=>'Páginas',
     'charts'=>'Gráficas',
     'tables'=>'Tablas',
@@ -172,6 +171,24 @@ return [
      'addproducts' => 'Añadir productos a esta comanda',
      'addproduct' => 'Añadir',
 
+     //Sidebar
+    'items' => 'ITEMS',
+    'posts' => 'Publicaciones',
+    'projects' => 'Proyectos',
+    'page-components' => 'Componentes',
+    'contacts' => 'Contactos',
+    'categories' => 'Categorías',
+    'tags' => 'Etiquetas',
+    'list' => 'Lista',
+    'create' => 'Crear',
+    'headers' => 'Cabeceras',
+    'about' => 'Sobre nosotros',
+    'services' => 'Servicios',
+    'titles' => 'Títulos',
 
+    //Breadcrumbs
+    'create-user' => 'Crear usuario',
+    'create-project' => 'Crear proyecto',
+    'create-post' => 'Crear publicación',
 
 ];

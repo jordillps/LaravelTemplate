@@ -16,8 +16,8 @@
                 <div class="card-header">
                     <div style="display: flex; justify-content: space-between; align-items: center;">
 
-                        <span id="card_title">
-                            {{ __('User') }}
+                        <span class="card_title">
+                            {{ __('global.users') }}
                         </span>
                         @if(Auth::user()->isAdmin())
                             <div class="float-right">

@@ -11,13 +11,13 @@
 
                 @includeif('partials.errors')
 
-                <div class="card card-primary">
+                <div class="card">
                     <div class="card-header">
                         <div class="float-left">
                             <span class="card-title">Create Post</span>
                         </div>
                         <div class="float-right">
-                            <a class="btn btn-dark" href="{{ route('posts.index') }}"> Back</a>
+                            <a class="btn btn-primary" href="{{ route('posts.index') }}"> Back</a>
                         </div>
                     </div>
                     <div class="card-body">

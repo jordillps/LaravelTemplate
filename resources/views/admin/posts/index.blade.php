@@ -16,8 +16,8 @@
                     <div class="card-header">
                         <div style="display: flex; justify-content: space-between; align-items: center;">
 
-                            <span id="card_title">
-                                {{ __('Post') }}
+                            <span class="card_title">
+                                {{ __('global.posts') }}
                             </span>
 
                              <div class="float-right">

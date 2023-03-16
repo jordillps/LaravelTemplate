@@ -28783,9 +28783,13 @@ html.maximized-card {
 
 .card-title {
   float: left;
-  font-size: 1.1rem;
+  font-size: 1.6rem;
   font-weight: 400;
   margin: 0;
+}
+
+.card_title{
+  font-size: 1.6rem;
 }
 
 .card-text {

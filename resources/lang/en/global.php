@@ -28,7 +28,6 @@ return [
     'profile'=>'My Profile',
     'activity'=>'Activities',
     'welcome' =>'Welcome   ',
-    'dashboard'=>'Dashboard',
     'pages'=>'Pages',
     'charts'=>'Charts',
     'tables'=>'Tables',
@@ -173,7 +172,25 @@ return [
      'addproducts' => 'Add products to the order',
      'addproduct' => 'Add',
 
+      //Sidebar
+    'items' => 'ITEMS',
+    'posts' => 'Posts',
+    'projects' => 'Projects',
+    'page-components' => 'Page Components',
+    'contacts' => 'Contacts',
+    'categories' => 'Categories',
+    'tags' => 'Tags',
+    'list' => 'List',
+    'create' => 'Create',
+    'headers' => 'Headers',
+    'about' => 'About',
+    'services' => 'Services',
+    'titles' => 'Titles',
 
+    //Breadcrumbs
+    'create-user' => 'Create user',
+    'create-project' => 'Create project',
+    'create-post' => 'Create post',
 
 
 ];
