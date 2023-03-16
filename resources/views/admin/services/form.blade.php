@@ -4,7 +4,7 @@
 <div class="box box-info padding-1">
     <div class="box-body">
         <div class="form-group">
-            {{ Form::label('page') }}
+            {{ Form::trans('global.page') }}
             {!! Form::select('page_id', $pages, $service->page_id, ['class' => 'form-control' . ($errors->has('page_id') ? ' is-invalid' : '')]) !!}
             {!! $errors->first('page_id', '<div class="invalid-feedback">:message</div>') !!}
         </div>
@@ -56,7 +56,7 @@
 
     </div>
     <div class="box-footer mt20">
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary">{{ __('global.save') }}</button>
     </div>
 </div>
 
@@ -77,7 +77,7 @@
           headers: {
             'X-CSRF-TOKEN': "{{ csrf_token() }}"
           },
-          dictDefaultMessage : 'Arrastrar para subir la fotografía',
+          dictDefaultMessage : '{{ __("global.drag-to-upload") }}',
           success: function (file, response) {
             $('form').append('<input type="hidden" name="images[]" value="' + response.name + '">')
             uploadedDocumentMap[file.name] = response.name

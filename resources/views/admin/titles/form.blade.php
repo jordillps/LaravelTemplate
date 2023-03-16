@@ -2,7 +2,7 @@
     <div class="box-body">
         
         <div class="form-group">
-            {{ Form::label('page') }}
+            {{ Form::trans('global.page') }}
             {!! Form::select('page_id', $pages, $title->page_id, ['class' => 'form-control' . ($errors->has('page_id') ? ' is-invalid' : '')]) !!}
             {!! $errors->first('page_id', '<div class="invalid-feedback">:message</div>') !!}
         </div>
@@ -19,6 +19,6 @@
 
     </div>
     <div class="box-footer mt20">
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary">{{ __('global.save') }}</button>
     </div>
 </div>

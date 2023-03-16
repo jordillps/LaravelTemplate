@@ -11,7 +11,7 @@
             </div>
 
             <div class="modal-footer">
-                <button type="button" class="btn  {{ str_contains($body, 'successfully') ? 'btn-success' : 'btn-default' }}" data-dismiss="modal">Close</button>
+                <button type="button" class="btn  {{ str_contains($body, 'successfully') ? 'btn-success' : 'btn-default' }}" data-dismiss="modal">{{ __('global.close') }}</button>
             </div>
         </div>
     </div>

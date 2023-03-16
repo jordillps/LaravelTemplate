@@ -14,7 +14,7 @@
                             <span class="card-title">Update Tag</span>
                         </div>
                         <div class="float-right">
-                            <a class="btn btn-primary" href="{{ route('tags.index') }}"> Back</a>
+                            <a class="btn btn-primary" href="{{ route('tags.index') }}">{{ __('global.back') }}</a>
                         </div>
                     </div>
 

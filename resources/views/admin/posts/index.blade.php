@@ -53,8 +53,8 @@
 											<td>{{ $post->category->{'name:'. app()->getLocale()} }}</td>
 
                                             <td>
-                                                    <a class="btn btn-sm btn-primary " href="{{ route('posts.show',$post->id) }}"><i class="fa fa-fw fa-eye"></i> Show</a>
-                                                    <a class="btn btn-sm btn-success" href="{{ route('posts.edit',$post->id) }}"><i class="fa fa-fw fa-edit"></i> Edit</a>
+                                                    <a class="btn btn-sm btn-primary " href="{{ route('posts.show',$post->id) }}"><i class="fa fa-fw fa-eye"></i>{{ __("global.show") }}</a>
+                                                    <a class="btn btn-sm btn-success" href="{{ route('posts.edit',$post->id) }}"><i class="fa fa-fw fa-edit"></i>{{ __("global.edit") }}</a>
                                                     <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-item-id="{{ $post->id }}" data-item-name="{{ $post->title }}" data-target="#modal-delete"><i class="fa fa-fw fa-trash"></i>
                                                         Delete
                                                       </button>
@@ -70,32 +70,7 @@
         </div>
     </section>
 </div>
-<form id="deleteItemForm" action="" method="POST">
-    <div class="modal fade" id="modal-delete">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title"></h4>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                @csrf
-                @method('DELETE')
-                <div class="modal-body">
-                    <p>Are you sure?</p>
-                </div>
-                <div class="modal-footer justify-content-between">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Delete</button>
-                </div>
-            </div>
-            <!-- /.modal-content -->
-        </div>
-        <!-- /.modal-dialog -->
-    </div>
-    <!-- /.modal -->
-</form>
+@include('partials.confirm-delete-modal')
 @endsection
 
 @push('scripts')
@@ -128,7 +103,7 @@
             $('#deleteItemForm').on('show.bs.modal', function (event) {
                 var button = $(event.relatedTarget);
                 const id = 'id';
-                $('.modal-title').text('Delete ' + button.data('item-name'));
+                $('.modal-title').text("{{ __('global.delete') }} " + button.data('item-name'));
                 var route = "{{ route('posts.destroy',  'id' ) }}";
                 route = route.replace('id',button.data('item-id'));
                 $('#deleteItemForm').attr('action', route);

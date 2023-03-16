@@ -192,5 +192,32 @@ return [
     'create-post' => 'Crear publicación',
 
     //Legal-pages
-    'legal-pages' => 'Páginas legales'
+    'legal-pages' => 'Páginas legales',
+
+    //Abouts
+    'abouts' => 'Sobre nosotros',
+    'create-about' => 'Crear sobre nosotros',
+    'update-about' => 'Actualizar sobre nosotros',
+
+
+    //Images
+    'image-uploaded' => 'Imagen guardada',
+
+    //Forms
+    'page' => 'Página',
+    'profession' => 'Professión',
+    'about_me' => 'Sobre mi',
+    'image-uploaded-warining-1' => 'Imagen sobre mi (Cargar solo una imagen, dimensiones máximas 1000x1000)',
+    'save' => 'Guardar',
+    'drag-to-upload' => '{{ __("global.drag-to-upload") }}',
+
+    //Index pages
+    'show' => 'Mostrar',
+    'edit' => 'Editar',
+
+    //Modals
+    'sure' => '¿Está seguro?',
+    'close' => 'Cerrar',
+
+
 ];

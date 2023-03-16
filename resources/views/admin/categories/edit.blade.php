@@ -14,7 +14,7 @@
                             <span class="card-title">Update Category</span>
                         </div>
                         <div class="float-right">
-                            <a class="btn btn-primary" href="{{ route('categories.index') }}"> Back</a>
+                            <a class="btn btn-primary" href="{{ route('categories.index') }}">{{ __('global.back') }}</a>
                         </div>
                     </div>
                     @include('flash::message')

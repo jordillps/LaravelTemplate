@@ -14,7 +14,7 @@
                             <span class="card-title">Create Category</span>
                         </div>
                         <div class="float-right">
-                            <a class="btn btn-primary" href="{{ route('categories.index') }}"> Back</a>
+                            <a class="btn btn-primary" href="{{ route('categories.index') }}">{{ __('global.back') }}</a>
                         </div>
                     </div>
                     <div class="card-body">

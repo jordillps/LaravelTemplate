@@ -193,6 +193,33 @@ return [
     'create-post' => 'Crear publicació',
 
     //Legal-pages
-    'legal-pages' => 'Pàgines legals'
+    'legal-pages' => 'Pàgines legals',
+
+    //Abouts
+    'abouts' => 'Sobre nosaltres',
+    'create-about' => 'Crear sobre nosaltres',
+    'update-about' => 'Actualitzar sobre nosaltres',
+
+
+    //Images
+    'image-uploaded' => 'Imatge guardada',
+
+    //Forms
+    'page' => 'Pàgina',
+    'profession' => 'Professió',
+    'about_me' => 'Sobre mi',
+    'image-uploaded-warining-1' => 'Imagen sobre mi (pengeu només una imatge, dimensions màximes 1000x1000)',
+    'save' => 'Guardar',
+    'drag-to-upload' => 'Arrossegar per pujar la fotografia',
+
+    //Index pages
+    'show' => 'Mostrar',
+    'edit' => 'Editar',
+
+
+    //Modals
+    'sure' => 'Esteu segur?',
+    'close' => 'Tancar',
+
 
 ];

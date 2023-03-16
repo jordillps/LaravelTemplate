@@ -12,7 +12,7 @@
                             <span class="card-title">Show Legal Page</span>
                         </div>
                         <div class="float-right">
-                            <a class="btn btn-primary" href="{{ route('legal-pages.index') }}"> Back</a>
+                            <a class="btn btn-primary" href="{{ route('legal-pages.index') }}">{{ __('global.back') }}</a>
                         </div>
                     </div>
 

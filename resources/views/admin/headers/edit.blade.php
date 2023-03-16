@@ -15,7 +15,7 @@
                             <span class="card-title">Update Header</span>
                         </div>
                         <div class="float-right">
-                            <a class="btn btn-primary" href="{{ route('headers.index') }}"> Back</a>
+                            <a class="btn btn-primary" href="{{ route('headers.index') }}">{{ __('global.back') }}</a>
                         </div>
                     </div>
                     @include('flash::message')
@@ -28,7 +28,7 @@
 
                         </form>
                         <hr>
-                            <label for="document">Image Uploaded</label>
+                            <label for="document">{{ __('global.image-uploaded') }}</label>
                             <div class="row">
                                 @foreach ($header->getMedia('images') as $media)
                                     <div class="col-12 col-md-6 col-lg-4">

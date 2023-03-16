@@ -17,7 +17,7 @@
                         <span class="card-title">Create User</span>
                       </div>
                       <div class="float-right">
-                          <a class="btn btn-primary" href="{{ route('users.index') }}"> Back</a>
+                          <a class="btn btn-primary" href="{{ route('users.index') }}">{{ __('global.back') }}</a>
                       </div>
                     </div>
                     <div class="card-body">

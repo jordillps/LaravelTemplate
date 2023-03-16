@@ -6,42 +6,42 @@
     <div class="box-body">
         
         <div class="form-group">
-          {{ Form::label('page') }}
+          {{ Form::label(trans('global.page')) }}
           {!! Form::select('page_id', $pages, $about->page_id, ['class' => 'form-control' . ($errors->has('page_id') ? ' is-invalid' : '')]) !!}
           {!! $errors->first('page_id', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="row">
           <div class="col-12 col-md-6">
             <div class="form-group">
-              {{ Form::label('name') }}
+              {{ Form::label(trans('global.name')) }}
               {{ Form::text('name', $about->name, ['class' => 'form-control' . ($errors->has('name') ? ' is-invalid' : ''), 'placeholder' => 'Name']) }}
               {!! $errors->first('name', '<div class="invalid-feedback">:message</div>') !!}
             </div>
           </div>
           <div class="col-12 col-md-6">
             <div class="form-group">
-              {{ Form::label('profession') }}
+              {{ Form::label(trans('global.profession')) }}
               {{ Form::text('profession:'.app()->getLocale(), $about->{'profession:'. app()->getLocale()}, ['class' => 'form-control' . ($errors->has('profession:'.app()->getLocale()) ? ' is-invalid' : ''), 'placeholder' => 'Profession']) }}
               {!! $errors->first('profession:'.app()->getLocale(), '<div class="invalid-feedback">:message</div>') !!}
             </div>
           </div>
         </div>   
         <div class="form-group">
-            {{ Form::label('about_me') }}
+            {{ Form::label(trans('global.about_me')) }}
             {{ Form::textarea('about_me:'.app()->getLocale(), $about->{'about_me:'. app()->getLocale()}, ['id'=> 'summernote','class' => 'form-control' . ($errors->has('about_me:'.app()->getLocale()) ? ' is-invalid' : ''), 'placeholder' => 'About Me']) }}
             {!! $errors->first('about_me:'.app()->getLocale(), '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="row">
           <div class="col-12 col-md-6">
             <div class="form-group">
-              {{ Form::label('email') }}
+              {{ Form::label(trans('global.email')) }}
               {{ Form::text('email', $about->email, ['class' => 'form-control' . ($errors->has('email') ? ' is-invalid' : ''), 'placeholder' => 'Email']) }}
               {!! $errors->first('email', '<div class="invalid-feedback">:message</div>') !!}
             </div>
           </div>
           <div class="col-12 col-md-6">
             <div class="form-group">
-              {{ Form::label('phone') }}
+              {{ Form::label(trans('global.phone')) }}
               {{ Form::text('phone', $about->phone, ['class' => 'form-control' . ($errors->has('phone') ? ' is-invalid' : ''), 'placeholder' => 'Phone']) }}
               {!! $errors->first('phone', '<div class="invalid-feedback">:message</div>') !!}
             </div>
@@ -78,14 +78,14 @@
           </div>
         </div>
         <div class="form-group">
-          <label for="document">Header Image (Upload only one image, max dimensions 1000x1000)</label>
+          <label for="document">{{ __('global.image-uploaded-warining-1') }}</label>
           <div class="needsclick dropzone" id="document-dropzone">
   
           </div>
         </div>
     </div>
     <div class="box-footer mt20">
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary">{{ __('global.save') }}</button>
     </div>
 </div>
 
@@ -104,7 +104,7 @@
           headers: {
             'X-CSRF-TOKEN': "{{ csrf_token() }}"
           },
-          dictDefaultMessage : 'Arrastrar para subir la fotografía',
+          dictDefaultMessage : '{{ __("global.drag-to-upload") }}',
           success: function (file, response) {
             $('form').append('<input type="hidden" name="images[]" value="' + response.name + '">')
             uploadedDocumentMap[file.name] = response.name

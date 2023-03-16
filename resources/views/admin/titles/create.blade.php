@@ -14,7 +14,7 @@
                             <span class="card-title">Create Title</span>
                         </div>
                         <div class="float-right">
-                            <a class="btn btn-primary" href="{{ route('titles.index') }}"> Back</a>
+                            <a class="btn btn-primary" href="{{ route('titles.index') }}">{{ __('global.back') }}</a>
                         </div>
                     </div>
                     <div class="card-body">

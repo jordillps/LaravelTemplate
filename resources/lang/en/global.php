@@ -193,7 +193,35 @@ return [
     'create-post' => 'Create post',
 
     //Legal-pages
-    'legal-pages' => 'Legal pages'
+    'legal-pages' => 'Legal pages',
+
+    //Abouts
+    'abouts' => 'Abouts',
+    'create-about' => 'Create about',
+    'update-about' => 'Update about',
+
+
+    //Images
+    'image-uploaded' => 'Image Uploaded',
+
+
+    //Forms
+    'page' => 'Page',
+    'profession' => 'Profession',
+    'about_me' => 'About me',
+    'image-uploaded-warining-1' => 'About me image (Upload only one image, max dimensions 1000x1000)',
+    'save' => 'Save',
+    'drag-to-upload' => 'Drag to upload photo',
+
+    //Index pages
+    'show' => 'Show',
+    'edit' => 'Edit',
+
+    //Modals
+    'sure' => 'Are you sure?',
+    'close' => 'Close',
+
+
 
     
 

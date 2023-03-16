@@ -15,7 +15,7 @@
                             <span class="card-title">Update Project</span>
                         </div>
                         <div class="float-right">
-                            <a class="btn btn-primary" href="{{ route('projects.index') }}"> Back</a>
+                            <a class="btn btn-primary" href="{{ route('projects.index') }}">{{ __('global.back') }}</a>
                         </div>
                     </div>
                     @include('flash::message')
