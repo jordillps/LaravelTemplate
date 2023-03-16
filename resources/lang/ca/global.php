@@ -197,8 +197,11 @@ return [
 
     //Abouts
     'abouts' => 'Sobre nosaltres',
+    'about-me' => 'Sobre mi',
     'create-about' => 'Crear sobre nosaltres',
     'update-about' => 'Actualitzar sobre nosaltres',
+    'show-about' => 'Mostrar sobre nosaltres',
+
 
 
     //Images

@@ -9,7 +9,7 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="float-left">
-                            <span class="card-title">Show About</span>
+                            <span class="card-title">{{ __('global.show-about') }}</span>
                         </div>
                         <div class="float-right">
                             <a class="btn btn-primary" href="{{ route('abouts.index') }}">{{ __('global.back') }}</a>
@@ -18,37 +18,37 @@
 
                     <div class="card-body">
                         <div class="callout callout-primary">
-                            <strong>Page:</strong>
+                            <strong>{{ __('global.page') }}:</strong>
                             {{ $about->page->name }}
                         </div>
                         <div class="row">
                             <div class="col-12 col-md-6">
                                 <div class="callout callout-primary">
-                                    <strong>Name:</strong>
+                                    <strong>{{ __('global.name') }}:</strong>
                                     {{ $about->name }}
                                 </div>
                             </div>
                             <div class="col-12 col-md-6">
                                 <div class="callout callout-primary">
-                                    <strong>Profession:</strong>
+                                    <strong>{{ __('global.profession') }}:</strong>
                                     {{ $about->{'profession:'. app()->getLocale()} }}
                                 </div>
                             </div>
                         </div>
                         <div class="callout callout-primary">
-                            <strong>About Me:</strong>
+                            <strong>{{ __('global.about-me') }}:</strong>
                             {!! $about->{'about_me:'. app()->getLocale()} !!}
                         </div>
                         <div class="row">
                             <div class="col-12 col-md-6">
                                 <div class="callout callout-primary">
-                                    <strong>Email:</strong>
+                                    <strong>{{ __('global.email') }}:</strong>
                                     {{ $about->email }}
                                 </div>
                             </div>
                             <div class="col-12 col-md-6">
                                 <div class="callout callout-primary">
-                                    <strong>Phone:</strong>
+                                    <strong>{{ __('global.phone') }}:</strong>
                                     {{ $about->phone }}
                                 </div>
                             </div>
@@ -80,7 +80,7 @@
                             </div>
                         </div>    
                         <div class="callout callout-primary">
-                            <strong>Picture:</strong>
+                            <strong>{{ __('global.image') }}:</strong>
                             <div class="row p-3">
                                 @foreach ($about->getMedia('images') as $media)
                                     <div class="col-12 col-md-6 col-lg-3">

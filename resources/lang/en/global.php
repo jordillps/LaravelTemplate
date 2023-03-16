@@ -197,8 +197,10 @@ return [
 
     //Abouts
     'abouts' => 'Abouts',
+    'about-me' => 'About me',
     'create-about' => 'Create about',
     'update-about' => 'Update about',
+    'show-about' => 'Show about me',
 
 
     //Images
