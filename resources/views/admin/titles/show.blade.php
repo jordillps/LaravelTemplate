@@ -1,9 +1,5 @@
 @extends('layouts.admin')
 
-@section('template_title')
-    {{ $title->name ?? 'Show Title' }}
-@endsection
-
 @section('content')
     <section class="content container-fluid">
         <div class="row">

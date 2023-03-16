@@ -1,9 +1,5 @@
 @extends('layouts.admin')
 
-@section('template_title')
-    Create Page
-@endsection
-
 @section('content')
     <section class="content container-fluid">
         <div class="row">
@@ -11,15 +7,20 @@
 
                 @includeif('partials.errors')
 
-                <div class="card card-default">
+                <div class="card">
                     <div class="card-header">
-                        <span class="card-title">Create Page</span>
+                        <div class="float-left">
+                            <span class="card-title">Create Page</span>
+                        </div>
+                        <div class="float-right">
+                            <a class="btn btn-primary" href="{{ route('pages.index') }}"> Back</a>
+                        </div>
                     </div>
                     <div class="card-body">
                         <form method="POST" action="{{ route('pages.store') }}"  role="form" enctype="multipart/form-data">
                             @csrf
 
-                            @include('page.form')
+                            @include('admin.pages.form')
 
                         </form>
                     </div>

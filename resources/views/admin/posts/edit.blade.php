@@ -1,9 +1,5 @@
 @extends('layouts.admin')
 
-@section('template_title')
-    Update Post
-@endsection
-
 @section('content')
     <div class="content-wrapper">    
         @include('admin.partials.header')

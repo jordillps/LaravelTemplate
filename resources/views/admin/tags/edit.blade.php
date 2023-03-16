@@ -1,9 +1,5 @@
 @extends('layouts.admin')
 
-@section('template_title')
-    Update Tag
-@endsection
-
 @section('content')
 <div class="content-wrapper">
     <section class="content container-fluid">
@@ -14,8 +10,14 @@
 
                 <div class="card card-default">
                     <div class="card-header">
-                        <span class="card-title">Update Tag</span>
+                        <div class="float-left">
+                            <span class="card-title">Update Tag</span>
+                        </div>
+                        <div class="float-right">
+                            <a class="btn btn-primary" href="{{ route('tags.index') }}"> Back</a>
+                        </div>
                     </div>
+
                     @include('flash::message')
                     <div class="card-body">
                         <form method="POST" action="{{ route('tags.update', $tag->id) }}"  role="form" enctype="multipart/form-data">

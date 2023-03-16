@@ -191,4 +191,6 @@ return [
     'create-project' => 'Crear proyecto',
     'create-post' => 'Crear publicación',
 
+    //Legal-pages
+    'legal-pages' => 'Páginas legales'
 ];

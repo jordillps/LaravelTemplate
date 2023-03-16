@@ -16,6 +16,7 @@ use App\Http\Controllers\ContactFormController;
 use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\TagController;
+use App\Http\Controllers\Admin\LegalPageController;
 
 
 /*
@@ -91,6 +92,9 @@ Route::group(['middleware' => ['auth']], function () {
 
         //Tags
         Route::resource('/tags', TagController::class);
+
+        //LegalPages
+        Route::resource('/legal-pages', LegalPageController::class);
     });
 });
 

@@ -192,4 +192,7 @@ return [
     'create-project' => 'Crear projecte',
     'create-post' => 'Crear publicació',
 
+    //Legal-pages
+    'legal-pages' => 'Pàgines legals'
+
 ];

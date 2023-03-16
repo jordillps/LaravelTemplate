@@ -1,9 +1,5 @@
 @extends('layouts.admin')
 
-@section('template_title')
-    Update Service
-@endsection
-
 @section('content')
 <div class="content-wrapper">
 

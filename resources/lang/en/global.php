@@ -192,5 +192,10 @@ return [
     'create-project' => 'Create project',
     'create-post' => 'Create post',
 
+    //Legal-pages
+    'legal-pages' => 'Legal pages'
+
+    
+
 
 ];

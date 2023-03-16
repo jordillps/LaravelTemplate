@@ -1,9 +1,5 @@
 @extends('layouts.admin')
 
-@section('template_title')
-    {{ $user->name ?? 'Show User' }}
-@endsection
-
 @section('content')
     <div class="content-wrapper">
 

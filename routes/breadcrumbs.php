@@ -73,6 +73,12 @@ Breadcrumbs::for('pages.index', function (BreadcrumbTrail $trail) {
     $trail->push(trans('global.pages'), route('pages.index'));
 });
 
+// Legal Pages
+Breadcrumbs::for('legal-pages.index', function (BreadcrumbTrail $trail) {
+    $trail->parent('admin');
+    $trail->push(trans('global.legal-pages'), route('legal-pages.index'));
+});
+
 // Headers
 Breadcrumbs::for('headers.index', function (BreadcrumbTrail $trail) {
     $trail->parent('admin');

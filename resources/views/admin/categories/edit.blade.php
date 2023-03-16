@@ -1,9 +1,5 @@
 @extends('layouts.admin')
 
-@section('template_title')
-    Update Category
-@endsection
-
 @section('content')
 <div class="content-wrapper">
     <section class="content container-fluid">

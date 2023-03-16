@@ -17,6 +17,9 @@ use App\Models\Service;
 use App\Models\ServiceTranslation;
 use App\Models\Post;
 use App\Models\Tag;
+use App\Models\Page;
+use App\Models\LegalPage;
+use App\Models\LegalPageTranslation;
 
 
 class DatabaseSeeder extends Seeder
@@ -73,10 +76,33 @@ class DatabaseSeeder extends Seeder
         }
 
         //Pages
-        \App\Models\Page::factory()->create(['name' => 'Home']);
+        Page::factory()->create(['name' => 'General']);
+        Page::factory()->create(['name' => 'Home']);
+
+        LegalPage::factory()->count(1)->create()->each(function (LegalPage $legalPage) {
+            LegalPageTranslation::factory()->count(1)->create([
+                'legal_page_id' => $legalPage->id,
+                'locale' => 'es',
+                'title' => 'Política de cookies',
+                'body' => 'Política de cookies'
+            ]);
+            LegalPageTranslation::factory()->count(1)->create([
+                'legal_page_id' => $legalPage->id,
+                'locale' => 'en',
+                'title' => 'Cookies politics',
+                'body' => 'Cookies politics'
+            ]);
+            LegalPageTranslation::factory()->count(1)->create([
+                'legal_page_id' => $legalPage->id,
+                'locale' => 'ca',
+                'title' => 'Política de cookies',
+                'body' => 'Política de cookies'
+            ]);
+        });
+
 
         //Header home page
-        Header::factory()->count(1)->create(['page_id' => 1])->each(function (Header $header) {
+        Header::factory()->count(1)->create(['page_id' => 2])->each(function (Header $header) {
             HeaderTranslation::factory()->count(1)->create([
                 'header_id' => $header->id, 
                 'locale' => 'es',
@@ -98,7 +124,7 @@ class DatabaseSeeder extends Seeder
         });
 
         //Titles Home Page
-        Title::factory()->count(1)->create(['page_id' => 1])->each(function (Title $title) {
+        Title::factory()->count(1)->create(['page_id' => 2])->each(function (Title $title) {
             TitleTranslation::factory()->count(1)->create([
                 'title_id' => $title->id, 
                 'locale' => 'es',
@@ -119,7 +145,7 @@ class DatabaseSeeder extends Seeder
             ]);
         });
 
-        Title::factory()->count(1)->create(['page_id' => 1])->each(function (Title $title) {
+        Title::factory()->count(1)->create(['page_id' => 2])->each(function (Title $title) {
             TitleTranslation::factory()->count(1)->create([
                 'title_id' => $title->id, 
                 'locale' => 'es',
@@ -140,7 +166,7 @@ class DatabaseSeeder extends Seeder
             ]);
         });
 
-        Title::factory()->count(1)->create(['page_id' => 1])->each(function (Title $title) {
+        Title::factory()->count(1)->create(['page_id' => 2])->each(function (Title $title) {
             TitleTranslation::factory()->count(1)->create([
                 'title_id' => $title->id, 
                 'locale' => 'es',
@@ -162,14 +188,14 @@ class DatabaseSeeder extends Seeder
         });
 
         //About home page
-        About::factory()->count(1)->create(['page_id' => 1])->each(function (About $about) {
+        About::factory()->count(1)->create(['page_id' => 2])->each(function (About $about) {
             AboutTranslation::factory()->count(1)->create(['about_id' => $about->id, 'locale' => 'es']);
             AboutTranslation::factory()->count(1)->create(['about_id' => $about->id,'locale' => 'en']);
             AboutTranslation::factory()->count(1)->create(['about_id' => $about->id,'locale' => 'ca']);
         });
 
         //Services
-        Service::factory()->count(1)->create(['page_id' => 1])->each(function (Service $service) {
+        Service::factory()->count(1)->create(['page_id' => 2])->each(function (Service $service) {
             ServiceTranslation::factory()->count(1)->create([
                 'service_id' => $service->id, 
                 'locale' => 'es',
