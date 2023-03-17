@@ -4,22 +4,22 @@
 <div class="box box-info padding-1">
     <div class="box-body">
         <div class="form-group">
-            {{ Form::trans('global.page') }}
+            {{ Form::label(trans('global.page')) }}
             {!! Form::select('page_id', $pages, $service->page_id, ['class' => 'form-control' . ($errors->has('page_id') ? ' is-invalid' : '')]) !!}
             {!! $errors->first('page_id', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('title') }}
+            {{ Form::label(trans('global.title')) }}
             {{ Form::text('title:'.app()->getLocale(), $service->{'title:'. app()->getLocale()}, ['class' => 'form-control' . ($errors->has('title:'.app()->getLocale()) ? ' is-invalid' : ''), 'placeholder' => 'Title']) }}
             {!! $errors->first('title:'.app()->getLocale(), '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('Text') }}
+            {{ Form::label(trans('global.text')) }}
             {{ Form::textarea('text:'.app()->getLocale(), $service->{'text:'. app()->getLocale()}, ['class' => 'form-control' . ($errors->has('text:'.app()->getLocale()) ? ' is-invalid' : ''), 'placeholder' => 'Text', 'rows' => 2]) }}
             {!! $errors->first('text:'.app()->getLocale(), '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
-          {{ Form::label('Icons') }}
+          {{ Form::label(trans('global.icons')) }}
           <div class="form-group-icons">
             <div class="row align-items-center">
               {{ Form::radio('icon','ion-monitor', $service->icon == 'ion-monitor') }}
@@ -49,7 +49,7 @@
           {!! $errors->first('text:'.app()->getLocale(), '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
-            <label for="document">Service Image (Upload only one image, max dimensions 100x100)</label>
+            <label for="document">{{ __('global.service-image') }}</label>
             <div class="needsclick dropzone" id="document-dropzone">
             </div>
         </div>
@@ -68,7 +68,7 @@
         Dropzone.options.documentDropzone = {
           url: '{{ route('services.storeMedia') }}',
           maxFilesize: 1, // MB
-          acceptedFiles: ".png,.jpg,.gif",
+          acceptedFiles: ".png,.jpg,.gif,webp",
           addRemoveLinks: true,
           maxFiles:1,
           uploadMultiple: false,
@@ -77,7 +77,7 @@
           headers: {
             'X-CSRF-TOKEN': "{{ csrf_token() }}"
           },
-          dictDefaultMessage : '{{ __("global.drag-to-upload") }}',
+          dictDefaultMessage : 'Arrastrar para subir las fotografías',
           success: function (file, response) {
             $('form').append('<input type="hidden" name="images[]" value="' + response.name + '">')
             uploadedDocumentMap[file.name] = response.name

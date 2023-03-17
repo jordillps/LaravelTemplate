@@ -9,7 +9,7 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="float-left">
-                            <span class="card-title">Show Project</span>
+                            <span class="card-title">{{ __('global.show-project') }}</span>
                         </div>
                         <div class="float-right">
                             <a class="btn btn-primary" href="{{ route('projects.index') }}">{{ __('global.back') }}</a>
@@ -17,29 +17,37 @@
                     </div>
                     <div class="card-body">
                         <div class="callout callout-primary">
-                            <strong>Title:</strong>
+                            <div>
+                                <strong>{{ __('global.title') }}:</strong>
+                            </div>
                             {{ $project->{'title:'. app()->getLocale()} }}
                         </div>
                         <div class="callout callout-primary">
-                            <strong>Text:</strong>
+                            <div>
+                                <strong>{{ __('global.text') }}:</strong>
+                            </div>
                             {{ $project->{'text:'. app()->getLocale()} }}
                         </div>
                         <div class="row">
                             <div class="col-12 col-md-6">
                                 <div class="callout callout-primary">
-                                    <strong>Published At:</strong>
+                                    <div>
+                                        <strong>{{ __('global.published_at') }}:</strong>
+                                    </div>
                                     {{ $project->published_at }}
                                 </div>
                             </div>
                             <div class="col-12 col-md-6">
                                 <div class="callout callout-primary">
-                                    <strong>Category:</strong>
+                                    <div>
+                                        <strong>{{ __('global.category') }}:</strong>
+                                    </div>
                                     {{ $project->category->name }}
                                 </div>
                             </div>
                         </div>
                         <div class="callout callout-primary">
-                            <strong>Pictures:</strong>
+                            <strong>{{ __('global.images') }}:</strong>
                             <div class="row">
                                 @foreach ($project->getMedia('images') as $media)
                                     <div class="col-12 col-md-4 col-lg-2">

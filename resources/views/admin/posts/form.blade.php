@@ -5,36 +5,36 @@
 <div class="box box-info padding-1">
   <div class="box-body">
       <div class="form-group">
-          {{ Form::label('title') }}
+          {{ Form::label(trans('global.title')) }}
           {{ Form::text('title:'.app()->getLocale(), $post->{'title:'. app()->getLocale()}, ['class' => 'form-control' . ($errors->has('title:'.app()->getLocale()) ? ' is-invalid' : ''), 'placeholder' => 'Title']) }}
           {!! $errors->first('title:'.app()->getLocale(), '<div class="invalid-feedback">:message</div>') !!}
       </div>
       <div class="form-group">
-          {{ Form::label('excerpt') }}
+          {{ Form::label(trans('global.excerpt')) }}
           {{ Form::text('excerpt:'.app()->getLocale(), $post->{'excerpt:'. app()->getLocale()}, ['class' => 'form-control' . ($errors->has('excerpt:'.app()->getLocale()) ? ' is-invalid' : ''), 'placeholder' => 'Excerpt']) }}
           {!! $errors->first('excerpt:'.app()->getLocale(), '<div class="invalid-feedback">:message</div>') !!}
       </div>
       <div class="form-group">
-          {{ Form::label('iframe') }}
+          {{ Form::label(trans('global.iframe')) }}
           {{ Form::text('iframe:'.app()->getLocale(), $post->{'iframe:'. app()->getLocale()}, ['class' => 'form-control' . ($errors->has('iframe:'.app()->getLocale()) ? ' is-invalid' : ''), 'placeholder' => 'Iframe']) }}
           {!! $errors->first('iframe:'.app()->getLocale(), '<div class="invalid-feedback">:message</div>') !!}
       </div>
       <div class="form-group">
-          {{ Form::label('body') }}
+          {{ Form::label(trans('global.body')) }}
           {{ Form::textarea('body:'.app()->getLocale(), $post->{'body:'. app()->getLocale()}, ['id'=> "summernote",'class' => 'form-control' . ($errors->has('body:'.app()->getLocale()) ? ' is-invalid' : ''), 'placeholder' => 'Body']) }}
           {!! $errors->first('body:'.app()->getLocale(), '<div class="invalid-feedback">:message</div>') !!}
       </div>
       <div class="row">
         <div class="col-12 col-md-6">
           <div class="form-group">
-            {{ Form::label('published_at') }}
+            {{ Form::label(trans('global.published_at')) }}
             {{ Form::date('published_at', $post->published_at, ['class' => 'form-control' . ($errors->has('published_at') ? ' is-invalid' : ''), 'placeholder' => 'Published At']) }}
             {!! $errors->first('published_at', '<div class="invalid-feedback">:message</div>') !!}
           </div>
         </div>
         <div class="col-12 col-md-6">
           <div class="form-group">
-              {{ Form::label('user') }}
+              {{ Form::label(trans('global.author')) }}
               @if(Route::is('posts.create'))
                   {!! Form::select('user_id', $users, null, ['class' => 'form-control' . ($errors->has('user_id') ? ' is-invalid' : '')]) !!}
               @else
@@ -47,7 +47,7 @@
       <div class="row">
         <div class="col-12 col-md-6">
           <div class="form-group">
-              {{ Form::label('category') }}
+              {{ Form::label(trans('global.category')) }}
               @if(Route::is('posts.create'))
                   {!! Form::select('category_id', $categories, null, ['class' => 'form-control' . ($errors->has('category_id') ? ' is-invalid' : '')]) !!}
               @else
@@ -58,7 +58,7 @@
         </div>
         <div class="col-12 col-md-6">
           <div class="form-group">
-            {{Form::label('tags')}}
+            {{Form::label(trans('global.tags'))}}
             @if(Route::is('posts.create'))
               {!! Form::select('tags[]', $tags, null, ['id' => 'tags', 'multiple' => 'multiple', 'class' => 'form-control' . ($errors->has('category_id') ? ' is-invalid' : '')]) !!}
             @else
@@ -69,7 +69,7 @@
         </div>
       </div>
       <div class="form-group">
-          <label for="document">Documents</label>
+          <label for="document">{{ __('global.upload-images') }}</label>
           <div class="needsclick dropzone" id="document-dropzone">
           </div>
       </div>

@@ -11,7 +11,7 @@
                     <div class="card">
                         <div class="card-header">
                             <div class="float-left">
-                                <span class="card-title">Show User</span>
+                                <span class="card-title">{{ __('global.show-user') }}</span>
                             </div>
                             <div class="float-right">
                                 <a class="btn btn-primary" href="{{ route('users.index') }}">{{ __('global.back') }}</a>
@@ -24,13 +24,17 @@
                                     <div class="row">
                                         <div class="col-12 col-md-6">
                                             <div class="callout callout-primary">
-                                                <strong>Name:</strong>
+                                                <div>
+                                                    <strong>{{ __('global.name') }}:</strong>
+                                                </div>
                                                 {{ $user->name }}
                                             </div>
                                         </div>
                                         <div class="col-12 col-md-6">
                                             <div class="callout callout-primary">
-                                                <strong>Role:</strong>
+                                                <div>
+                                                    <strong>{{ __('global.role') }}:</strong>
+                                                </div>
                                                 {{ $user->role->name }}
                                             </div>
                                         </div>
@@ -38,13 +42,17 @@
                                     <div class="row">
                                         <div class="col-12 col-md-6">
                                             <div class="callout callout-primary">
-                                                <strong>Email:</strong>
+                                                <div>
+                                                    <strong>{{ __('global.email') }}:</strong>
+                                                </div>
                                                 {{ $user->email }}
                                             </div>
                                         </div>
                                         <div class="col-12 col-md-6">
                                             <div class="callout callout-primary">
-                                                <strong>Date of Birth:</strong>
+                                                <div>
+                                                    <strong>{{ __('global.date-of-birth') }}:</strong>
+                                                </div>
                                                 {{ Carbon\Carbon::parse($user->date_birth)->format('d-m-Y') }}
                                             </div>
                                         </div>

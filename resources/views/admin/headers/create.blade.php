@@ -12,7 +12,7 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="float-left">
-                            <span class="card-title">Create Header</span>
+                            <span class="card-title">{{ __('global.create-header') }}</span>
                         </div>
                         <div class="float-right">
                             <a class="btn btn-primary" href="{{ route('headers.index') }}">{{ __('global.back') }}</a>

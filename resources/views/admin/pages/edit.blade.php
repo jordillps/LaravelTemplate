@@ -10,7 +10,7 @@
                 <div class="card card-default">
                     <div class="card-header">
                         <div class="float-left">
-                            <span class="card-title">Update Page</span>
+                            <span class="card-title">{{ __('global.update-page') }}</span>
                         </div>
                         <div class="float-right">
                             <a class="btn btn-primary" href="{{ route('pages.index') }}">{{ __('global.back') }}</a>

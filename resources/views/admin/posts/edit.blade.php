@@ -12,7 +12,7 @@
                     <div class="card card-default">
                         <div class="card-header">
                             <div class="float-left">
-                                <span class="card-title">Update Post</span>
+                                <span class="card-title">{{ __('global.update-post') }}</span>
                             </div>
                             <div class="float-right">
                                 <a class="btn btn-primary" href="{{ route('posts.index') }}">{{ __('global.back') }}</a>
@@ -29,7 +29,7 @@
 
                             </form>
                             <hr>
-                            <label for="document">Documents Uploaded</label>
+                            <label for="document">{{ __('global.images-uploaded') }}</label>
                             <div class="row">
                                 @foreach ($post->getMedia('images') as $media)
                                     <div class="col-12 col-md-4 col-lg-2">

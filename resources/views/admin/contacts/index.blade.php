@@ -28,14 +28,14 @@
                             <table id="item_datatable" class="table table-striped table-hover">
                                 <thead class="thead">
                                     <tr>
-                                        <th>No</th>
-                                        <th>Name</th>
-										<th>Email</th>
-                                        <th>Phone</th>
-                                        <th>Subject</th>
-                                        <th>Message</th>
-                                        <th>Date</th>
-                                        <th></th>
+                                        <th>{{ __('global.id') }}</th>
+                                        <th>{{ __('global.name') }}</th>
+										<th>{{ __('global.email') }}</th>
+                                        <th>{{ __('global.phone') }}</th>
+                                        <th>{{ __('global.subject') }}</th>
+                                        <th>{{ __('global.message') }}</th>
+                                        <th>{{ __('global.date') }}</th>
+                                        <th>{{ __('global.actions') }}</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -50,7 +50,7 @@
                                             <td>{{ Carbon\Carbon::parse($contact->created_at)->format('d-m-Y') }}</td>
                                             <td>
                                                 <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-item-name="{{ $contact->name }}" data-item-id="{{ $contact->id }}" data-target="#modal-delete"><i class="fa fa-fw fa-trash"></i>
-                                                    Delete
+                                                    {{ __('global.delete') }}
                                                 </button>
                                             </td>
                                         </tr>

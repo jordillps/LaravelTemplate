@@ -5,26 +5,26 @@
 <div class="box box-info padding-1">
   <div class="box-body">
       <div class="form-group">
-          {{ Form::label('title') }}
+          {{ Form::label(trans('global.title')) }}
           {{ Form::text('title:'.app()->getLocale(), $project->{'title:'. app()->getLocale()}, ['class' => 'form-control' . ($errors->has('title:'.app()->getLocale()) ? ' is-invalid' : ''), 'placeholder' => 'Title']) }}
           {!! $errors->first('title:'.app()->getLocale(), '<div class="invalid-feedback">:message</div>') !!}
       </div>
       <div class="form-group">
-          {{ Form::label('text') }}
+          {{ Form::label(trans('global.text')) }}
           {{ Form::text('text:'.app()->getLocale(), $project->{'text:'. app()->getLocale()}, ['class' => 'form-control' . ($errors->has('text:'.app()->getLocale()) ? ' is-invalid' : ''), 'placeholder' => 'text']) }}
           {!! $errors->first('text:'.app()->getLocale(), '<div class="invalid-feedback">:message</div>') !!}
       </div>
       <div class="row">
         <div class="col-12 col-md-6">
           <div class="form-group">
-            {{ Form::label('published_at') }}
+            {{ Form::label(trans('global.published_at')) }}
             {{ Form::date('published_at', $project->published_at, ['class' => 'form-control' . ($errors->has('published_at') ? ' is-invalid' : ''), 'placeholder' => 'Published At']) }}
             {!! $errors->first('published_at', '<div class="invalid-feedback">:message</div>') !!}
           </div>
         </div>
         <div class="col-12 col-md-6">
           <div class="form-group">
-              {{ Form::label('category') }}
+              {{ Form::label(trans('global.category')) }}
               @if(Route::is('projects.create'))
                   {!! Form::select('category_id', $categories, null, ['class' => 'form-control' . ($errors->has('category_id') ? ' is-invalid' : '')]) !!}
               @else
@@ -35,7 +35,7 @@
         </div>
       </div>
       <div class="form-group">
-        <label for="document">Documents</label>
+        <label for="document">{{ __('global.upload-images') }}</label>
         <div class="needsclick dropzone" id="document-dropzone">
         </div>
     </div>

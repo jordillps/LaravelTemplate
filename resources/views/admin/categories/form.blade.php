@@ -3,7 +3,7 @@
         <div class="row">
           <div class="col-12 col-md-6">
             <div class="form-group">
-              {{ Form::label(trans('global.profession')) }}
+              {{ Form::label(trans('global.name')) }}
               {{ Form::text('name:'.app()->getLocale(), $category->{'name:'. app()->getLocale()}, ['class' => 'form-control' . ($errors->has('name:'.app()->getLocale()) ? ' is-invalid' : ''), 'placeholder' => 'Name']) }}
               {!! $errors->first('name:'.app()->getLocale(), '<div class="invalid-feedback">:message</div>') !!}
             </div>

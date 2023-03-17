@@ -9,7 +9,7 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="float-left">
-                            <span class="card-title">Show Post</span>
+                            <span class="card-title">{{ __('global.show-post') }}</span>
                         </div>
                         <div class="float-right">
                             <a class="btn btn-primary" href="{{ route('posts.index') }}">{{ __('global.back') }}</a>
@@ -19,41 +19,57 @@
                     <div class="card-body">
                         
                         <div class="callout callout-primary">
-                            <strong>Title:</strong>
+                            <div>
+                                <strong>{{ __('global.title') }}:</strong>
+                            </div>
                             {{ $post->{'title:'. app()->getLocale()} }}
                         </div>
                         <div class="callout callout-primary">
-                            <strong>Url:</strong>
+                            <div>
+                                <strong>Url:</strong>
+                            </div>
                             {{ $post->{'url:'. app()->getLocale()} }}
                         </div>
                         <div class="callout callout-primary">
-                            <strong>Excerpt:</strong>
+                            <div>
+                                <strong>{{ __('global.excerpt') }}:</strong>
+                            </div>
                             {{ $post->{'excerpt:'. app()->getLocale()} }}
                         </div>
                         <div class="callout callout-primary">
-                            <strong>Iframe:</strong>
+                            <div>
+                                <strong>{{ __('global.iframe') }}:</strong>
+                            </div>
                             {{ $post->{'iframe:'. app()->getLocale()} }}
                         </div>
                         <div class="callout callout-primary">
-                            <strong>Body:</strong>
+                            <div>
+                                <strong>{{ __('global.body') }}:</strong>
+                            </div>
                             {!! $post->{'body:'. app()->getLocale()} !!}
                         </div>
                         <div class="row">
                             <div class="col-12 col-md-4">
                                 <div class="callout callout-primary">
-                                    <strong>Published At:</strong>
+                                    <div>
+                                        <strong>{{ __('global.published_at') }}:</strong>
+                                    </div>
                                     {{ $post->published_at }}
                                 </div>
                             </div>
                             <div class="col-12 col-md-4">
                                 <div class="callout callout-primary">
-                                    <strong>User:</strong>
+                                    <div>
+                                        <strong>{{ __('global.author') }}:</strong>
+                                    </div>
                                     {{ $post->user->name }}
                                 </div>
                             </div>
                             <div class="col-12 col-md-4">
                                 <div class="callout callout-primary">
-                                    <strong>Category:</strong>
+                                    <div>
+                                        <strong>{{ __('global.category') }}:</strong>
+                                    </div>
                                     {{ $post->category->{'name:'. app()->getLocale()} }}
                                 </div>
                             </div>
@@ -61,7 +77,9 @@
                         <div class="row">
                             <div class="col-12">
                                 <div class="callout callout-primary">
-                                    <strong>Tags:</strong>
+                                    <div>
+                                        <strong>{{ __('global.tags') }}:</strong>
+                                    </div>
                                     @foreach ($post->tags as $tag)
                                     <button type="button" class="btn btn btn-warning mr-3">{{ $tag->name }}</button>     
                                     @endforeach
@@ -69,7 +87,7 @@
                             </div>
                         </div>
                         <div class="callout callout-primary">
-                            <strong>Pictures:</strong>
+                            <strong>{{ __('global.images') }}:</strong>
                             <div class="row">
                                 @foreach ($post->getMedia('images') as $media)
                                     <div class="col-12 col-md-4 col-lg-2">

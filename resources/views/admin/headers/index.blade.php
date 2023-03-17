@@ -28,13 +28,11 @@
                             <table id="item_datatable" class="table table-striped table-hover">
                                 <thead class="thead">
                                     <tr>
-                                        <th>No</th>
-                                        
-										<th>Page</th>
+                                        <th>{{ __('global.id') }}</th>
+										<th>{{ __('global.page') }}</th>
+                                        <th>{{ __('global.title') }}</th>
 
-                                        <th>Title</th>
-
-                                        <th></th>
+                                        <th>{{ __('global.actions') }}</th>
                                     </tr>
                                 </thead>
                                 <tbody>

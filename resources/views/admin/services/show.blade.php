@@ -9,7 +9,7 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="float-left">
-                            <span class="card-title">Show Service</span>
+                            <span class="card-title">{{ __('global.show-service') }}</span>
                         </div>
                         <div class="float-right">
                             <a class="btn btn-primary" href="{{ route('services.index') }}">{{ __('global.back') }}</a>
@@ -18,19 +18,25 @@
 
                     <div class="card-body">
                         <div class="callout callout-primary">
-                            <strong>Page:</strong>
+                            <div>
+                                <strong>{{ __('global.page') }}:</strong>
+                            </div>
                             {{ $service->page->name }}
                         </div>
                         <div class="callout callout-primary">
-                            <strong>Title:</strong>
+                            <div>
+                                <strong>{{ __('global.title') }}:</strong>
+                            </div>
                             {{ $service->{'title:'. app()->getLocale()} }}
                         </div>
                         <div class="callout callout-primary">
-                            <strong>Text:</strong>
+                            <div>
+                                <strong>{{ __('global.text') }}:</strong>
+                            </div>
                             {{ $service->{'text:'. app()->getLocale()} }}
                         </div>
                         <div class="callout callout-primary">
-                            <strong>Picture:</strong>
+                            <strong>{{ __('global.image') }}:</strong>
                             <div class="row p-3">
                                 @foreach ($service->getMedia('images') as $media)
                                     <div class="col-12 col-md-6 col-lg-3">
@@ -40,7 +46,7 @@
                             </div>
                         </div>
                         <div class="callout callout-primary">
-                            <strong>Icons:</strong>
+                            <strong>{{ __('global.icons') }}:</strong>
                             <div>
                                 <span class="ico-circle"><i class="{{ $service->icon }}"></i></span>
                             </div>

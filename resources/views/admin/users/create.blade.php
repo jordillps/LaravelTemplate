@@ -14,7 +14,7 @@
                 <div class="card">
                     <div class="card-header">
                       <div class="float-left">
-                        <span class="card-title">Create User</span>
+                        <span class="card-title">{{ __('global.create-user') }}</span>
                       </div>
                       <div class="float-right">
                           <a class="btn btn-primary" href="{{ route('users.index') }}">{{ __('global.back') }}</a>

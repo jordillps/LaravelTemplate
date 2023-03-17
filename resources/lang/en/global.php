@@ -202,9 +202,78 @@ return [
     'update-about' => 'Update about',
     'show-about' => 'Show about me',
 
+    //Categories
+    'create-category' => 'Create category',
+    'update-category' => 'Update category',
+    'category' => 'Category',
+
+    //Headers
+    'create-header' => 'Create header',
+    'update-header' => 'Update header',
+    'show-header' => 'Show header',
+    'title' => 'Títle',
+    'text' => 'Text',
+    'header-image-warning' => 'Header Image (Upload only one image, min dimensions 1920x1055)',
+
+    //Legal Pages
+    'create-legal-page' => 'Create legal page',
+    'update-legal-page' => 'Update legal page',
+    'show-legal-page' => 'Show legal page',
+    'body' => 'Body',
+
+    //Pages
+    'create-page' => 'Create page',
+    'update-page' => 'Update page',
+
+    //Posts
+    'create-post' => 'Create post',
+    'update-post' => 'Update post',
+    'show-post' => 'Show post',
+
+    //Projects
+    'create-project' => 'Create project',
+    'update-project' => 'Update project',
+    'show-project' => 'Show project',
+
+    //Services
+    'create-service' => 'Crear service',
+    'update-service' => 'Actualitzar service',
+    'show-service' => 'Mostrar service',
+    'service-image' => 'Service Image (Upload only one image, max dimensions 100x100)',
+    'icons' => 'Icons',
+
+    //Tags
+    'create-tag' => 'Create tag',
+    'update-tag' => 'Update tag',
+
+    //Titles
+    'create-title' => 'Create title',
+    'update-title' => 'Update title',
+    'show-title' => 'Show title',
+
+    //Users
+    'create-user' => 'Create user',
+    'update-user' => 'Update user',
+    'show-user' => 'Show user',
+    'update-password' => 'Update password',
+    'square-image' => ' (Square image)',
+    'date-of-birth' => 'Date of birth',
+    'change-password' => 'Change password',
+    'current-password' => 'Current password',
+    'new-password' => 'New password',
+    'confirm-new-password' => 'Confirm new password',
+
 
     //Images
     'image-uploaded' => 'Image Uploaded',
+    'images-uploaded' => 'Images Uploaded',
+    'upload-images' => 'Upload images',
+    'images' => 'Images',
+
+
+    //Contacts
+    'subject' => 'Subject',
+    'message' => 'Message',
 
 
     //Forms
@@ -214,6 +283,11 @@ return [
     'image-uploaded-warining-1' => 'About me image (Upload only one image, max dimensions 1000x1000)',
     'save' => 'Save',
     'drag-to-upload' => 'Drag to upload photo',
+    'actions' => 'Actions',
+    'excerpt' => 'Excerpt',
+    'iframe' => 'Iframe',
+    'published_at' => 'Published at',
+    'author' => 'Author',
 
     //Index pages
     'show' => 'Show',

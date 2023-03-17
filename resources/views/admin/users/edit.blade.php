@@ -11,7 +11,7 @@
                 <div class="card card-default">
                     <div class="card-header">
                         <div class="float-left">
-                            <span class="card-title">Update User</span>
+                            <span class="card-title">{{ __('global.update-user') }}</span>
                         </div>
                         <div class="float-right">
                             <a class="btn btn-primary" href="{{ route('users.index') }}">{{ __('global.back') }}</a>
@@ -30,7 +30,7 @@
                     <div class="card card-default">
                         <div class="card-header">
                             <div class="float-left">
-                                <span class="card-title">Update Password</span>
+                                <span class="card-title">{{ __('global.update-password') }}</span>
                             </div>
                         </div>
                         <div class="card-body">
@@ -42,21 +42,21 @@
                                         <div class="row">
                                             <div class="col-12 col-md-6 col-lg-4">
                                                 <div class="form-group">
-                                                    {{ Form::label('current password') }}
+                                                    {{ Form::label(trans('global.current-password')) }}
                                                     {{ Form::password('current_password', ['class' => 'form-control' . ($errors->has('current_password') ? ' is-invalid' : ''), 'placeholder' => 'Current Password']) }}
                                                     {!! $errors->first('current_password', '<div class="invalid-feedback">:message</div>') !!}
                                                 </div>
                                             </div>
                                             <div class="col-12 col-md-6 col-lg-4">
                                                 <div class="form-group">
-                                                    {{ Form::label('new password') }}
+                                                    {{ Form::label(trans('global.new-password')) }}
                                                     {{ Form::password('new_password', ['class' => 'form-control' . ($errors->has('new_password') ? ' is-invalid' : ''), 'placeholder' => 'New Password']) }}
                                                     {!! $errors->first('new_password', '<div class="invalid-feedback">:message</div>') !!}
                                                 </div>
                                             </div>
                                             <div class="col-12 col-md-6 col-lg-4">
                                                 <div class="form-group">
-                                                    {{ Form::label('confirm new password') }}
+                                                    {{ Form::label('global.confirm-new-password') }}
                                                     {{ Form::password('new_confirm_password', ['class' => 'form-control' . ($errors->has('new_confirm_password') ? ' is-invalid' : ''), 'placeholder' => 'Confirm New Password']) }}
                                                     {!! $errors->first('new_confirm_password', '<div class="invalid-feedback">:message</div>') !!}
                                                 </div>
@@ -65,7 +65,7 @@
                                     </div>
                                 </div>
                                 <div class="box-footer mt20">
-                                    <button type="submit" class="btn btn-primary">Change Password</button>
+                                    <button type="submit" class="btn btn-primary">{{ __('global.change-password') }}</button>
                                 </div>
                             </form>
                         </div>

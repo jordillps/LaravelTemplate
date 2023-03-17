@@ -22,7 +22,7 @@
 
                              {{-- <div class="float-right">
                                 <a href="{{ route('pages.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
-                                  {{ __('Create New') }}
+                                  {{ __('global.create') }}
                                 </a>
                               </div> --}}
                         </div>
@@ -34,11 +34,11 @@
                             <table id="item_datatable" class="table table-striped table-hover">
                                 <thead class="thead">
                                     <tr>
-                                        <th>No</th>
+                                        <th>{{ __('global.id') }}</th>
                                         
-										<th>Name</th>
+										<th>{{ __('global.name') }}</th>
 
-                                        <th></th>
+                                        <th>{{ __('global.actions') }}</th>
                                     </tr>
                                 </thead>
                                 <tbody>

@@ -22,7 +22,7 @@
 
                              <div class="float-right">
                                 <a href="{{ route('services.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
-                                  {{ __('Create New') }}
+                                  {{ __('global.create') }}
                                 </a>
                               </div>
                         </div>
@@ -34,13 +34,13 @@
                             <table id="item_datatable" class="table table-striped table-hover">
                                 <thead class="thead">
                                     <tr>
-                                        <th>No</th>
+                                        <th>{{ __('global.id') }}</th>
                                         
-										<th>Page</th>
+										<th>{{ __('global.page') }}</th>
 
-                                        <th>Title</th>
+                                        <th>{{ __('global.title') }}</th>
 
-                                        <th></th>
+                                        <th>{{ __('global.actions') }}</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -56,7 +56,7 @@
                                                 <a class="btn btn-sm btn-primary " href="{{ route('services.show',$service->id) }}"><i class="fa fa-fw fa-eye"></i>{{ __("global.show") }}</a>
                                                     <a class="btn btn-sm btn-success" href="{{ route('services.edit',$service->id) }}"><i class="fa fa-fw fa-edit"></i>{{ __("global.edit") }}</a>
                                                     <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-item-id="{{ $service->id }}" data-target="#modal-delete"><i class="fa fa-fw fa-trash"></i>
-                                                        Delete
+                                                        {{ __('global.delete') }}
                                                     </button>
                                             </td>
                                         </tr>

@@ -201,9 +201,76 @@ return [
     'update-about' => 'Actualizar sobre nosotros',
     'show-about' => 'Mostrar sobre nosotros',
 
+    //Categories
+    'create-category' => 'Crear categoría',
+    'update-category' => 'Actualizar categoría',
+    'category' => 'Categoría',
+
+    //Headers
+    'create-header' => 'Crear cabecera',
+    'update-header' => 'Actualizar cabecera',
+    'show-header' => 'Mostrar cabecera',
+    'title' => 'Título',
+    'text' => 'Texto',
+    'header-image-warning' => 'Imagen de encabezado (Cargar solo una imagen, dimensiones mínimas 1920x1055)',
+
+    //Legal Pages
+    'create-legal-page' => 'Crear página legal',
+    'update-legal-page' => 'Actualizar página legal',
+    'show-legal-page' => 'Mostrar página legal',
+    'body' => 'Contenido',
+
+    //Pages
+    'create-page' => 'Crear página',
+    'update-page' => 'Actualitzar página',
+
+    //Posts
+    'create-post' => 'Crear publicación',
+    'update-post' => 'Actualizar publicación',
+    'show-post' => 'Mostrar publicación',
+
+    //Projects
+    'create-project' => 'Crear proyecto',
+    'update-project' => 'Actualizar proyecto',
+    'show-project' => 'Mostrar proyecto',
+
+    //Services
+    'create-service' => 'Crear servicio',
+    'update-service' => 'Actualitzar servicio',
+    'show-service' => 'Mostrar servicio',
+    'service-image' => 'Imagen del servicio (Cargar solo una imagen, dimensiones máximas 100x100)',
+    'icons' => 'Iconos',
+
+    //Tags
+    'create-tag' => 'Crear etiqueta',
+    'update-tag' => 'Actualizar etiqueta',
+
+    //Titles
+    'create-title' => 'Crear título',
+    'update-title' => 'Actualizar título',
+    'show-title' => 'Mostrar título',
+
+    //Users
+    'create-user' => 'Crear usuario',
+    'update-user' => 'Actualitzar usuario',
+    'show-user' => 'Mostrar usuario',
+    'update-password' => 'Actualizar contraseña',
+    'date-of-birth' => 'Fecha de nacimiento',
+    'change-password' => 'Cambiar contaseña',
+    'current-password' => 'Contaseña actual',
+    'new-password' => 'Nueva contraseña',
+    'confirm-new-password' => 'Confirma nueva contraseña',
 
     //Images
     'image-uploaded' => 'Imagen guardada',
+    'images-uploaded' => 'Imágenes guardadas',
+    'upload-images' => 'Subir imágenes',
+    'images' => 'Imágenes',
+    'square-image' => ' (Imagen cuadrada)',
+
+    //Contacts
+    'subject' => 'Asunto',
+    'message' => 'Mensaje',
 
     //Forms
     'page' => 'Página',
@@ -211,7 +278,12 @@ return [
     'about_me' => 'Sobre mi',
     'image-uploaded-warining-1' => 'Imagen sobre mi (Cargar solo una imagen, dimensiones máximas 1000x1000)',
     'save' => 'Guardar',
-    'drag-to-upload' => '{{ __("global.drag-to-upload") }}',
+    'drag-to-upload' => 'Arrastrar para subir las fotografías',
+    'actions' => 'Acciones',
+    'excerpt' => 'Extracto',
+    'iframe' => 'Cuadro',
+    'published_at' => 'Fecha de publicación',
+    'author' => 'Autor',
 
     //Index pages
     'show' => 'Mostrar',

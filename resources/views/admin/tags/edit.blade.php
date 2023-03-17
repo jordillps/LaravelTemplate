@@ -11,7 +11,7 @@
                 <div class="card card-default">
                     <div class="card-header">
                         <div class="float-left">
-                            <span class="card-title">Update Tag</span>
+                            <span class="card-title">{{ __('global.update-tag') }}</span>
                         </div>
                         <div class="float-right">
                             <a class="btn btn-primary" href="{{ route('tags.index') }}">{{ __('global.back') }}</a>

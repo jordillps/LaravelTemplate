@@ -22,7 +22,7 @@
                         @if(Auth::user()->isAdmin())
                             <div class="float-right">
                                 <a href="{{ route('users.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
-                                {{ __('Create New') }}
+                                {{ __('global.create') }}
                                 </a>
                             </div>
                         @endif
@@ -35,12 +35,12 @@
                         <table id="item_datatable" class="table table-striped" style="width:100%">
                             <thead class="thead">
                                 <tr>
-                                    <th>No</th>
-                                    <th>Image</th>
-                                    <th>Name</th>
-                                    <th>Role</th>
-                                    <th>Email</th>
-                                    <th>Action</th>
+                                    <th>{{ __('global.id') }}</th>
+                                    <th>{{ __('global.image') }}</th>
+                                    <th>{{ __('global.name') }}</th>
+                                    <th>{{ __('global.role') }}</th>
+                                    <th>{{ __('global.email') }}</th>
+                                    <th>{{ __('global.actions') }}</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -60,7 +60,7 @@
                                                 <a class="btn btn-sm btn-primary " href="{{ route('users.show',$user) }}"><i class="fa fa-fw fa-eye"></i>{{ __("global.show") }}</a>
                                                 <a class="btn btn-sm btn-success" href="{{ route('users.edit',$user) }}"><i class="fa fa-fw fa-edit"></i>{{ __("global.edit") }}</a>
                                                 <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-item-id="{{ $user->id }}" data-item-name="{{ $user->name }}" data-target="#modal-delete"><i class="fa fa-fw fa-trash"></i>
-                                                    Delete
+                                                    {{ __('global.delete') }}
                                                   </button>
                                         </td>
                                     </tr>

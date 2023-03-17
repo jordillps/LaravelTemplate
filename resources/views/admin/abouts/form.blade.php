@@ -97,14 +97,14 @@
         Dropzone.options.documentDropzone = {
           url: '{{ route('abouts.storeMedia') }}',
           maxFilesize: 1, // MB
-          acceptedFiles: ".png,.jpg,.gif",
+          acceptedFiles: ".png,.jpg,.gif,webp",
           addRemoveLinks: true,
           maxFiles:1,
           uploadMultiple: false,
           headers: {
             'X-CSRF-TOKEN': "{{ csrf_token() }}"
           },
-          dictDefaultMessage : '{{ __("global.drag-to-upload") }}',
+          dictDefaultMessage : "{{ __('global.drag-to-upload') }}",
           success: function (file, response) {
             $('form').append('<input type="hidden" name="images[]" value="' + response.name + '">')
             uploadedDocumentMap[file.name] = response.name

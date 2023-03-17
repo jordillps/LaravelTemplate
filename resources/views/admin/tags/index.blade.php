@@ -22,7 +22,7 @@
 
                              <div class="float-right">
                                 <a href="{{ route('tags.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
-                                  {{ __('Create New') }}
+                                  {{ __('global.create') }}
                                 </a>
                               </div>
                         </div>
@@ -34,11 +34,11 @@
                             <table id="item_datatable" class="table table-striped table-hover">
                                 <thead class="thead">
                                     <tr>
-                                        <th>No</th>
+                                        <th>{{ __('global.id') }}</th>
                                         
-										<th>Name</th>
+										<th>{{ __('global.name') }}</th>
 
-                                        <th></th>
+                                        <th>{{ __('global.actions') }}</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -51,7 +51,7 @@
                                             <td>
                                                 <a class="btn btn-sm btn-success" href="{{ route('tags.edit',$tag->id) }}"><i class="fa fa-fw fa-edit"></i>{{ __("global.edit") }}</a>
                                                 <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-item-id="{{ $tag->id }}" data-target="#modal-delete"><i class="fa fa-fw fa-trash"></i>
-                                                    Delete
+                                                    {{ __('global.delete') }}
                                                 </button>
                                             </td>
                                         </tr>

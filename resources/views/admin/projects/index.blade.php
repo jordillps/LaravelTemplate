@@ -22,7 +22,7 @@
 
                              <div class="float-right">
                                 <a href="{{ route('projects.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
-                                  {{ __('Create New') }}
+                                  {{ __('global.create') }}
                                 </a>
                               </div>
                         </div>
@@ -34,12 +34,12 @@
                             <table id="item_datatable" class="table table-striped table-hover">
                                 <thead class="thead">
                                     <tr>
-                                        <th>No</th>
-										<th>Title</th>
-										<th>Published At</th>
-										<th>Category</th>
+                                        <th>{{ __('global.id') }}</th>
+										<th>{{ __('global.title') }}</th>
+										<th>{{ __('global.published_at') }}</th>
+										<th>{{ __('global.category') }}</th>
 
-                                        <th></th>
+                                        <th>{{ __('global.actions') }}</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -54,7 +54,7 @@
                                                     <a class="btn btn-sm btn-primary " href="{{ route('projects.show',$project->id) }}"><i class="fa fa-fw fa-eye"></i>{{ __("global.show") }}</a>
                                                     <a class="btn btn-sm btn-success" href="{{ route('projects.edit',$project->id) }}"><i class="fa fa-fw fa-edit"></i>{{ __("global.edit") }}</a>
                                                     <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-item-id="{{ $project->id }}" data-item-name="{{ $project->title }}" data-target="#modal-delete"><i class="fa fa-fw fa-trash"></i>
-                                                        Delete
+                                                        {{ __('global.delete') }}
                                                     </button>
                                             </td>
                                         </tr>

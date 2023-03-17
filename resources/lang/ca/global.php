@@ -202,10 +202,77 @@ return [
     'update-about' => 'Actualitzar sobre nosaltres',
     'show-about' => 'Mostrar sobre nosaltres',
 
+    //Categories
+    'create-category' => 'Crear categoria',
+    'update-category' => 'Actualitzar categoria',
+    'category' => 'Categoria',
+
+    //Contacts
+    'subject' => 'Assumpte',
+    'message' => 'Missatge',
+
+    //Headers
+    'create-header' => 'Crear capçalera',
+    'update-header' => 'Actualitzar capçalera',
+    'show-header' => 'Mostrar capçalera',
+    'title' => 'Títol',
+    'text' => 'Text',
+    'header-image-warning' => 'Imatge de capçalera (pengeu només una imatge, dimensions mínimes 1920x1055)',
+
+    //Legal Pages
+    'create-legal-page' => 'Crear pàgina legal',
+    'update-legal-page' => 'Actualitzar pàgina legal',
+    'show-legal-page' => 'Mostrar pàgina legal',
+    'body' => 'Contingut',
+
+    //Pages
+    'create-page' => 'Crear pàgina',
+    'update-page' => 'Actualitzar pàgina',
+
+    //Posts
+    'create-post' => 'Crear publicació',
+    'update-post' => 'Actualitzar publicació',
+    'show-post' => 'Mostrar publicació',
+
+    //Projects
+    'create-project' => 'Crear projecte',
+    'update-project' => 'Actualitzar projecte',
+    'show-project' => 'Mostrar projecte',
+
+    //Services
+    'create-service' => 'Crear servei',
+    'update-service' => 'Actualitzar servei',
+    'show-service' => 'Mostrar servei',
+    'service-image' => 'Imatge del servei (pujar només una imatge, dimensions màximes 100 x 100)',
+    'icons' => 'Icones',
+
+    //Tags
+    'create-tag' => 'Crear etiqueta',
+    'update-tag' => 'Actualitzar etiqueta',
+
+    //Titles
+    'create-title' => 'Crear títol',
+    'update-title' => 'Actualitzar títol',
+    'show-title' => 'Mostrar títol',
+
+    //Users
+    'create-user' => 'Crear usuari',
+    'update-user' => 'Actualitzar usuari',
+    'show-user' => 'Mostrar usuari',
+    'update-password' => 'Actualitzar contrasenya',
+    'date-of-birth' => 'Data de naixement',
+    'change-password' => 'Cambiar contasenya',
+    'current-password' => 'Contasenya actual',
+    'new-password' => 'Nova contrasenya',
+    'confirm-new-password' => 'Confirma nova contrasenya',
 
 
     //Images
     'image-uploaded' => 'Imatge guardada',
+    'images-uploaded' => 'Imatges guardades',
+    'upload-images' => 'Pujar imatges',
+    'images' => 'Imatges',
+    'square-image' => ' (Imatge quadrada)',
 
     //Forms
     'page' => 'Pàgina',
@@ -214,6 +281,11 @@ return [
     'image-uploaded-warining-1' => 'Imagen sobre mi (pengeu només una imatge, dimensions màximes 1000x1000)',
     'save' => 'Guardar',
     'drag-to-upload' => 'Arrossegar per pujar la fotografia',
+    'actions' => 'Accions',
+    'excerpt' => 'Extracte',
+    'iframe' => 'Quadre',
+    'published_at' => 'Data de publicació',
+    'author' => 'Autor',
 
     //Index pages
     'show' => 'Mostrar',

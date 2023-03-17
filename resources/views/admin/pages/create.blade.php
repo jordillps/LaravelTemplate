@@ -10,7 +10,7 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="float-left">
-                            <span class="card-title">Create Page</span>
+                            <span class="card-title">{{ __('global.create-page') }}</span>
                         </div>
                         <div class="float-right">
                             <a class="btn btn-primary" href="{{ route('pages.index') }}">{{ __('global.back') }}</a>

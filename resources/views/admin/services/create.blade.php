@@ -11,7 +11,7 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="float-left">
-                            <span class="card-title">Create Service</span>
+                            <span class="card-title">{{ __('global.create-service') }}</span>
                         </div>
                         <div class="float-right">
                             <a class="btn btn-primary" href="{{ route('services.index') }}">{{ __('global.back') }}</a>

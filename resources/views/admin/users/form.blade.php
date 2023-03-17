@@ -9,14 +9,14 @@
                 <div class="row">
                     <div class="col-12 col-md-6">
                         <div class="form-group">
-                            {{ Form::label(trans('global.profession')) }}
+                            {{ Form::label(trans('global.name')) }}
                             {{ Form::text('name', $user->name, ['class' => 'form-control' . ($errors->has('name') ? ' is-invalid' : ''), 'placeholder' => 'Name']) }}
                             {!! $errors->first('name', '<div class="invalid-feedback">:message</div>') !!}
                         </div>
                     </div>
                     <div class="col-12 col-md-6">
                         <div class="form-group">
-                            {{ Form::label('role') }}
+                            {{ Form::label(trans('global.role')) }}
                             @if(Route::is('users.create'))
                                 {!! Form::select('role_id', $roles, null, ['class' => 'form-control' . ($errors->has('role_id') ? ' is-invalid' : '')]) !!}
                             @else
@@ -36,7 +36,7 @@
                     </div>
                     <div class="col-12 col-md-6">
                         <div class="form-group">
-                            {{ Form::label('Date of Birth') }}
+                            {{ Form::label(trans('global.date-of-birth')) }}
                             {{ Form::date('date_birth', $user->date_birth, ['class' => 'form-control' . ($errors->has('date_birth') ? ' is-invalid' : ''), 'placeholder' => 'Date of Birth']) }}
                             {!! $errors->first('date_birth', '<div class="invalid-feedback">:message</div>') !!}
                         </div>
@@ -46,14 +46,14 @@
                     <div class="row">
                         <div class="col-12 col-md-6">
                             <div class="form-group">
-                                {{ Form::label('Password') }}
+                                {{ Form::label(trans('global.password')) }}
                                 {{ Form::password('password', ['class' => 'form-control' . ($errors->has('password') ? ' is-invalid' : ''), 'placeholder' => 'New Password']) }}
                                 {!! $errors->first('password', '<div class="invalid-feedback">:message</div>') !!}
                             </div>
                         </div>
                         <div class="col-12 col-md-6">
                             <div class="form-group">
-                                {{ Form::label('confirm password') }}
+                                {{ Form::label(trans('global.confirmpassword')) }}
                                 {{ Form::password('password_confirmation', ['class' => 'form-control' . ($errors->has('password_confirmation') ? ' is-invalid' : ''), 'placeholder' => 'Confirm New Password']) }}
                                 {!! $errors->first('password_confirmation', '<div class="invalid-feedback">:message</div>') !!}
                             </div>
@@ -75,7 +75,7 @@
                     </div>
                 @else
                     <div class="form-group">
-                        <label for="document">Image <small>(Imagen cuadrada)</small></label>
+                        <label for="document">{{ __('global.image') }}<small>{{ __('global.square-image') }}</small></label>
                         <div class="needsclick dropzone" id="document-dropzone">
                         </div>
                     </div>  
@@ -84,7 +84,7 @@
         </div>
     </div>
     <div class="box-footer mt20">
-        <button type="submit" class="btn btn-primary">Save</button>
+        <button type="submit" class="btn btn-primary">{{ __('global.save') }}</button>
     </div>
 </div>
 

@@ -9,7 +9,7 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="float-left">
-                            <span class="card-title">Show Legal Page</span>
+                            <span class="card-title">{{ __('global.show-legal-page') }}</span>
                         </div>
                         <div class="float-right">
                             <a class="btn btn-primary" href="{{ route('legal-pages.index') }}">{{ __('global.back') }}</a>
@@ -18,11 +18,15 @@
 
                     <div class="card-body">
                         <div class="callout callout-primary">
-                            <strong>Title:</strong>
+                            <div>
+                                <strong>{{ __('global.title') }}:</strong>
+                            </div>
                             {{ $legalPage->{'title:'. app()->getLocale()} }}
                         </div>
                         <div class="callout callout-primary">
-                            <strong>Body:</strong>
+                            <div>
+                                <strong>{{ __('global.body') }}:</strong>
+                            </div>
                             {!! $legalPage->{'body:'. app()->getLocale()} !!}
                         </div>
 

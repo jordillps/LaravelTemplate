@@ -6,22 +6,22 @@
     <div class="box-body">
         
         <div class="form-group">
-            {{ Form::trans('global.page') }}
+            {{ Form::label(trans('global.page')) }}
             {!! Form::select('page_id', $pages, $header->page_id, ['class' => 'form-control' . ($errors->has('page_id') ? ' is-invalid' : '')]) !!}
             {!! $errors->first('page_id', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('title') }}
+            {{ Form::label(trans('global.title')) }}
             {{ Form::text('title:'.app()->getLocale(), $header->{'title:'. app()->getLocale()}, ['class' => 'form-control' . ($errors->has('title:'.app()->getLocale()) ? ' is-invalid' : ''), 'placeholder' => 'Title']) }}
             {!! $errors->first('title:'.app()->getLocale(), '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('Text') }}
+            {{ Form::label(trans('global.text')) }}
             {{ Form::textarea('text:'.app()->getLocale(), $header->{'text:'. app()->getLocale()}, ['class' => 'form-control' . ($errors->has('text:'.app()->getLocale()) ? ' is-invalid' : ''), 'placeholder' => 'Text']) }}
             {!! $errors->first('text:'.app()->getLocale(), '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
-            <label for="document">Header Image (Upload only one image, min dimensions 1920x1055)</label>
+            <label for="document">{{ __('global.header-image-warning') }}</label>
             <div class="needsclick dropzone" id="document-dropzone">
     
             </div>
@@ -40,7 +40,7 @@
         Dropzone.options.documentDropzone = {
           url: '{{ route('headers.storeMedia') }}',
           maxFilesize: 1, // MB
-          acceptedFiles: ".png,.jpg,.gif",
+          acceptedFiles: ".png,.jpg,.gif,.webp",
           addRemoveLinks: true,
           maxFiles:1,
           uploadMultiple: false,
@@ -49,7 +49,7 @@
           headers: {
             'X-CSRF-TOKEN': "{{ csrf_token() }}"
           },
-          dictDefaultMessage : '{{ __("global.drag-to-upload") }}',
+          dictDefaultMessage : 'Arrastrar para subir las fotografías',
           success: function (file, response) {
             $('form').append('<input type="hidden" name="images[]" value="' + response.name + '">')
             uploadedDocumentMap[file.name] = response.name

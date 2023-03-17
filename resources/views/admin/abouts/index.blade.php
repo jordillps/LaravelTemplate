@@ -35,7 +35,7 @@
 										<th>{{ __('global.email') }}</th>
 										<th>{{ __('global.phone') }}</th>
 
-                                        <th></th>
+                                        <th>{{ __('global.actions') }}</th>
                                     </tr>
                                 </thead>
                                 <tbody>

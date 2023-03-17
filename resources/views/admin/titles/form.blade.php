@@ -2,17 +2,17 @@
     <div class="box-body">
         
         <div class="form-group">
-            {{ Form::trans('global.page') }}
+            {{ Form::label(trans('global.page')) }}
             {!! Form::select('page_id', $pages, $title->page_id, ['class' => 'form-control' . ($errors->has('page_id') ? ' is-invalid' : '')]) !!}
             {!! $errors->first('page_id', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('title') }}
+            {{ Form::label(trans('global.title')) }}
             {{ Form::text('title:'.app()->getLocale(), $title->{'title:'. app()->getLocale()}, ['class' => 'form-control' . ($errors->has('title:'.app()->getLocale()) ? ' is-invalid' : ''), 'placeholder' => 'Title']) }}
             {!! $errors->first('title:'.app()->getLocale(), '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('Text') }}
+            {{ Form::label(trans('global.text')) }}
             {{ Form::textarea('text:'.app()->getLocale(), $title->{'text:'. app()->getLocale()}, ['class' => 'form-control' . ($errors->has('text:'.app()->getLocale()) ? ' is-invalid' : ''), 'placeholder' => 'Text', 'rows' => 2]) }}
             {!! $errors->first('text:'.app()->getLocale(), '<div class="invalid-feedback">:message</div>') !!}
         </div>

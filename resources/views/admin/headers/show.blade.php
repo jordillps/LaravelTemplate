@@ -9,7 +9,7 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="float-left">
-                            <span class="card-title">Show Header</span>
+                            <span class="card-title">{{ __('global.show-header') }}</span>
                         </div>
                         <div class="float-right">
                             <a class="btn btn-primary" href="{{ route('headers.index') }}">{{ __('global.back') }}</a>
@@ -18,19 +18,27 @@
 
                     <div class="card-body">
                         <div class="callout callout-primary">
-                            <strong>Page:</strong>
+                            <div>
+                                <strong>{{ __('global.page') }}:</strong>
+                            </div>
                             {{ $header->page->name }}
                         </div>
                         <div class="callout callout-primary">
-                            <strong>Title:</strong>
+                            <div>
+                                <strong>{{ __('global.title') }}:</strong>
+                            </div>
                             {{ $header->{'title:'. app()->getLocale()} }}
                         </div>
                         <div class="callout callout-primary">
-                            <strong>Text:</strong>
+                            <div>
+                                <strong>{{ __('global.text') }}:</strong>
+                            </div>
                             {{ $header->{'text:'. app()->getLocale()} }}
                         </div>
                         <div class="callout callout-primary">
-                            <strong>Picture:</strong>
+                            <div>
+                                <strong>{{ __('global.image') }}:</strong>
+                            </div>
                             <div class="row p-3">
                                 @foreach ($header->getMedia('images') as $media)
                                     <div class="col-12 col-md-6 col-lg-3">
