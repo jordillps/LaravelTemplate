@@ -47,7 +47,7 @@
                             </div>
 
                             <div class="row m-0 mb-5 justify-content-between align-items-center">
-                                <button type="submit" class="btn btn-block btn btn-primary mb-2">
+                                <button type="submit" class="btn btn-block btn btn-info mb-2">
                                     {{ __('Login') }}
                                 </button>
                                 <div class="form-check">

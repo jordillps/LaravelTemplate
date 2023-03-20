@@ -14,7 +14,7 @@
                                 <span class="card-title">{{ __('global.show-user') }}</span>
                             </div>
                             <div class="float-right">
-                                <a class="btn btn-primary" href="{{ route('users.index') }}">{{ __('global.back') }}</a>
+                                <a class="btn btn-info" href="{{ route('users.index') }}">{{ __('global.back') }}</a>
                             </div>
                         </div>
 
@@ -58,15 +58,17 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-3">
-                                    <div class="card card-primary card-outline">
-                                        <div class="card-body box-profile">
-                                          <div class="text-center">
-                                            <img class="profile-user-img img-fluid img-circle" src="{{ $user->getMedia('images')[0]->getUrl() }}" alt="User profile picture">
-                                          </div>
+                                @if(count($user->getMedia('images'))>0)
+                                    <div class="col-md-3">
+                                        <div class="card card-primary card-outline">
+                                            <div class="card-body box-profile">
+                                            <div class="text-center">
+                                                <img class="profile-user-img img-fluid img-circle" src="{{ $user->getMedia('images')[0]->getUrl() }}" alt="User profile picture">
+                                            </div>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
+                                @endif
                             </div>
                         </div>
                     </div>

@@ -28,7 +28,7 @@
                 >{{ $header->{'text:'. app()->getLocale()} }}</span
               ><strong class="text-slider"></strong>
             </p>
-            <!-- <p class="pt-3"><a class="btn btn-primary btn js-scroll px-4" href="#about" role="button">Learn More</a></p> -->
+            <!-- <p class="pt-3"><a class="btn btn-info btn js-scroll px-4" href="#about" role="button">Learn More</a></p> -->
           </div>
         </div>
       </div>
