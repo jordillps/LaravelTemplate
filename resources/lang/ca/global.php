@@ -266,6 +266,15 @@ return [
     'new-password' => 'Nova contrasenya',
     'confirm-new-password' => 'Confirma nova contrasenya',
 
+    //Settings
+    'settings' => "Configuració",
+    'create-setting' => 'Crear configuració',
+    'update-setting' => 'Actualitzar configuració',
+    'show-setting' => 'Mostrar configuració',
+    'social-networks' => 'Xarxes socials',
+    'contacts-email' => 'Email del formulari de contacte',
+    'contacts-email-explanation' => 'Email on es rebran els missatges del formulari de contacte',
+
 
     //Images
     'image-uploaded' => 'Imatge guardada',
@@ -295,6 +304,8 @@ return [
     //Modals
     'sure' => 'Esteu segur?',
     'close' => 'Tancar',
+
+
 
 
 ];

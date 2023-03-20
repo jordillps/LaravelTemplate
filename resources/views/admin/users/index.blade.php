@@ -12,7 +12,7 @@
 
     <section class="content container-fluid">
         <div class="col-sm-12">
-            <div class="card">
+            <div class="card card-info">
                 <div class="card-header">
                     <div style="display: flex; justify-content: space-between; align-items: center;">
 

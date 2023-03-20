@@ -9,7 +9,7 @@
 
                 @includeif('partials.errors')
 
-                <div class="card card-default">
+                <div class="card card-info">
                     <div class="card-header">
                         <div class="float-left">
                             <span class="card-title">{{ __('global.update-service') }}</span>

@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use App\Models\Setting;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -30,5 +31,7 @@ class AppServiceProvider extends ServiceProvider
             $view->with('current_locale_name', trans('global.' . $current_locale));
             $view->with('available_locales', config('app.available_locales'));
         });
+
+        view()->share('setting', $setting = Setting::first());
     }
 }

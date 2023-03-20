@@ -263,6 +263,15 @@ return [
     'new-password' => 'New password',
     'confirm-new-password' => 'Confirm new password',
 
+    //Settings
+    'settings' => "Settings",
+    'create-setting' => 'Create settings',
+    'update-setting' => 'Update settings',
+    'show-setting' => 'Show settings',
+    'social-networks' => 'Social networks',
+    'contacts-email' => 'Contact form email',
+    'contacts-email-explanation' => 'Email where messages from the contact form will be received',
+
 
     //Images
     'image-uploaded' => 'Image Uploaded',

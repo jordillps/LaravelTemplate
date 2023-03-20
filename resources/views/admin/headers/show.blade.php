@@ -6,7 +6,7 @@
     <section class="content container-fluid">
         <div class="row">
             <div class="col-md-12">
-                <div class="card">
+                <div class="card card-info">
                     <div class="card-header">
                         <div class="float-left">
                             <span class="card-title">{{ __('global.show-header') }}</span>

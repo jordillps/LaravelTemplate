@@ -8,7 +8,7 @@
 
                 @includeif('partials.errors')
 
-                <div class="card">
+                <div class="card card-info">
                     <div class="card-header">
                         <div class="float-left">
                             <span class="card-title">{{ __('global.create-category') }}</span>

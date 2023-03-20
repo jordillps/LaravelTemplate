@@ -17,6 +17,7 @@ use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\TagController;
 use App\Http\Controllers\Admin\LegalPageController;
+use App\Http\Controllers\Admin\SettingController;
 
 
 /*
@@ -95,6 +96,11 @@ Route::group(['middleware' => ['auth']], function () {
 
         //LegalPages
         Route::resource('/legal-pages', LegalPageController::class);
+
+        //Settings
+        Route::resource('/settings', SettingController::class);
+        Route::post('/settings/storeMedia', [SettingController::class, 'storeMedia'])->name('settings.storeMedia');
+        Route::delete('/settings/{media}/deleteMedia', [SettingController::class, 'deleteMedia'])->name('settings.deleteMedia');
     });
 });
 

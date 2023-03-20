@@ -84,6 +84,13 @@ return [
             'visibility' => 'public',
         ],
 
+        'settings-media' => [
+            'driver' => 'local',
+            'root' => public_path('/media/settings'),
+            'url' => env('APP_URL').'/media/settings',
+            'visibility' => 'public',
+        ],
+
         'public' => [
             'driver' => 'local',
             'root' => storage_path('app/public'),

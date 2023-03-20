@@ -261,6 +261,15 @@ return [
     'new-password' => 'Nueva contraseña',
     'confirm-new-password' => 'Confirma nueva contraseña',
 
+    //Settings
+    'settings' => "Configuració",
+    'create-setting' => 'Crear configuración',
+    'update-setting' => 'Actualizar configuración',
+    'show-setting' => 'Mostrar configuración',
+    'social-networks' => 'Redes sociales',
+    'contacts-email' => 'Email del formulario de contacto',
+    'contacts-email-explanation' => 'Email donde se recibirán los mensajes del formulario de contacto',
+
     //Images
     'image-uploaded' => 'Imagen guardada',
     'images-uploaded' => 'Imágenes guardadas',

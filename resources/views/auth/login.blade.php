@@ -4,7 +4,7 @@
     <div class="login-page">
         <div class="row justify-content-center">
             <div class="login-box">
-                <div class="card">
+                <div class="card card-info">
                     <div class="card-header">
                         <h3>{{ __('Login') }}</h3>
                     </div>

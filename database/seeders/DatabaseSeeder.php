@@ -47,6 +47,14 @@ class DatabaseSeeder extends Seeder
             'updated_at' => now(),
         ]);
 
+        DB::table('settings')->insert([
+            'email' => 'info@nuevaweb.com',
+            'phone' => '772772772',
+            'address' => 'c/Diagonal, 772',
+            'city' => 'Barcelona',
+            'email_contacts_form' => 'info@nuevaweb.com'
+        ]);
+
         //Users
         \App\Models\User::factory(10)->create();
         

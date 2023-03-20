@@ -8,7 +8,7 @@
         <section class="content container-fluid">
             <div class="col-sm-12">
                 @includeif('partials.errors')
-                <div class="card card-default">
+                <div class="card card-info">
                     <div class="card-header">
                         <div class="float-left">
                             <span class="card-title">{{ __('global.update-user') }}</span>
@@ -27,7 +27,7 @@
                     </div>
                 </div>
                 @if($user->isAdmin())
-                    <div class="card card-default">
+                    <div class="card card-info">
                         <div class="card-header">
                             <div class="float-left">
                                 <span class="card-title">{{ __('global.update-password') }}</span>
