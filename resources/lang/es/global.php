@@ -228,6 +228,7 @@ return [
     'create-post' => 'Crear publicación',
     'update-post' => 'Actualizar publicación',
     'show-post' => 'Mostrar publicación',
+    'upload-post-images' => 'Imágenes de la publicación (dimensiones mínimas 1000 x 666)',
 
     //Projects
     'create-project' => 'Crear proyecto',

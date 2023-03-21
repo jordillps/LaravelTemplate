@@ -171,6 +171,6 @@ class HeaderController extends Controller
 
         flash()->overlay('Deleted successfully', 'Delete Image');
 
-        return redirect()->back();
+        return redirect()->route('headers.index');
     }
 }

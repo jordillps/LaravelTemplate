@@ -233,6 +233,7 @@ return [
     'create-post' => 'Crear publicació',
     'update-post' => 'Actualitzar publicació',
     'show-post' => 'Mostrar publicació',
+    'upload-post-images' => 'Imatges de la publicació (dimensions mínimes 1000 x 666)',
 
     //Projects
     'create-project' => 'Crear projecte',

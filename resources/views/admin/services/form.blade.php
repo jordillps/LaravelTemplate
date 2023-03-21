@@ -68,7 +68,7 @@
         Dropzone.options.documentDropzone = {
           url: '{{ route('services.storeMedia') }}',
           maxFilesize: 1, // MB
-          acceptedFiles: ".png,.jpg,.gif,webp",
+          acceptedFiles: ".png,.jpg,.gif,.webp",
           addRemoveLinks: true,
           maxFiles:1,
           uploadMultiple: false,

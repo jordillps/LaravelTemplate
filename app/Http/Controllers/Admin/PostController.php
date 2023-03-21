@@ -11,7 +11,6 @@ use App\Models\Media;
 use Illuminate\Http\Request;
 use App\Http\Requests\PostStoreRequest;
 use App\Http\Requests\PostUpdateRequest;
-use App\Models\PostTranslation;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
 
@@ -176,6 +175,10 @@ class PostController extends Controller
     {
         //Delete on the server 
         File::delete(public_path('media/posts/' . $media->model_id . "/" . $media->file_name));
+
+        //Delete on the server conversion
+        $file_name = str_replace(".","-thumb.",$media->file_name);       
+        File::delete(public_path('media/posts/' . $media->model_id . '/' . 'conversions/' . $file_name));
        
         
         //Delete on the database

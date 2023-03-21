@@ -229,6 +229,7 @@ return [
     'create-post' => 'Create post',
     'update-post' => 'Update post',
     'show-post' => 'Show post',
+    'upload-post-images' => 'Post images (minimum dimensions 1000 x 666)',
 
     //Projects
     'create-project' => 'Create project',

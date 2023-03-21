@@ -44,12 +44,13 @@
           addRemoveLinks: true,
           maxFiles:1,
           uploadMultiple: false,
-          // resizeWidth: 1920,
+          //resizeWidth: 1920,
           // resizeHeight: 1055,
           headers: {
             'X-CSRF-TOKEN': "{{ csrf_token() }}"
           },
           dictDefaultMessage : 'Arrastrar para subir las fotografías',
+          dictInvalidFileType: 'Este formulario solo acepta imágenes.',
           success: function (file, response) {
             $('form').append('<input type="hidden" name="images[]" value="' + response.name + '">')
             uploadedDocumentMap[file.name] = response.name

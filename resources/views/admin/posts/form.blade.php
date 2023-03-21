@@ -69,7 +69,7 @@
         </div>
       </div>
       <div class="form-group">
-          <label for="document">{{ __('global.upload-images') }}</label>
+          <label for="document">{{ __('global.upload-post-images') }}</label>
           <div class="needsclick dropzone" id="document-dropzone">
           </div>
       </div>
@@ -85,7 +85,8 @@
         var uploadedDocumentMap = {}
         Dropzone.options.documentDropzone = {
           url: '{{ route('posts.storeMedia') }}',
-          maxFilesize: 2, // MB
+          maxFilesize: 1, // MB
+          acceptedFiles: ".png,.jpg,.gif,.webp",
           addRemoveLinks: true,
           headers: {
             'X-CSRF-TOKEN': "{{ csrf_token() }}"
