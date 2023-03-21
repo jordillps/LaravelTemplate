@@ -49,6 +49,17 @@ class DatabaseSeeder extends Seeder
 
         //Users
         \App\Models\User::factory(10)->create();
+
+        DB::table('settings')->insert([
+            'email' => 'mail@mail.com',
+            'phone' => '234234234',
+            'address' => 'c/Sagrados Corazones,77',
+            'postalcode' => '08001',
+            'city' => 'Madrid',
+            'email_contacts' => 'mailcontact@mail.com',
+            'created_at' => now(),
+            'updated_at' => now(),
+        ]);
         
 
         //Categories

@@ -276,7 +276,8 @@ return [
     'contacts-email-explanation' => 'Email on es rebran els missatges del formulari de contacte',
     'logo' => 'Logo',
     'address' => 'Adreça',
-    'email_contacts_form' => 'Email formulari de contacte',
+    'email_contacts' => 'Email formulari de contacte',
+    'footer-data' => 'Dades del footer',
 
 
     //Images

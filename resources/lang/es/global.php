@@ -262,7 +262,7 @@ return [
     'confirm-new-password' => 'Confirma nueva contraseña',
 
     //Settings
-    'settings' => "Configuració",
+    'settings' => "Configuración",
     'create-setting' => 'Crear configuración',
     'update-setting' => 'Actualizar configuración',
     'show-setting' => 'Mostrar configuración',
@@ -271,7 +271,8 @@ return [
     'contacts-email-explanation' => 'Email donde se recibirán los mensajes del formulario de contacto',
     'logo' => 'Logo',
     'address' => 'Dirección',
-    'email_contacts_form' => 'Email formulario de contacto',
+    'email_contacts' => 'Email formulario de contacto',
+    'footer-data' => 'Datos del footer',
 
     //Images
     'image-uploaded' => 'Imagen guardada',

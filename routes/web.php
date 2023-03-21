@@ -97,6 +97,9 @@ Route::group(['middleware' => ['auth']], function () {
         //LegalPages
         Route::resource('/legal-pages', LegalPageController::class);
 
+        //Settings
+        Route::resource('/settings', SettingController::class);
+
     });
 });
 

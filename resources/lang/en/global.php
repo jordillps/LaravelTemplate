@@ -273,7 +273,8 @@ return [
     'contacts-email-explanation' => 'Email where messages from the contact form will be received',
     'logo' => 'Logo',
     'address' => 'Address',
-    'email_contacts_form' => 'Email contact form',
+    'email_contacts' => 'Email contact form',
+    'footer-data' => 'Footer data',
 
 
 
