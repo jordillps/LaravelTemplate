@@ -6,7 +6,7 @@
             <div class="login-box">
                 <div class="card card-info">
                     <div class="card-header">
-                        <h3>{{ __('Login') }}</h3>
+                        <h3>{{ __('auth.login') }}</h3>
                     </div>
 
                     <div class="card-body login-card-body">
@@ -15,7 +15,7 @@
 
                             <div class="input-group mb-3">
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror"
-                                    name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="{{ __('Email Address')
+                                    name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="{{ __('auth.email')
                                 }}">
                                 <div class="input-group-append">
                                     <div class="input-group-text">
@@ -48,28 +48,28 @@
 
                             <div class="row m-0 mb-5 justify-content-between align-items-center">
                                 <button type="submit" class="btn btn-block btn btn-info mb-2">
-                                    {{ __('Login') }}
+                                    {{ __('auth.login') }}
                                 </button>
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" name="remember" id="remember" {{
                                         old('remember') ? 'checked' : '' }}>
 
                                     <label class="form-check-label" for="remember">
-                                        {{ __('Remember Me') }}
+                                        {{ __('auth.rememberme') }}
                                     </label>
                                 </div>
                             </div>
                             <div class="row mb-3">
                                 <div class="col-12">
                                     <a class="btn btn-block btn-outline-primary" href="{{ route('home') }}">
-                                        {{ __('Home') }}
+                                        {{ __('global.home') }}
                                     </a>
                                 </div>
                             </div>    
                             <div class="row mb-0">
                                 @if (Route::has('password.request'))
                                 <a class="btn btn-link" href="{{ route('password.request') }}">
-                                    {{ __('Forgot Your Password?') }}
+                                    {{ __('auth.forgotyourpassword') }}
                                 </a>
                                 @endif
                             </div>
