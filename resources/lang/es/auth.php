@@ -23,7 +23,7 @@ return [
     'confirm-password' => 'Confirma contraseña',
     'please-confirm-password' => 'Por favor, confirme su contraseña antes de continuar.',
     'reset-password' => 'Restablecer la contraseña',
-    'send-password-reset-link' => 'Envía el enlace de restablecimiento de la contraseña',
+    'send-password-reset-link' => 'Vuelve a enviar el enlace de restablecimiento de la contraseña',
     'login' => 'Acceso',
     'register' => 'Registrarse',
     'rememberme' => 'Recuérdame la contraseña',

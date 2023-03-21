@@ -24,7 +24,7 @@ return [
     'confirm-password' => 'Confirm password',
     'please-confirm-password' => 'Please confirm your password before continuing.',
     'reset-password' => 'Reset password',
-    'send-password-reset-link' => 'Send the password reset link',
+    'send-password-reset-link' => 'Resend the password reset link',
     'login' => 'Login',
     'register' => 'Register',
     'rememberme' => 'Remember my password',
