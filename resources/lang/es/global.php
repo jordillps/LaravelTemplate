@@ -269,6 +269,9 @@ return [
     'social-networks' => 'Redes sociales',
     'contacts-email' => 'Email del formulario de contacto',
     'contacts-email-explanation' => 'Email donde se recibirán los mensajes del formulario de contacto',
+    'logo' => 'Logo',
+    'address' => 'Dirección',
+    'email_contacts_form' => 'Email formulario de contacto',
 
     //Images
     'image-uploaded' => 'Imagen guardada',

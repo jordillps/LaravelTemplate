@@ -97,18 +97,14 @@ Route::group(['middleware' => ['auth']], function () {
         //LegalPages
         Route::resource('/legal-pages', LegalPageController::class);
 
-        //Settings
-        Route::resource('/settings', SettingController::class);
-        Route::post('/settings/storeMedia', [SettingController::class, 'storeMedia'])->name('settings.storeMedia');
-        Route::delete('/settings/{media}/deleteMedia', [SettingController::class, 'deleteMedia'])->name('settings.deleteMedia');
     });
 });
 
 
-Route::resource('post', App\Http\Controllers\PostController::class)->only('index', 'store');
+// Route::resource('post', App\Http\Controllers\PostController::class)->only('index', 'store');
 
-Route::resource('category', App\Http\Controllers\CategoryController::class)->only('index');
+// Route::resource('category', App\Http\Controllers\CategoryController::class)->only('index');
 
-Route::resource('tag', App\Http\Controllers\TagController::class)->only('index');
+// Route::resource('tag', App\Http\Controllers\TagController::class)->only('index');
 
 

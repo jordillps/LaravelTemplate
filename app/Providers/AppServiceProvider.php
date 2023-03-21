@@ -24,7 +24,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        
         view()->composer(['partials.language_switcher', 'admin.partials.navbar'], function ($view) {
             $current_locale = app()->getLocale();
             $view->with('current_locale', $current_locale);
@@ -32,6 +32,5 @@ class AppServiceProvider extends ServiceProvider
             $view->with('available_locales', config('app.available_locales'));
         });
 
-        view()->share('setting', $setting = Setting::first());
     }
 }

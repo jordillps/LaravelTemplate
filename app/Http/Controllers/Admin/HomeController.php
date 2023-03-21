@@ -25,7 +25,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $setting = Setting::first();
-        return view('admin.home', compact('setting'));
+        return view('admin.home');
     }
 }

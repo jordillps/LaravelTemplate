@@ -269,26 +269,6 @@
             </li>
           </ul>
         </nav>
-        <nav class="mt-4">
-          <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-            <li class="nav-item">
-              <a href="#" class="nav-link">
-                <i class="nav-icon fas fa-cogs"></i>
-                <p>
-                  {{ __('global.settings') }}
-                  <i class="fas fa-angle-left right"></i>
-                </p>
-              </a>
-              <ul class="nav nav-treeview">
-                <li class="nav-item ml-5">
-                  <a href="{{ route('settings.edit', $setting->id) }}" class="nav-link">
-                    <p>{{ __('global.edit') }}</p>
-                  </a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </nav> 
         <!-- /.sidebar-menu -->
       @endif
     </div>

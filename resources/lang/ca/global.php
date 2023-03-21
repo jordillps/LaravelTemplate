@@ -274,6 +274,9 @@ return [
     'social-networks' => 'Xarxes socials',
     'contacts-email' => 'Email del formulari de contacte',
     'contacts-email-explanation' => 'Email on es rebran els missatges del formulari de contacte',
+    'logo' => 'Logo',
+    'address' => 'Adreça',
+    'email_contacts_form' => 'Email formulari de contacte',
 
 
     //Images

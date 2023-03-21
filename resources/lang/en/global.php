@@ -271,6 +271,10 @@ return [
     'social-networks' => 'Social networks',
     'contacts-email' => 'Contact form email',
     'contacts-email-explanation' => 'Email where messages from the contact form will be received',
+    'logo' => 'Logo',
+    'address' => 'Address',
+    'email_contacts_form' => 'Email contact form',
+
 
 
     //Images
