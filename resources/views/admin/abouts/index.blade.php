@@ -29,9 +29,7 @@
                             <table id="item_datatable" class="table table-striped table-hover">
                                 <thead class="thead">
                                     <tr>
-                                        <th>{{ __('global.id') }}</th>
-                                        
-										<th>{{ __('global.page') }}</th>
+                                        <th>{{ __('global.id') }}</th>                                    
 										<th>{{ __('global.email') }}</th>
 										<th>{{ __('global.phone') }}</th>
 
@@ -42,7 +40,6 @@
                                     @foreach ($abouts as $about)
                                         <tr>
                                             <td>{{ $about->id }}</td>
-											<td>{{ $about->page->name }}</td>
 											<td>{{ $about->email }}</td>
 											<td>{{ $about->phone }}</td>
 											

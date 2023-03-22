@@ -4,12 +4,6 @@
 
 <div class="box box-info padding-1">
     <div class="box-body">
-        
-        <div class="form-group">
-          {{ Form::label(trans('global.page')) }}
-          {!! Form::select('page_id', $pages, $about->page_id, ['class' => 'form-control' . ($errors->has('page_id') ? ' is-invalid' : '')]) !!}
-          {!! $errors->first('page_id', '<div class="invalid-feedback">:message</div>') !!}
-        </div>
         <div class="row">
           <div class="col-12 col-md-6">
             <div class="form-group">

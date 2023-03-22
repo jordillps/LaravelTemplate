@@ -198,8 +198,8 @@ class DatabaseSeeder extends Seeder
             ]);
         });
 
-        //About home page
-        About::factory()->count(1)->create(['page_id' => 2])->each(function (About $about) {
+        //About
+        About::factory()->count(1)->create()->each(function (About $about) {
             AboutTranslation::factory()->count(1)->create(['about_id' => $about->id, 'locale' => 'es']);
             AboutTranslation::factory()->count(1)->create(['about_id' => $about->id,'locale' => 'en']);
             AboutTranslation::factory()->count(1)->create(['about_id' => $about->id,'locale' => 'ca']);

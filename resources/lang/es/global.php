@@ -254,7 +254,7 @@ return [
 
     //Users
     'create-user' => 'Crear usuario',
-    'update-user' => 'Actualitzar usuario',
+    'update-user' => 'Actualizar usuario',
     'show-user' => 'Mostrar usuario',
     'update-password' => 'Actualizar contraseña',
     'date-of-birth' => 'Fecha de nacimiento',

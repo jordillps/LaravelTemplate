@@ -24,7 +24,8 @@ class WelcomeController extends Controller
 
         $header = Header::where('page_id', $page->id)->first();
 
-        $about = About::where('page_id', $page->id)->first();
+        //Take the last one
+        $about = About::orderBy('id', 'desc')->first();
 
         $services = Service::all();
 

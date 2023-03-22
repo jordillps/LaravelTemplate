@@ -24,7 +24,6 @@ class AboutUpdateRequest extends FormRequest
     public function rules()
     {
         return [
-            'page_id' => ['required', 'integer', 'exists:pages,id'],
             'name' => ['required', 'string'],
 		    'email' => ['required', 'email'],
 		    'phone' => 'required',

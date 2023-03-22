@@ -33,19 +33,14 @@
               <a href="#" class="nav-link">
                 <i class="nav-icon fas fa-users"></i>
                 <p>
-                  {{ __('global.users') }}
+                  {{ __('global.about') }}
                   <i class="fas fa-angle-left right"></i>
                 </p>
               </a>
               <ul class="nav nav-treeview">
                 <li class="nav-item ml-5">
-                  <a href="{{ route('users.index') }}" class="nav-link">
+                  <a href="{{ route('abouts.index') }}" class="nav-link">
                     <p>{{ __('global.list') }}</p>
-                  </a>
-                </li>
-                <li class="nav-item ml-5">
-                  <a href="{{ route('users.create') }}" class="nav-link">
-                    <p>{{ __('global.create') }}</p>
                   </a>
                 </li>
               </ul>
@@ -174,22 +169,6 @@
                   <a href="#" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
                     <p>
-                      {{ __('global.about') }}
-                      <i class="fas fa-angle-left right"></i>
-                    </p>
-                  </a>
-                  <ul class="nav nav-treeview">
-                    <li class="nav-item ml-5">
-                      <a href="{{ route('abouts.index') }}" class="nav-link">
-                        <p>{{ __('global.list') }}</p>
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-                <li class="nav-item">
-                  <a href="#" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>
                       {{ __('global.titles') }}
                       <i class="fas fa-angle-left right"></i>
                     </p>
@@ -271,7 +250,28 @@
         </nav>
         <nav class="mt-4">
           <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-            <li class="nav-item" stlye="margin-bottom: 1px solid #c2c7d0">
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-users-cog"></i>
+                <p>
+                  {{ __('global.users') }}
+                  <i class="fas fa-angle-left right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item ml-5">
+                  <a href="{{ route('users.index') }}" class="nav-link">
+                    <p>{{ __('global.list') }}</p>
+                  </a>
+                </li>
+                <li class="nav-item ml-5">
+                  <a href="{{ route('users.create') }}" class="nav-link">
+                    <p>{{ __('global.create') }}</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
               <a href="#" class="nav-link">
                 <i class="nav-icon fas fa-cog"></i>
                 <p>

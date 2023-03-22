@@ -42,17 +42,8 @@ class About extends Model implements HasMedia, TranslatableContract
      *
      * @var array
      */
-    protected $fillable = ['page_id','name','email','phone','html','css','php','javascript'];
+    protected $fillable = ['name','email','phone','html','css','php','javascript'];
 
-
-
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\belongsTo
-     */
-    public function page()
-    {
-        return $this->belongsTo(Page::class);
-    }
 
     public function medias()
     {

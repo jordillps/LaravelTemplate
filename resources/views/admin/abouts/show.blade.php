@@ -17,12 +17,6 @@
                     </div>
 
                     <div class="card-body">
-                        <div class="callout callout-primary">
-                            <div>
-                                <strong>{{ __('global.page') }}:</strong>
-                            </div>
-                            {{ $about->page->name }}
-                        </div>
                         <div class="row">
                             <div class="col-12 col-md-6">
                                 <div class="callout callout-primary">

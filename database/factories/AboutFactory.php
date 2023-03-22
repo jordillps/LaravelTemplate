@@ -15,7 +15,6 @@ class AboutFactory extends Factory
     public function definition()
     {
         return [
-            'page_id' => Page::all()->random()->id,
             'name' => $this->faker->name(),
             'email' => $this->faker->unique()->safeEmail(),
             'phone' => $this->faker->phoneNumber(),
