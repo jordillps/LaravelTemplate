@@ -259,9 +259,9 @@
             <div class="col-md-4">
               <div class="work-box">
                 @if(count($project->getMedia('images')))
-                  <a href="{{ $project->getMedia('images')[0]->getUrl() }}" data-lightbox="gallery-mf">
+                  <a href="{{ $project->getMedia('images')[0]->getUrl('thumb') }}" data-lightbox="gallery-mf">
                     <div class="work-img">
-                      <img src="{{ $project->getMedia('images')[0]->getUrl() }}" alt="" class="img-fluid" />
+                      <img src="{{ $project->getMedia('images')[0]->getUrl('thumb') }}" alt="" class="img-fluid" />
                     </div>
                     <div class="work-content">
                       <div class="row">
@@ -362,7 +362,7 @@
               <div class="card-img">
                 @if(count($post->getMedia('images')))
                 <a href="blog-single.html"
-                  ><img src="{{ $post->getMedia('images')[0]->getUrl() }}" alt="" class="img-fluid"
+                  ><img src="{{ $post->getMedia('images')[0]->getUrl('thumb') }}" alt="" class="img-fluid"
                 /></a>
                 @endif
               </div>

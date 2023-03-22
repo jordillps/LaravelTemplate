@@ -239,6 +239,7 @@ return [
     'create-project' => 'Crear projecte',
     'update-project' => 'Actualitzar projecte',
     'show-project' => 'Mostrar projecte',
+    'upload-images-projects' => 'Imatges del projecte (dimensions mínimes 960 x 600)',
 
     //Services
     'create-service' => 'Crear servei',

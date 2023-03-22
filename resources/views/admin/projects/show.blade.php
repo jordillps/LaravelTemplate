@@ -51,7 +51,7 @@
                             <div class="row">
                                 @foreach ($project->getMedia('images') as $media)
                                     <div class="col-12 col-md-4 col-lg-2">
-                                        <img src="{{ $media->getUrl() }}" alt="" style="max-width: 100%;">
+                                        <img src="{{ $media->getUrl('thumb') }}" alt="" style="max-width: 100%;">
                                     </div>
                                 @endforeach
                                 </div>

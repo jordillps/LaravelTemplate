@@ -35,7 +35,7 @@
         </div>
       </div>
       <div class="form-group">
-        <label for="document">{{ __('global.upload-images') }}</label>
+        <label for="document">{{ __('global.upload-images-projects') }}</label>
         <div class="needsclick dropzone" id="document-dropzone">
         </div>
     </div>

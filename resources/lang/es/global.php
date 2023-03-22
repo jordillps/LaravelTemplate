@@ -234,6 +234,7 @@ return [
     'create-project' => 'Crear proyecto',
     'update-project' => 'Actualizar proyecto',
     'show-project' => 'Mostrar proyecto',
+    'upload-images-projects' => 'Imágenes del proyecto (dimensiones mínimas 960 x 600)',
 
     //Services
     'create-service' => 'Crear servicio',
