@@ -48,7 +48,7 @@ class TagController extends Controller
 
         $tag = Tag::create($request->all());
 
-        flash()->overlay($tag->name . ' created successfully', 'Saved Tag');
+        flash()->overlay($tag->name . trans('global.created-succesfully'), trans('global.saved-tag'));
         return redirect()->route('tags.index');
     }
 
@@ -88,7 +88,7 @@ class TagController extends Controller
 
         $tag->update($request->all());
 
-        flash()->overlay($tag->name . ' updated successfully', 'Update Category');
+        flash()->overlay($tag->name . trans('global.updated-succesfully'), trans('global.updated-tag'));
 
         return redirect()->route('tags.index');
     }
@@ -102,7 +102,7 @@ class TagController extends Controller
     {
         $tag->delete();
 
-        flash()->overlay($tag->name . ' deleted successfully', 'Delete Tag');
+        flash()->overlay($tag->name . trans('global.deleted-succesfully'), trans('global.deleted-tag'));
 
         return redirect()->route('tags.index');
     }

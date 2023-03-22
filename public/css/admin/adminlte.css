@@ -6218,6 +6218,8 @@ a.close.disabled, a.disabled.mailbox-attachment-close {
   }
   .modal-content {
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+    border: 5px solid #28a745;
+    background-color: #f7f7f7;
   }
   .modal-sm {
     max-width: 300px;

@@ -83,7 +83,7 @@ class SettingController extends Controller
 
         $setting->update($request->all());
 
-        flash()->overlay('Updated successfully', 'Update settings');
+        flash()->overlay('Updated successfully', trans('global.updated-settings'));
 
         return redirect()->route('settings.index');
     }

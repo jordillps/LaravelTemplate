@@ -56,7 +56,7 @@ class AboutController extends Controller
             $about->addMedia(storage_path('tmp/uploads/' . $file))->toMediaCollection('images', 'abouts-media');
         }
 
-        flash()->overlay($about->id . ' created successfully', 'Saved About');
+        flash()->overlay($about->id . trans('global.created-succesfully'), trans('global.saved-about'));
 
         return redirect()->route('abouts.index');
     }
@@ -116,7 +116,7 @@ class AboutController extends Controller
         }
     
         
-        flash()->overlay($about->id . ' updated successfully', 'Update About');
+        flash()->overlay($about->id . trans('global.updated-succesfully'), trans('global.updated-about'));
 
         return redirect()->route('abouts.index');
     }
@@ -130,7 +130,7 @@ class AboutController extends Controller
     {
         $about->delete();
 
-        flash()->overlay($about->id . ' deleted successfully', 'Delete About');
+        flash()->overlay($about->id . trans('global.deleted-succesfully'), trans('global.deleted-about'));
 
         return redirect()->route('abouts.index');
     }
@@ -168,7 +168,7 @@ class AboutController extends Controller
         //Borrem de la base de dades
         $media->delete();
 
-        flash()->overlay('Deleted successfully', 'Delete Image');
+        flash()->overlay(trans('global.deleted-succesfully'), trans('global.delete-image'));
 
         return redirect()->back();
     }

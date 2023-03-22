@@ -62,7 +62,7 @@ class PostController extends Controller
             $post->addMedia(storage_path('tmp/uploads/' . $file))->toMediaCollection('images', 'posts-media');
         }
 
-        flash()->overlay($post->title . ' created successfully', 'Create Post');
+        flash()->overlay($post->title . trans('global.created-succesfully'), trans('global.saved-post'));
 
         return redirect()->route('posts.index');
     }
@@ -130,7 +130,7 @@ class PostController extends Controller
         }
     
         
-        flash()->overlay($post->title . ' updated successfully', 'Update Post');
+        flash()->overlay($post->title . trans('global.updated-succesfully'), trans('global.updated-post'));
 
         return redirect()->route('posts.index');
     }
@@ -144,7 +144,7 @@ class PostController extends Controller
     {
         $post ->delete();
 
-        flash()->overlay($post->title . ' deleted successfully', 'Delete Post');
+        flash()->overlay($post->title . trans('global.deleted-succesfully'), trans('global.deleted-post'));
 
         return redirect()->route('posts.index');
     }
@@ -184,7 +184,7 @@ class PostController extends Controller
         //Delete on the database
         $media->delete();
 
-        flash()->overlay('Deleted successfully', 'Delete Image');
+        flash()->overlay(trans('global.deleted-succesfully'), trans('global.delete-image'));
 
         return redirect()->route('posts.index');
     }

@@ -50,7 +50,7 @@ class TitleController extends Controller
 
         $title = Title::create($request->all());
 
-        flash()->overlay($title->id . ' created successfully', 'Saved Title');
+        flash()->overlay(trans('global.created-succesfully'), trans('global.saved-title'));
 
         return redirect()->route('titles.index');
     }
@@ -91,7 +91,7 @@ class TitleController extends Controller
 
         $title->update($request->all());
 
-        flash()->overlay($title->id . ' updated successfully', 'Update Title');
+        flash()->overlay(trans('global.updated-succesfully'), trans('global.updated-title'));
 
         return redirect()->route('titles.index');
     }
@@ -105,7 +105,7 @@ class TitleController extends Controller
     {
         $title->delete();
 
-        flash()->overlay($title->id . ' deleted successfully', 'Delete Title');
+        flash()->overlay(trans('global.deleted-succesfully'), trans('global.deleted-title'));
         return redirect()->route('titles.index');
     }
 }

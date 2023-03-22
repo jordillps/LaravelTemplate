@@ -56,7 +56,7 @@ class ServiceController extends Controller
             $service->addMedia(storage_path('tmp/uploads/' . $file))->toMediaCollection('images', 'services-media');
         }
 
-        flash()->overlay($service->id . ' created successfully', 'Saved Service');
+        flash()->overlay($service->id . trans('global.created-succesfully'), trans('global.saved-service'));
 
         return redirect()->route('services.index');
     }
@@ -114,7 +114,7 @@ class ServiceController extends Controller
         }
     
         
-        flash()->overlay($service->id . ' updated successfully', 'Update Service');
+        flash()->overlay($service->id . trans('global.updated-succesfully'), trans('global.updated-service'));
 
         return redirect()->route('services.index');
     }
@@ -128,7 +128,7 @@ class ServiceController extends Controller
 
         $service->delete();
 
-        flash()->overlay($service->id . ' deleted successfully', 'Delete Service');
+        flash()->overlay($service->id . trans('global.deleted-succesfully'), trans('global.deleted-service'));
 
         return redirect()->route('services.index');
     }
@@ -166,7 +166,7 @@ class ServiceController extends Controller
         //Delete on the database
         $media->delete();
 
-        flash()->overlay('Deleted successfully', 'Delete Image');
+        flash()->overlay(trans('global.deleted-succesfully'), trans('global.delete-image'));
 
         return redirect()->back();
     }

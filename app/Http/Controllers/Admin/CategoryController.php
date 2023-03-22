@@ -48,7 +48,7 @@ class CategoryController extends Controller
 
         $category = Category::create($request->all());
 
-        flash()->overlay($category->id . ' created successfully', 'Saved Category');
+        flash()->overlay($category->name . trans('global.created-succesfully'), trans('global.saved-category'));
         return redirect()->route('categories.index');
     }
 
@@ -88,7 +88,7 @@ class CategoryController extends Controller
 
         $category->update($request->all());
 
-        flash()->overlay($category->id . ' updated successfully', 'Update Category');
+        flash()->overlay($category->name . trans('global.updated-succesfully'), trans('global.updated-category'));
 
         return redirect()->route('categories.index');
     }
@@ -102,7 +102,7 @@ class CategoryController extends Controller
     {
         $category->delete();
 
-        flash()->overlay($category->id . ' deleted successfully', 'Delete Category');
+        flash()->overlay($category->name . trans('global.deleted-succesfully'), trans('global.deleted-category'));
 
         return redirect()->route('categories.index');
     }

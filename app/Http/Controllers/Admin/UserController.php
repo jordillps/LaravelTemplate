@@ -73,7 +73,7 @@ class UserController extends Controller
             $user->addMedia(storage_path('tmp/uploads/' . $file))->toMediaCollection('images', 'users-media');
         }
 
-        flash()->overlay($user->name . ' created successfully', 'Create User');
+        flash()->overlay($user->name . trans('global.created-succesfully'), trans('global.saved-user'));
 
         return redirect()->route('users.index');
     }
@@ -137,7 +137,7 @@ class UserController extends Controller
     
 
 
-        flash()->overlay($user->name . ' updated successfully', 'Update User');
+        flash()->overlay($user->name . trans('global.updated-succesfully'), trans('global.updated-user'));
 
         return redirect()->route('users.index');
     }
@@ -151,7 +151,7 @@ class UserController extends Controller
     {
         $user->delete();
 
-        flash()->overlay($user->name . ' deleted successfully', 'Delete User');
+        flash()->overlay($user->name . trans('global.deleted-succesfully'), trans('global.deleted-user'));
 
         return redirect()->route('users.index');
     }
@@ -166,7 +166,7 @@ class UserController extends Controller
 
         User::find(auth()->user()->id)->update(['password'=> Hash::make($request->new_password)]);
 
-        flash()->overlay('Password changed successfully', 'Change Password');
+        flash()->overlay(trans('password-changed-successfully'), trans('change-password'));
         return redirect()->route('users.index');
     }
 
@@ -199,7 +199,7 @@ class UserController extends Controller
         //Delete on the database
         $media->delete();
 
-        flash()->overlay('Deleted successfully', 'Delete Image');
+        flash()->overlay(trans('global.deleted-succesfully'), trans('global.delete-image'));
 
         return redirect()->route('users.index');
     }
