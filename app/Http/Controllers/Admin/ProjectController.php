@@ -58,7 +58,7 @@ class ProjectController extends Controller {
 
         return $project->getMedia('images');
 
-        flash()->overlay($project->title . trans('global.created-succesfully'), trans('global.saved-project'));
+        flash()->overlay('"'. $project->title . '"' . trans('global.created-succesfully'), trans('global.saved-project'));
 
         return redirect()->route('projects.index');
     }
@@ -117,7 +117,7 @@ class ProjectController extends Controller {
         }
     
         
-        flash()->overlay($project->title . trans('global.updated-succesfully'), trans('global.updated-project'));
+        flash()->overlay('"'. $project->title . '"' . trans('global.updated-succesfully'), trans('global.updated-project'));
 
         return redirect()->route('projects.index');
     }
@@ -131,7 +131,7 @@ class ProjectController extends Controller {
     {
         $project ->delete();
 
-        flash()->overlay($project->title . trans('global.deleted-succesfully'), trans('global.deleted-project'));
+        flash()->overlay('"'. $project->title . '"' . trans('global.deleted-succesfully'), trans('global.deleted-project'));
 
         return redirect()->route('projects.index');
     }

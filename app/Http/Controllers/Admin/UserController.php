@@ -73,7 +73,7 @@ class UserController extends Controller
             $user->addMedia(storage_path('tmp/uploads/' . $file))->toMediaCollection('images', 'users-media');
         }
 
-        flash()->overlay($user->name . trans('global.created-succesfully'), trans('global.saved-user'));
+        flash()->overlay('"'. $user->name . '"' . trans('global.created-succesfully'), trans('global.saved-user'));
 
         return redirect()->route('users.index');
     }
@@ -137,7 +137,7 @@ class UserController extends Controller
     
 
 
-        flash()->overlay($user->name . trans('global.updated-succesfully'), trans('global.updated-user'));
+        flash()->overlay('"'. $user->name . '"' . trans('global.updated-succesfully'), trans('global.updated-user'));
 
         return redirect()->route('users.index');
     }
@@ -151,7 +151,7 @@ class UserController extends Controller
     {
         $user->delete();
 
-        flash()->overlay($user->name . trans('global.deleted-succesfully'), trans('global.deleted-user'));
+        flash()->overlay('"'. $user->name . '"' . trans('global.deleted-succesfully'), trans('global.deleted-user'));
 
         return redirect()->route('users.index');
     }

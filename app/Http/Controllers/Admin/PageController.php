@@ -102,7 +102,7 @@ class PageController extends Controller
     {
         $page->delete();
 
-        flash()->overlay($page->name . trans('global.deleted-succesfully'), trans('global.deleted-page'));
+        flash()->overlay('"'. $page->name . '"' . trans('global.deleted-succesfully'), trans('global.deleted-page'));
 
         return redirect()->route('pages.index');
     }

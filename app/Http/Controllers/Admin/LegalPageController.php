@@ -49,7 +49,7 @@ class LegalPageController extends Controller
 
         $legalPage = LegalPage::create($request->all());
 
-        flash()->overlay($legalPage->title . trans('global.created-succesfully'), trans('global.saved-legal-page'));
+        flash()->overlay('"'. $legalPage->title . '"' . trans('global.created-succesfully'), trans('global.saved-legal-page'));
 
         return redirect()->route('legal-pages.index');
     }
@@ -91,7 +91,7 @@ class LegalPageController extends Controller
 
         $legalPage->update($request->all());
 
-        flash()->overlay($legalPage->title . trans('global.updated-succesfully'), trans('global.updated-legal-page'));
+        flash()->overlay('"'. $legalPage->title . '"' . trans('global.updated-succesfully'), trans('global.updated-legal-page'));
 
         return redirect()->route('legal-pages.index');
     }
@@ -105,7 +105,7 @@ class LegalPageController extends Controller
     {
         $legalPage->delete();
 
-        flash()->overlay($legalPage->title . trans('global.deleted-succesfully'), trans('global.deleted-legal-page'));
+        flash()->overlay('"'. $legalPage->title . '"' . trans('global.deleted-succesfully'), trans('global.deleted-legal-page'));
         return redirect()->route('legal-pages.index');
     }
 }

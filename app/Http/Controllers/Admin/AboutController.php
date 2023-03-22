@@ -56,7 +56,7 @@ class AboutController extends Controller
             $about->addMedia(storage_path('tmp/uploads/' . $file))->toMediaCollection('images', 'abouts-media');
         }
 
-        flash()->overlay($about->id . trans('global.created-succesfully'), trans('global.saved-about'));
+        flash()->overlay('"'. $about->name . '"' . trans('global.created-succesfully'), trans('global.saved-about'));
 
         return redirect()->route('abouts.index');
     }
@@ -116,7 +116,7 @@ class AboutController extends Controller
         }
     
         
-        flash()->overlay($about->id . trans('global.updated-succesfully'), trans('global.updated-about'));
+        flash()->overlay('"'. $about->name . '"' . trans('global.updated-succesfully'), trans('global.updated-about'));
 
         return redirect()->route('abouts.index');
     }
@@ -130,7 +130,7 @@ class AboutController extends Controller
     {
         $about->delete();
 
-        flash()->overlay($about->id . trans('global.deleted-succesfully'), trans('global.deleted-about'));
+        flash()->overlay('"'. $about->name . '"' . trans('global.deleted-succesfully'), trans('global.deleted-about'));
 
         return redirect()->route('abouts.index');
     }

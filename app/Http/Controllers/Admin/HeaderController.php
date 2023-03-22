@@ -57,7 +57,7 @@ class HeaderController extends Controller
             $header->addMedia(storage_path('tmp/uploads/' . $file))->toMediaCollection('images', 'headers-media');
         }
 
-        flash()->overlay($header->id . trans('global.created-succesfully'), trans('global.saved-header'));
+        flash()->overlay('"'. $header->title . '"' . trans('global.created-succesfully'), trans('global.saved-header'));
 
         return redirect()->route('headers.index');
     }
@@ -116,7 +116,7 @@ class HeaderController extends Controller
         }
     
         
-        flash()->overlay($header->id . trans('global.updated-succesfully'), trans('global.updated-header'));
+        flash()->overlay('"'. $header->title . '"' . trans('global.updated-succesfully'), trans('global.updated-header'));
 
         return redirect()->route('headers.index');
     }
@@ -130,7 +130,7 @@ class HeaderController extends Controller
     {
         $header->delete();
 
-        flash()->overlay($header->id . trans('global.deleted-succesfully'), trans('global.deleted-header'));
+        flash()->overlay('"'. $header->title . '"' . trans('global.deleted-succesfully'), trans('global.deleted-header'));
 
         return redirect()->route('headers.index');
     }

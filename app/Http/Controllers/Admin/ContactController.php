@@ -86,7 +86,7 @@ class ContactController extends Controller
 
         $contact->delete();
 
-        flash()->overlay($contact->name . trans('global.deleted-succesfully'), trans('global.deleted-contact'));
+        flash()->overlay('"'. $contact->name . '"' . trans('global.deleted-succesfully'), trans('global.deleted-contact'));
 
         return redirect()->route('contacts-list.index');
     }
