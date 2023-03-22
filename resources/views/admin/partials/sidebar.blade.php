@@ -126,6 +126,27 @@
             </li>
             <li class="nav-item">
               <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-tasks"></i>
+                <p>
+                  {{ __('global.services') }}
+                  <i class="fas fa-angle-left right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item ml-5">
+                  <a href="{{ route('services.index') }}" class="nav-link">
+                    <p>{{ __('global.list') }}</p>
+                  </a>
+                </li>
+                <li class="nav-item ml-5">
+                  <a href="{{ route('services.create') }}" class="nav-link">
+                    <p>{{ __('global.create') }}</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
                 <i class="nav-icon fas fa-columns"></i>
                 <p>
                   {{ __('global.page-components') }}
@@ -161,27 +182,6 @@
                     <li class="nav-item ml-5">
                       <a href="{{ route('abouts.index') }}" class="nav-link">
                         <p>{{ __('global.list') }}</p>
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-                <li class="nav-item">
-                  <a href="#" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>
-                      {{ __('global.services') }}
-                      <i class="fas fa-angle-left right"></i>
-                    </p>
-                  </a>
-                  <ul class="nav nav-treeview">
-                    <li class="nav-item ml-5">
-                      <a href="{{ route('services.index') }}" class="nav-link">
-                        <p>{{ __('global.list') }}</p>
-                      </a>
-                    </li>
-                    <li class="nav-item ml-5">
-                      <a href="{{ route('services.create') }}" class="nav-link">
-                        <p>{{ __('global.create') }}</p>
                       </a>
                     </li>
                   </ul>

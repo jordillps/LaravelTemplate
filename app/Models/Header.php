@@ -28,9 +28,6 @@ class Header extends Model implements HasMedia, TranslatableContract
 
   use InteractsWithMedia;
 
-  // static $rules = [
-	// 	'page_id' => 'required',
-  // ];
 
   public $translatedAttributes = ['title','text'];
 

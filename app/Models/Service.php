@@ -36,14 +36,8 @@ class Service extends Model implements HasMedia, TranslatableContract{
      *
      * @var array
      */
-    protected $fillable = ['page_id','icon'];
+    protected $fillable = ['icon'];
 
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\belongsTo
-     */
-    public function page(){
-        return $this->belongsTo(Page::class);
-    }
 
     public function medias(){
         return $this->morphMany(Media::class, 'mediable');

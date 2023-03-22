@@ -24,7 +24,6 @@ class ServiceStoreRequest extends FormRequest
     public function rules()
     {
         return [
-            'page_id' => ['required', 'integer', 'exists:pages,id'],
             'title:'. app()->getLocale() => ['required', 'string'],
             'text:'. app()->getLocale() => ['required','string'],
         ];

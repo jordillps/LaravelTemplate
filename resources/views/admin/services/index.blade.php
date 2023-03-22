@@ -36,8 +36,6 @@
                                     <tr>
                                         <th>{{ __('global.id') }}</th>
                                         
-										<th>{{ __('global.page') }}</th>
-
                                         <th>{{ __('global.title') }}</th>
 
                                         <th>{{ __('global.actions') }}</th>
@@ -48,8 +46,6 @@
                                         <tr>
                                             <td>{{ $service->id }}</td>
                                             
-                                            <td>{{ $service->page->name }}</td>
-
                                             <td>{{ $service->{'title:'. app()->getLocale()}  }}</td>
 
                                             <td>

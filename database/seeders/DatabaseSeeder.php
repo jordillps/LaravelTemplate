@@ -206,7 +206,7 @@ class DatabaseSeeder extends Seeder
         });
 
         //Services
-        Service::factory()->count(1)->create(['page_id' => 2])->each(function (Service $service) {
+        Service::factory()->count(1)->create()->each(function (Service $service) {
             ServiceTranslation::factory()->count(1)->create([
                 'service_id' => $service->id, 
                 'locale' => 'es',

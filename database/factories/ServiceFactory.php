@@ -18,7 +18,6 @@ class ServiceFactory extends Factory
     public function definition()
     {
         return [
-            'page_id' => Page::all()->random()->id,
             'icon' => $this->faker->randomElement(['ion-monitor', 'ion-code-working', 'ion-camera', 'ion-android-phone-portrait', 'ion-paintbrush','ion-stats-bars'])
         ];
     }

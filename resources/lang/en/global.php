@@ -238,9 +238,9 @@ return [
     'upload-images-projects' => 'Project images (minimum dimensions 960 x 600)',
 
     //Services
-    'create-service' => 'Crear service',
-    'update-service' => 'Actualitzar service',
-    'show-service' => 'Mostrar service',
+    'create-service' => 'Create service',
+    'update-service' => 'Update service',
+    'show-service' => 'Show service',
     'service-image' => 'Service Image (Upload only one image, max dimensions 100x100)',
     'icons' => 'Icons',
 

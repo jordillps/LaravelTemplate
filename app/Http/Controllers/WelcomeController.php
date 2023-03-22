@@ -26,7 +26,7 @@ class WelcomeController extends Controller
 
         $about = About::where('page_id', $page->id)->first();
 
-        $services = Service::where('page_id', $page->id)->get();
+        $services = Service::all();
 
         $titles = Title::where('page_id', $page->id)->get();
 

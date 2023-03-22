@@ -19,12 +19,6 @@
                     <div class="card-body">
                         <div class="callout callout-primary">
                             <div>
-                                <strong>{{ __('global.page') }}:</strong>
-                            </div>
-                            {{ $service->page->name }}
-                        </div>
-                        <div class="callout callout-primary">
-                            <div>
                                 <strong>{{ __('global.title') }}:</strong>
                             </div>
                             {{ $service->{'title:'. app()->getLocale()} }}
