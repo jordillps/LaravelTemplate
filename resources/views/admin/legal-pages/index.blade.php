@@ -20,7 +20,7 @@
                             </span>
 
                              <div class="float-right">
-                                <a href="{{ route('legal-pages.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
+                                <a href="{{ route('legal-pages.create') }}" class="btn btn-primary float-right"  data-placement="left">
                                   {{ __('global.create') }}
                                 </a>
                               </div>

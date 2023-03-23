@@ -21,7 +21,7 @@
                         </span>
                         @if(Auth::user()->isAdmin())
                             <div class="float-right">
-                                <a href="{{ route('users.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
+                                <a href="{{ route('users.create') }}" class="btn btn-primary float-right"  data-placement="left">
                                 {{ __('global.create') }}
                                 </a>
                             </div>
