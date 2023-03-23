@@ -49,7 +49,7 @@
                             {!! $post->{'body:'. app()->getLocale()} !!}
                         </div>
                         <div class="row">
-                            <div class="col-12 col-md-4">
+                            <div class="col-12 col-md-3">
                                 <div class="callout callout-primary">
                                     <div>
                                         <strong>{{ __('global.published_at') }}:</strong>
@@ -57,7 +57,15 @@
                                     {{ $post->published_at }}
                                 </div>
                             </div>
-                            <div class="col-12 col-md-4">
+                            <div class="col-12 col-md-3">
+                                <div class="callout callout-primary">
+                                    <div>
+                                        <strong>{{ __('global.isPublished') }}:</strong>
+                                    </div>
+                                    {{ $post->isPublished }}
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-3">
                                 <div class="callout callout-primary">
                                     <div>
                                         <strong>{{ __('global.author') }}:</strong>
@@ -65,7 +73,7 @@
                                     {{ $post->user->name }}
                                 </div>
                             </div>
-                            <div class="col-12 col-md-4">
+                            <div class="col-12 col-md-3">
                                 <div class="callout callout-primary">
                                     <div>
                                         <strong>{{ __('global.category') }}:</strong>

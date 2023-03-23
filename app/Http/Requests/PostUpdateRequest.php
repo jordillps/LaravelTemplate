@@ -28,7 +28,6 @@ class PostUpdateRequest extends FormRequest
             'excerpt:'. app()->getLocale() => ['required'],
             'iframe:'. app()->getLocale() => ['required','string'],
             'body:'. app()->getLocale() => ['required','string'],
-            'published_at' => ['required'],
             'user_id' => ['required', 'integer', 'exists:users,id'],
             'category_id' => ['required', 'integer', 'exists:categories,id'],
         ];

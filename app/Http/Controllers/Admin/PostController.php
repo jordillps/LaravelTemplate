@@ -106,6 +106,12 @@ class PostController extends Controller
 
         $post->update($request->all());
 
+        if(!isset($request->isPublished)){
+            $post->isPublished = 0;
+            $post->published_at = null;
+            $post->save();
+        }
+
         $tags = collect($request->get('tags'))->map(function($tag){
             return Tag::find($tag) ? $tag : '';
                 // : Tag::create(['name'=> $tag])->id;

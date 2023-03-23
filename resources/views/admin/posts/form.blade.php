@@ -45,7 +45,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-12 col-md-6">
+        <div class="col-12 col-md-4">
           <div class="form-group">
               {{ Form::label(trans('global.category')) }}
               @if(Route::is('posts.create'))
@@ -56,7 +56,7 @@
               {!! $errors->first('category_id', '<div class="invalid-feedback">:message</div>') !!}
           </div>
         </div>
-        <div class="col-12 col-md-6">
+        <div class="col-12 col-md-4">
           <div class="form-group">
             {{Form::label(trans('global.tags'))}}
             @if(Route::is('posts.create'))
@@ -75,6 +75,12 @@
       </div>
   </div>
   <div class="box-footer mt20">
+    <div class="form-group">
+      <div class="custom-control custom-switch custom-switch-off-danger custom-switch-on-success">
+        {!!Form::checkbox('isPublished', '1', $post->isPublished, ['id' => "Publicado", 'class' => 'custom-control-input']) !!}
+        {{Form::label(trans('Publicado'), trans('global.is-published'),['class' => 'custom-control-label'])}}
+      </div>
+    </div>
       <button type="submit" class="btn btn-info">{{ __('global.save') }}</button>
   </div>
 </div>

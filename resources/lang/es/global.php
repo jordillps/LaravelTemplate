@@ -47,6 +47,7 @@ return [
     'Catalan' => 'Catalán',
     'search' => 'Buscar...',
     'exportToExcel' => 'Exportar a Excel',
+    'delete' => 'Borrar',
 
     //Calendar
     'calendar' =>'Calendario',
@@ -111,49 +112,6 @@ return [
     'printpdf' => 'Generar PDF',
     'donation' => 'Donación',
     'donationcertificate' => 'Certificado de donaciones',
-
-    //Reservations
-    'reservations' => 'Reservas',
-    'phone' => 'Teléfono',
-    'reservation_date' => 'Fecha',
-    'slot' => 'Hora',
-    'confirmdelete' => 'Confirmación del borrado',
-    'confirmupdate' => 'Confirmación de actualización de la reserva',
-    'sure' => '¿Estás seguro?',
-    'cancel' => 'Cancelar',
-    'delete' => 'Borrar',
-    'update' => 'Actualizar',
-    'reservationdeleted' => 'Reserva borrada correctamente',
-    'reservationscalendar' => 'Calendario de reservas',
-    'namereservation' => 'Nombre',
-    'emailreservation' => 'Correo electrónico',
-    'phonereservation' => 'Teléfono',
-    'createreservationsinfo' => 'Clic para crear una reserva',
-    'updatereservationsinfo' => 'Arratrar y Soltar para  modificar una reserva',
-    'deletereservationsinfo' => 'Clic sobre un reserva para borrar',
-    'eventdroppednoslot' => 'La durada de la reserva no pot ser superior a 30 min',
-    'perviousappointment' => 'Reserva de cita previa',
-    'date' => 'Fecha',
-    'next' => 'Siguiente',
-    'availablehours' => 'Horas disponibles',
-    'acceptprivacy' => 'Acepto la política de privacidad',
-    'confirmedreservation' => 'Reserva confirmada',
-    'book' => 'Reservar',
-    'back' => 'Volver',
-    'hour' => 'Hora',
-    'reservationaddedsuccessfully' => 'Reserva creada correctamente',
-    'reservationdeletedsuccessfully' => 'Reservation deleted correctly',
-    'reservationupdatedsuccessfully' => 'Resservation updated correctly',
-
-
-    //emails
-    'emailconfirmation' => 'Confirmación de reserva',
-
-    //Customers
-    'customers' => 'Clientes',
-    'customerremovedcorrectly' => 'Cliente borrado correctamente',
-    'errordeletingcustomer' => 'Error al borrar el cliente',
-    'No customers' => 'No hay clientes para mostrar',
 
     //Footer
     'allrightsreserved' => 'Todos los derechos reservados',
@@ -229,6 +187,8 @@ return [
     'update-post' => 'Actualizar publicación',
     'show-post' => 'Mostrar publicación',
     'upload-post-images' => 'Imágenes de la publicación (dimensiones mínimas 1000 x 666)',
+    'is-published' => 'Publicar',
+    'is-published-index' => 'Publicado',
 
     //Projects
     'create-project' => 'Crear proyecto',

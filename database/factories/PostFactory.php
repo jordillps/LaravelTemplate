@@ -24,7 +24,8 @@ class PostFactory extends Factory
     public function definition()
     {
         return [
-            'published_at' => $this->faker->dateTime(),
+            'published_at' => null,
+            'isPublished' => false,
             'user_id' => User::all()->random()->id,
             'category_id' => Category::all()->random()->id,
         ];

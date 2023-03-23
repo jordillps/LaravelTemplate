@@ -46,6 +46,7 @@ return [
     'Catalan' => 'Català',
     'search' => 'Cercar...',
     'exportToExcel' => 'Exportar a Excel',
+    'delete' => 'Esborrar',
 
     //Calendar
     'calendar' =>'Calendari',
@@ -110,50 +111,6 @@ return [
     'printpdf' => 'Generar PDF',
     'donation' => 'Donació',
     'donationcertificate' => 'Certificat de donacions',
-
-    //Reservations
-    'reservations' => 'Reserves',
-    'phone' => 'Telèfon',
-    'reservation_date' => 'Data',
-    'slot' => 'Hora',
-    'confirmdelete' => 'Confirmació de l\'esborrat',
-    'confirmupdate' => 'Confirmació de l\'actualització',
-    'sure' => 'Estàs segur?',
-    'cancel' => 'Cancel·lar',
-    'delete' => 'Esborrar',
-    'update' => 'Actualitzar',
-    'reservationdeleted' => 'Reserva esborrada correctament',
-
-    'reservationscalendar' => 'Calendari de reserves',
-    'namereservation' => 'Nom',
-    'emailreservation' => 'Correu electrònic',
-    'phonereservation' => 'Telèfon',
-    'createreservationsinfo' => 'Clic per a crear una reserva',
-    'updatereservationsinfo' => 'Arrossegar i deixar anar per a modificar una reserva',
-    'deletereservationsinfo' => 'Clic sobre un reserva per a esborrar',
-    'eventdroppednoslot' => 'La durada de la reserva no pot ser superior a 30 min',
-    'perviousappointment' => 'Reserva de cita prèvia',
-    'date' => 'Data',
-    'next' => 'Següent',
-    'availablehours' => 'Hores disponibles',
-    'acceptprivacy' => 'Accepto la política de privacitat',
-    'confirmedreservation' => 'Reserva confirmada',
-    'book' => 'Reservar',
-    'back' => 'Tornar',
-    'hour' => 'Hora',
-    'reservationaddedsuccessfully' => 'Reserva creada correctament',
-    'reservationdeletedsuccessfully' => 'Reserva esborrada correctament',
-    'reservationupdatedsuccessfully' => 'Reserva actualitzada correctament',
-
-
-    //emails
-    'emailconfirmation' => 'Confirmació de reserva',
-
-    //Customers
-    'customers' => 'Clients',
-    'customerremovedcorrectly' => 'Client esborrat correctament',
-    'errordeletingcustomer' => 'Error al esborrar el client',
-    'No customers' => 'No hi ha clients per a mostrar',
 
 
     //Footer
@@ -234,6 +191,8 @@ return [
     'update-post' => 'Actualitzar publicació',
     'show-post' => 'Mostrar publicació',
     'upload-post-images' => 'Imatges de la publicació (dimensions mínimes 1000 x 666)',
+    'is-published' => 'Publicar',
+    'is-published-index' => 'Publicat',
 
     //Projects
     'create-project' => 'Crear projecte',

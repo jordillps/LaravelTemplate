@@ -37,6 +37,7 @@
                                         <th>{{ __('global.id') }}</th>
 										<th>{{ __('global.title') }}</th>
 										<th>{{ __('global.published_at') }}</th>
+                                        <th>{{ __('global.is-published-index') }}</th>
 										<th>{{ __('global.author') }}</th>
 										<th>{{ __('global.category') }}</th>
 
@@ -48,7 +49,16 @@
                                         <tr>
                                             <td>{{ $post->id }}</td>
 											<td>{{ $post->{'title:'. app()->getLocale()} }}</td>
-											<td>{{ Carbon\Carbon::parse($post->published_at)->format('d-m-Y')}}</td>
+                                            @if(!$post->published_at)
+											   <td></td> 
+                                            @else
+                                               <td>{{ Carbon\Carbon::parse($post->published_at)->format('d-m-Y')}}</td>
+                                            @endif
+                                            @if($post->isPublished)
+											   <td><i class="nav-icon fas fa-check-circle fa-1x" style="color:green"></i></td> 
+                                            @else
+                                                <td><i class="nav-icon fas fa-times-circle fa-1x" style="color:red"></i></td>
+                                            @endif
 											<td>{{ $post->user->name }}</td>
 											<td>{{ $post->category->{'name:'. app()->getLocale()} }}</td>
 

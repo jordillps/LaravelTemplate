@@ -22,12 +22,12 @@ use Astrotomic\Translatable\Translatable;
  * @property $published_at
  * @property $user_id
  * @property $category_id
+ * @property $isPublished
  * @property $created_at
  * @property $updated_at
  *
  * @property Category $category
  * @property Comment[] $comments
- * @property Photo[] $photos
  * @property User $user
  * @package App
  * @mixin \Illuminate\Database\Eloquent\Builder
@@ -46,7 +46,7 @@ class Post extends Model implements HasMedia, TranslatableContract
      *
      * @var array
      */
-    protected $fillable = ['published_at','user_id','category_id'];
+    protected $fillable = ['published_at','user_id','category_id', 'isPublished'];
 
 
      /**

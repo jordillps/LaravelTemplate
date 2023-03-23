@@ -46,6 +46,7 @@ return [
     'English'=>'English',
     'Catalan' => 'Catalan',
     'exportToExcel' => 'Export to Excel',
+    'delete' => 'Delete',
 
     //Calendar
     'search' =>'Search for...',
@@ -110,51 +111,7 @@ return [
     'donation' => 'Donation',
     'donationcertificate' => 'Donations Certificate',
 
-    //Reservations
-    'reservations' => 'Reserves',
-    'phone' => 'Phone',
-    'reservation_date' => 'Date',
-    'slot' => 'Hour',
-    'confirmdelete' => 'Delete confirmation',
-    'confirmupdate' => 'Update confirmation',
-    'sure' => 'Are you sure?',
-    'cancel' => 'Cancel',
-    'delete' => 'Delete',
-    'update' => 'Update',
-    'reservationdeleted' => 'Reserve deleted correctly',
-    'reservationscalendar' => 'Reserves Calendar',
-    'namereservation' => 'Name',
-    'emailreservation' => 'Email',
-    'phonereservation' => 'Telephone',
-    'createreservationsinfo' => 'Click to create a new reserve',
-    'updatereservationsinfo' => 'Drag & Drop to modify',
-    'deletereservationsinfo' => 'Click on a reserve to delete',
-    'eventdroppednoslot' => 'Slot duration no more than 30 min',
-    'perviousappointment' => 'Booking an appointment',
-    'date' => 'Date',
-    'next' => 'Next',
-    'availablehours' => 'Available Slots',
-    'acceptprivacy' => 'Accept the private policy',
-    'confirmedreservation' => 'Confirmed reservation',
-    'book' => 'Book',
-    'back' => 'Back',
-    'hour' => 'Hour',
-    'reservationaddedsuccessfully' => 'Reservation added correctly',
-    'reservationdeletedsuccessfully' => 'Reserva deleted correctly',
-    'reservationupdatedsuccessfully' => 'Reserva updated correctly',
-
-
-
-    //emails
-    'emailconfirmation' => 'Reservation Confirmed',
-    'customerremovedcorrectly' => 'Customer deleted correctly',
-    'errordeletingcustomer' => 'Error deleting the customer',
-
-    //Customers
-    'customers' => 'Customers',
-    'customerremovedcorrectly' => 'Customer deleted correctly',
-    'errordeletingcustomer' => 'Error deleting the customer',
-    'No customers' => 'There is no customers to show',
+    
 
     //Footer
     'allrightsreserved' => 'All rights reserved',
@@ -230,6 +187,8 @@ return [
     'update-post' => 'Update post',
     'show-post' => 'Show post',
     'upload-post-images' => 'Post images (minimum dimensions 1000 x 666)',
+    'is-published' => 'Publish',
+    'is-published-index' => 'Published',
 
     //Projects
     'create-project' => 'Create project',

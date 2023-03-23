@@ -33,7 +33,7 @@ class WelcomeController extends Controller
 
         $projects = Project::all();
 
-        $posts = Post::take(3)->get();
+        $posts = Post::where('isPublished', 1 )->take(3)->get();
 
         return view('home', compact('header','about','services', 'titles', 'projects', 'posts'));
     }
