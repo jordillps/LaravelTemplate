@@ -10,6 +10,12 @@ use App\Models\Service;
 use App\Models\Title;
 use App\Models\Project;
 use App\Models\Post;
+use Artesaos\SEOTools\Facades\SEOTools;
+use Artesaos\SEOTools\Facades\SEOMeta;
+use Artesaos\SEOTools\Facades\OpenGraph;
+use Artesaos\SEOTools\Facades\TwitterCard;
+use Artesaos\SEOTools\Facades\JsonLd;
+use Illuminate\Support\Facades\URL;
 
 class WelcomeController extends Controller
 {
@@ -34,6 +40,8 @@ class WelcomeController extends Controller
         $projects = Project::all();
 
         $posts = Post::where('isPublished', 1 )->take(3)->get();
+
+        SEOMeta::setTitle('Home');
 
         return view('home', compact('header','about','services', 'titles', 'projects', 'posts'));
     }
