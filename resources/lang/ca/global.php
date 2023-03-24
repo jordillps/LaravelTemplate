@@ -188,14 +188,17 @@ return [
     'update-page' => 'Actualitzar pàgina',
 
     //Posts
+    'post' => 'publicació',
     'create-post' => 'Crear publicació',
     'update-post' => 'Actualitzar publicació',
     'show-post' => 'Mostrar publicació',
     'upload-post-images' => 'Imatges de la publicació (dimensions mínimes 1000 x 666)',
     'is-published' => 'Publicar',
     'is-published-index' => 'Publicat',
+    'create-warning' => "Per a crear una :item l'idioma ha de ser l'espanyol",
 
     //Projects
+    'project' => 'projecte',
     'create-project' => 'Crear projecte',
     'update-project' => 'Actualitzar projecte',
     'show-project' => 'Mostrar projecte',

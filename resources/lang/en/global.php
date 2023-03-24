@@ -184,14 +184,17 @@ return [
     'update-page' => 'Update page',
 
     //Posts
+    'post' => 'post',
     'create-post' => 'Create post',
     'update-post' => 'Update post',
     'show-post' => 'Show post',
     'upload-post-images' => 'Post images (minimum dimensions 1000 x 666)',
     'is-published' => 'Publish',
     'is-published-index' => 'Published',
+    'create-warning' => "To create a post the language must be Spanish",
 
     //Projects
+    'project' => 'project',
     'create-project' => 'Create project',
     'update-project' => 'Update project',
     'show-project' => 'Show project',

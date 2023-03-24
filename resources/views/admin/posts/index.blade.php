@@ -21,9 +21,17 @@
                             </span>
 
                              <div class="float-right">
-                                <a href="{{ route('posts.create') }}" class="btn btn-primary float-right @if(app()->getLocale() != 'es') disabled @endif"  data-placement="left">
-                                  {{ __('global.create') }}
-                                </a>
+                                @if(app()->getLocale() != 'es')
+                                    <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="{{ trans('global.create-warning', ['item' => trans('global.post')]) }}">
+                                        <a href="{{ route('posts.create') }}" class="btn btn-primary float-right disabled"  data-placement="left">
+                                        {{ __('global.create') }}
+                                        </a>
+                                    </span>
+                                @else
+                                    <a href="{{ route('posts.create') }}" class="btn btn-primary float-right"  data-placement="left">
+                                        {{ __('global.create') }}
+                                        </a>
+                                @endif
                               </div>
                         </div>
                     </div>
