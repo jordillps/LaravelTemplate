@@ -24,6 +24,7 @@ class PostFactory extends Factory
     public function definition()
     {
         return [
+            'url' => null,
             'published_at' => null,
             'isPublished' => false,
             'user_id' => User::all()->random()->id,

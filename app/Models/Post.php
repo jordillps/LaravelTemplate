@@ -39,14 +39,18 @@ class Post extends Model implements HasMedia, TranslatableContract
 
     use InteractsWithMedia;
 
-    public $translatedAttributes = ['title','url','excerpt', 'iframe','body'];
+    public $translatedAttributes = ['title','excerpt', 'iframe','body'];
 
     /**
      * Attributes that should be mass-assignable.
      *
      * @var array
      */
-    protected $fillable = ['published_at','user_id','category_id', 'isPublished'];
+    protected $fillable = ['published_at','user_id','category_id', 'isPublished','url'];
+
+    // function getRouteKeyName(){
+    //     return 'url';
+    // }
 
 
      /**

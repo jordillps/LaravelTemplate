@@ -17,6 +17,7 @@ class CreatePostsTable extends Migration
 
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
+            $table->string('url')->unique()->nullable();
             $table->date('published_at')->nullable();
             $table->boolean('isPublished')->nullable();
             $table->foreignId('user_id')->constrained()->onDelete('cascade');

@@ -18,7 +18,6 @@ class CreatePostTranslationsTable extends Migration
             $table->integer('post_id')->constrained()->onDelete('cascade');
             $table->string('locale')->index();
             $table->string('title', 400);
-            $table->string('url')->unique()->nullable();
             $table->mediumText('excerpt')->nullable();
             $table->text('iframe')->nullable();
             $table->longText('body')->nullable();

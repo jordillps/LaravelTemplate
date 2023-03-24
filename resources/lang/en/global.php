@@ -158,6 +158,7 @@ return [
     'create-about' => 'Create about',
     'update-about' => 'Update about',
     'show-about' => 'Show about me',
+    'phone' => 'Phone',
 
     //Categories
     'create-category' => 'Create category',

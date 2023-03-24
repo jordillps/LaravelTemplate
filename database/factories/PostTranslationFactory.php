@@ -17,9 +17,7 @@ class PostTranslationFactory extends Factory
     public function definition()
     {
         $title = $this->faker->unique()->sentence($nbWords = 8, $variableNbWords = true);
-        $url =  Str::slug($title);
         return [
-            'url' => $url,
             'title' => $title,
             'excerpt' => $this->faker->text,
             'iframe' => $this->faker->text,

@@ -25,14 +25,14 @@
           {!! $errors->first('body:'.app()->getLocale(), '<div class="invalid-feedback">:message</div>') !!}
       </div>
       <div class="row">
-        <div class="col-12 col-md-6">
+        <div class="col-12 col-md-3">
           <div class="form-group">
             {{ Form::label(trans('global.published_at')) }}
             {{ Form::date('published_at', $post->published_at, ['class' => 'form-control' . ($errors->has('published_at') ? ' is-invalid' : ''), 'placeholder' => 'Published At']) }}
             {!! $errors->first('published_at', '<div class="invalid-feedback">:message</div>') !!}
           </div>
         </div>
-        <div class="col-12 col-md-6">
+        <div class="col-12 col-md-3">
           <div class="form-group">
               {{ Form::label(trans('global.author')) }}
               @if(Route::is('posts.create'))
@@ -43,9 +43,7 @@
               {!! $errors->first('user_id', '<div class="invalid-feedback">:message</div>') !!}
           </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-12 col-md-4">
+        <div class="col-12 col-md-3">
           <div class="form-group">
               {{ Form::label(trans('global.category')) }}
               @if(Route::is('posts.create'))
@@ -56,7 +54,7 @@
               {!! $errors->first('category_id', '<div class="invalid-feedback">:message</div>') !!}
           </div>
         </div>
-        <div class="col-12 col-md-4">
+        <div class="col-12 col-md-3">
           <div class="form-group">
             {{Form::label(trans('global.tags'))}}
             @if(Route::is('posts.create'))

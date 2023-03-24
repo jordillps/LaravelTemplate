@@ -53,8 +53,8 @@
                                             <td>{{ $title->{'title:'. app()->getLocale()}  }}</td>
 
                                             <td>
-                                                <a class="btn btn-sm btn-primary " href="{{ route('titles.show',$title->id) }}"><i class="fa fa-fw fa-eye"></i>{{ __("global.show") }}</a>
-                                                    <a class="btn btn-sm btn-success" href="{{ route('titles.edit',$title->id) }}"><i class="fa fa-fw fa-edit"></i>{{ __("global.edit") }}</a>
+                                                <a class="btn btn-sm btn-primary " href="{{ route('titles.show',$title) }}"><i class="fa fa-fw fa-eye"></i>{{ __("global.show") }}</a>
+                                                    <a class="btn btn-sm btn-success" href="{{ route('titles.edit',$title) }}"><i class="fa fa-fw fa-edit"></i>{{ __("global.edit") }}</a>
                                                     <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-item-id="{{ $title->id }}" data-target="#modal-delete"><i class="fa fa-fw fa-trash"></i>
                                                         {{ __('global.delete') }}
                                                     </button>

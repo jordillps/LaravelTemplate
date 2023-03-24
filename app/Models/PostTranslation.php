@@ -11,5 +11,5 @@ class PostTranslation extends Model
 
     public $timestamps = false;
 
-    protected $fillable = ['post_id','locale','title','url', 'excerpt', 'iframe','body'];
+    protected $fillable = ['post_id','locale','title', 'excerpt', 'iframe','body'];
 }

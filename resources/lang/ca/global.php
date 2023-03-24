@@ -158,6 +158,7 @@ return [
     'create-about' => 'Crear sobre nosaltres',
     'update-about' => 'Actualitzar sobre nosaltres',
     'show-about' => 'Mostrar sobre nosaltres',
+    'phone' => 'Telèfon',
 
     //Categories
     'create-category' => 'Crear categoria',

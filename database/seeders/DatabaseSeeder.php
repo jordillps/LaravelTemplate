@@ -16,6 +16,7 @@ use App\Models\TitleTranslation;
 use App\Models\Service;
 use App\Models\ServiceTranslation;
 use App\Models\Post;
+use App\Models\PostTranslation;
 use App\Models\Tag;
 use App\Models\Page;
 use App\Models\LegalPage;
@@ -76,6 +77,16 @@ class DatabaseSeeder extends Seeder
         $this->call(PostSeeder::class);
         $this->call(ProjectSeeder::class);
         $this->call(CommentSeeder::class);
+
+        //Posts url
+        $posts = Post::all();
+
+        foreach($posts as $post){
+            $postTranslationEs = \App\Models\PostTranslation::where('post_id', $post->id)
+                                                                ->where('locale', 'es')->first();
+            $post->url = Str::slug($postTranslationEs->title);
+            $post->save();
+        }
 
         //Posts Tag
         foreach(range(1, 20) as $index){

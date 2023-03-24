@@ -49,8 +49,8 @@
                                             <td>{{ $service->{'title:'. app()->getLocale()}  }}</td>
 
                                             <td>
-                                                <a class="btn btn-sm btn-primary " href="{{ route('services.show',$service->id) }}"><i class="fa fa-fw fa-eye"></i>{{ __("global.show") }}</a>
-                                                    <a class="btn btn-sm btn-success" href="{{ route('services.edit',$service->id) }}"><i class="fa fa-fw fa-edit"></i>{{ __("global.edit") }}</a>
+                                                <a class="btn btn-sm btn-primary " href="{{ route('services.show',$service) }}"><i class="fa fa-fw fa-eye"></i>{{ __("global.show") }}</a>
+                                                    <a class="btn btn-sm btn-success" href="{{ route('services.edit',$service) }}"><i class="fa fa-fw fa-edit"></i>{{ __("global.edit") }}</a>
                                                     <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-item-id="{{ $service->id }}" data-target="#modal-delete"><i class="fa fa-fw fa-trash"></i>
                                                         {{ __('global.delete') }}
                                                     </button>

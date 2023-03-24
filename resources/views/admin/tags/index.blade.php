@@ -49,7 +49,7 @@
 											<td>{{ $tag->name }}</td>
 
                                             <td>
-                                                <a class="btn btn-sm btn-success" href="{{ route('tags.edit',$tag->id) }}"><i class="fa fa-fw fa-edit"></i>{{ __("global.edit") }}</a>
+                                                <a class="btn btn-sm btn-success" href="{{ route('tags.edit',$tag) }}"><i class="fa fa-fw fa-edit"></i>{{ __("global.edit") }}</a>
                                                 <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-item-id="{{ $tag->id }}" data-target="#modal-delete"><i class="fa fa-fw fa-trash"></i>
                                                     {{ __('global.delete') }}
                                                 </button>

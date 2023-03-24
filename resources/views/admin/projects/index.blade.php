@@ -51,8 +51,8 @@
                                             <td>{{ $project->category->name }}</td>
 
                                             <td>
-                                                    <a class="btn btn-sm btn-primary " href="{{ route('projects.show',$project->id) }}"><i class="fa fa-fw fa-eye"></i>{{ __("global.show") }}</a>
-                                                    <a class="btn btn-sm btn-success" href="{{ route('projects.edit',$project->id) }}"><i class="fa fa-fw fa-edit"></i>{{ __("global.edit") }}</a>
+                                                    <a class="btn btn-sm btn-primary " href="{{ route('projects.show',$project) }}"><i class="fa fa-fw fa-eye"></i>{{ __("global.show") }}</a>
+                                                    <a class="btn btn-sm btn-success" href="{{ route('projects.edit',$project) }}"><i class="fa fa-fw fa-edit"></i>{{ __("global.edit") }}</a>
                                                     <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-item-id="{{ $project->id }}" data-item-name="{{ $project->title }}" data-target="#modal-delete"><i class="fa fa-fw fa-trash"></i>
                                                         {{ __('global.delete') }}
                                                     </button>

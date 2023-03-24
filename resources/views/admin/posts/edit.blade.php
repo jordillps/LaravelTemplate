@@ -21,7 +21,7 @@
 
                         @include('flash::message')
                         <div class="card-body">
-                            <form method="POST" action="{{ route('posts.update', $post->id) }}"  role="form" enctype="multipart/form-data">
+                            <form method="POST" action="{{ route('posts.update', $post) }}"  role="form" enctype="multipart/form-data">
                                 {{ method_field('PATCH') }}
                                 @csrf
 

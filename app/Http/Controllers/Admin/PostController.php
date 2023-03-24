@@ -86,7 +86,6 @@ class PostController extends Controller
      */
     public function edit(Post $post)
     {
-        
         $users = User::all()->pluck('name', 'id');
         $categories = Category::all()->pluck('name', 'id');
         $tags = Tag::all()->pluck('name', 'id');
@@ -102,6 +101,7 @@ class PostController extends Controller
      */
     public function update(PostUpdateRequest $request, Post $post)
     {
+
         $request->validated();
 
         $post->update($request->all());
