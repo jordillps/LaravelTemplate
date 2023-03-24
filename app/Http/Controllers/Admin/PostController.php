@@ -54,9 +54,16 @@ class PostController extends Controller
      */
     public function store(PostStoreRequest $request)
     {
+        //When reate a project locale = 'es'
+        app()->setLocale = 'es';
+
         $request->validated();
 
         $post = Post::create($request->all());
+
+        //Post Url
+        $post->url = Str::slug($post->title);
+        $post->save();
 
         foreach ($request->input('images', []) as $file) {
             $post->addMedia(storage_path('tmp/uploads/' . $file))->toMediaCollection('images', 'posts-media');

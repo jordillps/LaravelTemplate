@@ -10,6 +10,9 @@ use Illuminate\Http\Request;
 use App\Http\Requests\ProjectStoreRequest;
 use App\Http\Requests\ProjectUpdateRequest;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Str;
+use Illuminate\Support\Facades\App;
+ 
 
 /**
  * Class ProjectController
@@ -35,6 +38,7 @@ class ProjectController extends Controller {
      */
     public function create()
     {
+        
         $project = new Project();
         $categories = Category::all()->pluck('name', 'id');
         return view('admin.projects.create', compact('project', 'categories'));
@@ -48,15 +52,18 @@ class ProjectController extends Controller {
      */
     public function store(ProjectStoreRequest $request)
     {
+        
         $request->validated();
 
         $project = Project::create($request->all());
 
+        //create Url
+        $project->url = Str::slug($project->title);
+        $project->save();
+
         foreach ($request->input('images', []) as $file) {
             $project->addMedia(storage_path('tmp/uploads/' . $file))->toMediaCollection('images', 'projects-media');
         }
-
-        return $project->getMedia('images');
 
         flash()->overlay('"'. $project->title . '"' . trans('global.created-succesfully'), trans('global.saved-project'));
 

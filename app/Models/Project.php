@@ -35,7 +35,12 @@ class Project extends Model  implements HasMedia, TranslatableContract{
      *
      * @var array
      */
-    protected $fillable = ['published_at','category_id'];
+    protected $fillable = ['published_at','category_id','url'];
+
+
+    function getRouteKeyName(){
+        return 'url';
+    }
 
      /**
      * @return \Illuminate\Database\Eloquent\Relations\belongsTo

@@ -20,7 +20,7 @@
                     </div>
                     @include('flash::message')
                     <div class="card-body">
-                        <form method="POST" action="{{ route('projects.update', $project->id) }}"  role="form" enctype="multipart/form-data">
+                        <form method="POST" action="{{ route('projects.update', $project) }}"  role="form" enctype="multipart/form-data">
                             {{ method_field('PATCH') }}
                             @csrf
 

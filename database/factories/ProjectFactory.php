@@ -18,6 +18,7 @@ class ProjectFactory extends Factory
     public function definition()
     {
         return [
+            'url' => null,
             'published_at' => $this->faker->dateTime(),
             'category_id' => Category::all()->random()->id,
         ];

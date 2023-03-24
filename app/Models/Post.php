@@ -48,9 +48,9 @@ class Post extends Model implements HasMedia, TranslatableContract
      */
     protected $fillable = ['published_at','user_id','category_id', 'isPublished','url'];
 
-    // function getRouteKeyName(){
-    //     return 'url';
-    // }
+    function getRouteKeyName(){
+        return 'url';
+    }
 
 
      /**

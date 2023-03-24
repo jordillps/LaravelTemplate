@@ -21,6 +21,7 @@ use App\Models\Tag;
 use App\Models\Page;
 use App\Models\LegalPage;
 use App\Models\LegalPageTranslation;
+use App\Models\Project;
 
 
 class DatabaseSeeder extends Seeder
@@ -87,6 +88,18 @@ class DatabaseSeeder extends Seeder
             $post->url = Str::slug($postTranslationEs->title);
             $post->save();
         }
+
+        //Projects url
+        $projects = Project::all();
+
+        foreach($projects as $project){
+            $projectTranslationEs = \App\Models\ProjectTranslation::where('project_id', $project->id)
+                                                                ->where('locale', 'es')->first();
+            $project->url = Str::slug($projectTranslationEs->title);
+            $project->save();
+        }
+
+
 
         //Posts Tag
         foreach(range(1, 20) as $index){

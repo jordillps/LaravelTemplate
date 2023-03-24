@@ -21,7 +21,7 @@
                             </span>
 
                              <div class="float-right">
-                                <a href="{{ route('posts.create') }}" class="btn btn-primary float-right"  data-placement="left">
+                                <a href="{{ route('posts.create') }}" class="btn btn-primary float-right @if(app()->getLocale() != 'es') disabled @endif"  data-placement="left">
                                   {{ __('global.create') }}
                                 </a>
                               </div>
@@ -65,7 +65,7 @@
                                             <td>
                                                     <a class="btn btn-sm btn-primary " href="{{ route('posts.show',$post) }}"><i class="fa fa-fw fa-eye"></i>{{ __("global.show") }}</a>
                                                     <a class="btn btn-sm btn-success" href="{{ route('posts.edit',$post) }}"><i class="fa fa-fw fa-edit"></i>{{ __("global.edit") }}</a>
-                                                    <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-item-id="{{ $post->id }}" data-item-name="{{ $post->title }}" data-target="#modal-delete"><i class="fa fa-fw fa-trash"></i>
+                                                    <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-item-id="{{ $post->url }}" data-item-name="{{ $post->title }}" data-target="#modal-delete"><i class="fa fa-fw fa-trash"></i>
                                                         {{ __('global.delete') }}
                                                       </button>
                                             </td>
