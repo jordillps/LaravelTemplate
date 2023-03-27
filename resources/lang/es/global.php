@@ -247,6 +247,7 @@ return [
     //Contacts
     'subject' => 'Asunto',
     'message' => 'Mensaje',
+    'contact-form-success' => 'Mensaje enviado correctamente. En breve nos pondremos en contacto',
 
     //Forms
     'page' => 'Página',

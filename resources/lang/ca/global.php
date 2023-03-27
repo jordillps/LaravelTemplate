@@ -245,6 +245,11 @@ return [
     'footer-data' => 'Dades del footer',
 
 
+    //Contacts
+    'subject' => 'Assumpte',
+    'message' => 'Missatge',
+    'contact-form-success' => 'Missatge enviat correctament. En breu ens posarem en contacte',
+
     //Images
     'image-uploaded' => 'Imatge guardada',
     'images-uploaded' => 'Imatges guardades',

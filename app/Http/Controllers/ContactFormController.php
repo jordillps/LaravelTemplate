@@ -66,7 +66,7 @@ class ContactFormController extends Controller
 
         Mail::to('hola@formalweb.cat')->send(new ContactMail($mailData));
 
-        return redirect(url()->previous() .'#contact')->with(['success' => 'Contact Form Submit Successfully']);
+        return redirect(url()->previous() .'#contact')->with(['success' => trans('global.contact-form-success')]);
     }
 
     /**

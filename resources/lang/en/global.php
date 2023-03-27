@@ -253,7 +253,7 @@ return [
     //Contacts
     'subject' => 'Subject',
     'message' => 'Message',
-
+    'contact-form-success' => 'Message sent successfully. We will be in touch shortly',
 
     //Forms
     'page' => 'Page',
