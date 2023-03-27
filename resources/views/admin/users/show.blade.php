@@ -14,7 +14,7 @@
                                 <span class="card-title">{{ __('global.show-user') }}</span>
                             </div>
                             <div class="float-right">
-                                <a class="btn btn-info" href="{{ route('users.index') }}">{{ __('global.back') }}</a>
+                                <a class="btn btn-primary" href="{{ route('users.index') }}">{{ __('global.back') }}</a>
                             </div>
                         </div>
 

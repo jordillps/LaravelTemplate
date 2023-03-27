@@ -12,7 +12,7 @@
                             <span class="card-title">{{ __('global.show-project') }}</span>
                         </div>
                         <div class="float-right">
-                            <a class="btn btn-info" href="{{ route('projects.index') }}">{{ __('global.back') }}</a>
+                            <a class="btn btn-primary" href="{{ route('projects.index') }}">{{ __('global.back') }}</a>
                         </div>
                     </div>
                     <div class="card-body">
