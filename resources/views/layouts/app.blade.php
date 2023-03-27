@@ -30,6 +30,8 @@
 
     <!-- Main Stylesheet File -->
     <link href="{{ asset('css/web/style-red.css') }}" rel="stylesheet" />
+
+    
 </head>
 <body id="page-top">
     <div id="app">
@@ -40,6 +42,14 @@
 
     <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
     <div id="preloader"></div>
+
+
+    <!-- Cookies component https://cookie-script.com/es/ -->
+    {{-- CAT --}}
+    {{-- <script type="text/javascript" charset="UTF-8" src="//cdn.cookie-script.com/s/d02d0ed95868d190143820c514c08bbc.js"></script> --}}
+    {{-- ES --}}
+    {{-- <script type="text/javascript" charset="UTF-8" src="//cdn.cookie-script.com/s/44c211e6244e57f914141ca984d442a5.js"></script> --}}
+
 
     <!-- JavaScript Libraries -->
     <script src="{{ asset('pluguins/js/jquery.min.js') }}"></script>

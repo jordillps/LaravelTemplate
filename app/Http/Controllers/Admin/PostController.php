@@ -54,9 +54,7 @@ class PostController extends Controller
      */
     public function store(PostStoreRequest $request)
     {
-        //When reate a project locale = 'es'
-        app()->setLocale = 'es';
-
+        
         $request->validated();
 
         $post = Post::create($request->all());
