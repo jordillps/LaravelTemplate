@@ -89,7 +89,9 @@ class Post extends Model implements HasMedia, TranslatableContract
     public function registerMediaConversions(Media $media = null): void
     {
         $this->addMediaConversion('thumb')
-              ->width(1000);
+              ->width(1000)
+              ->nonOptimized() //for shared hosts
+              ->nonQueued(); //for shared hosts
     }
 
 }

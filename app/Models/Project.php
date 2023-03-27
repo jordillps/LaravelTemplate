@@ -57,7 +57,9 @@ class Project extends Model  implements HasMedia, TranslatableContract{
     public function registerMediaConversions(Media $media = null): void
     {
         $this->addMediaConversion('thumb')
-              ->width(960);
+              ->width(960)
+              ->nonOptimized() //for shared hosts
+              ->nonQueued(); //for shared hosts;
     }
 
 }

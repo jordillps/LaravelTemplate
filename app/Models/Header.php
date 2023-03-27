@@ -57,7 +57,9 @@ class Header extends Model implements HasMedia, TranslatableContract
     public function registerMediaConversions(Media $media = null): void
     {
         $this->addMediaConversion('thumb')
-              ->width(1920);
+              ->width(1920)
+              ->nonOptimized() //for shared hosts
+              ->nonQueued(); //for shared hosts;
     }
 
 

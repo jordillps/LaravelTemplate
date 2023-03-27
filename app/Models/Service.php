@@ -45,7 +45,9 @@ class Service extends Model implements HasMedia, TranslatableContract{
 
     public function registerMediaConversions(Media $media = null): void{
         $this->addMediaConversion('thumb')
-              ->width(100);
+              ->width(100)
+              ->nonOptimized() //for shared hosts
+              ->nonQueued(); //for shared hosts;
     }
 
 
