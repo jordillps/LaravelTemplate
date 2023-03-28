@@ -236,6 +236,10 @@ return [
     'address' => 'Dirección',
     'email_contacts' => 'Email formulario de contacto',
     'footer-data' => 'Datos del footer',
+    'footer-oficial-logos' => 'Logos oficiales del footer',
+    'upload-footer-logos' => 'Subir logos del footer',
+    'logos-uploaded' => 'Logos guardados',
+
 
     //Images
     'image-uploaded' => 'Imagen guardada',

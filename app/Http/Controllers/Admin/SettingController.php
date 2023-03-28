@@ -83,7 +83,23 @@ class SettingController extends Controller
 
         $setting->update($request->all());
 
-        flash()->overlay('Updated successfully', trans('global.updated-settings'));
+        if (($setting->getMedia('images'))) {
+            foreach ($setting->getMedia() as $media) {
+                if (!in_array($media->file_name, $request->input('images', []))) {
+                    $media->delete();
+                }
+            }
+        }
+    
+        $media = $setting->getMedia()->pluck('file_name')->toArray();
+    
+        foreach ($request->input('images', []) as $file) {
+            if (count($media) === 0 || !in_array($file, $media)) {
+                $setting->addMedia(storage_path('tmp/uploads/' . $file))->toMediaCollection('images','settings-media');
+            }
+        }
+
+        flash()->overlay(trans('global.updated-succesfully'), trans('global.updated-settings'));
 
         return redirect()->route('settings.index');
     }
@@ -96,6 +112,44 @@ class SettingController extends Controller
     public function destroy(Setting $setting)
     {
        
+    }
+
+    public function storeMedia(Request $request)
+    {
+        $path = storage_path('tmp/uploads');
+
+        if (!file_exists($path)) {
+            mkdir($path, 0777, true);
+        }
+
+        $file = $request->file('file');
+
+        $name = uniqid() . '_' . trim($file->getClientOriginalName());
+
+        $file->move($path, $name);
+
+        return response()->json([
+            'name'          => $name,
+            'original_name' => $file->getClientOriginalName(),
+        ]);
+    }
+
+    public function deleteMedia(Media $media)
+    {
+        //Delete on the server 
+        File::delete(public_path('media/settings/' . $media->model_id . "/" . $media->file_name));
+
+        //Delete on the server conversion
+        $file_name = str_replace(".","-thumb.",$media->file_name);       
+        File::delete(public_path('media/settings/' . $media->model_id . '/' . 'conversions/' . $file_name));
+       
+        
+        //Delete on the database
+        $media->delete();
+
+        flash()->overlay(trans('global.deleted-succesfully'), trans('global.delete-image'));
+
+        return redirect()->route('settings.index');
     }
 
 }

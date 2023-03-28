@@ -19,13 +19,27 @@
                     </div>
                     @include('flash::message')
                     <div class="card-body">
-                        <form method="POST" action="{{ route('settings.update', $setting->id) }}"  role="form" enctype="multipart/form-data">
+                        <form method="POST" action="{{ route('settings.update', $setting) }}"  role="form" enctype="multipart/form-data">
                             {{ method_field('PATCH') }}
                             @csrf
 
                             @include('admin.settings.form')
 
                         </form>
+                        <hr>
+                        <label for="document">{{ __('global.logos-uploaded') }}</label>
+                        <div class="row">
+                            @foreach ($setting->getMedia('images') as $media)
+                                <div class="col-12 col-md-4 col-lg-2">
+                                    <form action="{{ route('settings.deleteMedia', ['media' => $media])}}" method="POST">
+                                        {{ @method_field('DELETE')}}
+                                        @csrf
+                                        <img src="{{ $media->getUrl('thumb') }}" alt="" style="max-width: 100%; position:relative;">
+                                        <button class="btn btn-danger" style="position:absolute; top:0; left:0;"><i class="far fa-trash-alt xs"></i></button>
+                                    </form>
+                                </div>
+                            @endforeach
+                        </div>
                     </div>
                 </div>
             </div>

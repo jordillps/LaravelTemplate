@@ -99,6 +99,8 @@ Route::group(['middleware' => ['auth']], function () {
 
         //Settings
         Route::resource('/settings', SettingController::class);
+        Route::post('/settings/storeMedia', [SettingController::class, 'storeMedia'])->name('settings.storeMedia');
+        Route::delete('/settings/{media}/deleteMedia', [SettingController::class, 'deleteMedia'])->name('settings.deleteMedia');
 
     });
 });

@@ -240,8 +240,9 @@ return [
     'address' => 'Address',
     'email_contacts' => 'Email contact form',
     'footer-data' => 'Footer data',
-
-
+    'footer-oficial-logos' => 'Oficial footer logos',
+    'upload-footer-logos' => 'Upload footer logos',
+    'logos-uploaded' => 'Uploaded logos',
 
     //Images
     'image-uploaded' => 'Image Uploaded',

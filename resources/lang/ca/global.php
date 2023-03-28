@@ -243,6 +243,10 @@ return [
     'address' => 'Adreça',
     'email_contacts' => 'Email formulari de contacte',
     'footer-data' => 'Dades del footer',
+    'footer-oficial-logos' => 'Logos oficials del footer',
+    'upload-footer-logos' => 'Pujar els logos del footer',
+    'logos-uploaded' => 'Logos guardats',
+
 
 
     //Contacts
