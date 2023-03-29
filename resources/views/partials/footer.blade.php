@@ -5,7 +5,7 @@
             <div class="col-lg-3 col-sm-6 d-flex align-items-center wow animate fadeInLeft" data-wow-delay="300ms" data-wow-duration="1500ms">
                 <div class="footer-wrrap">
                     <div class="footer-icon">
-                        <img src="{{ asset('img/logoFormalweb_8.png') }}" alt="">
+                        <img src="{{ asset('img/logoFormalWeb_8.png') }}" alt="">
                     </div>
                     <p>Integer purus odio, placerat nec ande
                         rhoncus in, ullamcorper nec dolor. on
