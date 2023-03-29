@@ -17,6 +17,32 @@
     <link href="{{ asset('img/logoformalweb.ico') }}" rel="icon" />
     <link href="{{ asset('img/web/apple-touch-icon.png') }}" rel="apple-touch-icon" />
 
+    <!-- TEMPLATE CSS -->
+    <link rel="stylesheet" href="{{ asset('css/web/animate.css') }}">
+    <!-- css file link -->
+    <link rel="stylesheet" href="{{ asset('css/web/all.css') }}">
+    <!-- bootstrap 5 -->
+    <link rel="stylesheet" href="{{ asset('css/web/bootstrap.min.css') }}">
+    <!-- box-icon -->
+    <link rel="stylesheet" href="{{ asset('css/web/boxicons.min.css') }}">
+    <!-- bootstrap icon -->
+    <link rel="stylesheet" href="{{ asset('css/web/bootstrap-icons.css') }}">
+    <!-- jquery ui -->
+    <link rel="stylesheet" href="{{ asset('css/web/jquery-ui.css') }}">
+    <!-- swiper-slide -->
+    <link rel="stylesheet" href="{{ asset('css/web/swiper-bundle.min.css') }}">
+    <!-- slick-slide -->
+    <link rel="stylesheet" href="{{ asset('css/web/slick-theme.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/web/slick.css') }}">
+    <!-- select 2 -->
+    <link rel="stylesheet" href="{{ asset('css/web/nice-select.css') }}">
+    <!-- animate css -->
+    <link rel="stylesheet" href="{{ asset('css/web/magnific-popup.css') }}">
+    <!-- odometer css -->
+    <link rel="stylesheet" href="{{ asset('css/web/odometer.css') }}">
+    <!-- style css -->
+    <link rel="stylesheet" href="{{ asset('css/web/style.css') }}">
+
     
     
 </head>
@@ -37,7 +63,19 @@
     {{-- ES --}}
     {{-- <script type="text/javascript" charset="UTF-8" src="//cdn.cookie-script.com/s/44c211e6244e57f914141ca984d442a5.js"></script> --}}
 
-
+    <!-- js file link -->
+    <script src="{{ asset('js/web/jquery-3.6.0.min.js') }}"></script>
+    <script src="{{ asset('js/web/jquery-ui.js') }}"></script>
+    <script src="{{ asset('js/web/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('js/web/wow.min.js') }}"></script>
+    <script src="{{ asset('js/web/swiper-bundle.min.js') }}"></script>
+    <script src="{{ asset('js/web/slick.js') }}"></script>
+    <script src="{{ asset('js/web/jquery.nice-select.js') }}"></script>
+    <script src="{{ asset('js/web/odometer.min.js') }}"></script>
+    <script src="{{ asset('js/web/isotope.pkgd.min.js') }}"></script>
+    <script src="{{ asset('js/web/viewport.jquery.js') }}"></script>
+    <script src="{{ asset('js/web/jquery.magnific-popup.min.js') }}"></script>
+    <script src="{{ asset('js/web/main.js') }}"></script>
     
 </body>
 </html>
