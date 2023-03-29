@@ -12,10 +12,7 @@
 @endsection
 
 @section('content')
-    @include('partials.navbar')
 
     <h1>Holaaaaa</h1>
-
-    @include('partials.footer')
 
 @endsection

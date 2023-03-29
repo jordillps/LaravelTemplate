@@ -48,13 +48,16 @@
 </head>
 <body id="page-top">
     <div id="app">
-        
-        @yield('content')  
+        @include('partials.preloader')
 
+        @include('partials.navbar')
+        
+        @yield('content')
+        
+        @include('partials.footer')
     </div>
 
-    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
-    <div id="preloader"></div>
+    {{-- <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a> --}}
 
 
     <!-- Cookies component https://cookie-script.com/es/ -->
