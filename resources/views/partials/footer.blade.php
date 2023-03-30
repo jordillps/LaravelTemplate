@@ -18,9 +18,9 @@
                     <div class="social-icon">
                         <span>Follow Me:</span>
                         <ul>
-                            <li><a href="https://www.linkedin.com/"><i class='bx bxl-linkedin-alt'></i></a></li>
-                            <li><a href="https://twitter.com/"><i class='bx bxl-twitter' ></i></a></li>
-                            <li><a href="https://www.facebook.com/"><i class='bx bxl-facebook' ></i></a></li>
+                            <li><a href="https://www.linkedin.com/" aria-label="linkedin"><i class='bx bxl-linkedin-alt'></i></a></li>
+                            <li><a href="https://twitter.com/ " aria-label="twitter"><i class='bx bxl-twitter' ></i></a></li>
+                            <li><a href="https://www.facebook.com/" aria-label="facebook"><i class='bx bxl-facebook' ></i></a></li>
                         </ul>
                     </div>
                     <div class="footer-menu">

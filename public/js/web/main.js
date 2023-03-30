@@ -400,12 +400,12 @@ var swiper = new Swiper(".testimonial-slider-1", {
       },
     });
 // calender
-jQuery(document).ready(function () {
-  jQuery('#datepicker').datepicker({
-      format: 'dd-mm-yyyy',
-      startDate: '+1d'
-  });
-});
+// jQuery(document).ready(function () {
+//   jQuery('#datepicker').datepicker({
+//       format: 'dd-mm-yyyy',
+//       startDate: '+1d'
+//   });
+// });
 // progressbar.js@1.0.0 version is used
 // Docs: http://progressbarjs.readthedocs.org/en/1.0.0/
 
