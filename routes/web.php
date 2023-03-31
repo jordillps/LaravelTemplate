@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\WelcomeController;
+// use App\Http\Controllers\WelcomeController;
 use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\PostController;
@@ -18,6 +18,12 @@ use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\TagController;
 use App\Http\Controllers\Admin\LegalPageController;
 use App\Http\Controllers\Admin\SettingController;
+use App\Http\Controllers\HomeWebController;
+use App\Http\Controllers\AboutWebController;
+use App\Http\Controllers\ServicesWebController;
+use App\Http\Controllers\ProjectsWebController;
+use App\Http\Controllers\BlogWebController;
+use App\Http\Controllers\ContactWebController;
 
 
 /*
@@ -31,14 +37,25 @@ use App\Http\Controllers\Admin\SettingController;
 |
 */
 
-Route::get('/', [WelcomeController::class,'index'])->name('home');
+//Web
+Route::get('/', [HomeWebController::class,'index'])->name('home');
+Route::get('/sobre-mi-desarollador-web', [AboutWebController::class,'index'])->name('about-me');
+Route::get('/servicios-desarrollo-web-seo', [ServicesWebController::class,'index'])->name('services');
+Route::get('/proyectos-desarrollo-web-seo', [ProjectsWebController::class,'index'])->name('projects');
+Route::get('/blog-desarrollo-web', [BlogWebController::class,'index'])->name('blog');
+Route::get('/contacto', [ContactWebController::class,'index'])->name('contact');
+
+
 
 Route::get('locale/{locale}', [LocalizationController::class,'setLocale'])->name('setLocale');
 
 //Web Contacts
 Route::resource('/contacts', ContactFormController::class);
 
+
+//Auth
 Auth::routes(['register' => false]);
+
 
 //Admin
 Route::group(['middleware' => ['auth']], function () {

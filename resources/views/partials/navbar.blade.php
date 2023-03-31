@@ -16,18 +16,18 @@
       </div>
       <ul class="menu-list">
           <li>
-              <a href="about.html">About Me</a>
+              <a href="{{ route('about-me') }}">About me</a>
           </li>
           <li>
-            <a href="about.html">Services</a>
+            <a href="{{ route('services') }}">Services</a>
           </li>
           <li>
-            <a href="about.html">Projects</a>
+            <a href="{{ route('projects') }}">Projects</a>
           </li>
           <li>
-            <a href="about.html">Blog</a>
+            <a href="{{ route('blog') }}">Blog</a>
           </li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="{{ route('contact') }}">Contact</a></li>
           @include('partials.language_switcher')
       </ul>
       <!-- mobile-search-area -->

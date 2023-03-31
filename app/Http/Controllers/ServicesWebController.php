@@ -3,21 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Page;
-use App\Models\Header;
-use App\Models\About;
-use App\Models\Service;
-use App\Models\Title;
-use App\Models\Project;
-use App\Models\Post;
-use Artesaos\SEOTools\Facades\SEOTools;
-use Artesaos\SEOTools\Facades\SEOMeta;
-use Artesaos\SEOTools\Facades\OpenGraph;
-use Artesaos\SEOTools\Facades\TwitterCard;
-use Artesaos\SEOTools\Facades\JsonLd;
-use Illuminate\Support\Facades\URL;
 
-class WelcomeController extends Controller
+class ServicesWebController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -26,24 +13,8 @@ class WelcomeController extends Controller
      */
     public function index()
     {
-        $page = Page::where('name', 'home')->first('id');
-
-        $header = Header::where('page_id', $page->id)->first();
-
-        //Take the last one
-        $about = About::orderBy('id', 'desc')->first();
-
-        $services = Service::all();
-
-        $titles = Title::where('page_id', $page->id)->get();
-
-        $projects = Project::all();
-
-        $posts = Post::where('isPublished', 1 )->take(3)->get();
-
-        SEOMeta::setTitle('Home');
-
-        return view('home', compact('header','about','services', 'titles', 'projects', 'posts'));
+        //
+        return view('services');
     }
 
     /**
