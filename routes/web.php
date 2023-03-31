@@ -24,6 +24,7 @@ use App\Http\Controllers\ServicesWebController;
 use App\Http\Controllers\ProjectsWebController;
 use App\Http\Controllers\BlogWebController;
 use App\Http\Controllers\ContactWebController;
+use App\Models\LegalPage;
 
 
 /*
@@ -44,6 +45,12 @@ Route::get('/servicios-desarrollo-web-seo', [ServicesWebController::class,'index
 Route::get('/proyectos-desarrollo-web-seo', [ProjectsWebController::class,'index'])->name('projects');
 Route::get('/blog-desarrollo-web', [BlogWebController::class,'index'])->name('blog');
 Route::get('/contacto', [ContactWebController::class,'index'])->name('contact');
+
+//Legal Pages
+Route::get('/aviso-legal', function(){
+    $legalNotice =  LegalPage::where('id',1);
+    return view('legal-notice', compact('legalNotice')); 
+})->name('legal-notice');
 
 
 

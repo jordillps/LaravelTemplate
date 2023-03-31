@@ -409,4 +409,9 @@ var swiper = new Swiper(".testimonial-slider-1", {
 // progressbar.js@1.0.0 version is used
 // Docs: http://progressbarjs.readthedocs.org/en/1.0.0/
 
+var year = new Date().getFullYear();
+document.getElementById("copyright").innerHTML =
+  "<span>Copyright &copy " +
+  year;
+
 }(jQuery));
