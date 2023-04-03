@@ -24,7 +24,9 @@ use App\Http\Controllers\ServicesWebController;
 use App\Http\Controllers\ProjectsWebController;
 use App\Http\Controllers\BlogWebController;
 use App\Http\Controllers\ContactWebController;
-use App\Models\LegalPage;
+use App\Http\Controllers\LegalNoticeController;
+use App\Http\Controllers\CookiesPolicyController;
+use App\Http\Controllers\PrivacyPolicyController;
 
 
 /*
@@ -47,12 +49,9 @@ Route::get('/blog-desarrollo-web', [BlogWebController::class,'index'])->name('bl
 Route::get('/contacto', [ContactWebController::class,'index'])->name('contact');
 
 //Legal Pages
-Route::get('/aviso-legal', function(){
-    $legalNotice =  LegalPage::where('id',1);
-    return view('legal-notice', compact('legalNotice')); 
-})->name('legal-notice');
-
-
+Route::get('/aviso-legal', [LegalNoticeController::class,'index'])->name('legal-notice');
+Route::get('/politica-cookies', [CookiesPolicyController::class,'index'])->name('cookies-policy');
+Route::get('/politica-privacidad', [PrivacyPolicyController::class,'index'])->name('privacy-policy');
 
 Route::get('locale/{locale}', [LocalizationController::class,'setLocale'])->name('setLocale');
 

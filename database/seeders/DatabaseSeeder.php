@@ -114,7 +114,7 @@ class DatabaseSeeder extends Seeder
         Page::factory()->create(['name' => 'General']);
         Page::factory()->create(['name' => 'Home']);
 
-        LegalPage::factory()->count(1)->create()->each(function (LegalPage $legalPage) {
+        LegalPage::factory()->count(1)->create(['url' => 'politica-cookies'])->each(function (LegalPage $legalPage) {
             LegalPageTranslation::factory()->count(1)->create([
                 'legal_page_id' => $legalPage->id,
                 'locale' => 'es',
@@ -132,6 +132,48 @@ class DatabaseSeeder extends Seeder
                 'locale' => 'ca',
                 'title' => 'Política de cookies',
                 'body' => 'Política de cookies'
+            ]);
+        });
+
+        LegalPage::factory()->count(1)->create(['url' => 'politica-privacidad'])->each(function (LegalPage $legalPage) {
+            LegalPageTranslation::factory()->count(1)->create([
+                'legal_page_id' => $legalPage->id,
+                'locale' => 'es',
+                'title' => 'Política de privacidad',
+                'body' => 'Política de privacidad'
+            ]);
+            LegalPageTranslation::factory()->count(1)->create([
+                'legal_page_id' => $legalPage->id,
+                'locale' => 'en',
+                'title' => 'Privacy politics',
+                'body' => 'Privacy politics'
+            ]);
+            LegalPageTranslation::factory()->count(1)->create([
+                'legal_page_id' => $legalPage->id,
+                'locale' => 'ca',
+                'title' => 'Política de privacitat',
+                'body' => 'Política de privacitat'
+            ]);
+        });
+
+        LegalPage::factory()->count(1)->create(['url' => 'aviso-legal'])->each(function (LegalPage $legalPage) {
+            LegalPageTranslation::factory()->count(1)->create([
+                'legal_page_id' => $legalPage->id,
+                'locale' => 'es',
+                'title' => 'Aviso legal',
+                'body' => 'Aviso legal'
+            ]);
+            LegalPageTranslation::factory()->count(1)->create([
+                'legal_page_id' => $legalPage->id,
+                'locale' => 'en',
+                'title' => 'Legal notice',
+                'body' => 'Legal notice'
+            ]);
+            LegalPageTranslation::factory()->count(1)->create([
+                'legal_page_id' => $legalPage->id,
+                'locale' => 'ca',
+                'title' => 'Avís legal',
+                'body' => 'Avís legal'
             ]);
         });
 

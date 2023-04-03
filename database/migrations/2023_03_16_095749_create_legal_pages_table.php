@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('legal_pages', function (Blueprint $table) {
             $table->id();
+            $table->string('url')->unique()->nullable();
             $table->timestamps();
         });
     }

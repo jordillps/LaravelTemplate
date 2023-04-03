@@ -19,11 +19,11 @@
                                 {{ __('global.legal-pages') }}
                             </span>
 
-                             <div class="float-right">
+                             {{-- <div class="float-right">
                                 <a href="{{ route('legal-pages.create') }}" class="btn btn-primary float-right"  data-placement="left">
                                   {{ __('global.create') }}
                                 </a>
-                              </div>
+                              </div> --}}
                         </div>
                     </div>
                     @include('flash::message')
@@ -35,6 +35,7 @@
                                     <tr>
                                         <th>{{ __('global.id') }}</th>
                                         <th>{{ __('global.title') }}</th>
+                                        <th>Url</th>
                                         <th>{{ __('global.actions') }}</th>
                                     </tr>
                                 </thead>
@@ -43,6 +44,7 @@
                                         <tr>
                                             <td>{{ $legalPage->id }}</td>
                                             <td>{{ $legalPage->{'title:'. app()->getLocale()} }}</td>
+                                            <td>{{ $legalPage->url }}</td>
 
                                             <td>
                                                 <a class="btn btn-sm btn-primary " href="{{ route('legal-pages.show',$legalPage->id) }}"><i class="fa fa-fw fa-eye"></i>{{ __("global.show") }}</a>

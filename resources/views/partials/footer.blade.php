@@ -36,7 +36,7 @@
                     </div>
                     <div  class="devlper-area">
                      <span id="copyright"></span>   
-                     <span>{{ __('web.all-rights-reserved') }} | <a href="{{ route('legal-notice') }}">{{ __('web.legal-notice') }}</a> | <a href='politica-privacidad.html'>{{ __('web.privacy-policy') }}</a> | <a href='politica-cookies.html'>{{ __('web.cookies-policy') }}</a></span>
+                        <span>{{ __('web.all-rights-reserved') }} | <a href="{{ route('legal-notice') }}">{{ __('web.legal-notice') }}</a> | <a href={{ route('privacy-policy') }}>{{ __('web.privacy-policy') }}</a> | <a href={{ route('cookies-policy') }}>{{ __('web.cookies-policy') }}</a></span>
                      <div>
                         <span>{{__('web.developed-by') }} <a href="{{ route('home') }}"> Jordi Llobet / Formal Web</a></span>
                      </div>
