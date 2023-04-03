@@ -34,7 +34,7 @@
                             <div class="row p-3">
                                 @foreach ($service->getMedia('images') as $media)
                                     <div class="col-12 col-md-6 col-lg-3">
-                                        <img src="{{ $media->getUrl('thumb') }}" alt="" style="max-width: 100%;">
+                                        <img src="{{ $media->getUrl() }}" alt="" style="max-width: 100%;">
                                     </div>
                                 @endforeach
                             </div>
@@ -42,7 +42,7 @@
                         <div class="callout callout-primary">
                             <strong>{{ __('global.icons') }}:</strong>
                             <div>
-                                <span class="ico-circle"><i class="{{ $service->icon }}"></i></span>
+                                <span class="ico-circle"><img src="{{ asset('img/web/icons/'.$service->icon) }}"></span>
                             </div>
                         </div>                        
                     </div>

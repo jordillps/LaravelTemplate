@@ -11,6 +11,15 @@ return [
     */
 
     //Home
+    'developer' => 'Desarrollador',
+    'what-i-do' => 'Lo que hago',
+    'myservices' => 'Mis servicios',
+    'services-description' => 'Ver los servicios',
+    'read-more' => 'Quieres saber más',
+    'web-sites-manageables' => 'Páginas web administrables',
+    'web-applications' => 'Aplicaciones web',
+    'other-web-projects' => 'Proyectos web de otras empresas',
+
 
 
     //About me
@@ -40,7 +49,9 @@ return [
     'legal-notice' => 'Aviso Legal',
     'cookies-policy' => 'Política de cookies',
     'privacy-policy' => 'Política de privacidad',
-    'developed-by' => 'Desarrollado por'
+    'developed-by' => 'Desarrollado por',
+    'click-to-call' => 'Clic para llamar',
+
 
 
 ];

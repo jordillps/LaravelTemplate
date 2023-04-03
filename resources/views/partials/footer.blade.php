@@ -30,6 +30,7 @@
                             <li><a href="{{ route('home') }}">{{ __('web.home') }}</a></li>
                             <li><a href="{{ route('about-me') }}">{{ __('web.about-me') }}</a></li>
                             <li><a href="{{ route('services') }}">{{ __('web.services') }}</a></li>
+                            <li><a href="{{ route('projects') }}">{{ __('web.projects') }}</a></li>
                             <li><a href="{{ route('blog') }}">{{ __('web.blog') }}</a></li>
                             <li><a href="{{ route('contact') }}">{{ __('web.contact') }}</a></li>
                         </ul>

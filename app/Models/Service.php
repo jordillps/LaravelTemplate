@@ -43,13 +43,5 @@ class Service extends Model implements HasMedia, TranslatableContract{
         return $this->morphMany(Media::class, 'mediable');
     }
 
-    public function registerMediaConversions(Media $media = null): void{
-        $this->addMediaConversion('thumb')
-              ->width(100)
-              ->nonOptimized() //for shared hosts
-              ->nonQueued(); //for shared hosts;
-    }
-
-
 
 }

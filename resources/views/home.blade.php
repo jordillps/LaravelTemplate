@@ -22,7 +22,7 @@
         <div class="social-area">
             <ul>
                 <li><a href="https://www.facebook.com/">FACEBOOK</a></li>
-                <li><a href="https://twitter.com/">TWITEER</a></li>
+                <li><a href="https://twitter.com/">TWITTER</a></li>
                 <li><a href="https://www.linkedin.com/">LINKEDIN</a></li>
             </ul>
         </div>
@@ -30,14 +30,16 @@
             <div class="row">
                 <div class="col-lg-6 d-flex align-items-center justify-content-end p-0">
                     <div class="hero-content">
-                        <h1 >Jordi Llobet <span class="red">Desenvolupador</span> <span>Web Freelance</span> </h1>
-                        <ul>
-                            <li>Pàgines web administrables</li>
-                            <li>Aplicacions web</li>
-                            <li>Maquetació web</li>
-                        </ul>
-                        
-                        <a class="eg-btn btn--primary btn--lg" href="about.html">About Me</a>
+                        <h1>Jordi Llobet <span class="red">{{ __('web.developer') }}</span>
+                            <span>WEB Freelance</span></h1>
+                        <div class="mb-5">
+                            <ul>
+                                <li><img src="{{ asset('img/web/home/check-white.png') }}" alt=""><h5>{{ __('web.web-sites-manageables') }}</h5></li>
+                                <li><img src="{{ asset('img/web/home/check-white.png') }}" alt=""><h5>{{ __('web.web-applications') }}</h5></li>
+                                <li><img src="{{ asset('img/web/home/check-white.png') }}" alt=""><h5>{{ __('web.other-web-projects') }}</h5></li>
+                            </ul>
+                        </div>
+                        <a class="eg-btn btn--primary btn--lg" href="{{ route('about-me') }}">{{ __('web.about-me') }}</a>
                     </div>
                 </div>
                 <div class="col-lg-6 p-0">
@@ -56,118 +58,36 @@
             <div class="row mb-75">
                 <div class="col-md-12 d-flex justify-content-between align-items-center flex-wrap wow animate fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
                     <div class="section-title1">
-                        <span>What I Do</span>
-                        <h2>My Services.</h2>
+                        <span>{{ __('web.what-i-do') }}</span>
+                        <h2>{{ __('web.myservices') }}</h2>
                     </div>
                     <div class="view-all-btn">
-                        <a class="eg-btn btn--primary btn--lg" href="services.html">VIEW ALL</a>
+                        <a class="eg-btn btn--primary btn--lg" href="{{ route('services') }}">{{ __('web.services-description') }}</a>
                     </div>
-                    
                 </div>
             </div>
             <div class="row g-4">
-                <div class="col-md-6 col-lg-4 wow animate fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
-                    <div class="services-wrrap">
-                        <div class="services-top d-flex justify-content-between align-items-center">
-                            <div class="icon">
-                                <img src="{{ asset('img/web/icons/web-design.svg') }}" alt="web-design">
+                @foreach ($services as $service)
+                    <div class="col-md-6 col-lg-4 wow animate fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
+                        <div class="services-wrrap">
+                            <div class="services-top d-flex justify-content-between align-items-center">
+                                <div class="icon">
+                                    <img src="{{ asset('img/web/icons/'. $service->icon) }}" alt="" width="60">
+                                </div>
+                                <h2>{{ $loop->index + 1 }}</h2>
                             </div>
-                            <h2>01</h2>
-                        </div>
-                        <div class="content">
-                            <h3>Web <br>
-                                Devlopment.</h3>
-                        </div>
-                        <div class="read-more-btn d-flex justify-content-end">
-                            <a href="services-details.html">Read More <span><img src="{{ asset('img/web/icons/arrow-right.svg') }}" alt=""></span></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 wow animate fadeInLeft" data-wow-delay="400ms" data-wow-duration="1500ms">
-                    <div class="services-wrrap">
-                        <div class="services-top d-flex justify-content-between align-items-center">
-                            <div class="icon">
-                                <img src="{{ asset('img/web/icons/graphic-design.svg') }}" alt="web-design">
+                            <div class="content">
+                                <h3>{{ $service->{'title:'. app()->getLocale()} }}</h3>
+                                <p>{{ $service->{'text:'. app()->getLocale()} }}</p>
                             </div>
-                            <h2>02</h2>
-                        </div>
-                        <div class="content">
-                            <h3>Graphic<br>
-                                Design.</h3>
-                        </div>
-                        <div class="read-more-btn d-flex justify-content-end">
-                            <a href="services-details.html">Read More <span><img src="{{ asset('img/web/icons/arrow-right.svg') }}" alt=""></span></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 wow animate fadeInLeft" data-wow-delay="600ms" data-wow-duration="1500ms">
-                    <div class="services-wrrap">
-                        <div class="services-top d-flex justify-content-between align-items-center">
-                            <div class="icon">
-                                <img src="{{ asset('img/web/icons/coding.svg') }}" alt="web-design">
+                            <div class="read-more-btn d-flex justify-content-end">
+                                <a href="{{ route('services') }}">{{ __('web.read-more') }}
+                                    <span><img src="{{ asset('img/web/icons/arrow-right.svg') }}" alt=""></span>
+                                </a>
                             </div>
-                            <h2>03</h2>
                         </div>
-                        <div class="content">
-                            <h3>Software <br>
-                                Devlopment.</h3>
-                        </div>
-                        <div class="read-more-btn d-flex justify-content-end">
-                            <a href="services-details.html">Read More <span><img src="{{ asset('img/web/icons/arrow-right.svg') }}" alt=""></span></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 wow animate fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
-                    <div class="services-wrrap">
-                        <div class="services-top d-flex justify-content-between align-items-center">
-                            <div class="icon">
-                                <img src="{{ asset('img/web/icons/video.svg') }}" alt="web-design">
-                            </div>
-                            <h2>04</h2>
-                        </div>
-                        <div class="content">
-                            <h3>Video Motion <br>
-                                Graphic.</h3>
-                        </div>
-                        <div class="read-more-btn d-flex justify-content-end">
-                            <a href="services-details.html">Read More <span><img src="{{ asset('img/web/icons/arrow-right.svg') }}" alt=""></span></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 wow animate fadeInLeft" data-wow-delay="400ms" data-wow-duration="1500ms">
-                    <div class="services-wrrap">
-                        <div class="services-top d-flex justify-content-between align-items-center">
-                            <div class="icon">
-                                <img src="{{ asset('img/web/icons/idea.svg') }}" alt="web-design">
-                            </div>
-                            <h2>05</h2>
-                        </div>
-                        <div class="content">
-                            <h3>Product Design &<br>
-                                Develop.</h3>
-                        </div>
-                        <div class="read-more-btn d-flex justify-content-end">
-                            <a href="services-details.html">Read More <span><img src="{{ asset('img/web/icons/arrow-right.svg') }}" alt=""></span></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 wow animate fadeInLeft" data-wow-delay="600ms" data-wow-duration="1500ms">
-                    <div class="services-wrrap">
-                        <div class="services-top d-flex justify-content-between align-items-center">
-                            <div class="icon">
-                                <img src="{{ asset('img/web/icons/branding.svg') }}" alt="web-design">
-                            </div>
-                            <h2>06</h2>
-                        </div>
-                        <div class="content">
-                            <h3>Branding & Soft <br>
-                                Indentity.</h3>
-                        </div>
-                        <div class="read-more-btn d-flex justify-content-end">
-                            <a href="services-details.html">Read More <span><img src="{{ asset('img/web/icons/arrow-right.svg') }}" alt=""></span></a>
-                        </div>
-                    </div>
-                </div>
+                    </div> 
+                @endforeach
             </div>
         </div>
     </div>
@@ -203,7 +123,7 @@
                                         <h3>Desktop Mockup</h3>
                                     </div>
                                     <div class="case-button">
-                                        <a href="project-details.html">Case Study</a>
+                                        <a href="{{ route('projects') }}">Case Study</a>
                                     </div>
                                 </div>
                             </div>
@@ -222,7 +142,7 @@
                                         <h3>Desktop Mockup</h3>
                                     </div>
                                     <div class="case-button">
-                                        <a href="project-details.html">Case Study</a>
+                                        <a href="{{ route('projects') }}">Case Study</a>
                                     </div>
                                 </div>
                             </div>
@@ -233,7 +153,7 @@
             <div class="row pt-50">
                 <div class="col-12 d-flex justify-content-center wow animate fadeInUp" data-wow-delay="300ms" data-wow-duration="1500ms">
                     <div class="view-all-btn">
-                        <a class="eg-btn btn--primary btn--lg" href="project1.html">VIEW ALL</a>
+                        <a class="eg-btn btn--primary btn--lg" href="{{ route('projects') }}">VIEW ALL</a>
                     </div>
                 </div>
             </div>

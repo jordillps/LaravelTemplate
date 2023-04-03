@@ -11,7 +11,14 @@ return [
     */
 
     //Home
-
+    'developer' => 'Desenvolupador',
+    'what-i-do' => 'El que faig',
+    'myservices' => 'Els meus serveis',
+    'services-description' => 'Veure els serveis',
+    'read-more' => 'Vols saber més',
+    'web-sites-manageables' => 'Pàgines web administrables',
+    'web-applications' => 'Aplicacions web',
+    'other-web-projects' => 'Projectes web d\'altres empreses',
 
     //About me
 
@@ -41,5 +48,6 @@ return [
     'cookies-policy' => 'Política de cookies',
     'privacy-policy' => 'Política de privacitat',
     'developed-by' => 'Desenvolupat per',
+    'click-to-call' => 'Clic per trucar'
 
 ];

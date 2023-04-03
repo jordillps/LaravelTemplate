@@ -17,28 +17,24 @@
           {{ Form::label(trans('global.icons')) }}
           <div class="form-group-icons">
             <div class="row align-items-center">
-              {{ Form::radio('icon','ion-monitor', $service->icon == 'ion-monitor') }}
-              <span class="ico-circle"><i class="ion-monitor"></i></span> 
+              {{ Form::radio('icon','web-design.svg', $service->icon == 'web-design.svg') }}
+              <span class="ico-circle"><img src="{{ asset('img/web/icons/web-design.svg') }}" alt=""></span> 
             </div>
             <div class="row align-items-center">
-              {{ Form::radio('icon','ion-code-working', $service->icon == 'ion-code-working') }}
-              <span class="ico-circle"><i class="ion-code-working"></i></span>
+              {{ Form::radio('icon','branding.svg', $service->icon == 'branding.svg') }}
+              <span class="ico-circle"><img src="{{ asset('img/web/icons/branding.svg') }}" alt=""></span>
             </div>
             <div class="row align-items-center">
-              {{ Form::radio('icon','ion-camera', $service->icon == 'ion-camera') }}
-              <span class="ico-circle"><i class="ion-camera"></i></span>
+              {{ Form::radio('icon','graphic-design.svg', $service->icon == 'graphic-design.svg') }}
+              <span class="ico-circle"><img src="{{ asset('img/web/icons/graphic-design.svg') }}" alt=""></span>
             </div>
             <div class="row align-items-center">
-              {{ Form::radio('icon','ion-android-phone-portrait', $service->icon == 'ion-android-phone-portrait') }}
-              <span class="ico-circle"><i class="ion-android-phone-portrait"></i></span> 
+              {{ Form::radio('icon','coding.svg', $service->icon == 'coding.svg') }}
+              <span class="ico-circle"><img src="{{ asset('img/web/icons/coding.svg') }}" alt=""></span> 
             </div>
             <div class="row align-items-center">
-              {{ Form::radio('icon','ion-paintbrush', $service->icon == 'ion-paintbrush') }}
-              <span class="ico-circle"><i class="ion-paintbrush"></i></span> 
-            </div>
-            <div class="row align-items-center">
-              {{ Form::radio('icon','ion-stats-bars', $service->icon == 'ion-stats-bars') }}
-              <span class="ico-circle"><i class="ion-stats-bars"></i></span> 
+              {{ Form::radio('icon','idea.svg', $service->icon == 'idea.svg') }}
+              <span class="ico-circle"><img src="{{ asset('img/web/icons/idea.svg') }}" alt=""></span> 
             </div>
           </div>
           {!! $errors->first('text:'.app()->getLocale(), '<div class="invalid-feedback">:message</div>') !!}
@@ -63,7 +59,7 @@
         Dropzone.options.documentDropzone = {
           url: '{{ route('services.storeMedia') }}',
           maxFilesize: 1, // MB
-          acceptedFiles: ".png,.jpg,.gif,.webp",
+          acceptedFiles: ".png,.jpg,.gif,.webp,.svg",
           addRemoveLinks: true,
           maxFiles:1,
           uploadMultiple: false,

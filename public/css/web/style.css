@@ -495,16 +495,18 @@ i.bx {
   font-weight: 500;
   font-size: 16px;
   line-height: 25px;
-  color: var(--primary-color);
+  color: #ffffff;
+  background-color: #000000;
   margin-left: 20px;
   position: relative;
+  padding: 0.2em 0.4em;
 }
 
-.section-title1 > span::after {
+/* .section-title1 > span::after {
   position: absolute;
   content: url("../../img/web/icons/section-vector.svg");
   left: -15px;
-}
+} */
 
 .section-title1 h2 {
   font-size: 55px;
@@ -1570,6 +1572,10 @@ header.style-1 .mobile-menu-form .hotline .hotline-info h6 {
     margin-left: unset;
     padding: 150px 100px;
   }
+
+  .hero-style1 .hero-content ul {
+    text-align: left;
+  }
 }
 
 @media (max-width: 767px) {
@@ -1688,6 +1694,14 @@ header.style-1 .mobile-menu-form .hotline .hotline-info h6 {
 
 .hero-style1 .hero-img img {
   height: 90%;
+}
+
+.hero-style1 .hero-content ul li img {
+	margin-right: 10px;
+}
+
+.hero-style1 .hero-content ul li h5{
+  display: inline-block;
 }
 
 @media (max-width: 1399px) {
@@ -10887,5 +10901,27 @@ header.style-4 .mobile-menu-btn .bx {
 .contact-page .contact-form-area .form-inner button {
   font-size: 18px;
   border: none;
+}
+
+
+mark {
+  -webkit-animation: 1.5s highlight 1.5s 1 normal forwards;
+          animation: 1.5s highlight 1.5s 1 normal forwards;
+  background-color: none;
+  background: linear-gradient(90deg, #6d9f38 50%, rgba(255, 255, 255, 0) 50%);
+  background-size: 200% 100%;
+  background-position: 100% 0;
+}
+
+@-webkit-keyframes highlight {
+  to {
+    background-position: 0 0;
+  }
+}
+
+@keyframes highlight {
+  to {
+    background-position: 0 0;
+  }
 }
 /*# sourceMappingURL=style.css.map */

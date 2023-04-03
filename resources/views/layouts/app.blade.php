@@ -46,7 +46,7 @@
     @stack('styles')
     
 </head>
-<body id="page-top">
+<body>
     <div id="app">
         @include('partials.preloader')
 

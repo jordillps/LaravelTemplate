@@ -159,10 +159,6 @@ class ServiceController extends Controller
         //Delete on the server         
         File::delete(public_path('media/services/' . $media->model_id . '/' . $media->file_name));
 
-        //Delete on the server conversion
-        $file_name = str_replace(".","-thumb.",$media->file_name);       
-        File::delete(public_path('media/services/' . $media->model_id . '/' . 'conversions/' . $file_name));
-        
         //Delete on the database
         $media->delete();
 

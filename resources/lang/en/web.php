@@ -11,7 +11,17 @@ return [
     */
 
     //Home
-
+    'developer' => 'Developer',
+    'what-i-do' => 'What I do',
+    'myservices' => 'My services',
+    'services-description' => 'Services description',
+    'read-more' => 'Read more',
+    'web-sites-manageables' => 'Websites manageables',
+    'web-applications' => 'Web applications',
+    'other-web-projects' => 'Other companies web projects',
+    
+    
+    
 
     //About me
 
@@ -40,6 +50,7 @@ return [
     'legal-notice' => 'Legal notice',
     'cookies-policy' => 'Cookies policy',
     'privacy-policy' => 'Privacy policy',
-    'developed-by' => 'Developed by'
+    'developed-by' => 'Developed by',
+    'click-to-call' => 'Clic to call'
 
 ];

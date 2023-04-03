@@ -19,18 +19,18 @@
       </div>
       <ul class="menu-list">
           <li>
-              <a href="{{ route('about-me') }}">About me</a>
+              <a href="{{ route('about-me') }}">{{ __('web.about-me') }}</a>
           </li>
           <li>
-            <a href="{{ route('services') }}">Services</a>
+            <a href="{{ route('services') }}">{{ __('web.services') }}</a>
           </li>
           <li>
-            <a href="{{ route('projects') }}">Projects</a>
+            <a href="{{ route('projects') }}">{{ __('web.projects') }}</a>
           </li>
           <li>
-            <a href="{{ route('blog') }}">Blog</a>
+            <a href="{{ route('blog') }}">{{ __('web.blog') }}</a>
           </li>
-          <li><a href="{{ route('contact') }}">Contact</a></li>
+          <li><a href="{{ route('contact') }}">{{ __('web.contact') }}</a></li>
           @include('partials.language_switcher')
       </ul>
       <!-- mobile-search-area -->
@@ -41,8 +41,8 @@
                       <img alt="image" src="{{ asset('img/web/icons/header-phone.svg') }}" >
                   </div>
                   <div class="hotline-info">
-                      <span>Click To Call</span>
-                      <h6><a href="tel:347-274-8816">{{ $phone[0] }}</a></h6>
+                      <span>{{ __('web.click-to-call') }}</span>
+                      <h6><a href="tel:{{ $phone[0] }}">{{ $phone[0] }}</a></h6>
                   </div>
               </div>
           </form>
@@ -55,8 +55,7 @@
               <img alt="image" src="{{ asset('img/web/icons/header-phone.svg') }}" >
           </div>
           <div class="hotline-info">
-              <span>Click To Call</span>
-              <h6><a href="tel:347-274-8816">{{ $phone[0] }}</a></h6>
+              <h6><a href="tel:{{ $phone[0] }}">{{ $phone[0] }}</a></h6>
           </div>
       </div>
       <div class="mobile-menu-btn d-lg-none d-block">
