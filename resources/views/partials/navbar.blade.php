@@ -1,3 +1,6 @@
+@php
+    $phone = \App\Models\Setting::pluck('phone');
+@endphp
 <!-- ========== header============= -->
 
 <header class="header-area style-1">
@@ -39,7 +42,7 @@
                   </div>
                   <div class="hotline-info">
                       <span>Click To Call</span>
-                      <h6><a href="tel:347-274-8816">+347-274-8816</a></h6>
+                      <h6><a href="tel:347-274-8816">{{ $phone[0] }}</a></h6>
                   </div>
               </div>
           </form>
@@ -53,7 +56,7 @@
           </div>
           <div class="hotline-info">
               <span>Click To Call</span>
-              <h6><a href="tel:347-274-8816">+347-274-8816</a></h6>
+              <h6><a href="tel:347-274-8816">{{ $phone[0] }}</a></h6>
           </div>
       </div>
       <div class="mobile-menu-btn d-lg-none d-block">

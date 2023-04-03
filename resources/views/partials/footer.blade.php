@@ -11,19 +11,12 @@
                     <div class="footer-icon">
                         <img src="{{ asset('img/logoFormalWeb_8.png') }}" alt="">
                     </div>
-                    <div class="footer-img">
-                        @if(count($setting->getMedia('images'))>0)
-                            @foreach ($setting->getMedia('images') as $media)   
-                                <img src="{{ $media->getUrl('thumb') }}" alt=""> 
-                            @endforeach
-                        @endif
-                    </div>
                     <p>{{ $setting->text }}</p>
+                    <a class="footer-btn eg-btn btn--primary btn--lg mb-30" href="{{ route('contact') }}">{{ __('web.lets-chat') }}</a>
                 </div>
             </div>
-            <div class="col-lg-6 col-sm-12 d-flex align-items-center text-center justify-content-center order-lg-2 order-3 wow animate fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
+            <div class="col-lg-6 col-sm-12 d-flex align-items-center text-center order-lg-2 order-3 wow animate fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
                 <div class="footer-wrrap1">
-                    <a class="footer-btn eg-btn btn--primary btn--lg mb-30" href="{{ route('contact') }}">{{ __('web.lets-chat') }}</a>
                     <div class="social-icon">
                         <span>{{ __('web.follow-me') }}:</span>
                         <ul>
@@ -76,7 +69,9 @@
                         <div class="location">
                             <a href="#">{{ $setting->city }}</a>
                         </div>
-
+                    </div>
+                    <div class="footer-img">
+                        <img src="{{ asset('img/web/ES_NEG_small.png') }}" alt="" style="max-width:100%;"> 
                     </div>
                 </div>
             </div>
