@@ -53046,5 +53046,11 @@ a.text-muted:hover {
   color: var(--success);
 }
 
+.row.bg-uploaded-images{
+  background-color: #bbbbbb;
+  padding: 2em;
+}
+
+
 
 

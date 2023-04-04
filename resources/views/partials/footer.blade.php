@@ -38,9 +38,18 @@
                     <div  class="devlper-area">
                      <span id="copyright"></span>   
                         <span>{{ __('web.all-rights-reserved') }} | <a href="{{ route('legal-notice') }}">{{ __('web.legal-notice') }}</a> | <a href={{ route('privacy-policy') }}>{{ __('web.privacy-policy') }}</a> | <a href={{ route('cookies-policy') }}>{{ __('web.cookies-policy') }}</a></span>
-                     <div>
-                        <span>{{__('web.developed-by') }} <a href="{{ route('home') }}"> Jordi Llobet / Formal Web</a></span>
-                     </div>
+                        <div>
+                            <span>{{__('web.developed-by') }} <a href="{{ route('home') }}"> Jordi Llobet / Formal Web</a></span>
+                        </div>
+                    </div>
+                    <div class="footer-img">
+                        @if(count($setting->getMedia('images'))>0)
+                            @foreach ($setting->getMedia('images') as $media)
+                            <img src="{{ $media->getUrl() }}" alt="" style="display=inline-block;">
+                            {{-- <img src="{{ asset('img/web/ES_NEG_small.png') }}" alt="" style="max-width:100%; display=inline-block;"> 
+                            <img src="{{ asset('img/web/LogoPRTR_small.png') }}" alt="" style="max-width:100%;"> --}}
+                            @endforeach
+                        @endif
                     </div>
                 </div>
             </div>
@@ -71,9 +80,7 @@
                             <a href="#">{{ $setting->city }}</a>
                         </div>
                     </div>
-                    <div class="footer-img">
-                        <img src="{{ asset('img/web/ES_NEG_small.png') }}" alt="" style="max-width:100%;"> 
-                    </div>
+                    
                 </div>
             </div>
         </div>

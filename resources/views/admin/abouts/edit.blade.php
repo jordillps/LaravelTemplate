@@ -29,7 +29,7 @@
                         </form>
                         <hr>
                         <label for="document">{{ __('global.image-uploaded') }}</label>
-                        <div class="row">
+                        <div class="row bg-uploaded-images">
                             @foreach ($about->getMedia('images') as $media)
                                 <div class="col-12 col-md-6 col-lg-4">
                                     <form action="{{ route('abouts.deleteMedia', ['media' => $media])}}" method="POST">
