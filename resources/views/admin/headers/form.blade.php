@@ -17,7 +17,7 @@
         </div>
         <div class="form-group">
             {{ Form::label(trans('global.text')) }}
-            {{ Form::textarea('text:'.app()->getLocale(), $header->{'text:'. app()->getLocale()}, ['class' => 'form-control' . ($errors->has('text:'.app()->getLocale()) ? ' is-invalid' : ''), 'placeholder' => 'Text']) }}
+            {{ Form::textarea('text:'.app()->getLocale(), $header->{'text:'. app()->getLocale()}, ['id'=> "summernote",'class' => 'form-control' . ($errors->has('text:'.app()->getLocale()) ? ' is-invalid' : ''), 'placeholder' => 'Text']) }}
             {!! $errors->first('text:'.app()->getLocale(), '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">

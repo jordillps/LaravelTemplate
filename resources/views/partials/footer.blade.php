@@ -20,9 +20,9 @@
                     <div class="social-icon">
                         <span>{{ __('web.follow-me') }}:</span>
                         <ul>
-                            <li><a href="{{ $setting->linkedin_url }}" aria-label="linkedin"><i class='bx bxl-linkedin'></i></a></li>
-                            <li><a href="{{ $setting->twitter_url }}" aria-label="twitter"><i class='bx bxl-twitter' ></i></a></li>
-                            <li><a href="{{ $setting->facebook_url }}" aria-label="facebook"><i class='bx bxl-facebook' ></i></a></li>
+                            <li><a href="{{ $setting->linkedin_url }}" target="blank" aria-label="linkedin"><i class='bx bxl-linkedin'></i></a></li>
+                            <li><a href="{{ $setting->twitter_url }}" target="blank" aria-label="twitter"><i class='bx bxl-twitter' ></i></a></li>
+                            <li><a href="{{ $setting->facebook_url }}" target="blank" aria-label="facebook"><i class='bx bxl-facebook' ></i></a></li>
                         </ul>
                     </div>
                     <div class="footer-menu">

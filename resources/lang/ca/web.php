@@ -18,7 +18,10 @@ return [
     'read-more' => 'Vols saber més',
     'web-sites-manageables' => 'Pàgines web administrables',
     'web-applications' => 'Aplicacions web',
-    'other-web-projects' => 'Projectes web d\'altres empreses',
+    'other-web-projects' => 'Projectes d\'altres empreses',
+    'my-web-projects' => 'Els meus projectes web',
+    'my-portfolio' => 'El meu portfoli',
+    'view-all' => 'Veure tots els projectes',
 
     //About me
 

@@ -26,7 +26,6 @@ class HeaderStoreRequest extends FormRequest
         return [
             'page_id' => ['required', 'integer', 'exists:pages,id'],
             'title:'. app()->getLocale() => ['required', 'string'],
-            'text:'. app()->getLocale() => ['required','string'],
         ];
     }
 }

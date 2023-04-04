@@ -175,7 +175,7 @@ return [
     'show-header' => 'Mostrar capçalera',
     'title' => 'Títol',
     'text' => 'Text',
-    'header-image-warning' => 'Imatge de capçalera (pengeu només una imatge, dimensions mínimes 1920x1055)',
+    'header-image-warning' => 'Imatge de capçalera (pengeu només una imatge)',
 
     //Legal Pages
     'create-legal-page' => 'Crear pàgina legal',

@@ -21,16 +21,16 @@
      <div class="hero-style1 mb-120">
         <div class="social-area">
             <ul>
-                <li><a href="https://www.facebook.com/">FACEBOOK</a></li>
-                <li><a href="https://twitter.com/">TWITTER</a></li>
-                <li><a href="https://www.linkedin.com/">LINKEDIN</a></li>
+                <li><a href="{{ $setting->facebook_url }}" target="blank" aria-label="facebook">FACEBOOK</a></li>
+                <li><a href="{{ $setting->twitter_url }}" target="blank" aria-label="twitter">TWITTER</a></li>
+                <li><a href="{{ $setting->linkedin_url }}" target="blank" aria-label="linkedin">LINKEDIN</a></li>
             </ul>
         </div>
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-6 d-flex align-items-center justify-content-end p-0">
                     <div class="hero-content">
-                        <h1>Jordi Llobet <span class="red">{{ __('web.developer') }}</span>
+                        <h1>{{ $header->title }}<span class="red">{!! $header->text !!}</span>
                             <span>WEB Freelance</span></h1>
                         <div class="mb-5">
                             <ul>
@@ -44,7 +44,9 @@
                 </div>
                 <div class="col-lg-6 p-0">
                     <div class="hero-img">
-                        <img class="img-fluid" src="{{ asset('img/web/home/jordi.webp') }}" alt="">
+                        @foreach ($header->getMedia('images') as $media)
+                            <img class="img-fluid" src="{{ $media->getUrl() }}" alt="">                 
+                        @endforeach
                     </div>
                 </div>
             </div>
@@ -100,8 +102,8 @@
                 <div class="col-lg-12">
                     <div class="works-top d-flex justify-content-between align-items-center flex-wrap wow animate fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
                         <div class="section-title1">
-                            <span>My Portfolio</span>
-                            <h2>Creative Works.</h2>
+                            <span>{{ __('web.my-portfolio') }}</span>
+                            <h2>{{ __('web.my-web-projects') }}</h2>
                         </div>
                     </div>
                 </div>
@@ -112,7 +114,7 @@
                         <div class="item all web  wow animate fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
                             <div class="works-wrrap style-1">
                                 <div class="works-img">
-                                    <img class="big-img" src="{{ asset('img/web/home/work-1.png') }}" alt="">
+                                    <img class="big-img" src="{{ asset('img/web/home/sentits_pantalles_nova.png') }}" alt="">
                                 </div>
                                 <div class="overlay">
                                     <div class="sl-number">
@@ -153,7 +155,7 @@
             <div class="row pt-50">
                 <div class="col-12 d-flex justify-content-center wow animate fadeInUp" data-wow-delay="300ms" data-wow-duration="1500ms">
                     <div class="view-all-btn">
-                        <a class="eg-btn btn--primary btn--lg" href="{{ route('projects') }}">VIEW ALL</a>
+                        <a class="eg-btn btn--primary btn--lg" href="{{ route('projects') }}">{{ __('web.view-all') }}</a>
                     </div>
                 </div>
             </div>

@@ -18,7 +18,10 @@ return [
     'read-more' => 'Read more',
     'web-sites-manageables' => 'Websites manageables',
     'web-applications' => 'Web applications',
-    'other-web-projects' => 'Other companies web projects',
+    'other-web-projects' => 'Other web projects',
+    'my-web-projects' => 'My web projects',
+    'my-portfolio' => 'My portfolio',
+    'view-all' => 'View all projects',
     
     
     

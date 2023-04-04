@@ -171,7 +171,7 @@ return [
     'show-header' => 'Mostrar cabecera',
     'title' => 'Título',
     'text' => 'Texto',
-    'header-image-warning' => 'Imagen de encabezado (Cargar solo una imagen, dimensiones mínimas 1920x1055)',
+    'header-image-warning' => 'Imagen de encabezado (Cargar solo una imagen)',
 
     //Legal Pages
     'create-legal-page' => 'Crear página legal',

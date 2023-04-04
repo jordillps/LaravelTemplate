@@ -16,6 +16,7 @@ use Artesaos\SEOTools\Facades\OpenGraph;
 use Artesaos\SEOTools\Facades\TwitterCard;
 use Artesaos\SEOTools\Facades\JsonLd;
 use Illuminate\Support\Facades\URL;
+use App\Models\Setting;
 
 class HomeWebController extends Controller
 {
@@ -28,22 +29,18 @@ class HomeWebController extends Controller
     {
         $page = Page::where('name', 'home')->first('id');
 
-        $header = Header::where('page_id', $page->id)->first();
-
         //Take the last one
-        $about = About::orderBy('id', 'desc')->first();
+        $header = Header::where('page_id', $page->id)->first();
 
         $services = Service::all();
 
-        $titles = Title::where('page_id', $page->id)->get();
-
         $projects = Project::all();
 
-        $posts = Post::where('isPublished', 1 )->take(3)->get();
+        $setting = Setting::first();
 
         SEOMeta::setTitle('Home');
 
-        return view('home', compact('header','about','services', 'titles', 'projects', 'posts'));
+        return view('home', compact('header','services', 'projects', 'setting'));
     }
 
     /**

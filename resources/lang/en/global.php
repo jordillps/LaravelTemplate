@@ -171,7 +171,7 @@ return [
     'show-header' => 'Show header',
     'title' => 'Títle',
     'text' => 'Text',
-    'header-image-warning' => 'Header Image (Upload only one image, min dimensions 1920x1055)',
+    'header-image-warning' => 'Header Image (Upload only one image)',
 
     //Legal Pages
     'create-legal-page' => 'Create legal page',
