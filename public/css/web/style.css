@@ -2128,7 +2128,7 @@ header.style-1 .mobile-menu-form .hotline .hotline-info h6 {
 
 .work-area .work-item .item .works-wrrap.style-1:hover .overlay {
   visibility: visible;
-  opacity: 1;
+  opacity: 0.75;
   -webkit-transform: translate(0%, 0%) scale(1);
           transform: translate(0%, 0%) scale(1);
 }

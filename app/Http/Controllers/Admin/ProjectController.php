@@ -168,7 +168,6 @@ class ProjectController extends Controller {
         //Delete on the server 
         File::delete(public_path('media/projects/' . $media->model_id . "/" . $media->file_name));
        
-        
         //Delete on the database
         $media->delete();
 

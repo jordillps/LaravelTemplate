@@ -111,44 +111,28 @@
             <div class="row">
                 <div class="col-12">
                     <div class="work-item d-flex justify-content-center">
-                        <div class="item all web  wow animate fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
-                            <div class="works-wrrap style-1">
-                                <div class="works-img">
-                                    <img class="big-img" src="{{ asset('img/web/home/sentits_pantalles_nova.png') }}" alt="">
-                                </div>
-                                <div class="overlay">
-                                    <div class="sl-number">
-                                        <h2>01</h2>
-                                    </div>
-                                    <div class="content">
-                                        <span>Software</span>
-                                        <h3>Desktop Mockup</h3>
-                                    </div>
-                                    <div class="case-button">
-                                        <a href="{{ route('projects') }}">Case Study</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item all app wow animate fadeInRight" data-wow-delay="400ms" data-wow-duration="1500ms">
-                            <div class="works-wrrap style-1 style-2">
-                                <div class="works-img">
-                                    <img src="{{ asset('img/web/home/work-2.png') }}" alt="">
-                                </div>
-                                <div class="overlay">
-                                    <div class="sl-number">
-                                        <h2>02</h2>
-                                    </div>
-                                    <div class="content">
-                                        <span>Software</span>
-                                        <h3>Desktop Mockup</h3>
-                                    </div>
-                                    <div class="case-button">
-                                        <a href="{{ route('projects') }}">Case Study</a>
+                        @foreach ($projects as $project)
+                            <div class="item all web  wow animate fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
+                                <div class="works-wrrap style-1 services-wrrap">
+                                    @if(count($project->getMedia('images'))>0)
+                                        <div class="works-img">
+                                            <img class="big-img" src="{{ $project->getMedia('images')[0]->getUrl() }}" alt="">
+                                        </div>
+                                    @endif
+                                    <div class="overlay">
+                                        <div class="sl-number">
+                                            <h2>  {{ '0'. $loop->index + 1 }}</h2>
+                                        </div>
+                                        <div class="content">
+                                            <h3>{{ $project->title }}</h3>
+                                        </div>
+                                        <div class="case-button">
+                                            <a href="{{ route('projects') }}">{{ __('web.read-more') }}</a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
+                            </div>  
+                        @endforeach
                     </div>
                 </div>
             </div>

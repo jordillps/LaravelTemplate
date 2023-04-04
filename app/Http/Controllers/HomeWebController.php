@@ -34,7 +34,7 @@ class HomeWebController extends Controller
 
         $services = Service::all();
 
-        $projects = Project::all();
+        $projects = Project::take(2)->get();
 
         $setting = Setting::first();
 

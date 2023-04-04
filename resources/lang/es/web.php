@@ -19,7 +19,7 @@ return [
     'web-sites-manageables' => 'Páginas web administrables',
     'web-applications' => 'Aplicaciones web',
     'other-web-projects' => 'Proyectos de otras empresas',
-    'my-web-projects' => 'Mis projectes web',
+    'my-web-projects' => 'Mis proyectos web',
     'my-portfolio' => 'Mi portfolio',
     'view-all' => 'Ver todos los proyectos',
 

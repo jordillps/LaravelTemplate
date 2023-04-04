@@ -50,8 +50,11 @@
                             <strong>{{ __('global.images') }}:</strong>
                             <div class="row">
                                 @foreach ($project->getMedia('images') as $media)
-                                    <div class="col-12 col-md-4 col-lg-2">
-                                        <img src="{{ $media->getUrl('thumb') }}" alt="" style="max-width: 100%;">
+                                    <div class="col-12 col-md-4 col-lg-2 text-center">
+                                        <img src="{{ $media->getUrl() }}" alt="" style="max-width: 100%;">
+                                        @if ($loop->index == 0)
+                                        <strong>{{ __('global.home') }}</strong>
+                                        @endif
                                     </div>
                                 @endforeach
                                 </div>
