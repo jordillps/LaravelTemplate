@@ -46,8 +46,6 @@
                         @if(count($setting->getMedia('images'))>0)
                             @foreach ($setting->getMedia('images') as $media)
                             <img src="{{ $media->getUrl() }}" alt="" style="display=inline-block;">
-                            {{-- <img src="{{ asset('img/web/ES_NEG_small.png') }}" alt="" style="max-width:100%; display=inline-block;"> 
-                            <img src="{{ asset('img/web/LogoPRTR_small.png') }}" alt="" style="max-width:100%;"> --}}
                             @endforeach
                         @endif
                     </div>

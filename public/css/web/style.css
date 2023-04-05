@@ -2128,7 +2128,7 @@ header.style-1 .mobile-menu-form .hotline .hotline-info h6 {
 
 .work-area .work-item .item .works-wrrap.style-1:hover .overlay {
   visibility: visible;
-  opacity: 0.75;
+  opacity: 0.8;
   -webkit-transform: translate(0%, 0%) scale(1);
           transform: translate(0%, 0%) scale(1);
 }
@@ -2668,6 +2668,7 @@ header.style-1 .mobile-menu-form .hotline .hotline-info h6 {
   margin-bottom: 35px;
 }
 
+.item .works-wrrap .works-header h3,
 .pricing-plan-area .pricing-wrrap .project-price h3 {
   font-family: "Saira", sans-serif;
   font-weight: 700;
@@ -8215,7 +8216,7 @@ header.style-4 .mobile-menu-btn .bx {
 }
 
 .inner-page-banner .breadcrumb-area {
-  background-image: url(../images/bg/inner-banner-img.png);
+  background-image: url(../../img/web/inner-banner-img.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;

@@ -114,6 +114,9 @@
                         @foreach ($projects as $project)
                             <div class="item all web  wow animate fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
                                 <div class="works-wrrap style-1 services-wrrap">
+                                    <div class="works-header">
+                                        <h3>{{ $project->category->{'name:'. app()->getLocale()} }}</h3>
+                                    </div>
                                     @if(count($project->getMedia('images'))>0)
                                         <div class="works-img">
                                             <img class="big-img" src="{{ $project->getMedia('images')[0]->getUrl() }}" alt="">
@@ -129,6 +132,11 @@
                                         <div class="case-button">
                                             <a href="{{ route('projects') }}">{{ __('web.read-more') }}</a>
                                         </div>
+                                    </div>
+                                    <div class="read-more-btn d-flex justify-content-end d-lg-none">
+                                        <a href="{{ route('services') }}">{{ __('web.read-more') }}
+                                            <span><img src="{{ asset('img/web/icons/arrow-right.svg') }}" alt=""></span>
+                                        </a>
                                     </div>
                                 </div>
                             </div>  

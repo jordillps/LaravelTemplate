@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Service;
+use App\Models\Setting;
 
 class ServicesWebController extends Controller
 {
@@ -13,8 +15,11 @@ class ServicesWebController extends Controller
      */
     public function index()
     {
-        //
-        return view('services');
+        $services = Service::all();
+
+        $setting = Setting::first();
+
+        return view('services', compact('services', 'setting'));
     }
 
     /**
