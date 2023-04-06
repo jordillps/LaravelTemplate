@@ -29,7 +29,7 @@ class Service extends Model implements HasMedia, TranslatableContract{
 
   
 
-  public $translatedAttributes = ['title','text'];
+  public $translatedAttributes = ['title','text','body'];
 
   /**
      * Attributes that should be mass-assignable.

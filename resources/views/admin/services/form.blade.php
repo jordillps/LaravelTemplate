@@ -14,6 +14,11 @@
             {!! $errors->first('text:'.app()->getLocale(), '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
+          {{ Form::label(trans('global.body')) }}
+          {{ Form::textarea('body:'.app()->getLocale(), $service->{'body:'. app()->getLocale()}, ['id'=> "summernote",'class' => 'form-control' . ($errors->has('body:'.app()->getLocale()) ? ' is-invalid' : ''), 'placeholder' => 'Body']) }}
+          {!! $errors->first('body:'.app()->getLocale(), '<div class="invalid-feedback">:message</div>') !!}
+      </div>
+        <div class="form-group">
           {{ Form::label(trans('global.icons')) }}
           <div class="form-group-icons">
             <div class="row align-items-center">
@@ -61,7 +66,7 @@
           maxFilesize: 1, // MB
           acceptedFiles: ".png,.jpg,.gif,.webp,.svg",
           addRemoveLinks: true,
-          maxFiles:1,
+          // maxFiles:1,
           uploadMultiple: false,
           // resizeWidth: 1920,
           // resizeHeight: 1055,

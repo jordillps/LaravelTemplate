@@ -26,6 +26,7 @@ class ServiceStoreRequest extends FormRequest
         return [
             'title:'. app()->getLocale() => ['required', 'string'],
             'text:'. app()->getLocale() => ['required','string'],
+            'body:'. app()->getLocale() => ['required'],
         ];
     }
 }

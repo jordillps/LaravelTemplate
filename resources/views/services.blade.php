@@ -48,24 +48,33 @@
             <div class="col-lg-8 order-lg-1 order-2 wow animate fadeInDown" data-wow-delay="400ms" data-wow-duration="1500ms">
                 @foreach ($services as $service)
                     <div class="service-details-wrrap pb-60">
-                        <div class="service-img-1">
-                            <img class="img-fluid" src="{{ asset('img/web/services/swrvice-dt-1.png') }}" alt="">
-                        </div>
+                        @if(count($service->getMedia('images'))>0)
+                            <div class="service-img-1">
+                                <img class="img-fluid" src="{{ $service->getMedia('images')[0]->getUrl() }}" alt="">
+                            </div>
+                        @endif
                         <div class="services-top d-flex justify-content-between align-items-center">
                             <div class="icon">
                                 <img src="{{ asset('img/web/icons/'. $service->icon) }}" alt="" width="60">
                             </div>
                             <h3>{{ $service->{'title:'. app()->getLocale()} }}</h3>
                         </div>
-                        {{-- <h3 class="pt-25">Unlimited skills for super projects.</h3>
-                        <ul>
-                            <li>We provide free initial consultation and support of all time 24 hour.</li>
-                            <li>We work with some of the most successful businesses work many creative work.</li>
-                            <li>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.</li>
-                            <li>Omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem.</li>
-                        </ul> --}}
+                        <div class="service-body">
+                            {!! $service->{'body:'. app()->getLocale()} !!}
+                        </div>
+                        @if(count($service->getMedia('images'))>0)
+                            
+                            <div class="services-technologies">
+                                @foreach($service->getMedia('images') as $media)
+                                    @if($loop->index != 0)
+                                        <img src="{{ $media->getUrl() }}" alt="" width="50">
+                                    @endif
+                                @endforeach
+                            </div>
+                        @endif
                     </div>
                 @endforeach
+               
             </div>
             <div class="col-lg-4 order-lg-2 order-1">
                 <div class="blog-sidebar">

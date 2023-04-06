@@ -30,6 +30,10 @@
                             {{ $service->{'text:'. app()->getLocale()} }}
                         </div>
                         <div class="callout callout-primary">
+                            <strong>{{ __('global.body') }}:</strong>
+                                {!! $service->{'body:'. app()->getLocale()} !!}
+                        </div>   
+                        <div class="callout callout-primary">
                             <strong>{{ __('global.image') }}:</strong>
                             <div class="row p-3">
                                 @foreach ($service->getMedia('images') as $media)

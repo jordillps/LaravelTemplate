@@ -6456,6 +6456,9 @@ header.style-3 .mobile-menu-btn .bx {
   fill: #987750;
 }
 
+.service-body{
+  padding-top: 2em;
+}
 /*================================================
 28. Home Three About
 =================================================*/
@@ -8940,7 +8943,7 @@ header.style-4 .mobile-menu-btn .bx {
   color: #272727;
 }
 
-.services-details .service-details-wrrap ul {
+/* .services-details .service-details-wrrap ul {
   margin: 0;
   padding: 0;
   padding-top: 8px;
@@ -8958,6 +8961,13 @@ header.style-4 .mobile-menu-btn .bx {
 .services-details .service-details-wrrap ul li svg {
   fill: var(--primary-color);
   margin-right: 5px;
+} */
+
+.services-technologies{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+  justify-content: center;
 }
 
 /*================================================

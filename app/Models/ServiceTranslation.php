@@ -11,5 +11,5 @@ class ServiceTranslation extends Model
 
     public $timestamps = false;
 
-    protected $fillable = ['service_id','locale', 'title', 'text'];
+    protected $fillable = ['service_id','locale', 'title', 'text', 'body'];
 }
