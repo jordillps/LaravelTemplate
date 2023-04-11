@@ -10810,13 +10810,13 @@ margin-top: -130px;
   padding: 65px 0;
 }
 
-@media (max-width: 991px) {
+/* @media (max-width: 991px) {
   .contact-page .contact-address .single-contact {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
   }
-}
+} */
 
 .contact-page .contact-address .single-contact .icon {
   width: 80px;
@@ -10879,16 +10879,35 @@ margin-top: -130px;
 @media (max-width: 991px) {
   .contact-page .contact-form-area {
     margin-top: 0px;
+    padding: 2em 1em;
   }
 }
 
 .contact-page .contact-form-area h2 {
   font-family: "Saira", sans-serif;
   font-weight: 600;
-  font-size: 55px;
+  font-size: 35px;
+  color: #fff;
+}
+
+.contact-page .contact-form-area p {
+  font-family: "Saira", sans-serif;
   color: #fff;
   margin-bottom: 45px;
 }
+
+.contact-page .contact-form-area p span{
+  text-decoration: underline;
+}
+
+.contact-page .contact-form-area p span:hover{
+  color: var(--primary-color);
+}
+
+.contact-page .contact-form-area .form-inner {
+  margin-bottom: 40px;
+}
+
 
 .contact-page .contact-form-area .form-inner input {
   height: 52px;
@@ -10896,12 +10915,13 @@ margin-top: -130px;
   font-family: "Outfit", sans-serif;
   font-weight: 400;
   font-size: 14px;
-  color: #9A9999;
+  /* color: #9A9999; */
+  color: #181818;
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 5px;
   padding: 20px 25px;
-  background: #181818;
-  margin-bottom: 40px;
+  /* background: #181818; */
+  background: #ffffff;
 }
 
 .contact-page .contact-form-area .form-inner textarea {
@@ -10909,17 +10929,22 @@ margin-top: -130px;
   font-family: "Outfit", sans-serif;
   font-weight: 400;
   font-size: 14px;
-  color: #9A9999;
+  /* color: #9A9999; */
+  color: #181818;
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 5px;
   padding: 20px 25px;
-  background: #181818;
-  margin-bottom: 40px;
+  /* background: #181818; */
+  background: #ffffff;
 }
 
 .contact-page .contact-form-area .form-inner button {
   font-size: 18px;
   border: none;
+}
+
+.alert.alert-success{
+  font-weight: bold;
 }
 
 

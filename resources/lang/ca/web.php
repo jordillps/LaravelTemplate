@@ -22,6 +22,7 @@ return [
     'my-web-projects' => 'Els meus projectes web',
     'my-portfolio' => 'El meu portfoli',
     'view-all' => 'Veure tots els projectes',
+    'home' => 'Inici',
 
     //About me
 
@@ -36,6 +37,17 @@ return [
 
 
     //Contact
+    'contact-now' => 'Contacta ara',
+    'phone' => 'Telèfon',
+    'email' => 'Correu electrònic',
+    'need-help-contact' => 'Necessites ajuda? Contacta\'m',
+    'need-help-contact-text' => 'Pots omplir i enviar el següent formulari. O, si ho prefereixes, envia un correu electrònic a',
+    'your-name' => 'El teu nom',
+    'your-email' => 'El teu correu electrònic',
+    'your-phone' => 'El teu telèfon',
+    'your-subject' => 'Assumpte',
+    'your-message' => 'El teu missatge',
+    'send-message' => 'Enviar missatge',
 
     //Footer, NavBar
     'lets-chat' => 'Parlem',

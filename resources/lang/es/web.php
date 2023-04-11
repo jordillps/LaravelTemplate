@@ -22,6 +22,7 @@ return [
     'my-web-projects' => 'Mis proyectos web',
     'my-portfolio' => 'Mi portfolio',
     'view-all' => 'Ver todos los proyectos',
+    'home' => 'Inicio',
 
 
 
@@ -38,6 +39,17 @@ return [
 
 
     //Contact
+    'contact-now' => 'Contacta ahora',
+    'phone' => 'Teléfono',
+    'email' => 'Correo electrónic',
+    'need-help-contact' => '¿Necesitas ayuda? Contacta conmigo',
+    'need-help-contact-text' => 'Puedes rellenar y enviar el siguiente formulario. O, si lo prefieres, envía un correo electrónico a',
+    'your-name' => 'Tu nombre',
+    'your-email' => 'Tu correo electrónico',
+    'your-phone' => 'Tu teléfono',
+    'your-subject' => 'Asunto',
+    'your-message' => 'Tu mensaje',
+    'send-message' => 'Enviar mensaje',
 
     //Footer
     'lets-chat' => 'Hablamos',
