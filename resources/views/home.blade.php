@@ -82,7 +82,16 @@
                                 <h3>{{ $service->{'title:'. app()->getLocale()} }}</h3>
                                 <p>{{ $service->{'text:'. app()->getLocale()} }}</p>
                             </div>
-                            <div class="read-more-btn d-flex justify-content-end">
+                            @if(count($service->getMedia('images'))>0)
+                                <div class="services-technologies">
+                                    @foreach($service->getMedia('images') as $media)
+                                        @if($loop->index != 0)
+                                            <img src="{{ $media->getUrl() }}" alt="" width="50">
+                                        @endif
+                                    @endforeach
+                                </div>
+                            @endif
+                            <div class="read-more-btn d-flex justify-content-end mt-3">
                                 <a href="{{ route('services') }}">{{ __('web.read-more') }}
                                     <span><img src="{{ asset('img/web/icons/arrow-right.svg') }}" alt=""></span>
                                 </a>
