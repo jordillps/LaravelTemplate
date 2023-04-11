@@ -67,7 +67,7 @@
                             <div class="services-technologies">
                                 @foreach($service->getMedia('images') as $media)
                                     @if($loop->index != 0)
-                                        <img src="{{ $media->getUrl() }}" alt="" width="50">
+                                        <img src="{{ $media->getUrl() }}" alt="" width="70">
                                     @endif
                                 @endforeach
                             </div>

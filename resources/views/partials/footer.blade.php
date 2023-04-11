@@ -67,7 +67,7 @@
                             <i class='bx bx-envelope' ></i>
                         </div>
                         <div class="email">
-                            <a href="tell:{{ $setting->email }}">{{ $setting->email }}</a><br>
+                            <a href="tell:{{ $setting->email }}">{{ $setting->email }}</a>
                         </div>
                     </div>
                     <div class="address d-flex align-items-center">
