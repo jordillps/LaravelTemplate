@@ -27,7 +27,16 @@ return [
 
 
     //About me
-
+    'working-over-years' => 'Freelance desde 2021',
+    'my-details' => 'Datos de contacto',
+    'experience' => 'Experiencia',
+    'technologies' => 'Tecnologías',
+    'languages' => 'Idiomas',
+    'education' => 'Educación',
+    'name' => 'Nombre',
+    'city' => 'Ciudad',
+    'degree-1' => 'Ingeniería Técnica de Obras Públicas',
+    'degree-2' => 'Grado de Ingeniería Informática',
 
     //Services
 

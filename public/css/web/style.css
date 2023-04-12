@@ -709,14 +709,14 @@ i.bx {
   line-height: 32px;
 }
 
-.section-title5 p::after {
-  content: url("../images/bg/about-p-shape.png");
+/* .section-title5 p::after {
+  content: url("../../img/web/about/about-p-shape.png");
   position: absolute;
   left: -15px;
   top: 50%;
   -webkit-transform: translateY(-42%);
           transform: translateY(-42%);
-}
+} */
 
 @media (max-width: 576px) {
   .view-all-btn {
@@ -8332,13 +8332,13 @@ margin-top: -130px;
   position: relative;
 }
 
-.about-work .about-img::after {
-  content: url("../images/bg/about-work-bg.png");
+/* .about-work .about-img::after {
+  content: url("../../img/web/about/about-work-bg.png");
   position: absolute;
   bottom: -20px;
   left: -20px;
   z-index: -1;
-}
+} */
 
 @media (min-width: 992px) and (max-width: 1199px) {
   .about-work .about-img::after {
@@ -8391,6 +8391,19 @@ margin-top: -130px;
   background-color: var(--primary-color);
 }
 
+@media (max-width: 576px) {
+  .about-work .about-content .about-tab .nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    border: none;
+  }
+
+  .about-work .about-content .about-tab .nav .nav-item {
+    width: 100%;
+  }
+}
+
 .about-work .about-content .about-tab .about-details {
   padding-top: 20px;
 }
@@ -8439,7 +8452,7 @@ margin-top: -130px;
 
 .about-work .donate-done {
   position: relative;
-  background: #E22454;
+  background: var(--primary-color);
   border-radius: 25px;
   color: #fff;
   display: -webkit-box;
@@ -8470,8 +8483,13 @@ margin-top: -130px;
   width: 85%;
 }
 
+.about-work .progress-area {
+  padding: 0 2em;
+}
+
 .about-work .progress-items {
   margin-bottom: 35px;
+  
 }
 
 .about-work .progress-items h6 {
@@ -8502,6 +8520,36 @@ margin-top: -130px;
 
 .about-work .progress-items.four .donate span {
   right: 13%;
+}
+
+.aboutme .resume .resume-title {
+  font-size: 26px;
+  font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #ffffff;
+  letter-spacing: 2px;
+  background: var(--primary-color);
+  padding: 0.5rem 1rem;
+}
+
+.aboutme .resume .resume-item {
+  padding: 0 0 20px 20px;
+  margin-top: -2px;
+  border-left: 2px solid var(--primary-color);
+  position: relative;
+}
+
+.aboutme .resume .resume-item::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50px;
+  left: -9px;
+  top: 0;
+  background: #fff;
+  border: 2px solid var(--primary-color);
 }
 
 /*================================================

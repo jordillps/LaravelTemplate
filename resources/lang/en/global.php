@@ -159,6 +159,8 @@ return [
     'update-about' => 'Update about',
     'show-about' => 'Show about me',
     'phone' => 'Phone',
+    'languages' => 'Languages',
+    'slogan' => 'Slogan',
 
     //Categories
     'create-category' => 'Create category',
@@ -260,7 +262,7 @@ return [
     'page' => 'Page',
     'profession' => 'Profession',
     'about_me' => 'About me',
-    'image-uploaded-warining-1' => 'About me image (Upload only one image, max dimensions 1000x1000)',
+    'image-uploaded-warining-1' => 'About me image (Upload only one image)',
     'save' => 'Save',
     'drag-to-upload' => 'Drag to upload photo',
     'actions' => 'Actions',

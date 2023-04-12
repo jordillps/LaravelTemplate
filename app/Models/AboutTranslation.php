@@ -11,5 +11,5 @@ class AboutTranslation extends Model
 
     public $timestamps = false;
 
-    protected $fillable = ['about_id','locale','profession', 'about_me'];
+    protected $fillable = ['about_id','locale','profession', 'about_me', 'languages', 'slogan'];
 }

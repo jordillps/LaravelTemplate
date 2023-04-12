@@ -35,29 +35,20 @@ class About extends Model implements HasMedia, TranslatableContract
   use InteractsWithMedia;
     
     
-    public $translatedAttributes = ['profession', 'about_me'];
+    public $translatedAttributes = ['profession', 'about_me', 'languages', 'slogan'];
 
     /**
      * Attributes that should be mass-assignable.
      *
      * @var array
      */
-    protected $fillable = ['name','email','phone','html','css','php','javascript'];
+    protected $fillable = ['name','email','phone','html','css','php','javascript', 'bootstrap', 'laravel', 'mysql', 'git', 'city'];
 
 
     public function medias()
     {
         return $this->morphMany(Media::class, 'mediable');
     }
-
-    public function registerMediaConversions(Media $media = null): void
-    {
-        $this->addMediaConversion('thumb')
-              ->width(150)
-              ->nonOptimized() //for shared hosts
-              ->nonQueued(); //for shared hosts;
-    }
-
 
 
 }

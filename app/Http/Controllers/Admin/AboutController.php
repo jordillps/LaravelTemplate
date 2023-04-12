@@ -157,13 +157,9 @@ class AboutController extends Controller
 
     public function deleteMedia(Media $media)
     {
-        // return $media;
-        //Delete on the server conversions        
+        //Delete on the server        
         File::delete(public_path('media/abouts/' . $media->model_id . '/' . $media->file_name));
 
-        //Delete on the server conversions
-        $file_name = str_replace(".","-thumb.",$media->file_name);       
-        File::delete(public_path('media/abouts/' . $media->model_id . '/conversions' . '/'. $file_name ));
         
         //Borrem de la base de dades
         $media->delete();

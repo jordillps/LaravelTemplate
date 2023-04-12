@@ -35,6 +35,24 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="row">
+                            <div class="col-12 col-md-6">
+                                <div class="callout callout-primary">
+                                    <div>
+                                        <strong>{{ __('global.slogan') }}:</strong>
+                                    </div>
+                                    {{ $about->{'slogan:'. app()->getLocale()} }}
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="callout callout-primary">
+                                    <div>
+                                        <strong>{{ __('global.languages') }}:</strong>
+                                    </div>
+                                    {{ $about->{'languages:'. app()->getLocale()} }}
+                                </div>
+                            </div>
+                        </div>
                         <div class="callout callout-primary">
                             <div>
                                 <strong>{{ __('global.about-me') }}:</strong>
@@ -42,7 +60,7 @@
                             {!! $about->{'about_me:'. app()->getLocale()} !!}
                         </div>
                         <div class="row">
-                            <div class="col-12 col-md-6">
+                            <div class="col-12 col-md-4">
                                 <div class="callout callout-primary">
                                     <div>
                                         <strong>{{ __('global.email') }}:</strong>
@@ -50,12 +68,20 @@
                                     {{ $about->email }}
                                 </div>
                             </div>
-                            <div class="col-12 col-md-6">
+                            <div class="col-12 col-md-4">
                                 <div class="callout callout-primary">
                                     <div>
                                         <strong>{{ __('global.phone') }}:</strong>
                                     </div>
                                     {{ $about->phone }}
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4">
+                                <div class="callout callout-primary">
+                                    <div>
+                                        <strong>{{ __('global.city') }}:</strong>
+                                    </div>
+                                    {{ $about->city }}
                                 </div>
                             </div>
                         </div>
@@ -92,7 +118,41 @@
                                     {{ $about->javascript }}
                                 </div>
                             </div>
-                        </div>    
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-md-3">
+                                <div class="callout callout-primary">
+                                    <div>
+                                        <strong>Bootstrap:</strong>
+                                    </div>
+                                    {{ $about->bootstrap }}
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-3">
+                                <div class="callout callout-primary">
+                                    <div>
+                                        <strong>Laravel:</strong>
+                                    </div>
+                                    {{ $about->laravel }}
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-3">
+                                <div class="callout callout-primary">
+                                    <div>
+                                        <strong>Mysql:</strong>
+                                    </div>
+                                    {{ $about->mysql }}
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-3">
+                                <div class="callout callout-primary">
+                                    <div>
+                                        <strong>Git:</strong>
+                                    </div>
+                                    {{ $about->git }}
+                                </div>
+                            </div>
+                        </div>   
                         <div class="callout callout-primary">
                             <strong>{{ __('global.image') }}:</strong>
                             <div class="row p-3">

@@ -25,11 +25,11 @@
                <div class="row">
                    <div class="col-12 d-flex justify-content-sm-end justify-content-center">
                         <div class="inner-breadcrumb">
-                            <h2>Services Details</h2>
+                            <h2>{{ __('web.services-details') }}</h2>
                             <nav>
                                 <ol class="breadcrumb">
-                                  <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                                  <li class="breadcrumb-item active" aria-current="page">Services Details</li>
+                                  <li class="breadcrumb-item"><a href="index.html">{{ __('web.home') }}</a></li>
+                                  <li class="breadcrumb-item active" aria-current="page">{{ __('web.services-details') }}</li>
                                 </ol>
                               </nav>
                         </div>

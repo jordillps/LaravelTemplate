@@ -25,8 +25,17 @@ return [
     'home' => 'Inici',
 
     //About me
-
-
+    'working-over-years' => 'Freelance from 2021',
+    'my-details' => 'Dades de contacte',
+    'experience' => 'Experiència',
+    'technologies' => 'Tecnologies',
+    'languages' => 'Idiomes',
+    'education' => 'Educació',
+    'name' => 'Nom',
+    'city' => 'Ciutat',
+    'degree-1' => 'Enginyeria Tènica Obres Públiques',
+    'degree-2' => 'Grau Enginyeria Informàtica',
+    
     //Services
 
 

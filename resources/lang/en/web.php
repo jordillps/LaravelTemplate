@@ -29,6 +29,16 @@ return [
     
 
     //About me
+    'working-over-years' => 'Freelance since 2021',
+    'my-details' => 'Contact data',
+    'experience' => 'Experience',
+    'technologies' => 'Technologies',
+    'languages' => 'Languages',
+    'education' => 'Education',
+    'name' => 'Name',
+    'city' => 'City',
+    'degree-1' => 'Civil Engineer',
+    'degree-2' => 'Computer Science Degree',
 
 
     //Services

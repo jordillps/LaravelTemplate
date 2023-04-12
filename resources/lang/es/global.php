@@ -159,6 +159,8 @@ return [
     'update-about' => 'Actualizar sobre nosotros',
     'show-about' => 'Mostrar sobre nosotros',
     'phone' => 'Teléfono',
+    'languages' => 'Idiomas',
+    'slogan' => 'Slogan',
 
     //Categories
     'create-category' => 'Crear categoría',
@@ -257,7 +259,7 @@ return [
     'page' => 'Página',
     'profession' => 'Professión',
     'about_me' => 'Sobre mi',
-    'image-uploaded-warining-1' => 'Imagen sobre mi (Cargar solo una imagen, dimensiones máximas 1000x1000)',
+    'image-uploaded-warining-1' => 'Imagen sobre mi (Cargar solo una imagen)',
     'save' => 'Guardar',
     'drag-to-upload' => 'Arrastrar para subir las fotografías',
     'actions' => 'Acciones',
