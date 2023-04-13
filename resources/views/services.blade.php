@@ -28,7 +28,7 @@
                             <h2>{{ __('web.services-details') }}</h2>
                             <nav>
                                 <ol class="breadcrumb">
-                                  <li class="breadcrumb-item"><a href="index.html">{{ __('web.home') }}</a></li>
+                                  <li class="breadcrumb-item"><a href="{{ route('home') }}">{{ __('web.home') }}</a></li>
                                   <li class="breadcrumb-item active" aria-current="page">{{ __('web.services-details') }}</li>
                                 </ol>
                               </nav>

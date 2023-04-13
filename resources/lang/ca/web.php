@@ -25,7 +25,7 @@ return [
     'home' => 'Inici',
 
     //About me
-    'working-over-years' => 'Freelance from 2021',
+    'working-over-years' => 'Freelance des del 2021',
     'my-details' => 'Dades de contacte',
     'experience' => 'Experiència',
     'technologies' => 'Tecnologies',

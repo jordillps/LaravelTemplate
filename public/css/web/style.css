@@ -1823,18 +1823,6 @@ header.style-1 .mobile-menu-form .hotline .hotline-info h6 {
   transition: 1s ease 0.3s;
 }
 
-.home-one-about .donate-done.two {
-  width: 98%;
-}
-
-.home-one-about .donate-done.three {
-  width: 80%;
-}
-
-.home-one-about .donate-done.four {
-  width: 85%;
-}
-
 .home-one-about .progress-items {
   margin-bottom: 35px;
 }
@@ -8436,7 +8424,7 @@ margin-top: -130px;
   border-radius: 20px;
   position: relative;
   height: 5px;
-  width: 100%;
+  max-width: 100%;
 }
 
 .about-work .donate span {

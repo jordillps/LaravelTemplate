@@ -28,7 +28,7 @@
                             <h2>{{ __('web.about-me') }}</h2>
                             <nav>
                                 <ol class="breadcrumb">
-                                  <li class="breadcrumb-item"><a href="index.html">{{ __('web.home') }}</a></li>
+                                  <li class="breadcrumb-item"><a href="{{ route('home') }}">{{ __('web.home') }}</a></li>
                                   <li class="breadcrumb-item active" aria-current="page">{{ __('web.about-me') }}</li>
                                 </ol>
                               </nav>
@@ -131,7 +131,7 @@
                                             <div class="resume-item">
                                                 <h4>{{ $about->{'profession:'. app()->getLocale()} }}</h4>
                                                 <h5>2019 - Actualitat</h5>
-                                                <p><em>{{ __('web.text-about') }}</em></p>
+                                                {{-- <p><em>{{ __('web.text-about') }}</em></p> --}}
                                             </div>
                                         </div>
                                     </div>
@@ -141,53 +141,60 @@
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="progress-area pt-20">
-                                            <div class="progress-items ">
+                                            <div class="progress-items">
                                                 <h6>HTML5</h6>
                                                 <div class="donate">
-                                                    <div class="donate-done" data-done="90"></div>
-                                                    <span>90%</span>
-                                                </div>
+                                                    <div class="donate-done" style="width:{{ $about->html }}%;"></div>
+                                                    <span>{{ $about->html }}%</span>
+                                                </div> 
                                             </div>
-                                            <div class="progress-items two">
+                                            <div class="progress-items">
                                                 <h6>CSS3</h6>
                                                 <div class="donate">
-                                                    <div class="donate-done two" data-done="98"></div>
-                                                    <span>98%</span>
+                                                    <div class="donate-done" style="width:{{ $about->css }}%;"></div>
+                                                    <span>{{ $about->css }}%</span>
                                                 </div>
                                             </div>
-                                            <div class="progress-items three">
+                                            <div class="progress-items">
                                                 <h6>BOOTSTRAP</h6>
                                                 <div class="donate">
-                                                    <div class="donate-done three" data-done="80"></div>
-                                                    <span>80%</span>
+                                                    <div class="donate-done" style="width:{{ $about->bootstrap }}%;"></div>
+                                                    <span>{{ $about->bootstrap }}%</span>
                                                 </div>
                                             </div>
-                                            <div class="progress-items four">
+                                            <div class="progress-items">
+                                                <h6>PHP</h6>
+                                                <div class="donate">
+                                                    <div class="donate-done" style="width:{{ $about->php }}%;"></div>
+                                                    <span>{{ $about->php }}%</span>
+                                                </div>
+                                            </div>
+                                            <div class="progress-items">
                                                 <h6>LARAVEL</h6>
                                                 <div class="donate">
-                                                    <div class="donate-done four" data-done="85"></div>
-                                                    <span>85%</span>
+                                                    <div class="donate-done" style="width:{{ $about->laravel }}%;"></div>
+                                                    <span>{{ $about->laravel }}%</span>
                                                 </div>
                                             </div>
-                                            <div class="progress-items four">
+                                            <div class="progress-items">
                                                 <h6>JAVASCRIPT</h6>
                                                 <div class="donate">
-                                                    <div class="donate-done four" data-done="85"></div>
-                                                    <span>85%</span>
+                                                    <div class="donate-done" style="width:{{ $about->javascript }}%;"></div>
+                                                    <span>{{ $about->javascript }}%</span>
                                                 </div>
                                             </div>
-                                            <div class="progress-items four">
+                                            <div class="progress-items">
                                                 <h6>MYSQL</h6>
                                                 <div class="donate">
-                                                    <div class="donate-done four" data-done="85"></div>
-                                                    <span>85%</span>
+                                                    <div class="donate-done" style="width:{{ $about->mysql }}%;"></div>
+                                                    <span>{{ $about->mysql }}%</span>
                                                 </div>
                                             </div>
-                                            <div class="progress-items four">
+                                            <div class="progress-items">
                                                 <h6>GIT</h6>
                                                 <div class="donate">
-                                                    <div class="donate-done four" data-done="85"></div>
-                                                    <span>85%</span>
+                                                    <div class="donate-done" style="width:{{ $about->git }}%;"></div>
+                                                    <span>{{ $about->git }}%</span>
                                                 </div>
                                             </div>
                                         </div>
