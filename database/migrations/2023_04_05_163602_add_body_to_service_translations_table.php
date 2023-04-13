@@ -26,7 +26,7 @@ return new class extends Migration
     public function down()
     {
         Schema::table('service_translations', function (Blueprint $table) {
-            $table->text('body')->nullable();
+            $table->dropColumn('body');
         });
     }
 };

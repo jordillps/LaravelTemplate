@@ -29,10 +29,10 @@ return new class extends Migration
     public function down()
     {
         Schema::table('abouts', function (Blueprint $table) {
-            $table->dropDown('bootstrap');
-            $table->dropDown('laravel');
-            $table->dropDown('mysql');
-            $table->dropDown('git');
+            $table->dropColumn('bootstrap');
+            $table->dropColumn('laravel');
+            $table->dropColumn('mysql');
+            $table->dropColumn('git');
         });
     }
 };
