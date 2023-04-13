@@ -11,5 +11,5 @@ class ProjectTranslation extends Model
 
     public $timestamps = false;
 
-    protected $fillable = ['project_id','locale', 'title', 'text'];
+    protected $fillable = ['project_id','locale', 'title', 'text', 'period-time'];
 }

@@ -27,7 +27,7 @@ class Project extends Model  implements HasMedia, TranslatableContract{
 
     use InteractsWithMedia;
 
-    public $translatedAttributes = ['title', 'text'];
+    public $translatedAttributes = ['title', 'text','period-time'];
 
 
     /**
@@ -35,7 +35,7 @@ class Project extends Model  implements HasMedia, TranslatableContract{
      *
      * @var array
      */
-    protected $fillable = ['published_at','category_id','url'];
+    protected $fillable = ['published_at','category_id','url', 'company', 'location','projectLink', 'isPublished'];
 
 
     function getRouteKeyName(){

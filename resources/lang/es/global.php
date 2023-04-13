@@ -197,7 +197,11 @@ return [
     'create-project' => 'Crear proyecto',
     'update-project' => 'Actualizar proyecto',
     'show-project' => 'Mostrar proyecto',
-    'upload-images-projects' => 'Imágenes del proyecto (dimensiones mínimas 960 x 600)',
+    'upload-images-projects' => 'Imágenes del proyecto',
+    'period-time' => 'Perioo del proyecto',
+    'company' => 'Empresa',
+    'location' => 'Localización',
+    'project-link' => 'Url del proyecto',
 
     //Services
     'create-service' => 'Crear servicio',

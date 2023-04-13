@@ -107,6 +107,12 @@ class ProjectController extends Controller {
 
         $project->update($request->all());
 
+        if(!isset($request->isPublished)){
+            $project->isPublished = 0;
+            $project->published_at = null;
+            $project->save();
+        }
+
         if (($project->getMedia('images'))) {
             foreach ($project->getMedia() as $media) {
                 if (!in_array($media->file_name, $request->input('images', []))) {

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Project;
 
 class ProjectsWebController extends Controller
 {
@@ -14,7 +15,9 @@ class ProjectsWebController extends Controller
     public function index()
     {
         //
-        return view('projects');
+        $projects = Project::where('isPublished', true)->get();
+        
+        return view('projects', compact('projects'));
     }
 
     /**

@@ -40,6 +40,11 @@ return [
 
 
     //Projects
+    'period-time' => 'Periode del projecte',
+    'company' => 'Empresa',
+    'location' => 'Localització',
+    'project-link' => 'Url del projecte',
+    'category' => 'Categoria',
 
 
     //Blog

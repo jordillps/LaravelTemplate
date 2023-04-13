@@ -11,18 +11,18 @@
       </div>
       <div class="form-group">
           {{ Form::label(trans('global.text')) }}
-          {{ Form::text('text:'.app()->getLocale(), $project->{'text:'. app()->getLocale()}, ['class' => 'form-control' . ($errors->has('text:'.app()->getLocale()) ? ' is-invalid' : ''), 'placeholder' => 'text']) }}
+          {{ Form::textarea('text:'.app()->getLocale(), $project->{'text:'. app()->getLocale()}, ['id'=> "summernote",'class' => 'form-control' . ($errors->has('text:'.app()->getLocale()) ? ' is-invalid' : ''), 'placeholder' => 'text']) }}
           {!! $errors->first('text:'.app()->getLocale(), '<div class="invalid-feedback">:message</div>') !!}
       </div>
       <div class="row">
-        <div class="col-12 col-md-6">
+        <div class="col-12 col-md-4">
           <div class="form-group">
             {{ Form::label(trans('global.published_at')) }}
             {{ Form::date('published_at', $project->published_at, ['class' => 'form-control' . ($errors->has('published_at') ? ' is-invalid' : ''), 'placeholder' => 'Published At']) }}
             {!! $errors->first('published_at', '<div class="invalid-feedback">:message</div>') !!}
           </div>
         </div>
-        <div class="col-12 col-md-6">
+        <div class="col-12 col-md-4">
           <div class="form-group">
               {{ Form::label(trans('global.category')) }}
               @if(Route::is('projects.create'))
@@ -33,7 +33,38 @@
               {!! $errors->first('category_id', '<div class="invalid-feedback">:message</div>') !!}
           </div>
         </div>
+        <div class="col-12 col-md-4">
+          <div class="form-group">
+            {{ Form::label(trans('global.period-time')) }}
+            {{ Form::text('period-time:'.app()->getLocale(), $project->{'period-time:'. app()->getLocale()}, ['class' => 'form-control' . ($errors->has('period-time:'.app()->getLocale()) ? ' is-invalid' : ''), 'placeholder' => trans('global.period-time')]) }}
+            {!! $errors->first('period-time:'.app()->getLocale(), '<div class="invalid-feedback">:message</div>') !!}
+          </div>
+        </div>
       </div>
+      <div class="row">
+        <div class="col-12 col-md-4">
+          <div class="form-group">
+            {{ Form::label(trans('global.company')) }}
+              {{ Form::text('company', $project->company, ['class' => 'form-control' . ($errors->has('company') ? ' is-invalid' : ''), 'placeholder' => trans('global.company')]) }}
+              {!! $errors->first('company', '<div class="invalid-feedback">:message</div>') !!}
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="form-group">
+            {{ Form::label(trans('global.location')) }}
+              {{ Form::text('location', $project->location, ['class' => 'form-control' . ($errors->has('location') ? ' is-invalid' : ''), 'placeholder' => 'location']) }}
+              {!! $errors->first('location', '<div class="invalid-feedback">:message</div>') !!}
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="form-group">
+            {{ Form::label(trans('global.project-link')) }}
+              {{ Form::text('projectLink', $project->projectLink, ['class' => 'form-control' . ($errors->has('projectLink') ? ' is-invalid' : ''), 'placeholder' => trans('global.project-link')]) }}
+              {!! $errors->first('projectLink', '<div class="invalid-feedback">:message</div>') !!}
+          </div>
+        </div>
+      </div>
+      
       <div class="form-group">
         <label for="document">{{ __('global.upload-images-projects') }}</label>
         <div class="needsclick dropzone" id="document-dropzone">
@@ -41,6 +72,12 @@
     </div>
   </div>
   <div class="box-footer mt20">
+      <div class="form-group">
+        <div class="custom-control custom-switch custom-switch-off-danger custom-switch-on-success">
+          {!!Form::checkbox('isPublished', '1', $project->isPublished, ['id' => "Publicado", 'class' => 'custom-control-input']) !!}
+          {{Form::label(trans('Publicado'), trans('global.is-published'),['class' => 'custom-control-label'])}}
+        </div>
+      </div>
       <button type="submit" class="btn btn-info">{{ __('global.save') }}</button>
   </div>
 </div>

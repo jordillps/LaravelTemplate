@@ -200,7 +200,11 @@ return [
     'create-project' => 'Create project',
     'update-project' => 'Update project',
     'show-project' => 'Show project',
-    'upload-images-projects' => 'Project images (minimum dimensions 960 x 600)',
+    'upload-images-projects' => 'Project images',
+    'period-time' => 'Project dates',
+    'company' => 'Company',
+    'location' => 'Location',
+    'project-link' => 'Project Url',
 
     //Services
     'create-service' => 'Create service',

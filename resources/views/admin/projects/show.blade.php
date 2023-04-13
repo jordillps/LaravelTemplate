@@ -29,7 +29,7 @@
                             {{ $project->{'text:'. app()->getLocale()} }}
                         </div>
                         <div class="row">
-                            <div class="col-12 col-md-6">
+                            <div class="col-12 col-md-4">
                                 <div class="callout callout-primary">
                                     <div>
                                         <strong>{{ __('global.published_at') }}:</strong>
@@ -37,12 +37,46 @@
                                     {{ $project->published_at }}
                                 </div>
                             </div>
-                            <div class="col-12 col-md-6">
+                            <div class="col-12 col-md-4">
                                 <div class="callout callout-primary">
                                     <div>
                                         <strong>{{ __('global.category') }}:</strong>
                                     </div>
                                     {{ $project->category->name }}
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4">
+                                <div class="callout callout-primary">
+                                    <div>
+                                        <strong>{{ __('global.period-time') }}:</strong>
+                                    </div>
+                                    {{ $project->{'period-time:'. app()->getLocale()} }}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-md-4">
+                                <div class="callout callout-primary">
+                                    <div>
+                                        <strong>{{ __('global.company') }}:</strong>
+                                    </div>
+                                    {{ $project->company }}
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4">
+                                <div class="callout callout-primary">
+                                    <div>
+                                        <strong>{{ __('global.location') }}:</strong>
+                                    </div>
+                                    {{ $project->location }}
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4">
+                                <div class="callout callout-primary">
+                                    <div>
+                                        <strong>{{ __('global.project-link') }}:</strong>
+                                    </div>
+                                    {{ $project->projectLink }}
                                 </div>
                             </div>
                         </div>

@@ -45,6 +45,11 @@ return [
 
 
     //Projects
+    'period-time' => 'Project dates',
+    'company' => 'Company',
+    'location' => 'Location',
+    'project-link' => 'Project Url',
+    'category' => 'Category',
 
 
     //Blog
