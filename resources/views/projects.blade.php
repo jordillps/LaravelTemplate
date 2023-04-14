@@ -43,9 +43,9 @@
 
 <!-- ==========project Start============= -->
 @foreach ($projects as $project)
-    <div class="project-details pt-120 mb-120">
+    <div class="project-details pt-80">
         <div class="container">
-            <div class="row g-4 mb-100">
+            <div class="row g-4 {{ ($loop->last) ? 'mb-120' : 'mb-20' }}">
                 <div class="col-lg-8 wow animate fadeInDown" data-wow-delay="400ms" data-wow-duration="1500ms">
                     <div class="row">
                         <div class="swiper Project1">
@@ -55,7 +55,7 @@
                                     <div class="project-img">
                                         <img class="img-fluid" src="{{ asset('img/web/projects/project---1.png') }}" alt="">
                                         <div class="batch">
-                                            <span>{{ $project->{'category:'. app()->getLocale()} }}</span>
+                                            <span>{{ $project->category->{'name:'. app()->getLocale()} }}</span>
                                         </div>
                                     </div>
                                 </div>
@@ -65,7 +65,7 @@
                                     <div class="project-img">
                                         <img class="img-fluid" src="{{ asset('img/web/projects/project---2.png') }}" alt="">
                                         <div class="batch">
-                                            <span>{{ $project->{'category:'. app()->getLocale()} }}</span>
+                                            <span>{{ $project->category->{'name:'. app()->getLocale()} }}</span>
                                         </div>
                                     </div>
                                 </div>
@@ -76,7 +76,7 @@
                         </div>
                     </div>
                     <h3 class="main-title">{{ $project->{'title:'. app()->getLocale()} }}</h3>
-                    <P class="para1">{{ $project->{'text:'. app()->getLocale()} }}</P>
+                    <p>{!! $project->{'text:'. app()->getLocale()} !!}</p>
                 </div>   
                 <div class="col-lg-4">
                     <div class="project-sidebar">
@@ -100,7 +100,7 @@
                                 </li>
                                 <li class=" wow animate fadeInUp" data-wow-delay="800ms" data-wow-duration="1500ms">
                                     <p><img src="{{ asset('img/web/icons/project-sidebar-arrrow.svg') }}" alt="">{{ __('web.project-link') }}:</p>
-                                    <h5><a href="{{ $project->projectLink }}" target="_blank">{{ $project->projectLink }}</a></h5>
+                                    <h6><a href="{{ $project->projectLink }}" target="_blank">{{ $project->projectLink }}</a></h6>
                                 </li>
                             </ul>
                         </div>

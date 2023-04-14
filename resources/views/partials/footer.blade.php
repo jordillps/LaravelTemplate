@@ -36,8 +36,11 @@
                         </ul>
                     </div>
                     <div  class="devlper-area">
-                     <span id="copyright"></span>   
-                        <span>{{ __('web.all-rights-reserved') }} | <a href="{{ route('legal-notice') }}">{{ __('web.legal-notice') }}</a> | <a href={{ route('privacy-policy') }}>{{ __('web.privacy-policy') }}</a> | <a href={{ route('cookies-policy') }}>{{ __('web.cookies-policy') }}</a></span>
+                        <div>
+                            <span id="copyright"></span>
+                            <span>{{ __('web.all-rights-reserved') }} </span>
+                        </div>
+                        <span><a href="{{ route('legal-notice') }}">{{ __('web.legal-notice') }}</a> | <a href={{ route('privacy-policy') }}>{{ __('web.privacy-policy') }}</a> | <a href={{ route('cookies-policy') }}>{{ __('web.cookies-policy') }}</a></span>
                         <div>
                             <span>{{__('web.developed-by') }} <a href="https://javajan.es/">Serveis d'Internet Javajan</a></span>
                         </div>
@@ -75,7 +78,7 @@
                             <i class="bi bi-geo-alt"></i>
                         </div>
                         <div class="location">
-                            <a href="#">{{ $setting->city }}</a>
+                            <a href="">{{ $setting->city }}</a>
                         </div>
                     </div>
                     
