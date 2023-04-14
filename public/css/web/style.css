@@ -10909,10 +10909,12 @@ margin-top: -130px;
   color: #272727;
   -webkit-transition: 0.35s;
   transition: 0.35s;
+  padding: 0.1em 0.2em;
 }
 
 .contact-page .contact-address .single-contact .content a:hover {
-  color: var(--primary-color);
+  background-color: var(--primary-color);
+  color: #fff;
 }
 
 .contact-page .contact-form-area {
@@ -10949,7 +10951,7 @@ margin-top: -130px;
 }
 
 .contact-page .contact-form-area p span:hover{
-  color: var(--primary-color);
+  background-color: var(--primary-color);
 }
 
 .contact-page .contact-form-area .form-inner {
