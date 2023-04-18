@@ -46,6 +46,10 @@
         </div>
         <div class="form-group">
             <label for="document">{{ __('global.service-image') }}</label>
+            <ul>
+              <li>{{ __('global.first-image-services') }}</li>
+              <li>{{ __('global.icon-services-images') }}</li>
+            </ul>
             <div class="needsclick dropzone" id="document-dropzone">
             </div>
         </div>

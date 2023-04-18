@@ -202,6 +202,8 @@ return [
     'company' => 'Empresa',
     'location' => 'Localización',
     'project-link' => 'Url del proyecto',
+    'first-image-home' => '1a imagen página de Inicio (570x500)',
+    'two-third-image-projects' => '2a y 3a imagen página  de Proyectos (856x445)',
 
     //Services
     'create-service' => 'Crear servicio',
@@ -209,6 +211,8 @@ return [
     'show-service' => 'Mostrar servicio',
     'service-image' => 'Imagen del servicio (Cargar solo una imagen, dimensiones máximas 100x100)',
     'icons' => 'Iconos',
+    'first-image-services' => '1a imagen del servicio, pàgina Servicios (856x383)',
+    'icon-services-images' => 'Iconos de las tecnologías del servicio(70x70)',
 
     //Tags
     'create-tag' => 'Crear etiqueta',

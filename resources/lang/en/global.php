@@ -205,6 +205,8 @@ return [
     'company' => 'Company',
     'location' => 'Location',
     'project-link' => 'Project Url',
+    'first-image-home' => '1st image Home page (570x500)',
+    'two-third-image-projects' => '2nd and 3rd image Projects page (856x445)',
 
     //Services
     'create-service' => 'Create service',
@@ -212,6 +214,8 @@ return [
     'show-service' => 'Show service',
     'service-image' => 'Service Image (Upload only one image, max dimensions 100x100)',
     'icons' => 'Icons',
+    'first-image-services' => '1st imatge servce, Services page (856x383)',
+    'icon-services-images' => 'Services technology icons(70x70)',
 
     //Tags
     'create-tag' => 'Create tag',

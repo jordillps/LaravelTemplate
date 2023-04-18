@@ -37,7 +37,9 @@
                                         @csrf
                                         <img src="{{ $media->getUrl() }}" alt="" style="max-width: 100%; position:relative;">
                                         @if ($loop->index == 0)
-                                        <strong>{{ __('global.home') }}</strong>
+                                            <strong>{{ __('global.home') }}</strong>
+                                        @else
+                                            <strong>{{ __('global.projects') }}</strong>
                                         @endif
                                         <button class="btn btn-danger" style="position:absolute; top:0; left:0;"><i class="far fa-trash-alt xs"></i></button>
                                     </form>

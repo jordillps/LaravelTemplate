@@ -67,6 +67,10 @@
       
       <div class="form-group">
         <label for="document">{{ __('global.upload-images-projects') }}</label>
+        <ul>
+          <li>{{ __('global.first-image-home') }}</li>
+          <li>{{ __('global.two-third-image-projects') }}</li>
+        </ul>
         <div class="needsclick dropzone" id="document-dropzone">
         </div>
     </div>

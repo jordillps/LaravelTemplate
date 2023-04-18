@@ -23,7 +23,7 @@
         <div class="breadcrumb-area">
            <div class="container">
                <div class="row">
-                   <div class="col-12 d-flex justify-content-sm-end justify-content-center">
+                   <div class="col-12 d-flex justify-content-end">
                         <div class="inner-breadcrumb">
                             <h2>{{ __('web.services-details') }}</h2>
                             <nav>

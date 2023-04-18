@@ -2007,9 +2007,9 @@ header.style-1 .mobile-menu-form .hotline .hotline-info h6 {
 /*================================================
 9. Home One Works
 =================================================*/
-.work-area{
+/* .work-area{
   background-image: url(../../img/web/179.png);
-}
+} */
 
 .work-area .works-top .works-tab-btn-area ul {
   margin: 0;
@@ -8273,7 +8273,7 @@ margin-top: -130px;
   font-weight: 700;
   font-size: 50px;
   line-height: 79px;
-  color: var(--secondary-color);
+  color: #0A0A0A;
 }
 
 @media (max-width: 576px) {
@@ -8301,17 +8301,18 @@ margin-top: -130px;
   font-family: "Saira", sans-serif;
   font-weight: 400;
   font-size: 17px;
-  color: #FFFFFF;
+  color: #0A0A0A;
 }
 
 .inner-page-banner .breadcrumb-area .inner-breadcrumb nav .breadcrumb .breadcrumb-item a {
   color: var(--primary-color);
+  font-weight: 600;
 }
 
 .inner-page-banner .breadcrumb-area .inner-breadcrumb nav .breadcrumb .breadcrumb-item + .breadcrumb-item::before {
   float: left;
   padding-right: 0.5rem;
-  color: var(--secondary-color);
+  color: #0A0A0A;
   content: url("../../img/web/icons/breadcrumb-icon.svg");
 }
 

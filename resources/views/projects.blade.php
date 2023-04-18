@@ -23,7 +23,7 @@
         <div class="breadcrumb-area">
            <div class="container">
                <div class="row">
-                   <div class="col-12 d-flex justify-content-sm-end justify-content-center">
+                   <div class="col-12 d-flex justify-content-end">
                         <div class="inner-breadcrumb">
                             <h2>{{ __('web.projects') }}</h2>
                             <nav>
@@ -50,26 +50,22 @@
                     <div class="row">
                         <div class="swiper Project1">
                             <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="project1-slider-wrrap">
-                                    <div class="project-img">
-                                        <img class="img-fluid" src="{{ asset('img/web/projects/project---1.png') }}" alt="">
-                                        <div class="batch">
-                                            <span>{{ $project->category->{'name:'. app()->getLocale()} }}</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="project1-slider-wrrap">
-                                    <div class="project-img">
-                                        <img class="img-fluid" src="{{ asset('img/web/projects/project---2.png') }}" alt="">
-                                        <div class="batch">
-                                            <span>{{ $project->category->{'name:'. app()->getLocale()} }}</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                                @if(count($project->getMedia('images'))>1)
+                                    @foreach($project->getMedia('images') as $media)
+                                        @if($loop->index != 0)
+                                            <div class="swiper-slide">
+                                                <div class="project1-slider-wrrap">
+                                                    <div class="project-img">
+                                                        <img class="img-fluid" src="{{ $media->getUrl() }}" alt="">
+                                                        <div class="batch">
+                                                            <span>{{ $project->category->{'name:'. app()->getLocale()} }}</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        @endif
+                                    @endforeach
+                                @endif
                             </div>
                             <div class="swiper-button-next-h"><i class="bi bi-arrow-right-short"></i></div>
                             <div class="swiper-button-prev-h"><i class="bi bi-arrow-left-short"></i></div>
