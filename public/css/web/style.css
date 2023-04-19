@@ -10161,7 +10161,7 @@ margin-top: -130px;
   font-size: 18px;
   color: #FFFFFF;
   padding: 7px 30px;
-  background: #8A8A8A;
+  background: var(--primary-color);
 }
 
 .project-details .Project1 .swiper-button-next-h {

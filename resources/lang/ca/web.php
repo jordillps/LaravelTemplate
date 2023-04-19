@@ -37,6 +37,7 @@ return [
     'degree-2' => 'Grau Enginyeria Informàtica',
     
     //Services
+    'categories' => 'Categories',
 
 
     //Projects

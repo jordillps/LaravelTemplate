@@ -39,6 +39,7 @@ return [
     'degree-2' => 'Grado de Ingeniería Informática',
 
     //Services
+    'categories' => 'Categorías',
 
 
     //Projects

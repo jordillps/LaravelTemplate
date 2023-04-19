@@ -25,11 +25,11 @@
                <div class="row">
                    <div class="col-12 d-flex justify-content-end">
                         <div class="inner-breadcrumb">
-                            <h2>{{ __('web.services-details') }}</h2>
+                            <h2>{{ __('web.services') }}</h2>
                             <nav>
                                 <ol class="breadcrumb">
                                   <li class="breadcrumb-item"><a href="{{ route('home') }}">{{ __('web.home') }}</a></li>
-                                  <li class="breadcrumb-item active" aria-current="page">{{ __('web.services-details') }}</li>
+                                  <li class="breadcrumb-item active" aria-current="page">{{ __('web.services') }}</li>
                                 </ol>
                               </nav>
                         </div>
@@ -67,7 +67,7 @@
                             <div class="services-technologies">
                                 @foreach($service->getMedia('images') as $media)
                                     @if($loop->index != 0)
-                                        <img src="{{ $media->getUrl() }}" alt="" width="70">
+                                        <img src="{{ $media->getUrl() }}" alt="" width="70" height="70">
                                     @endif
                                 @endforeach
                             </div>
@@ -78,22 +78,10 @@
             </div>
             <div class="col-lg-4 order-lg-2 order-1">
                 <div class="blog-sidebar">
-                    <div class="blog-widget-item wow animate fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
-                        <div class="search-area">
-                            <div class="blog-widget-body1">
-                                <form>
-                                    <div class="form-inner">
-                                        <input type="text" placeholder="Search...">
-                                        <button class="search--btn"><i class='bx bx-search'></i></button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
                     <div class="blog-widget-item wow animate fadeInUp" data-wow-delay="600ms" data-wow-duration="1500ms">
                         <div class="top-blog">
                             <div class="sidebar-widget-title">
-                                <h4>Categories</h4>
+                                <h4>{{ __('web.categories') }}</h4>
                                 <span></span>
                             </div>
                             <div class="blog-widget-body">
@@ -108,7 +96,7 @@
                     <div class="blog-widget-item wow animate fadeInUp" data-wow-delay="800ms" data-wow-duration="1500ms">
                         <div class="tag-area">
                             <div class="sidebar-widget-title">
-                                <h4>Follow Me</h4>
+                                <h4>{{ __('web.follow-me') }}</h4>
                                 <span></span>
                             </div>
                             <div class="blog-widget-body">

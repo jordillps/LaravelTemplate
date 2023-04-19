@@ -42,6 +42,7 @@ return [
 
 
     //Services
+    'categories' => 'Categories',
 
 
     //Projects
