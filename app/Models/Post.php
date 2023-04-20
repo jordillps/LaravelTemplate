@@ -9,6 +9,7 @@ use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 use Astrotomic\Translatable\Contracts\Translatable as TranslatableContract;
 use Astrotomic\Translatable\Translatable;
+use Carbon\Carbon;
 
 /**
  * Class Post
@@ -38,6 +39,8 @@ class Post extends Model implements HasMedia, TranslatableContract
     use Translatable;
 
     use InteractsWithMedia;
+
+    protected $dates = ['published_at'];
 
     public $translatedAttributes = ['title','excerpt', 'iframe','body'];
 
@@ -86,12 +89,5 @@ class Post extends Model implements HasMedia, TranslatableContract
         return $this->morphMany(Media::class, 'mediable');
     }
 
-    public function registerMediaConversions(Media $media = null): void
-    {
-        $this->addMediaConversion('thumb')
-              ->width(1000)
-              ->nonOptimized() //for shared hosts
-              ->nonQueued(); //for shared hosts
-    }
 
 }

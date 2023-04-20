@@ -1677,11 +1677,11 @@ header.style-1 .mobile-menu-form .hotline .hotline-info h6 {
 }
 
 .hero-style1 .hero-img {
-  background-image: url(../../img/web/home/hero-img-bg.png);
+  /* background-image: url(../../img/web/home/hero-img-bg.png);
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  height: 782px;
+  height: 782px; */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

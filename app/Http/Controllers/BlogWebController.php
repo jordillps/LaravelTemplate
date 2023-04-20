@@ -3,9 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Post;
+use Carbon\Carbon;
+use Astrotomic\Translatable\Translatable;
+use App\Models\Setting;
 
-class BlogWebController extends Controller
+
+class BlogWebController extends Controller 
 {
+    use Translatable;
     /**
      * Display a listing of the resource.
      *
@@ -13,8 +19,9 @@ class BlogWebController extends Controller
      */
     public function index()
     {
-        //
-        return view('blog');
+        
+        $posts = Post::where('isPublished', true)->orderBy('published_at', 'desc')->get();
+        return view('blog', compact('posts'));
     }
 
     /**
@@ -44,9 +51,14 @@ class BlogWebController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Post $post)
     {
         //
+        $setting = Setting::first();
+
+        $tags = $post->tags;
+        $relatedPosts = Post::where('category_id', $post->category_id)->take(3)->get();
+        return view('blog-details', compact('post', 'setting', 'tags', 'relatedPosts'));
     }
 
     /**

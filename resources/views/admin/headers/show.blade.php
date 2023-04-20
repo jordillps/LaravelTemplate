@@ -33,7 +33,7 @@
                             <div>
                                 <strong>{{ __('global.text') }}:</strong>
                             </div>
-                            {{ $header->{'text:'. app()->getLocale()} }}
+                            {!! $header->{'text:'. app()->getLocale()} !!}
                         </div>
                         <div class="callout callout-primary">
                             <div>

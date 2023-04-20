@@ -46,6 +46,7 @@ Route::get('/sobre-mi-desarollador-web', [AboutWebController::class,'index'])->n
 Route::get('/servicios-desarrollo-web-seo', [ServicesWebController::class,'index'])->name('services');
 Route::get('/proyectos-desarrollo-web-seo', [ProjectsWebController::class,'index'])->name('projects');
 Route::get('/blog-desarrollo-web', [BlogWebController::class,'index'])->name('blog');
+Route::get('/blog-desarrollo-web/{post}', [BlogWebController::class,'show'])->name('blog.show');
 Route::get('/contacto', [ContactWebController::class,'index'])->name('contact');
 
 //Legal Pages

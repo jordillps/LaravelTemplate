@@ -54,6 +54,12 @@ return [
 
 
     //Blog
+    'blog' => 'Blog',
+    'by-author' => 'Jordi Llobet',
+    'post-tag' => 'Post Tags',
+    'share-on' => 'Share On',
+    'next-post' => 'Next Post',
+    'previous-post' => 'Previous Post',
 
 
     //Contact
