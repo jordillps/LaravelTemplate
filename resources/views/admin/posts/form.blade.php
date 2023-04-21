@@ -68,6 +68,11 @@
       </div>
       <div class="form-group">
           <label for="document">{{ __('global.upload-post-images') }}</label>
+          <ul>
+            <li>{{ __('global.first-image-posts') }}</li>
+            <li>{{ __('global.second-image-posts') }}</li>
+            <li>{{ __('global.third-image-posts') }}</li>
+          </ul>
           <div class="needsclick dropzone" id="document-dropzone">
           </div>
       </div>

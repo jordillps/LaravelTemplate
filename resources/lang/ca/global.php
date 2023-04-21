@@ -194,10 +194,13 @@ return [
     'create-post' => 'Crear publicació',
     'update-post' => 'Actualitzar publicació',
     'show-post' => 'Mostrar publicació',
-    'upload-post-images' => 'Imatges de la publicació (dimensions mínimes 1000 x 666)',
+    'upload-post-images' => 'Imatges de la publicació',
     'is-published' => 'Publicar',
     'is-published-index' => 'Publicat',
     'create-warning' => "Per a crear una :item l'idioma ha de ser l'espanyol",
+    'first-image-posts' => '1a imatge pàgina blog index 370x270',
+    'second-image-posts' => '2a imatge pàgina blog detalls 770x450',
+    'third-image-posts' => '3a imatge pàgina blog detalls, publicacions recents 90x80',
 
     //Projects
     'project' => 'projecte',

@@ -60,6 +60,7 @@ return [
     'share-on' => 'Share On',
     'next-post' => 'Next Post',
     'previous-post' => 'Previous Post',
+    'related-posts' => 'Related posts',
 
 
     //Contact

@@ -117,6 +117,9 @@ class PostController extends Controller
             $post->save();
         }
 
+        $post->url = Str::slug($post->title);
+        $post->save();
+
         $tags = collect($request->get('tags'))->map(function($tag){
             return Tag::find($tag) ? $tag : '';
                 // : Tag::create(['name'=> $tag])->id;

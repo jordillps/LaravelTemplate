@@ -76,9 +76,9 @@
                 @endforeach
             </div>
 
-            {{-- {{ $posts->links() }} --}}
+            {{ $posts->links() }}
 
-            <div class="row pt-70 wow animate fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
+            {{-- <div class="row pt-70 wow animate fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
                 <nav aria-label="...">
                     <ul class="pagination justify-content-center gap-4">
                         <li class="page-item disabled">
@@ -104,7 +104,7 @@
                         </li>
                     </ul>
                 </nav>
-            </div>
+            </div> --}}
         </div>
     </div>
     <!-- ==========Blog End============= -->

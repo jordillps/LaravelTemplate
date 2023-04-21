@@ -54,10 +54,11 @@ return [
     //Blog
     'blog' => 'Blog',
     'by-author' => 'Jordi Llobet',
-    'post-tag' => 'Eiquetas',
+    'post-tag' => 'Etiquetas',
     'share-on' => 'Compartir',
     'next-post' => 'Publicación siguiente',
     'previous-post' => 'Publicación anterior',
+    'related-posts' => 'Publicaciones relacionadas',
 
 
     //Contact

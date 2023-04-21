@@ -189,9 +189,12 @@ return [
     'create-post' => 'Crear publicación',
     'update-post' => 'Actualizar publicación',
     'show-post' => 'Mostrar publicación',
-    'upload-post-images' => 'Imágenes de la publicación (dimensiones mínimas 1000 x 666)',
+    'upload-post-images' => 'Imágenes de la publicación',
     'is-published' => 'Publicar',
     'is-published-index' => 'Publicado',
+    'first-image-posts' => '1a imagen página blog índice 370x270',
+    'second-image-posts' => '2a imagen página blog detalles 770x450',
+    'third-image-posts' => '3a imagen página blog detalles, publicaciones recientes 90x80',
 
     //Projects
     'create-project' => 'Crear proyecto',

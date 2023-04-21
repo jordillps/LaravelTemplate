@@ -51,10 +51,11 @@ return [
     //Blog
     'blog' => 'Bloc',
     'by-author' => 'Jordi Llobet',
-    'post-tag' => 'Eiquetes',
+    'post-tag' => 'Etiquetes',
     'share-on' => 'Compartir',
     'next-post' => 'Publicació següent',
     'previous-post' => 'Publicació anterior',
+    'related-posts' => 'Publicacions relacionades',
 
 
     //Contact

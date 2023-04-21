@@ -20,7 +20,18 @@ class BlogWebController extends Controller
     public function index()
     {
         
-        $posts = Post::where('isPublished', true)->orderBy('published_at', 'desc')->get();
+        $posts = Post::where('isPublished', true)
+        // ->leftJoin('post_translations', 'post_translations.post_id', 'posts.id')
+        // ->where('post_translations.locale', app()->getLocale())
+        ->orderBy('published_at', 'desc')->paginate(12);
+
+        // $posts = $posts->map(function ($post) {
+        //     return collect($post->toArray())
+        //         ->only(['id', 'published_at', 'category_id','translations'])
+        //         ->all();
+        // });
+        // return  $posts;
+
         return view('blog', compact('posts'));
     }
 
@@ -57,8 +68,25 @@ class BlogWebController extends Controller
         $setting = Setting::first();
 
         $tags = $post->tags;
-        $relatedPosts = Post::where('category_id', $post->category_id)->take(3)->get();
-        return view('blog-details', compact('post', 'setting', 'tags', 'relatedPosts'));
+        $relatedPosts = Post::where('category_id', $post->category_id)
+        ->where('id','!=', $post->id)
+        ->where('isPublished', true)
+        ->take(3)
+        ->get();
+
+         //Previous post
+        $previous_id = Post::where('user_id', $post->user_id)
+        ->where('id','<', $post->id)
+        ->max('id');
+        $previous = Post::find($previous_id);
+
+        //Next post
+        $next_id = Post::where('user_id', $post->user_id)
+            ->where('id','>', $post->id)
+            ->min('id');
+        $next = Post::find($next_id);
+
+        return view('blog-details', compact('post', 'setting', 'tags', 'relatedPosts', 'previous', 'next'));
     }
 
     /**

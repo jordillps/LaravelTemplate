@@ -190,10 +190,13 @@ return [
     'create-post' => 'Create post',
     'update-post' => 'Update post',
     'show-post' => 'Show post',
-    'upload-post-images' => 'Post images (minimum dimensions 1000 x 666)',
+    'upload-post-images' => 'Post images',
     'is-published' => 'Publish',
     'is-published-index' => 'Published',
     'create-warning' => "To create a post the language must be Spanish",
+    'first-image-posts' => '1st image blog page 370x270',
+    'second-image-posts' => '2n image blog details page 770x450',
+    'third-image-posts' => '3rt image blog details page, recent posts 90x80',
 
     //Projects
     'project' => 'project',
