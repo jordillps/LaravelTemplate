@@ -1610,7 +1610,7 @@ header.style-1 .mobile-menu-form .hotline .hotline-info h6 {
 
 @media (max-width: 1399px) {
   .hero-style1 .hero-content h1 {
-    font-size: 55px;
+    font-size: 48px;
     line-height: 80px;
   }
 }
@@ -1701,7 +1701,8 @@ header.style-1 .mobile-menu-form .hotline .hotline-info h6 {
 	margin-right: 10px;
 }
 
-.hero-style1 .hero-content ul li h5{
+.hero-style1 .hero-content ul li h5,
+.hero-style1 .hero-content ul li .h5{
   display: inline-block;
 }
 

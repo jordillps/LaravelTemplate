@@ -78,7 +78,7 @@
                             <i class="bi bi-geo-alt"></i>
                         </div>
                         <div class="location">
-                            <a href="">{{ $setting->city }}</a>
+                            <a href="#" aria-label="{{ $setting->city }}">{{ $setting->city }}</a>
                         </div>
                     </div>
                     

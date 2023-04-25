@@ -30,13 +30,13 @@
             <div class="row">
                 <div class="col-lg-6 d-flex align-items-center justify-content-end p-0">
                     <div class="hero-content">
-                        <h1>{{ $header->title }}<span class="red">{!! $header->text !!}</span>
+                        <h1>{{ $header->title }}<span>{!! $header->text !!}</span>
                             <span>WEB Freelance</span></h1>
                         <div class="mb-5">
                             <ul>
-                                <li><img src="{{ asset('img/web/home/check-white.png') }}" alt=""><h5>{{ __('web.web-sites-manageables') }}</h5></li>
-                                <li><img src="{{ asset('img/web/home/check-white.png') }}" alt=""><h5>{{ __('web.web-applications') }}</h5></li>
-                                <li><img src="{{ asset('img/web/home/check-white.png') }}" alt=""><h5>{{ __('web.other-web-projects') }}</h5></li>
+                                <li><img src="{{ asset('img/web/home/check-white.png') }}" alt=""><p class="h5">{{ __('web.web-sites-manageables') }}</p></li>
+                                <li><img src="{{ asset('img/web/home/check-white.png') }}" alt=""><p class="h5">{{ __('web.web-applications') }}</p></li>
+                                <li><img src="{{ asset('img/web/home/check-white.png') }}" alt=""><p class="h5">{{ __('web.other-web-projects') }}</p></li>
                             </ul>
                         </div>
                         <a class="eg-btn btn--primary btn--lg" href="{{ route('about-me') }}">{{ __('web.about-me') }}</a>
@@ -86,7 +86,7 @@
                                 <div class="services-technologies">
                                     @foreach($service->getMedia('images') as $media)
                                         @if($loop->index != 0)
-                                            <img src="{{ $media->getUrl() }}" alt="" width="50">
+                                            <img src="{{ $media->getUrl() }}" alt="" width="50" height="auto">
                                         @endif
                                     @endforeach
                                 </div>
