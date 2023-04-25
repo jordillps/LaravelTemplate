@@ -18,7 +18,7 @@
     <link href="{{ asset('img/web/apple-touch-icon.png') }}" rel="apple-touch-icon" />
 
     <!-- TEMPLATE CSS -->
-    {{-- <link rel="stylesheet" href="{{ asset('css/web/animate.css') }}"> --}}
+    <link rel="stylesheet" href="{{ asset('css/web/animate.css') }}">
     <!-- css file link -->
     {{-- <link rel="stylesheet" href="{{ asset('css/web/all.css') }}"> --}}
     <!-- bootstrap 5 -->
@@ -44,9 +44,44 @@
     <link rel="stylesheet" href="{{ asset('css/web/style.css') }}">
 
     @stack('styles')
-    
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+        rel="dns-prefetch"
+        src="https://www.googletagmanager.com/gtag/js?id=G-EPWXYKMD2W"
+        ></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
+
+        gtag("config", "G-EPWXYKMD2W");
+        </script>
+
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s),
+            dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+        })(window, document, "script", "dataLayer", "GTM-WW8CBXL");
+    </script>
+    <!-- End Google Tag Manager -->
+
 </head>
 <body>
+    <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe rel="dns-prefetch" src="https://www.googletagmanager.com/ns.html?id=GTM-WW8CBXL" height="0"
+    width="0" style="display: none; visibility: hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     <div id="app">
         @include('partials.preloader')
 
@@ -61,10 +96,15 @@
 
 
     <!-- Cookies component https://cookie-script.com/es/ -->
-    {{-- CAT --}}
-    {{-- <script type="text/javascript" charset="UTF-8" src="//cdn.cookie-script.com/s/d02d0ed95868d190143820c514c08bbc.js"></script> --}}
-    {{-- ES --}}
-    {{-- <script type="text/javascript" charset="UTF-8" src="//cdn.cookie-script.com/s/44c211e6244e57f914141ca984d442a5.js"></script> --}}
+    
+    @if(app()->getLocale() == 'ca')
+        <!-- CAT -->
+        <script type="text/javascript" charset="UTF-8" src="//cdn.cookie-script.com/s/d02d0ed95868d190143820c514c08bbc.js"></script>
+        
+    @else
+        <!-- ES -->
+        <script type="text/javascript" charset="UTF-8" src="//cdn.cookie-script.com/s/44c211e6244e57f914141ca984d442a5.js"></script>
+    @endif
 
     <!-- js file link -->
     <script src="{{ asset('js/web/jquery-3.6.0.min.js') }}"></script>

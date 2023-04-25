@@ -88,7 +88,7 @@
           <tr>
             <td align="center" style="padding:50px 10px 50px 10px;font-size:24px;line-height:28px;font-weight:bold;background: linear-gradient(135deg, #9ff669 0%, #31de79 100%);">
                 <a href="https://formalweb.cat">
-                    <img src="https://formalweb.cat/images/core-img/logoFormalWeb_8.png" width="250" alt="" style="width:250px;height:auto;" />
+                    <img src="{{ asset('img/email-template/logoFormalWeb_8.png') }}" width="250" alt="" style="width:250px;height:auto;" />
                 </a>
             </td>
           </tr>
@@ -138,13 +138,13 @@
               <p style="margin:10px;font-size:14px;line-height:10px;">Desenvolupament i maquetació web</p>
               <p style="margin:10px;font-size:14px;line-height:10px;">
                   <a href="https://twitter.com/formalweb" aria-label="Twitter">
-                      <img src="https://formalweb.cat/images/core-img/twitter-icon.png" width="35" alt="" style="width:35px;height:auto;line-height:10px;" />
+                      <img src="{{ asset('img/email-template/twitter-icon.png') }}" width="35" alt="" style="width:35px;height:auto;line-height:10px;" />
                   </a>
                   <a href="https://es.linkedin.com/in/jordillobetpalau" aria-label="linkedin">
-                      <img src="https://formalweb.cat/images/core-img/linkedin-icon.png" width="35" alt="" style="width:35px;height:auto;line-height:10px;" />
+                      <img src="{{ asset('img/email-template/linkedin-icon.png') }}" width="35" alt="" style="width:35px;height:auto;line-height:10px;" />
                   </a>
                   <a href="https://www.facebook.com/profile.php?id=100009017877672" aria-label="linkedin">
-                    <img src="https://formalweb.cat/images/core-img/facebook-icon.png" width="35" alt="" style="width:35px;height:auto;line-height:10px;" />
+                    <img src="{{ asset('img/email-template/facebook-icon.png') }}" width="35" alt="" style="width:35px;height:auto;line-height:10px;" />
                   </a>
               </p>
               <p style="margin:10px;font-size:14px;line-height:10px;">
