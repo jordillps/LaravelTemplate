@@ -14,8 +14,9 @@ class CookiesPolicyController extends Controller
      */
     public function index()
     {
-        $cookiesPolicy =  LegalPage::where('url','politica-cookies');
-         return view('cookies-policy', compact('cookiesPolicy')); 
+        $cookiesPolicy =  LegalPage::where('url','politica-cookies')->first();
+
+        return view('cookies-policy', compact('cookiesPolicy')); 
     }
 
     /**

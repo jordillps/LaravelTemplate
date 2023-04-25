@@ -14,8 +14,8 @@ class LegalNoticeController extends Controller
      */
     public function index()
     {
-        $legalNotice =  LegalPage::where('url','aviso-legal');
-        return view('legal-notice')->with('legalNotice', $legalNotice); 
+        $legalNotice =  LegalPage::where('url','aviso-legal')->first();
+        return view('legal-notice', compact('legalNotice')); 
     }
 
     /**

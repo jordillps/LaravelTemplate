@@ -14,7 +14,7 @@ class PrivacyPolicyController extends Controller
      */
     public function index()
     {
-        $privacyPolicy =  LegalPage::where('url','politica-privacidad');
+        $privacyPolicy =  LegalPage::where('url','politica-privacidad')->first();
         return view('privacy-policy', compact('privacyPolicy')); 
     }
 
