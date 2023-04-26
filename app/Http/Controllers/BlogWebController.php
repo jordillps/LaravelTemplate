@@ -22,6 +22,7 @@ class BlogWebController extends Controller
     public function index()
     {
         SEOTools::setTitle('Blog desarrollo web');
+        SEOTools::setDescription('Desarrollador web Freelance.Diseño web responsive. Publicaciones sobre lenguajes de programación HTML,CSS,PHP,Javascript, Laravel, MySql. Trabajo en remoto Git');
         
         $posts = Post::where('isPublished', true)
         // ->leftJoin('post_translations', 'post_translations.post_id', 'posts.id')

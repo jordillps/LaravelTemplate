@@ -19,6 +19,7 @@ class AboutWebController extends Controller
         $about = About::first();
 
         SEOTools::setTitle('Sobre mi');
+        SEOTools::setDescription('Desarrollador web Freelance.Diseño web responsive. Lenguajes de programación HTML,CSS,PHP,Javascript, Laravel, MySql. Trabajo en remoto Git. Optimitzación SEO.');
 
         return view('about-me', compact('about'));
     }

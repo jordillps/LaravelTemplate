@@ -17,6 +17,8 @@ class ServicesWebController extends Controller
     public function index()
     {
         SEOTools::setTitle('Servicios web');
+
+        SEOTools::setDescription('Desarrollador web Freelance. Diseño web responsive. Proyectos y Aplicaciones web. Proyectos de otras empresas. Lenguajes HTML,CSS,PHP,Javascript, Laravel, MySql');
         
         $services = Service::all();
 

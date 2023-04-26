@@ -16,6 +16,7 @@ class ContactWebController extends Controller
     public function index()
     {
         SEOTools::setTitle('Contacto');
+        SEOTools::setDescription('Desarrollador web Freelance.Diseño web responsive. Lenguajes de programación HTML,CSS,PHP,Javascript, Laravel, MySql. Contacto con Formal Web.');
         return view('contact');
     }
 

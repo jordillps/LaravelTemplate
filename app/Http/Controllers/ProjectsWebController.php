@@ -17,6 +17,8 @@ class ProjectsWebController extends Controller
     {
         SEOTools::setTitle('Proyectos web');
 
+        SEOTools::setDescription('Desarrollador web Freelance.Diseño web responsive. Lenguajes HTML,CSS,PHP,Javascript, Laravel, MySql. Trabajo en remoto Git. Proyectos web. Aplicaciones web.');
+
         $projects = Project::where('isPublished', true)->get();
         
         return view('projects', compact('projects'));

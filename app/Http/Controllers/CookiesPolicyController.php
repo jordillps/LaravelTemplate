@@ -17,6 +17,8 @@ class CookiesPolicyController extends Controller
     {
         SEOTools::setTitle('Política cookies');
 
+        SEOTools::setDescription('Desarrollador web Freelance.Diseño web responsive. Lenguajes HTML,CSS,PHP,Javascript, Laravel, MySql. Política de cookies');
+
         $cookiesPolicy =  LegalPage::where('url','politica-cookies')->first();
 
         return view('cookies-policy', compact('cookiesPolicy')); 

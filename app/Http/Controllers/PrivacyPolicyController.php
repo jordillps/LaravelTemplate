@@ -17,6 +17,8 @@ class PrivacyPolicyController extends Controller
     {
         SEOTools::setTitle('Política privacidad');
 
+        SEOTools::setDescription('Desarrollador web Freelance.Diseño web responsive. Lenguajes HTML,CSS,PHP,Javascript, Laravel, MySql. Política de privacidad');
+
         $privacyPolicy =  LegalPage::where('url','politica-privacidad')->first();
         return view('privacy-policy', compact('privacyPolicy')); 
     }

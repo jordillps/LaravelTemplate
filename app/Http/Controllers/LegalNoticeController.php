@@ -18,6 +18,8 @@ class LegalNoticeController extends Controller
     {
         SEOTools::setTitle('Aviso Legal');
 
+        SEOTools::setDescription('Desarrollador web Freelance.Diseño web responsive. Optimización SEO. Lenguajes HTML,CSS,PHP,Javascript, Laravel, MySql. Aviso Legal');
+
         $legalNotice =  LegalPage::where('url','aviso-legal')->first();
         return view('legal-notice', compact('legalNotice')); 
     }
