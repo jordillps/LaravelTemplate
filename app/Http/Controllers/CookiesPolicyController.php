@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\LegalPage;
+use Artesaos\SEOTools\Facades\SEOTools;
 
 class CookiesPolicyController extends Controller
 {
@@ -14,6 +15,8 @@ class CookiesPolicyController extends Controller
      */
     public function index()
     {
+        SEOTools::setTitle('Política cookies');
+
         $cookiesPolicy =  LegalPage::where('url','politica-cookies')->first();
 
         return view('cookies-policy', compact('cookiesPolicy')); 

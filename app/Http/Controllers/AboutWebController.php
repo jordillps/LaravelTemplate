@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\About;
+use Artesaos\SEOTools\Facades\SEOTools;
+
 
 class AboutWebController extends Controller
 {
@@ -15,6 +17,8 @@ class AboutWebController extends Controller
     public function index()
     {
         $about = About::first();
+
+        SEOTools::setTitle('Sobre mi');
 
         return view('about-me', compact('about'));
     }

@@ -27,6 +27,8 @@ class HomeWebController extends Controller
      */
     public function index()
     {
+        SEOTools::setTitle('Formal Web');
+
         $page = Page::where('name', 'home')->first('id');
 
         //Take the last one

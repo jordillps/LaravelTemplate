@@ -7,6 +7,8 @@ use App\Models\Post;
 use Carbon\Carbon;
 use Astrotomic\Translatable\Translatable;
 use App\Models\Setting;
+use Artesaos\SEOTools\Facades\SEOTools;
+
 
 
 class BlogWebController extends Controller 
@@ -19,6 +21,7 @@ class BlogWebController extends Controller
      */
     public function index()
     {
+        SEOTools::setTitle('Blog desarrollo web');
         
         $posts = Post::where('isPublished', true)
         // ->leftJoin('post_translations', 'post_translations.post_id', 'posts.id')

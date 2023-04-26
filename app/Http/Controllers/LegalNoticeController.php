@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\LegalPage;
+use Artesaos\SEOTools\Facades\SEOTools;
+
 
 class LegalNoticeController extends Controller
 {
@@ -14,6 +16,8 @@ class LegalNoticeController extends Controller
      */
     public function index()
     {
+        SEOTools::setTitle('Aviso Legal');
+
         $legalNotice =  LegalPage::where('url','aviso-legal')->first();
         return view('legal-notice', compact('legalNotice')); 
     }

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Artesaos\SEOTools\Facades\SEOTools;
+
 
 class ContactWebController extends Controller
 {
@@ -13,7 +15,7 @@ class ContactWebController extends Controller
      */
     public function index()
     {
-        //
+        SEOTools::setTitle('Contacto');
         return view('contact');
     }
 

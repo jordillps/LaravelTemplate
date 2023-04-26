@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Service;
 use App\Models\Setting;
+use Artesaos\SEOTools\Facades\SEOTools;
 
 class ServicesWebController extends Controller
 {
@@ -15,6 +16,8 @@ class ServicesWebController extends Controller
      */
     public function index()
     {
+        SEOTools::setTitle('Servicios web');
+        
         $services = Service::all();
 
         $setting = Setting::first();

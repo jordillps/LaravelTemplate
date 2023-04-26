@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\LegalPage;
+use Artesaos\SEOTools\Facades\SEOTools;
 
 class PrivacyPolicyController extends Controller
 {
@@ -14,6 +15,8 @@ class PrivacyPolicyController extends Controller
      */
     public function index()
     {
+        SEOTools::setTitle('Política privacidad');
+
         $privacyPolicy =  LegalPage::where('url','politica-privacidad')->first();
         return view('privacy-policy', compact('privacyPolicy')); 
     }
