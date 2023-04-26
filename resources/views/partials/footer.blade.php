@@ -9,7 +9,7 @@
             <div class="col-lg-3 col-sm-6 d-flex align-items-center wow animate fadeInLeft" data-wow-delay="300ms" data-wow-duration="1500ms">
                 <div class="footer-wrrap">
                     <div class="footer-icon">
-                        <img src="{{ asset('img/logoFormalWeb_8.png') }}" alt="">
+                        <img src="{{ asset('img/logoFormalWeb_8.png') }}" alt="logo Formal Web" title="logo Formal Web">
                     </div>
                     <p>{{ $setting->text }}</p>
                     <a class="footer-btn eg-btn btn--primary btn--lg mb-30" href="{{ route('contact') }}">{{ __('web.lets-chat') }}</a>

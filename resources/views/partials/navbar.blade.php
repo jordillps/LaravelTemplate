@@ -5,12 +5,12 @@
 
 <header class="header-area style-1">
   <div class="header-logo">
-      <a href="{{ route('home') }}"><img alt="image" src="{{ asset('img/logoFormalWeb_8.png') }}" ></a>
+      <a href="{{ route('home') }}"><img alt="logo Formal Web" src="{{ asset('img/logoFormalWeb_8.png') }}" title="logo Formal Web"></a>
   </div>
   <div class="main-menu">
       <div class="mobile-logo-area d-lg-none d-flex justify-content-between align-items-center">
           <div class="mobile-logo-wrap ">
-              <a href="{{ route('home') }}"><img alt="image" src="{{ asset('img/logoFormalWebMobile.png') }}" ></a>
+              <a href="{{ route('home') }}"><img alt="logo Formal Web" src="{{ asset('img/logoFormalWebMobile.png') }}" title="logo Formal Web"></a>
 
           </div>
           <div class="menu-close-btn">

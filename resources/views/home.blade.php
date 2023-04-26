@@ -86,7 +86,7 @@
                                 <div class="services-technologies">
                                     @foreach($service->getMedia('images') as $media)
                                         @if($loop->index != 0)
-                                            <img src="{{ $media->getUrl() }}" alt="" width="50" height="auto">
+                                            <img src="{{ $media->getUrl() }}" alt="lenguajes de programacion web" title="lenguajes de programacion web" width="50" height="auto">
                                         @endif
                                     @endforeach
                                 </div>
