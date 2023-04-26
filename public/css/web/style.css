@@ -2890,11 +2890,13 @@ header.style-1 .mobile-menu-form .hotline .hotline-info h6 {
   color: var(--secondary-color);
 }
 
+.home-1-blog .blog-wrrap .blog-content .h4, 
 .home-1-blog .blog-wrrap .blog-content h4 {
   margin: 0;
   padding-top: 15px;
 }
 
+.home-1-blog .blog-wrrap .blog-content .h4 a,
 .home-1-blog .blog-wrrap .blog-content h4 a {
   font-family: "Saira", sans-serif;
   font-weight: 600;
@@ -2906,6 +2908,7 @@ header.style-1 .mobile-menu-form .hotline .hotline-info h6 {
   text-transform: capitalize;
 }
 
+.home-1-blog .blog-wrrap .blog-content .h4 a:hover,
 .home-1-blog .blog-wrrap .blog-content h4 a:hover {
   color: var(--primary-color);
 }
@@ -8411,9 +8414,10 @@ margin-top: -130px;
   font-family: "Outfit", sans-serif;
   font-weight: 500;
   font-size: 18px;
-  color: #8A8A8A;
+  color: #3d3d3d;
 }
 
+.about-work .about-content .about-tab .about-details ul li .h5,
 .about-work .about-content .about-tab .about-details ul li h5 {
   font-family: "Saira", sans-serif;
   font-weight: 600;
@@ -9233,6 +9237,7 @@ margin-top: -130px;
   background: var(--primary-color);
 }
 
+.blog-sidebar .blog-widget-item .sidebar-widget-title .h4,
 .blog-sidebar .blog-widget-item .sidebar-widget-title h4 {
   font-family: "Outfit", sans-serif;
   font-weight: 500;
@@ -9498,6 +9503,7 @@ margin-top: -130px;
   margin-bottom: 35px;
 }
 
+.blog-details .blog-dt-wrrap .blog-tag .h4,
 .blog-details .blog-dt-wrrap .blog-tag h4 {
   font-family: "Outfit", sans-serif;
   font-weight: 600;
@@ -10305,7 +10311,7 @@ margin-top: -130px;
   font-family: "Saira", sans-serif;
   font-weight: 400;
   font-size: 15px;
-  color: #8A8A8A;
+  color: #3d3d3d;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -10318,6 +10324,7 @@ margin-top: -130px;
   margin-right: 10px;
 }
 
+.project-details .project-sidebar .client-deatils ul li .h5,
 .project-details .project-sidebar .client-deatils ul li h5 {
   margin-bottom: 0px;
   font-family: "Saira", sans-serif;
@@ -10326,11 +10333,13 @@ margin-top: -130px;
   color: #0A0A0A;
 }
 
+.project-details .project-sidebar .client-deatils ul li .h6,
 .project-details .project-sidebar .client-deatils ul li h6 {
   margin-bottom: 0px;
   font-family: "Saira", sans-serif;
   font-weight: 600;
   color: #0A0A0A;
+  font-size: 1rem;
 }
 
 .project-details .project-sidebar .client-deatils ul li:last-child {

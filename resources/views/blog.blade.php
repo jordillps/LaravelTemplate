@@ -69,7 +69,7 @@
                                         @endif
                                     </div>
                                 </div>
-                                <h4><a href="{{ route('blog.show', $post) }}">{{ $post->{'title:'. app()->getLocale()} }}</a></h4>
+                                <p class="h4"><a href="{{ route('blog.show', $post) }}">{{ $post->{'title:'. app()->getLocale()} }}</a></p>
                             </div>
                         </div>
                     </div>

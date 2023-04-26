@@ -83,15 +83,15 @@
                                         <ul>
                                             <li>
                                                 <span>{{ __('web.name') }}</span>
-                                                <h5>{{ $about->name }}</h5>
+                                                <p class="h5">{{ $about->name }}</p>
                                             </li>
                                             <li>
                                                 <span>{{ __('web.email') }}</span>
-                                                <h5>{{ $about->email }}</h5>
+                                                <p class="h5">{{ $about->email }}</p>
                                             </li>
                                             <li>
                                                 <span>{{ __('web.languages') }}</span>
-                                                <h5>{{ $about->{'languages:'. app()->getLocale()} }}</h5>
+                                                <p class="h5">{{ $about->{'languages:'. app()->getLocale()} }}</p>
                                             </li>
                                         </ul>
                                     </div>
@@ -101,11 +101,11 @@
                                         <ul>
                                             <li>
                                                 <span>{{ __('web.phone') }}</span>
-                                                <h5>{{ $about->phone }}</h5>
+                                                <p class="h5">{{ $about->phone }}</p>
                                             </li>
                                             <li>
                                                 <span>{{ __('web.city') }}</span>
-                                                <h5>{{ $about->city }}</h5>
+                                                <p class="h5">{{ $about->city }}</p>
                                             </li>
                                         </ul>
                                     </div>
@@ -119,18 +119,18 @@
                                             <h3 class="resume-title">{{ __('web.education') }}</h3>
                                             <div class="resume-item pb-0">
                                                 <h4>{{ __('web.degree-1') }}</h4>
-                                                <h5>1987 - 1990</h5>
+                                                <p class="h5">1987 - 1990</p>
                                                 <p><em>Universitat Politècnica de Catalunya</em></p>
                                             </div>
                                             <div class="resume-item pb-0">
                                                 <h4>{{ __('web.degree-2') }}</h4>
-                                                <h5>2012 - 2016</h5>
+                                                <p class="h5">2012 - 2016</p>
                                                 <p><em>Universitat Oberta de Catalunya</em></p>
                                             </div>
                                             <h3 class="resume-title">{{ __('web.experience') }}</h3>
                                             <div class="resume-item">
                                                 <h4>{{ $about->{'profession:'. app()->getLocale()} }}</h4>
-                                                <h5>2019 - Actualitat</h5>
+                                                <p class="h5">2019 - Actualitat</p>
                                                 {{-- <p><em>{{ __('web.text-about') }}</em></p> --}}
                                             </div>
                                         </div>

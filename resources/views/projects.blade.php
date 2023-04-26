@@ -80,23 +80,23 @@
                             <ul>
                                 <li class=" wow animate fadeInUp" data-wow-delay="500ms" data-wow-duration="1500ms">
                                     <p><img src="{{ asset('img/web/icons/project-sidebar-arrrow.svg') }}" alt="">{{ __('web.company') }}:</p>
-                                    <h5>{{ $project->company }}</h5>
+                                    <p class="h5">{{ $project->company }}</p>
                                 </li>
                                 <li class=" wow animate fadeInUp" data-wow-delay="600ms" data-wow-duration="1500ms">
                                     <p><img src="{{ asset('img/web/icons/project-sidebar-arrrow.svg') }}" alt="">{{ __('web.location') }}:</p>
-                                    <h5>{{ $project->location }}</h5>
+                                    <p class="h5">{{ $project->location }}</p>
                                 </li>
                                 <li class=" wow animate fadeInUp" data-wow-delay="700ms" data-wow-duration="1500ms">
                                     <p><img src="{{ asset('img/web/icons/project-sidebar-arrrow.svg') }}" alt="">{{ __('web.category') }}:</p>
-                                    <h5>{{ $project->category->{'name:'. app()->getLocale()} }}</h5>
+                                    <p class="h5">{{ $project->category->{'name:'. app()->getLocale()} }}</p>
                                 </li>
                                 <li class=" wow animate fadeInUp" data-wow-delay="800ms" data-wow-duration="1500ms">
                                     <p><img src="{{ asset('img/web/icons/project-sidebar-arrrow.svg') }}" alt="">{{ __('web.period-time') }}:</p>
-                                    <h5>{{ $project->{'period-time:'. app()->getLocale()} }}</h5>
+                                    <p class="h5">{{ $project->{'period-time:'. app()->getLocale()} }}</p>
                                 </li>
                                 <li class=" wow animate fadeInUp" data-wow-delay="800ms" data-wow-duration="1500ms">
                                     <p><img src="{{ asset('img/web/icons/project-sidebar-arrrow.svg') }}" alt="">{{ __('web.project-link') }}:</p>
-                                    <h6><a href="{{ $project->projectLink }}" target="_blank">{{ $project->projectLink }}</a></h6>
+                                    <p class="h6"><a href="{{ $project->projectLink }}" target="_blank">{{ $project->projectLink }}</a></p>
                                 </li>
                             </ul>
                         </div>

@@ -78,10 +78,10 @@
                         <div class="blog-tag">
                             <div class="row g-3">
                                 <div class="col-md-6 d-flex justify-content-md-start justify-content-center align-items-center">
-                                    <h4>{{ __('web.share-on') }}</h4>
+                                    <p class="h4">{{ __('web.share-on') }}</p>
                                     <ul class="social-icon d-flex align-items-center flex-wrap">
-                                        <li><a href="https://www.facebook.com/"><i class="bx bxl-facebook"></i></a></li>
-                                        <li><a href="https://twitter.com/"><i class="bx bxl-twitter"></i></a></li>
+                                        <li><a href="https://www.facebook.com/" aria-label="facebook"><i class="bx bxl-facebook"></i></a></li>
+                                        <li><a href="https://twitter.com/" aria-label="twitter"><i class="bx bxl-twitter"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -120,7 +120,7 @@
                     <div class="blog-widget-item wow animate fadeInUp" data-wow-delay="300ms" data-wow-duration="1500ms">
                         <div class="blog-category">
                             <div class="sidebar-widget-title">
-                                <h4>{{ __('web.related-posts') }}</h4>
+                                <p class="h4">{{ __('web.related-posts') }}</p>
                                 <span></span>
                             </div>
                             <div class="blog-widget-body">
@@ -130,7 +130,7 @@
                                             <li class="single-post d-flex align-items-center">
                                                 @if(count($post->getMedia('images'))>2)
                                                     <div class="post-img">
-                                                        <img alt="image" src="{{ $post->getMedia('images')[2]->getUrl() }}">
+                                                        <img alt="image" src="{{ $post->getMedia('images')[2]->getUrl() }}" alt="">
                                                     </div>
                                                 @endif
                                                 <div class="post-content">
@@ -152,7 +152,7 @@
                     <div class="blog-widget-item wow animate fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
                         <div class="top-blog">
                             <div class="sidebar-widget-title">
-                                <h4>{{ __('web.category') }}</h4>
+                                <p class="h4">{{ __('web.category') }}</p>
                                 <span></span>
                             </div>
                             <div class="blog-widget-body">
@@ -168,14 +168,14 @@
                     <div class="blog-widget-item wow animate fadeInUp" data-wow-delay="500ms" data-wow-duration="1500ms">
                         <div class="tag-area">
                             <div class="sidebar-widget-title">
-                                <h4>{{ __('web.follow-me') }}</h4>
+                                <p class="h4">{{ __('web.follow-me') }}</p>
                                 <span></span>
                             </div>
                             <div class="blog-widget-body">
                                 <ul class="sidebar-social-list gap-4">
-                                    <li><a href="{{ $setting->linkedin_url }}" target="blank" aria-label="linkedin"><i class="bx bxl-facebook"></i></a></li>
-                                    <li><a href="{{ $setting->twitter_url }}" target="blank" aria-label="twitter"><i class="bx bxl-twitter"></i></a></li>
-                                    <li><a href="{{ $setting->linkedin_url }}" target="blank" aria-label="linkedin"><i class="bx bxl-linkedin"></i></a></li>
+                                    <li><a href="{{ $setting->facebook_url }}" aria-label="facebook" target="blank" aria-label="linkedin"><i class="bx bxl-facebook"></i></a></li>
+                                    <li><a href="{{ $setting->twitter_url }}" aria-label="twitter" target="blank" aria-label="twitter"><i class="bx bxl-twitter"></i></a></li>
+                                    <li><a href="{{ $setting->linkedin_url }}" aria-label="linkedin" target="blank" aria-label="linkedin"><i class="bx bxl-linkedin"></i></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -183,7 +183,7 @@
                     <div class="blog-widget-item wow animate fadeInUp" data-wow-delay="600ms" data-wow-duration="1500ms">
                         <div class="tag-area">
                             <div class="sidebar-widget-title">
-                                <h4>{{ __('web.post-tag') }}</h4>
+                                <p class="h4">{{ __('web.post-tag') }}</p>
                                 <span></span>
                             </div>
                             <div class="blog-widget-body">
