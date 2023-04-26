@@ -34,9 +34,9 @@
                             <span>WEB Freelance</span></h1>
                         <div class="mb-5">
                             <ul>
-                                <li><img src="{{ asset('img/web/home/check-white.png') }}" alt=""><p class="h5">{{ __('web.web-sites-manageables') }}</p></li>
-                                <li><img src="{{ asset('img/web/home/check-white.png') }}" alt=""><p class="h5">{{ __('web.web-applications') }}</p></li>
-                                <li><img src="{{ asset('img/web/home/check-white.png') }}" alt=""><p class="h5">{{ __('web.other-web-projects') }}</p></li>
+                                <li><img src="{{ asset('img/web/home/check-white.png') }}" alt="{{ __('web.web-sites-manageables') }}" title="{{ __('web.web-sites-manageables') }}"><p class="h5">{{ __('web.web-sites-manageables') }}</p></li>
+                                <li><img src="{{ asset('img/web/home/check-white.png') }}" alt="{{ __('web.web-applications') }}" title="{{ __('web.web-applications') }}"><p class="h5">{{ __('web.web-applications') }}</p></li>
+                                <li><img src="{{ asset('img/web/home/check-white.png') }}" alt="{{ __('web.other-web-projects') }}" title="{{ __('web.other-web-projects') }}"><p class="h5">{{ __('web.other-web-projects') }}</p></li>
                             </ul>
                         </div>
                         <a class="eg-btn btn--primary btn--lg" href="{{ route('about-me') }}">{{ __('web.about-me') }}</a>
@@ -45,7 +45,7 @@
                 <div class="col-lg-6 p-0">
                     <div class="hero-img">
                         @foreach ($header->getMedia('images') as $media)
-                            <img class="img-fluid" src="{{ $media->getUrl() }}" alt="">                 
+                            <img class="img-fluid" src="{{ $media->getUrl() }}" alt="web developer freelance" title="web developer freelance">                 
                         @endforeach
                     </div>
                 </div>
@@ -74,7 +74,7 @@
                         <div class="services-wrrap">
                             <div class="services-top d-flex justify-content-between align-items-center">
                                 <div class="icon">
-                                    <img src="{{ asset('img/web/icons/'. $service->icon) }}" alt="" width="60">
+                                    <img src="{{ asset('img/web/icons/'. $service->icon) }}" alt="{{ $service->{'title:'. app()->getLocale()} }}" title="{{ $service->{'title:'. app()->getLocale()} }}" width="60">
                                 </div>
                                 <h2>{{ $loop->index + 1 }}</h2>
                             </div>
@@ -93,7 +93,7 @@
                             @endif
                             <div class="read-more-btn d-flex justify-content-end mt-3">
                                 <a href="{{ route('services') }}">{{ __('web.read-more') }}
-                                    <span><img src="{{ asset('img/web/icons/arrow-right.svg') }}" alt=""></span>
+                                    <span><img src="{{ asset('img/web/icons/arrow-right.svg') }}" alt="{{ $service->{'title:'. app()->getLocale()} }}" title="{{ $service->{'title:'. app()->getLocale()} }}"></span>
                                 </a>
                             </div>
                         </div>
@@ -128,7 +128,7 @@
                                     </div>
                                     @if(count($project->getMedia('images'))>0)
                                         <div class="works-img">
-                                            <img class="big-img" src="{{ $project->getMedia('images')[0]->getUrl() }}" alt="">
+                                            <img class="big-img" src="{{ $project->getMedia('images')[0]->getUrl() }}" alt="{{ $project->title }}" title="{{ $project->title }}">
                                         </div>
                                     @endif
                                     <div class="overlay">
@@ -144,7 +144,7 @@
                                     </div>
                                     <div class="read-more-btn d-flex justify-content-end d-lg-none">
                                         <a href="{{ route('services') }}">{{ __('web.read-more') }}
-                                            <span><img src="{{ asset('img/web/icons/arrow-right.svg') }}" alt=""></span>
+                                            <span><img src="{{ asset('img/web/icons/arrow-right.svg') }}" alt="{{ $project->title }}" title="{{ $project->title }}"></span>
                                         </a>
                                     </div>
                                 </div>

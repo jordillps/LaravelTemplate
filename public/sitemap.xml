@@ -7,24 +7,6 @@
         <priority>0.8</priority>
         </url>
     <url>
-        <loc>http://laraveltest.dev</loc>
-        <lastmod>2023-04-26T09:13:47+02:00</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.8</priority>
-        </url>
-    <url>
-        <loc>https://formalweb.cat/locale/en</loc>
-        <lastmod>2023-04-26T09:13:47+02:00</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.8</priority>
-        </url>
-    <url>
-        <loc>https://formalweb.cat/locale/es</loc>
-        <lastmod>2023-04-26T09:13:47+02:00</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.8</priority>
-        </url>
-    <url>
         <loc>https://formalweb.cat/servicios-desarrollo-web-seo</loc>
         <lastmod>2023-04-26T09:13:47+02:00</lastmod>
         <changefreq>daily</changefreq>

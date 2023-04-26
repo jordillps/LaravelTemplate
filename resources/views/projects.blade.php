@@ -28,7 +28,7 @@
                             <h2>{{ __('web.projects') }}</h2>
                             <nav>
                                 <ol class="breadcrumb">
-                                  <li class="breadcrumb-item"><a href="index.html">{{ __('web.home') }}</a></li>
+                                  <li class="breadcrumb-item"><a href="{{ route('home') }}">{{ __('web.home') }}</a></li>
                                   <li class="breadcrumb-item active" aria-current="page">{{ __('web.projects') }}</li>
                                 </ol>
                               </nav>
@@ -56,7 +56,7 @@
                                             <div class="swiper-slide">
                                                 <div class="project1-slider-wrrap">
                                                     <div class="project-img">
-                                                        <img class="img-fluid" src="{{ $media->getUrl() }}" alt="">
+                                                        <img class="img-fluid" src="{{ $media->getUrl() }}" alt="{{ $project->category->{'name:'. app()->getLocale()} }}" title="{{ $project->category->{'name:'. app()->getLocale()} }}">
                                                         <div class="batch">
                                                             <span>{{ $project->category->{'name:'. app()->getLocale()} }}</span>
                                                         </div>
@@ -79,23 +79,23 @@
                         <div class="client-deatils">
                             <ul>
                                 <li class=" wow animate fadeInUp" data-wow-delay="500ms" data-wow-duration="1500ms">
-                                    <p><img src="{{ asset('img/web/icons/project-sidebar-arrrow.svg') }}" alt="">{{ __('web.company') }}:</p>
+                                    <p><img src="{{ asset('img/web/icons/project-sidebar-arrrow.svg') }}" alt="{{ $project->company }}" title="{{ $project->company }}">{{ __('web.company') }}:</p>
                                     <p class="h5">{{ $project->company }}</p>
                                 </li>
                                 <li class=" wow animate fadeInUp" data-wow-delay="600ms" data-wow-duration="1500ms">
-                                    <p><img src="{{ asset('img/web/icons/project-sidebar-arrrow.svg') }}" alt="">{{ __('web.location') }}:</p>
+                                    <p><img src="{{ asset('img/web/icons/project-sidebar-arrrow.svg') }}" alt="{{ $project->location }}" title="{{ $project->location }}">{{ __('web.location') }}:</p>
                                     <p class="h5">{{ $project->location }}</p>
                                 </li>
                                 <li class=" wow animate fadeInUp" data-wow-delay="700ms" data-wow-duration="1500ms">
-                                    <p><img src="{{ asset('img/web/icons/project-sidebar-arrrow.svg') }}" alt="">{{ __('web.category') }}:</p>
+                                    <p><img src="{{ asset('img/web/icons/project-sidebar-arrrow.svg') }}" alt="{{ $project->category->{'name:'. app()->getLocale()} }}" title="{{ $project->category->{'name:'. app()->getLocale()} }}">{{ __('web.category') }}:</p>
                                     <p class="h5">{{ $project->category->{'name:'. app()->getLocale()} }}</p>
                                 </li>
                                 <li class=" wow animate fadeInUp" data-wow-delay="800ms" data-wow-duration="1500ms">
-                                    <p><img src="{{ asset('img/web/icons/project-sidebar-arrrow.svg') }}" alt="">{{ __('web.period-time') }}:</p>
+                                    <p><img src="{{ asset('img/web/icons/project-sidebar-arrrow.svg') }}" alt="{{ $project->{'period-time:'. app()->getLocale()} }}" title="{{ $project->{'period-time:'. app()->getLocale()} }}">{{ __('web.period-time') }}:</p>
                                     <p class="h5">{{ $project->{'period-time:'. app()->getLocale()} }}</p>
                                 </li>
                                 <li class=" wow animate fadeInUp" data-wow-delay="800ms" data-wow-duration="1500ms">
-                                    <p><img src="{{ asset('img/web/icons/project-sidebar-arrrow.svg') }}" alt="">{{ __('web.project-link') }}:</p>
+                                    <p><img src="{{ asset('img/web/icons/project-sidebar-arrrow.svg') }}" alt="{{ $project->projectLink }}" title="{{ $project->projectLink }}">{{ __('web.project-link') }}:</p>
                                     <p class="h6"><a href="{{ $project->projectLink }}" target="_blank">{{ $project->projectLink }}</a></p>
                                 </li>
                             </ul>

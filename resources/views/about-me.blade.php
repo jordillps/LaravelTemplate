@@ -48,7 +48,8 @@
             <div class="col-lg-5 d-flex justify-content-center wow animate fadeInUp" data-wow-delay="300ms" data-wow-duration="1500ms">
                 @if(count($about->getMedia('images'))>0)
                     <div class="about-img">
-                        <img class="img-fluid" src="{{ $about->getMedia('images')[0]->getUrl() }}" alt="">
+                        <img class="img-fluid" src="{{ $about->getMedia('images')[0]->getUrl() }}" alt="desarrollador web freelance"
+                        title="desarrollador web freelance">
                     </div>
                 @endif
             </div>

@@ -66,7 +66,7 @@
                         </div>
                         <div class="content">
                             <h3>{{ __('web.email') }}</h3>
-                            <a href="tell:{{ $setting->email }}">{{ $setting->email }}</a>
+                            <a href="mailto:{{ $setting->email }}">{{ $setting->email }}</a>
                         </div>
                     </div>
                 </div>

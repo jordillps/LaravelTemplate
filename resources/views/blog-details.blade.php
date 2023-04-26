@@ -50,7 +50,7 @@
                 <div class="blog-dt-wrrap">
                     @if(count($post->getMedia('images'))>1)
                         <div class="blog-dt-img">
-                            <img class="img-fluid" src="{{ $post->getMedia('images')[1]->getUrl() }}" alt="">
+                            <img class="img-fluid" src="{{ $post->getMedia('images')[1]->getUrl() }}" alt="{{ $post->{'title:'. app()->getLocale()} }}" title="{{ $post->{'title:'. app()->getLocale()} }}">
                         </div>
                     @endif
                     
@@ -69,7 +69,7 @@
                         <h2>{{ $post->{'title:'. app()->getLocale()} }}</h2>
                         <p>{!! $post->{'body:'. app()->getLocale()} !!}</p>
                         <blockquote>
-                            <img src="{{ asset('img/web/icons/blockquote-icon.svg') }}" alt="">
+                            <img src="{{ asset('img/web/icons/blockquote-icon.svg') }}" alt="comillas" title="comillas">
                             <div class="blockquote-author d-flex justify-content-center">
                             </div>
                             <p>{{ $post->{'iframe:'. app()->getLocale()} }}</p>
@@ -130,7 +130,8 @@
                                             <li class="single-post d-flex align-items-center">
                                                 @if(count($post->getMedia('images'))>2)
                                                     <div class="post-img">
-                                                        <img alt="image" src="{{ $post->getMedia('images')[2]->getUrl() }}" alt="">
+                                                        <img alt="image" src="{{ $post->getMedia('images')[2]->getUrl() }}"
+                                                        alt="{{ $post->{'title:'. app()->getLocale()} }}" title="{{ $post->{'title:'. app()->getLocale()} }}">
                                                     </div>
                                                 @endif
                                                 <div class="post-content">
@@ -157,7 +158,7 @@
                             </div>
                             <div class="blog-widget-body">
                                 <ul class="category-list">
-                                    <li><a href="blog-standard.html"><span>{{ $post->category->{'name:'. app()->getLocale()} }}</span><span><svg width="31" height="16" viewBox="0 0 31 16" xmlns="http://www.w3.org/2000/svg">
+                                    <li><a href="{{ route('blog') }}"><span>{{ $post->category->{'name:'. app()->getLocale()} }}</span><span><svg width="31" height="16" viewBox="0 0 31 16" xmlns="http://www.w3.org/2000/svg">
                                         <path
                                             d="M22.4313 0.0952265C22.0661 0.205017 21.8592 0.57746 21.9525 0.950568C21.9758 1.06122 22.9569 2.0713 24.8779 3.98646L27.7623 6.865L14.1265 6.84643L0.484815 6.83367L0.319743 6.95565C0.231302 7.01953 0.113142 7.1824 0.0657449 7.31629C-0.0112326 7.53168 -0.00543762 7.5783 0.0824619 7.7591C0.135216 7.8699 0.252607 8.00998 0.340778 8.06844C0.493658 8.16782 1.12364 8.17503 14.1294 8.22134L27.7592 8.26319L24.8915 11.0999C23.3102 12.6577 21.9884 14.0064 21.9587 14.0937C21.8107 14.472 21.9571 14.8277 22.3218 14.98C22.7336 15.1499 22.651 15.2196 26.4982 11.4238C28.9174 9.0406 30.0976 7.83727 30.1214 7.72663C30.1451 7.63929 30.1454 7.49947 30.1221 7.4062C30.0988 7.30129 28.9298 6.09856 26.5506 3.72217C23.531 0.715166 22.7672 -0.00312928 22.6199 0.0431444C22.6081 0.0431183 22.5256 0.0720353 22.4313 0.0952265Z" />
                                     </svg></span></a></li>

@@ -50,12 +50,12 @@
                     <div class="service-details-wrrap pb-60">
                         @if(count($service->getMedia('images'))>0)
                             <div class="service-img-1">
-                                <img class="img-fluid" src="{{ $service->getMedia('images')[0]->getUrl() }}" alt="">
+                                <img class="img-fluid" src="{{ $service->getMedia('images')[0]->getUrl() }}" alt="{{ $service->{'title:'. app()->getLocale()} }}" title="{{ $service->{'title:'. app()->getLocale()} }}">
                             </div>
                         @endif
                         <div class="services-top d-flex justify-content-between align-items-center">
                             <div class="icon">
-                                <img src="{{ asset('img/web/icons/'. $service->icon) }}" alt="" width="60">
+                                <img src="{{ asset('img/web/icons/'. $service->icon) }}" alt="{{ $service->{'title:'. app()->getLocale()} }}" title="{{ $service->{'title:'. app()->getLocale()} }}" width="60">
                             </div>
                             <h3>{{ $service->{'title:'. app()->getLocale()} }}</h3>
                         </div>
@@ -67,7 +67,7 @@
                             <div class="services-technologies">
                                 @foreach($service->getMedia('images') as $media)
                                     @if($loop->index != 0)
-                                        <img src="{{ $media->getUrl() }}" alt="" width="70" height="70">
+                                        <img src="{{ $media->getUrl() }}" alt="html,css,javascript,php,laravel" title="html,css,javascript,php,laravel" width="70" height="70">
                                     @endif
                                 @endforeach
                             </div>

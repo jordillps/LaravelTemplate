@@ -50,9 +50,9 @@
                         <div class="blog-wrrap">
                             @if(count($post->getMedia('images'))>0)
                             <div class="blog-img">
-                                <img src="{{ $post->getMedia('images')[0]->getUrl() }}" alt="">
+                                <img src="{{ $post->getMedia('images')[0]->getUrl() }}" alt="{{ $post->{'title:'. app()->getLocale()} }}" title="{{ $post->{'title:'. app()->getLocale()} }}">
                                 <div class="batch">
-                                    <a class="eg-btn btn--primary btn--lg" href="blog.html">{{ $post->category->{'name:'. app()->getLocale()} }}</a>
+                                    <a class="eg-btn btn--primary btn--lg" href="{{ route('blog') }}">{{ $post->category->{'name:'. app()->getLocale()} }}</a>
                                 </div>
                             </div>
                             @endif

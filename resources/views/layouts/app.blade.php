@@ -9,10 +9,6 @@
 
     @yield('seo')
     
-    <link rel="alternate" hreflang="ca" href="https://laraveltest.dev">
-    <link rel="alternate" hreflang="es" href="https://laraveltest.dev">
-    <link rel="alternate" hreflang="en" href="https://laraveltest.dev">
-
     <!-- Favicons -->
     <link href="{{ asset('img/logoformalweb.ico') }}" rel="icon" />
     <link href="{{ asset('img/web/apple-touch-icon.png') }}" rel="apple-touch-icon" />
