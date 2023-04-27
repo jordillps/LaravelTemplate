@@ -56,6 +56,10 @@ Template Name: Perport Portfolio Template
   --secondary-color: #fff;
 }
 
+body{
+  letter-spacing: 0.04rem;
+}
+
 h1,
 h2,
 h3,
