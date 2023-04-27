@@ -10320,6 +10320,14 @@ margin-top: -130px;
           align-items: center;
 }
 
+.project-details .project-sidebar .client-deatils ul li p:hover {
+  color:#ffffff;
+}
+
+.project-details .project-sidebar .client-deatils ul li p:hover a{
+  padding: 0.2em 0.4em;
+}
+
 .project-details .project-sidebar .client-deatils ul li p img {
   margin-right: 10px;
 }

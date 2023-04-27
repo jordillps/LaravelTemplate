@@ -201,7 +201,7 @@ return [
     'update-project' => 'Actualizar proyecto',
     'show-project' => 'Mostrar proyecto',
     'upload-images-projects' => 'Imágenes del proyecto',
-    'period-time' => 'Perioo del proyecto',
+    'period-time' => 'Periodo del proyecto',
     'company' => 'Empresa',
     'location' => 'Localización',
     'project-link' => 'Url del proyecto',
