@@ -527,7 +527,7 @@ i.bx {
 @media (max-width: 576px) {
   .section-title1 h2 {
     font-size: 2.5rem;
-    line-height: 55px;
+    line-height: 60px;
   }
 }
 
@@ -737,7 +737,7 @@ i.bx {
   font-family: "Exo", sans-serif;
   font-weight: 600;
   font-size: 1.25rem;
-  line-height: 27px;
+  line-height: 30px;
   color: #333333;
   position: relative;
   display: inline-block;
@@ -1595,7 +1595,7 @@ header.style-1 .mobile-menu-form .hotline .hotline-info h6 {
   font-family: "Saira", sans-serif;
   font-weight: 700;
   font-size: 5rem;
-  line-height: 110px;
+  line-height: 120px;
   color: var(--secondary-color);
 }
 
@@ -1655,7 +1655,7 @@ header.style-1 .mobile-menu-form .hotline .hotline-info h6 {
   font-family: "Saira", sans-serif;
   font-weight: 800;
   font-size: 2.5rem;
-  line-height: 40px;
+  line-height: 60px;
   color: var(--secondary-color);
 }
 
@@ -1937,7 +1937,7 @@ header.style-1 .mobile-menu-form .hotline .hotline-info h6 {
   font-family: "Saira", sans-serif;
   font-weight: 600;
   font-size: 2.1875rem;
-  line-height: 50px;
+  line-height: 52px;
   color: #17161A;
 }
 
@@ -2194,7 +2194,7 @@ header.style-1 .mobile-menu-form .hotline .hotline-info h6 {
   font-size: 4.375rem;
   color: #8A8A8A;
   opacity: 0.2;
-  line-height: 52px;
+  line-height: 102px;
 }
 
 @media (max-width: 991px) {
@@ -2652,7 +2652,7 @@ header.style-1 .mobile-menu-form .hotline .hotline-info h6 {
   font-size: 1.875rem;
   color: #0A0A0A;
   text-align: center;
-  line-height: 27px;
+  line-height: 45px;
   margin-bottom: 30px;
   -webkit-transition: 0.4s;
   transition: 0.4s;
@@ -2878,7 +2878,7 @@ header.style-1 .mobile-menu-form .hotline .hotline-info h6 {
   font-family: "Saira", sans-serif;
   font-weight: 600;
   font-size: 1.125rem;
-  line-height: 22px;
+  line-height: 30px;
   color: #FFFFFF;
   margin: 0;
 }
@@ -2937,6 +2937,7 @@ header.style-1 .mobile-menu-form .hotline .hotline-info h6 {
   font-size: 1.5625rem;
   color: var(--secondary-color);
   margin-bottom: 20px;
+  line-height: 38px;
 }
 
 .footer1 .footer-wrrap .number, .footer1 .footer-wrrap .office-mail, .footer1 .footer-wrrap .address {
@@ -3853,7 +3854,7 @@ header.style-2 .mobile-menu-btn .bx {
   font-weight: 500;
   font-size: 2.5rem;
   color: #E22454;
-  line-height: 56px;
+  line-height: 60px;
 }
 
 @media (max-width: 576px) {
@@ -3988,7 +3989,7 @@ header.style-2 .mobile-menu-btn .bx {
   font-family: "Saira", sans-serif;
   font-weight: 600;
   font-size: 2.1875rem;
-  line-height: 32px;
+  line-height: 52px;
   color: #101010;
   text-align: center;
 }
@@ -4009,7 +4010,7 @@ header.style-2 .mobile-menu-btn .bx {
   font-family: "Outfit", sans-serif;
   font-weight: 500;
   font-size: 1rem;
-  line-height: 19px;
+  line-height: 24px;
   color: #E22454;
   position: relative;
   margin-left: 10px;
@@ -4052,7 +4053,7 @@ header.style-2 .mobile-menu-btn .bx {
 @media (max-width: 576px) {
   .section-title-4 h2 {
     font-size: 2.5rem;
-    line-height: 49px;
+    line-height: 60px;
   }
 }
 
@@ -4246,7 +4247,7 @@ header.style-2 .mobile-menu-btn .bx {
   font-family: "Saira", sans-serif;
   font-weight: 600;
   font-size: 2.1875rem;
-  line-height: 32px;
+  line-height: 52px;
   color: #101010;
 }
 
@@ -4368,7 +4369,7 @@ header.style-2 .mobile-menu-btn .bx {
   font-family: "Saira", sans-serif;
   font-weight: 500;
   font-size: 1.125rem;
-  line-height: 28px;
+  line-height: 30px;
   color: #17161A;
   margin-bottom: 10px;
 }
@@ -4969,7 +4970,7 @@ header.style-2 .mobile-menu-btn .bx {
   font-family: "Saira", sans-serif;
   font-weight: 600;
   font-size: 1.5625rem;
-  line-height: 30px;
+  line-height: 38px;
   color: #0A0A0A;
   margin-bottom: 0;
 }
@@ -6584,7 +6585,7 @@ header.style-3 .mobile-menu-btn .bx {
   font-family: "Lora", serif;
   font-weight: 700;
   font-size: 3.75rem;
-  line-height: 77px;
+  line-height: 90px;
   color: #162542;
   padding-top: 15px;
 }
@@ -6594,7 +6595,7 @@ header.style-3 .mobile-menu-btn .bx {
   font-family: "Exo", sans-serif;
   font-weight: 400;
   font-size: 1.375rem;
-  line-height: 29px;
+  line-height: 33px;
   color: #636363;
   opacity: 0.7;
 }
@@ -6626,7 +6627,7 @@ header.style-3 .mobile-menu-btn .bx {
   font-family: "Exo", sans-serif;
   font-weight: 600;
   font-size: 1.125rem;
-  line-height: 24px;
+  line-height: 30px;
 }
 
 .home3-case-area .view-all-btn a::after {
@@ -6669,7 +6670,7 @@ header.style-3 .mobile-menu-btn .bx {
   font-family: "Exo", sans-serif;
   font-weight: 500;
   font-size: 1rem;
-  line-height: 20px;
+  line-height: 24px;
   color: #FFFFFF;
   position: relative;
   margin-bottom: 5px;
@@ -6689,7 +6690,7 @@ header.style-3 .mobile-menu-btn .bx {
   font-family: "Lora", serif;
   font-weight: 700;
   font-size: 1.375rem;
-  line-height: 28px;
+  line-height: 33px;
   color: #FFFFFF;
   margin-bottom: 0;
 }
@@ -6967,7 +6968,7 @@ header.style-3 .mobile-menu-btn .bx {
   font-family: "Lora", serif;
   font-weight: 700;
   font-size: 1.875rem;
-  line-height: 30px;
+  line-height: 45px;
   letter-spacing: 0.03em;
   color: #0A0A0A;
 }
@@ -7106,7 +7107,7 @@ header.style-3 .mobile-menu-btn .bx {
   font-family: "Lora", serif;
   font-weight: 400;
   font-size: 1.125rem;
-  line-height: 23px;
+  line-height: 30px;
   color: #333333;
   margin-bottom: 25px;
   display: -webkit-box;
@@ -7179,7 +7180,7 @@ header.style-3 .mobile-menu-btn .bx {
   font-family: "Lora", serif;
   font-weight: 700;
   font-size: 3.4375rem;
-  line-height: 70px;
+  line-height: 90px;
   height: 82px;
   width: 82px;
   color: #987750;
@@ -7222,7 +7223,7 @@ header.style-3 .mobile-menu-btn .bx {
   font-family: "Exo", sans-serif;
   font-weight: 600;
   font-size: 1.125rem;
-  line-height: 24px;
+  line-height: 30px;
 }
 
 .home3-blog .view-all-btn a::after {
@@ -7371,7 +7372,7 @@ header.style-3 .mobile-menu-btn .bx {
   font-family: "Exo", sans-serif;
   font-weight: 500;
   font-size: 1.125rem;
-  line-height: 24px;
+  line-height: 30px;
   color: #987750;
 }
 
@@ -9024,6 +9025,7 @@ margin-top: -130px;
   flex-wrap: wrap;
   gap: 2em;
   justify-content: center;
+  padding-top: 1em;
 }
 
 /*================================================
@@ -9275,7 +9277,7 @@ margin-top: -130px;
   font-style: normal;
   font-weight: 600;
   font-size: 1.125rem;
-  line-height: 26px;
+  line-height: 30px;
   text-transform: capitalize;
   color: #17161A;
   -webkit-transition: 0.4s;
@@ -9383,7 +9385,7 @@ margin-top: -130px;
 }
 
 .blog-sidebar .blog-widget-item .blog-widget-body .sidebar-social-list li a:hover {
-  background: #8A8A8A;
+  background: #212529;
 }
 
 .blog-sidebar .blog-widget-item .blog-widget-body .post-tag-list {
@@ -9484,7 +9486,7 @@ margin-top: -130px;
   font-family: "Saira", sans-serif;
   font-weight: 600;
   font-size: 1.5625rem;
-  line-height: 37px;
+  line-height: 38px;
   color: var(--primary-color);
   margin-bottom: 12px;
   text-align: center;
@@ -9835,7 +9837,7 @@ margin-top: -130px;
 @media (max-width: 991px) {
   .project-1 .gallery-item .single-gallery .overlay .content h3 {
     font-size: 1.875rem;
-    line-height: 37px;
+    line-height: 45px;
   }
 }
 
@@ -10490,7 +10492,7 @@ margin-top: -130px;
   font-weight: 700;
   font-size: 4.375rem;
   color: #8A8A8A;
-  line-height: 50px;
+  line-height: 105px;
   opacity: 0.4;
   margin-bottom: 0;
 }
@@ -10793,7 +10795,7 @@ margin-top: -130px;
   font-size: 1.5625rem;
   font-weight: 600px;
   color: var(--white);
-  line-height: 1.4;
+  line-height: 1.5;
 }
 
 .photo-gallery .portfolio-item3 .overlay .overlay-content i {
@@ -10919,6 +10921,7 @@ margin-top: -130px;
   font-size: 1.875rem;
   color: #17161A;
   margin-bottom: 12px;
+  line-height: 45px;
 }
 
 .contact-page .contact-address .single-contact .content a {
@@ -10958,6 +10961,7 @@ margin-top: -130px;
   font-weight: 600;
   font-size: 2.1875rem;
   color: var(--secondary-color);
+  line-height: 55px;
 }
 
 .contact-page .contact-form-area p {
