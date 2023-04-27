@@ -77,7 +77,7 @@ return [
     'send-message' => 'Send message',
 
     //Footer
-    'lets-chat' => 'Let\'s chat',
+    'lets-chat' => 'Contact',
     'follow-me' => 'Follow me',
     'home' => 'Home',
     'about-me' => 'About me',

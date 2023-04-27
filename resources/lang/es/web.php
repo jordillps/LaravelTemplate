@@ -75,7 +75,7 @@ return [
     'send-message' => 'Enviar mensaje',
 
     //Footer
-    'lets-chat' => 'Hablamos',
+    'lets-chat' => 'Contact',
     'follow-me' => 'Sígueme',
     'home' => 'Inicio',
     'about-me' => 'Sobre mi',

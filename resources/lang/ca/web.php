@@ -72,7 +72,7 @@ return [
     'send-message' => 'Enviar missatge',
 
     //Footer, NavBar
-    'lets-chat' => 'Parlem',
+    'lets-chat' => 'Contacte',
     'follow-me' => 'Segueix-me',
     'home' => 'Inici',
     'about-me' => 'Sobre mi',

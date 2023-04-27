@@ -2670,7 +2670,8 @@ header.style-1 .mobile-menu-form .hotline .hotline-info h6 {
   color: var(--secondary-color);
   background-color: var(--primary-color);
   text-align: center;
-  padding: 12px 0px;
+  padding: 0.2em 0.4em;
+  display: inline-block;
 }
 
 .pricing-plan-area .pricing-wrrap .project-price h3 span {
@@ -10991,6 +10992,11 @@ margin-top: -130px;
   padding: 20px 25px;
   /* background: #181818; */
   background: #ffffff;
+}
+
+.contact-page .contact-form-area .form-inner input:focus {
+  border: solid 3px #FFC107;
+  box-shadow: none;
 }
 
 .contact-page .contact-form-area .form-inner textarea {
