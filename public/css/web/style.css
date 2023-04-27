@@ -436,7 +436,7 @@ i.bx {
 }
 
 .btn--lg {
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 700;
   text-transform: uppercase;
   padding: 14px 48px;
@@ -450,7 +450,7 @@ i.bx {
 
 .btn--md {
   padding: 14px 45px;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 700;
 }
 
@@ -461,7 +461,7 @@ i.bx {
 }
 
 .btn--sm {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 600;
   padding: 5px 12px;
 }
@@ -469,7 +469,7 @@ i.bx {
 .header-btn {
   background-color: var(--primary-color);
   color: var(--secondary-color);
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 600;
   font-family: "Saira", sans-serif;
   padding: 9px 20px;
@@ -494,7 +494,7 @@ i.bx {
 .section-title1 > span {
   font-family: "Saira", sans-serif;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 25px;
   color: #ffffff;
   background-color: #000000;
@@ -510,7 +510,7 @@ i.bx {
 } */
 
 .section-title1 h2 {
-  font-size: 55px;
+  font-size: 3.4375rem;
   font-weight: 600;
   color: #333333;
   padding-top: 12px;
@@ -519,14 +519,14 @@ i.bx {
 
 @media (max-width: 991px) {
   .section-title1 h2 {
-    font-size: 45px;
+    font-size: 2.81rem;
     line-height: 67px;
   }
 }
 
 @media (max-width: 576px) {
   .section-title1 h2 {
-    font-size: 40px;
+    font-size: 2.5rem;
     line-height: 55px;
   }
 }
@@ -548,7 +548,7 @@ i.bx {
 }
 
 .section-title1 p {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 300;
   font-family: "Outfit", sans-serif;
   color: #333333;
@@ -559,7 +559,7 @@ i.bx {
 .section-title-11 > span {
   font-family: "Saira", sans-serif;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 25px;
   color: var(--primary-color);
   margin-left: 20px;
@@ -573,7 +573,7 @@ i.bx {
 }
 
 .section-title-11 h2 {
-  font-size: 55px;
+  font-size: 3.4375rem;
   font-weight: 600;
   color: var(--secondary-color);
   padding-top: 12px;
@@ -582,7 +582,7 @@ i.bx {
 
 @media (max-width: 991px) {
   .section-title-11 h2 {
-    font-size: 45px;
+    font-size: 2.81rem;
     line-height: 67px;
   }
 }
@@ -598,7 +598,7 @@ i.bx {
 }
 
 .section-title-11 p {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 300;
   font-family: "Outfit", sans-serif;
   color: #333333;
@@ -617,7 +617,7 @@ i.bx {
 }
 
 .section-title2 p {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 400;
   font-family: "Outfit", sans-serif;
   color: #8A8A8A;
@@ -670,7 +670,7 @@ i.bx {
 }
 
 .section-title4 p {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 400;
   font-family: "Outfit", sans-serif;
   color: #8A8A8A;
@@ -679,14 +679,14 @@ i.bx {
 .section-title5 > span {
   font-family: "Saira", sans-serif;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 25px;
   color: var(--primary-color);
   position: relative;
 }
 
 .section-title5 h2 {
-  font-size: 55px;
+  font-size: 3.4375rem;
   font-weight: 600;
   color: #333333;
   padding-top: 17px;
@@ -695,13 +695,13 @@ i.bx {
 
 @media (max-width: 991px) {
   .section-title5 h2 {
-    font-size: 45px;
+    font-size: 2.81rem;
     line-height: 67px;
   }
 }
 
 .section-title5 p {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 300;
   font-family: "Outfit", sans-serif;
   color: #333333;
@@ -736,7 +736,7 @@ i.bx {
 .section-title-5 > span {
   font-family: "Exo", sans-serif;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 27px;
   color: #333333;
   position: relative;
@@ -745,7 +745,7 @@ i.bx {
 }
 
 .section-title-5 h2 {
-  font-size: 45px;
+  font-size: 2.81rem;
   font-weight: 700;
   color: #333333;
   padding-top: 12px;
@@ -766,12 +766,12 @@ i.bx {
 
 @media (max-width: 576px) {
   .section-title-5 h2 {
-    font-size: 40px;
+    font-size: 2.5rem;
   }
 }
 
 .section-title-5 p {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 400;
   font-family: "Exo", sans-serif;
   color: #333333;
@@ -1044,14 +1044,14 @@ header.style-1 .nav-right .hotline .hotline-icon {
 }
 
 header.style-1 .nav-right .hotline .hotline-info span {
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 400;
   font-family: "Saira", sans-serif;
   color: var(--primary-color);
 }
 
 header.style-1 .nav-right .hotline .hotline-info h6 {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 600;
   font-family: "Saira", sans-serif;
   color: var(--secondary-color);
@@ -1070,7 +1070,7 @@ header.style-1 .nav-right .search-btn {
 }
 
 header.style-1 .nav-right .search-btn .bi {
-  font-size: 20px;
+  font-size: 1.25rem;
   color: var(--secondary-color);
 }
 
@@ -1168,7 +1168,7 @@ header.style-1 .main-menu .menu-list > li {
 
 header.style-1 .main-menu .menu-list > li .dropdown-icon {
   color: var(--secondary-color);
-  font-size: 25px;
+  font-size: 1.5625rem;
   -webkit-transition: 0.4s ease-in;
   transition: 0.4s ease-in;
   opacity: 0;
@@ -1187,7 +1187,7 @@ header.style-1 .main-menu .menu-list > li .dropdown-icon.active {
 }
 
 header.style-1 .main-menu .menu-list > li a {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 500;
   color: var(--secondary-color);
   padding: 2em 0.5em;
@@ -1302,7 +1302,7 @@ header.style-1 .main-menu .menu-list > li .submenu > li a {
   border-bottom: 1px solid rgba(51, 51, 51, 0.1);
   position: relative;
   z-index: 1;
-  font-size: 14px;
+  font-size: 0.875rem;
   color: var(--secondary-color);
 }
 
@@ -1362,7 +1362,7 @@ header.style-1 .main-menu .menu-list > li.menu-item-has-children::after {
   position: absolute;
   top: 33px;
   right: 0px;
-  font-size: 13px;
+  font-size: 0.8125rem;
   color: var(--secondary-color);
   -webkit-transition: all 0.42s ease-in-out;
   transition: all 0.42s ease-in-out;
@@ -1379,7 +1379,7 @@ header.style-1 .main-menu .menu-list > li.menu-item-has-children .dropdown-icon 
   position: absolute;
   top: 12px;
   right: 0;
-  font-size: 20px;
+  font-size: 1.25rem;
 }
 
 header.style-1 .main-menu .menu-list > li.menu-item-has-children .dropdown-icon.active {
@@ -1430,7 +1430,7 @@ header.style-1 .main-menu .mobile-logo-area .menu-close-btn {
 
 header.style-1 .main-menu .mobile-logo-area .menu-close-btn .bi {
   color: var(--secondary-color);
-  font-size: 18px;
+  font-size: 1.125rem;
 }
 
 header.style-1 .main-menu .mobile-logo-area .menu-close-btn .bi:hover {
@@ -1459,14 +1459,14 @@ header.style-1 .mobile-menu-form .hotline .hotline-info {
 }
 
 header.style-1 .mobile-menu-form .hotline .hotline-info span {
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 400;
   font-family: "Saira", sans-serif;
   color: var(--primary-color);
 }
 
 header.style-1 .mobile-menu-form .hotline .hotline-info h6 {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 600;
   font-family: "Saira", sans-serif;
   color: var(--secondary-color);
@@ -1479,7 +1479,7 @@ header.style-1 .mobile-menu-form .hotline .hotline-info h6 {
 
 .mobile-menu-btn .bx {
   color: var(--secondary-color);
-  font-size: 28px;
+  font-size: 1.75rem;
 }
 
 /*================================================
@@ -1546,7 +1546,7 @@ header.style-1 .mobile-menu-form .hotline .hotline-info h6 {
 .hero-style1 .social-area ul li a {
   font-family: "Saira", sans-serif;
   font-weight: 500;
-  font-size: 15px;
+  font-size: 1rem;
   color: #ffffff;
   -webkit-transition: .35s;
   transition: .35s;
@@ -1594,7 +1594,7 @@ header.style-1 .mobile-menu-form .hotline .hotline-info h6 {
 .hero-style1 .hero-content h1 {
   font-family: "Saira", sans-serif;
   font-weight: 700;
-  font-size: 80px;
+  font-size: 5rem;
   line-height: 110px;
   color: var(--secondary-color);
 }
@@ -1617,7 +1617,7 @@ header.style-1 .mobile-menu-form .hotline .hotline-info h6 {
 
 @media (max-width: 576px) {
   .hero-style1 .hero-content h1 {
-    font-size: 40px;
+    font-size: 2.5rem;
     line-height: 70px;
     margin-top: 15px;
   }
@@ -1654,7 +1654,7 @@ header.style-1 .mobile-menu-form .hotline .hotline-info h6 {
 .hero-style1 .hero-content .hero-counter .counter-item .counter h2 {
   font-family: "Saira", sans-serif;
   font-weight: 800;
-  font-size: 40px;
+  font-size: 2.5rem;
   line-height: 40px;
   color: var(--secondary-color);
 }
@@ -1745,7 +1745,7 @@ header.style-1 .mobile-menu-form .hotline .hotline-info h6 {
   width: 100%;
   font-family: "Saira", sans-serif;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 25px;
   color: #0A0A0A;
 }
@@ -1769,14 +1769,14 @@ header.style-1 .mobile-menu-form .hotline .hotline-info h6 {
 .home-one-about .about-content .about-tab .about-details ul li span {
   font-family: "Outfit", sans-serif;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 1.125rem;
   color: #8A8A8A;
 }
 
 .home-one-about .about-content .about-tab .about-details ul li h5 {
   font-family: "Saira", sans-serif;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 1.25rem;
   color: #0A0A0A;
 }
 
@@ -1796,7 +1796,7 @@ header.style-1 .mobile-menu-form .hotline .hotline-info h6 {
 .home-one-about .donate span {
   font-family: "Saira", sans-serif;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 0.875rem;
   color: #17161A;
   position: absolute;
   display: inline-block;
@@ -1832,7 +1832,7 @@ header.style-1 .mobile-menu-form .hotline .hotline-info h6 {
 .home-one-about .progress-items h6 {
   font-family: "Saira", sans-serif;
   font-weight: 600;
-  font-size: 15px;
+  font-size: 1rem;
   line-height: 24px;
   color: #17161A;
 }
@@ -1921,7 +1921,7 @@ header.style-1 .mobile-menu-form .hotline .hotline-info h6 {
 .services-wrrap .services-top h2 {
   font-family: "Saira", sans-serif;
   font-weight: 700;
-  font-size: 50px;
+  font-size: 1.67rem;
   -webkit-text-stroke: 1px var(--primary-color);
   color: transparent;
   opacity: 0.15;
@@ -1936,7 +1936,7 @@ header.style-1 .mobile-menu-form .hotline .hotline-info h6 {
 .services-wrrap .content h3 {
   font-family: "Saira", sans-serif;
   font-weight: 600;
-  font-size: 35px;
+  font-size: 2.1875rem;
   line-height: 50px;
   color: #17161A;
 }
@@ -1944,7 +1944,7 @@ header.style-1 .mobile-menu-form .hotline .hotline-info h6 {
 .services-wrrap .read-more-btn a {
   font-family: "Saira", sans-serif;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 1.125rem;
   color: var(--primary-color);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2026,7 +2026,7 @@ header.style-1 .mobile-menu-form .hotline .hotline-info h6 {
 .work-area .works-top .works-tab-btn-area ul li {
   font-family: "Saira", sans-serif;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 1.125rem;
   color: #0A0A0A;
   margin-right: 40px;
   cursor: pointer;
@@ -2191,7 +2191,7 @@ header.style-1 .mobile-menu-form .hotline .hotline-info h6 {
   font-family: "Saira", sans-serif;
   font-style: normal;
   font-weight: 700;
-  font-size: 70px;
+  font-size: 4.375rem;
   color: #8A8A8A;
   opacity: 0.2;
   line-height: 52px;
@@ -2199,33 +2199,33 @@ header.style-1 .mobile-menu-form .hotline .hotline-info h6 {
 
 @media (max-width: 991px) {
   .work-area .work-item .item .works-wrrap.style-1 .overlay .sl-number h2 {
-    font-size: 45px;
+    font-size: 2.81rem;
   }
 }
 
 .work-area .work-item .item .works-wrrap.style-1 .overlay .content span {
   font-family: "Saira", sans-serif;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 1.125rem;
   color: #E4E4E4;
 }
 
 @media (max-width: 991px) {
   .work-area .work-item .item .works-wrrap.style-1 .overlay .content span {
-    font-size: 16px;
+    font-size: 1rem;
   }
 }
 
 .work-area .work-item .item .works-wrrap.style-1 .overlay .content h3 {
   font-family: "Saira", sans-serif;
   font-weight: 600;
-  font-size: 35px;
+  font-size: 2.1875rem;
   color: var(--secondary-color);
 }
 
 @media (max-width: 991px) {
   .work-area .work-item .item .works-wrrap.style-1 .overlay .content h3 {
-    font-size: 25px;
+    font-size: 1.5625rem;
   }
 }
 
@@ -2242,7 +2242,7 @@ header.style-1 .mobile-menu-form .hotline .hotline-info h6 {
 .work-area .work-item .item .works-wrrap.style-1 .overlay .case-button a {
   font-family: "Saira", sans-serif;
   font-weight: 500;
-  font-size: 13px;
+  font-size: 0.8125rem;
   color: var(--secondary-color);
   border: 1px solid #FFFFFF;
   border-radius: 5px;
@@ -2310,7 +2310,7 @@ header.style-1 .mobile-menu-form .hotline .hotline-info h6 {
 .testimonial-area .testimonial-wrrap .testimonial-content > p {
   font-family: "Outfit", sans-serif;
   font-weight: 300;
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 50px;
   letter-spacing: 0.03em;
   color: #FFFFFF;
@@ -2350,7 +2350,7 @@ header.style-1 .mobile-menu-form .hotline .hotline-info h6 {
 .testimonial-area .testimonial-wrrap .testimonial-content .author-review .author h3 {
   font-family: "Saira", sans-serif;
   font-weight: 600;
-  font-size: 30px;
+  font-size: 1.875rem;
   color: #f1f1f1;
   margin-bottom: 0;
 }
@@ -2358,7 +2358,7 @@ header.style-1 .mobile-menu-form .hotline .hotline-info h6 {
 .testimonial-area .testimonial-wrrap .testimonial-content .author-review .author > p {
   font-family: "Outfit", sans-serif;
   font-weight: 400;
-  font-size: 17px;
+  font-size: 1rem;
   color: #949494;
   margin-bottom: 0;
 }
@@ -2437,7 +2437,7 @@ header.style-1 .mobile-menu-form .hotline .hotline-info h6 {
 
 .testimonial-area .slider-navigations .swiper-button-prev-c i, .testimonial-area .slider-navigations .swiper-button-next-c i {
   color: #8A8A8A;
-  font-size: 25px;
+  font-size: 1.5625rem;
   -webkit-transition: 0.35s;
   transition: 0.35s;
 }
@@ -2649,7 +2649,7 @@ header.style-1 .mobile-menu-form .hotline .hotline-info h6 {
 .pricing-plan-area .pricing-wrrap > h3 {
   font-family: "Saira", sans-serif;
   font-weight: 600;
-  font-size: 30px;
+  font-size: 1.875rem;
   color: #0A0A0A;
   text-align: center;
   line-height: 27px;
@@ -2666,7 +2666,7 @@ header.style-1 .mobile-menu-form .hotline .hotline-info h6 {
 .pricing-plan-area .pricing-wrrap .project-price h3 {
   font-family: "Saira", sans-serif;
   font-weight: 700;
-  font-size: 30px;
+  font-size: 1.875rem;
   color: var(--secondary-color);
   background-color: var(--primary-color);
   text-align: center;
@@ -2674,7 +2674,7 @@ header.style-1 .mobile-menu-form .hotline .hotline-info h6 {
 }
 
 .pricing-plan-area .pricing-wrrap .project-price h3 span {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 400;
 }
 
@@ -2695,7 +2695,7 @@ header.style-1 .mobile-menu-form .hotline .hotline-info h6 {
   margin-bottom: 20px;
   font-family: "Outfit", sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 1rem;
   color: #333333;
   -webkit-transition: 0.4s;
   transition: 0.4s;
@@ -2725,7 +2725,7 @@ header.style-1 .mobile-menu-form .hotline .hotline-info h6 {
 .pricing-plan-area .pricing-wrrap .chose-btn a {
   font-family: "Saira", sans-serif;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 1rem;
   color: var(--primary-color);
   border: 1px solid var(--primary-color);
   border-radius: 5px;
@@ -2739,7 +2739,7 @@ header.style-1 .mobile-menu-form .hotline .hotline-info h6 {
   padding: 0;
   font-family: "Outfit", sans-serif;
   font-weight: 400;
-  font-size: 12px;
+  font-size: 0.75rem;
   color: #333333;
   text-align: center;
   -webkit-transition: 0.4s;
@@ -2788,7 +2788,7 @@ header.style-1 .mobile-menu-form .hotline .hotline-info h6 {
 .pricing-plan-area .commitions span {
   font-family: "Outfit", sans-serif;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 0.875rem;
   color: #FFFFFF;
   padding: 4px 16px;
   background: #282A2D;
@@ -2815,7 +2815,7 @@ header.style-1 .mobile-menu-form .hotline .hotline-info h6 {
 .home-1-blog .blog-wrrap .blog-img .batch a {
   font-family: "Saira", sans-serif;
   font-weight: 600;
-  font-size: 12px;
+  font-size: 0.75rem;
   color: #FFFFFF;
   padding: 3px 15px;
 }
@@ -2846,7 +2846,7 @@ header.style-1 .mobile-menu-form .hotline .hotline-info h6 {
 .home-1-blog .blog-wrrap .blog-content .publisher-date .publisher a {
   font-family: "Saira", sans-serif;
   font-weight: 500;
-  font-size: 17px;
+  font-size: 1rem;
   line-height: 0px;
   color: #5F6062;
 }
@@ -2876,7 +2876,7 @@ header.style-1 .mobile-menu-form .hotline .hotline-info h6 {
 .home-1-blog .blog-wrrap .blog-content .publisher-date .date p {
   font-family: "Saira", sans-serif;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 22px;
   color: #FFFFFF;
   margin: 0;
@@ -2885,7 +2885,7 @@ header.style-1 .mobile-menu-form .hotline .hotline-info h6 {
 .home-1-blog .blog-wrrap .blog-content .publisher-date .date span {
   font-family: "Saira", sans-serif;
   font-weight: 500;
-  font-size: 15px;
+  font-size: 1rem;
   line-height: 0px;
   color: var(--secondary-color);
 }
@@ -2900,7 +2900,7 @@ header.style-1 .mobile-menu-form .hotline .hotline-info h6 {
 .home-1-blog .blog-wrrap .blog-content h4 a {
   font-family: "Saira", sans-serif;
   font-weight: 600;
-  font-size: 22px;
+  font-size: 1.375rem;
   line-height: 33px;
   color: #17161A;
   -webkit-transition: 0.35s;
@@ -2933,7 +2933,7 @@ header.style-1 .mobile-menu-form .hotline .hotline-info h6 {
 .footer1 .footer-wrrap h4 {
   font-family: "Saira", sans-serif;
   font-weight: 700;
-  font-size: 25px;
+  font-size: 1.5625rem;
   color: var(--secondary-color);
   margin-bottom: 20px;
 }
@@ -2952,13 +2952,13 @@ header.style-1 .mobile-menu-form .hotline .hotline-info h6 {
 
 .footer1 .footer-wrrap .number .num-icon i, .footer1 .footer-wrrap .number .mail-icon i, .footer1 .footer-wrrap .number .address-icon i, .footer1 .footer-wrrap .office-mail .num-icon i, .footer1 .footer-wrrap .office-mail .mail-icon i, .footer1 .footer-wrrap .office-mail .address-icon i, .footer1 .footer-wrrap .address .num-icon i, .footer1 .footer-wrrap .address .mail-icon i, .footer1 .footer-wrrap .address .address-icon i {
   color: var(--secondary-color);
-  font-size: 25px;
+  font-size: 1.5625rem;
 }
 
 .footer1 .footer-wrrap .number .phone a, .footer1 .footer-wrrap .number .email a, .footer1 .footer-wrrap .number .location a, .footer1 .footer-wrrap .office-mail .phone a, .footer1 .footer-wrrap .office-mail .email a, .footer1 .footer-wrrap .office-mail .location a, .footer1 .footer-wrrap .address .phone a, .footer1 .footer-wrrap .address .email a, .footer1 .footer-wrrap .address .location a {
   font-family: "Saira", sans-serif;
   font-weight: 500;
-  font-size: 17px;
+  font-size: 1rem;
   line-height: 27px;
   color: #FFFFFF;
   -webkit-transition: 0.35s;
@@ -2977,7 +2977,7 @@ header.style-1 .mobile-menu-form .hotline .hotline-info h6 {
 .footer1 .footer-wrrap p {
   font-family: "Saira", sans-serif;
   font-weight: 300;
-  font-size: 15px;
+  font-size: 1rem;
   color: #E4E4E4;
   line-height: 30px;
   margin-bottom: 30px;
@@ -2986,7 +2986,7 @@ header.style-1 .mobile-menu-form .hotline .hotline-info h6 {
 .footer1 .footer-wrrap .footer-btn {
   padding: 8px 30px;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 1.125rem;
 }
 
 .footer1 .footer-wrrap1 .footer-img {
@@ -3009,7 +3009,7 @@ header.style-1 .mobile-menu-form .hotline .hotline-info h6 {
 .footer1 .footer-wrrap1 .social-icon span {
   font-family: "Saira", sans-serif;
   font-weight: 500;
-  font-size: 15px;
+  font-size: 1rem;
   color: #FFFFFF;
   margin-bottom: 0;
 }
@@ -3094,7 +3094,7 @@ header.style-1 .mobile-menu-form .hotline .hotline-info h6 {
 .footer1 .footer-wrrap1 .footer-menu ul li a {
   font-family: "Saira", sans-serif;
   font-weight: 400;
-  font-size: 12px;
+  font-size: 0.75rem;
   color: #FFFFFF;
   position: relative;
   padding: 0.2em 0.6em;
@@ -3153,7 +3153,7 @@ header.style-1 .mobile-menu-form .hotline .hotline-info h6 {
   font-family: "Saira", sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 0.875rem;
   color: #E4E4E4;
 }
 
@@ -3249,14 +3249,14 @@ header.style-2 .nav-right .hotline .hotline-icon {
 }
 
 header.style-2 .nav-right .hotline .hotline-info span {
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 400;
   font-family: "Saira", sans-serif;
   color: #E22454;
 }
 
 header.style-2 .nav-right .hotline .hotline-info h6 {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 600;
   font-family: "Saira", sans-serif;
   color: #0A0A0A;
@@ -3275,7 +3275,7 @@ header.style-2 .nav-right .search-btn {
 }
 
 header.style-2 .nav-right .search-btn .bi {
-  font-size: 20px;
+  font-size: 1.25rem;
   color: #0A0A0A;
 }
 
@@ -3373,7 +3373,7 @@ header.style-2 .main-menu .menu-list > li {
 
 header.style-2 .main-menu .menu-list > li .dropdown-icon {
   color: #0A0A0A;
-  font-size: 25px;
+  font-size: 1.5625rem;
   -webkit-transition: 0.4s ease-in;
   transition: 0.4s ease-in;
   opacity: 0;
@@ -3388,7 +3388,7 @@ header.style-2 .main-menu .menu-list > li .dropdown-icon {
 }
 
 header.style-2 .main-menu .menu-list > li a {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 500;
   color: #0A0A0A;
   padding: 30px 0px;
@@ -3503,7 +3503,7 @@ header.style-2 .main-menu .menu-list > li .submenu > li a {
   border-bottom: 1px solid rgba(51, 51, 51, 0.1);
   position: relative;
   z-index: 1;
-  font-size: 14px;
+  font-size: 0.875rem;
   color: #0A0A0A;
 }
 
@@ -3563,7 +3563,7 @@ header.style-2 .main-menu .menu-list > li.menu-item-has-children::after {
   position: absolute;
   top: 33px;
   right: 0px;
-  font-size: 13px;
+  font-size: 0.8125rem;
   color: #0A0A0A;
   -webkit-transition: all 0.42s ease-in-out;
   transition: all 0.42s ease-in-out;
@@ -3580,7 +3580,7 @@ header.style-2 .main-menu .menu-list > li.menu-item-has-children .dropdown-icon 
   position: absolute;
   top: 12px;
   right: 0;
-  font-size: 20px;
+  font-size: 1.25rem;
 }
 
 header.style-2 .main-menu .menu-list > li.menu-item-has-children:hover .submenu {
@@ -3627,7 +3627,7 @@ header.style-2 .main-menu .mobile-logo-area .menu-close-btn {
 
 header.style-2 .main-menu .mobile-logo-area .menu-close-btn .bi {
   color: #0A0A0A;
-  font-size: 18px;
+  font-size: 1.125rem;
 }
 
 header.style-2 .main-menu .mobile-logo-area .menu-close-btn .bi:hover {
@@ -3656,14 +3656,14 @@ header.style-2 .mobile-menu-form .hotline .hotline-info {
 }
 
 header.style-2 .mobile-menu-form .hotline .hotline-info span {
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 400;
   font-family: "Saira", sans-serif;
   color: #E22454;
 }
 
 header.style-2 .mobile-menu-form .hotline .hotline-info h6 {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 600;
   font-family: "Saira", sans-serif;
   color: #0A0A0A;
@@ -3676,7 +3676,7 @@ header.style-2 .mobile-menu-btn {
 
 header.style-2 .mobile-menu-btn .bx {
   color: #0A0A0A;
-  font-size: 28px;
+  font-size: 1.75rem;
 }
 
 /*================================================
@@ -3803,7 +3803,7 @@ header.style-2 .mobile-menu-btn .bx {
 .hero-style2 .social-area ul li a {
   font-family: "Saira", sans-serif;
   font-weight: 500;
-  font-size: 15px;
+  font-size: 1rem;
   color: #0A0A0A;
   opacity: 0.6;
   -webkit-transition: 0.35s;
@@ -3850,21 +3850,21 @@ header.style-2 .mobile-menu-btn .bx {
 .hero-style2 .hero-content span {
   font-family: "Saira", sans-serif;
   font-weight: 500;
-  font-size: 40px;
+  font-size: 2.5rem;
   color: #E22454;
   line-height: 56px;
 }
 
 @media (max-width: 576px) {
   .hero-style2 .hero-content span {
-    font-size: 35px;
+    font-size: 2.1875rem;
   }
 }
 
 .hero-style2 .hero-content h1 {
   font-family: "Saira", sans-serif;
   font-weight: 700;
-  font-size: 80px;
+  font-size: 5rem;
   line-height: 105px;
   color: #0A0A0A;
 }
@@ -3880,14 +3880,14 @@ header.style-2 .mobile-menu-btn .bx {
 
 @media (max-width: 1399px) {
   .hero-style2 .hero-content h1 {
-    font-size: 70px;
+    font-size: 4.375rem;
     line-height: 90px;
   }
 }
 
 @media (max-width: 576px) {
   .hero-style2 .hero-content h1 {
-    font-size: 40px;
+    font-size: 2.5rem;
     line-height: 55px;
   }
 }
@@ -3895,7 +3895,7 @@ header.style-2 .mobile-menu-btn .bx {
 .hero-style2 .hero-content p {
   font-family: "Saira", sans-serif;
   font-weight: 400;
-  font-size: 25px;
+  font-size: 1.5625rem;
   color: #0B0B0B;
   padding-top: 15px;
   margin-bottom: 58px;
@@ -3986,7 +3986,7 @@ header.style-2 .mobile-menu-btn .bx {
 .hero-counter2 .counter-item .counter h3 {
   font-family: "Saira", sans-serif;
   font-weight: 600;
-  font-size: 35px;
+  font-size: 2.1875rem;
   line-height: 32px;
   color: #101010;
   text-align: center;
@@ -4007,7 +4007,7 @@ header.style-2 .mobile-menu-btn .bx {
 .section-title-4 span {
   font-family: "Outfit", sans-serif;
   font-weight: 500;
-  font-size: 15px;
+  font-size: 1rem;
   line-height: 19px;
   color: #E22454;
   position: relative;
@@ -4035,7 +4035,7 @@ header.style-2 .mobile-menu-btn .bx {
 .section-title-4 h2 {
   font-family: "Saira", sans-serif;
   font-weight: 700;
-  font-size: 50px;
+  font-size: 1.67rem;
   line-height: 65px;
   color: #0A0A0A;
   padding-top: 13px;
@@ -4043,14 +4043,14 @@ header.style-2 .mobile-menu-btn .bx {
 
 @media (max-width: 991px) {
   .section-title-4 h2 {
-    font-size: 45px;
+    font-size: 2.81rem;
     line-height: 60px;
   }
 }
 
 @media (max-width: 576px) {
   .section-title-4 h2 {
-    font-size: 40px;
+    font-size: 2.5rem;
     line-height: 49px;
   }
 }
@@ -4058,7 +4058,7 @@ header.style-2 .mobile-menu-btn .bx {
 .section-title-4 p {
   font-family: "Outfit", sans-serif;
   font-weight: 300;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 32px;
   color: #333333;
   padding-top: 5px;
@@ -4149,14 +4149,14 @@ header.style-2 .mobile-menu-btn .bx {
 .home-two-solution .solution-wrrap .solutions-item h4 {
   font-family: "Saira", sans-serif;
   font-weight: 600;
-  font-size: 25px;
+  font-size: 1.5625rem;
   color: #0A0A0A;
 }
 
 .home-two-solution .solution-wrrap .solutions-item p {
   font-family: "Outfit", sans-serif;
   font-weight: 300;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 30px;
   color: #333333;
   margin-bottom: 0;
@@ -4186,14 +4186,14 @@ header.style-2 .mobile-menu-btn .bx {
 .home-two-solution .solution-wrrap .solution-overlay .solution-content h4 {
   font-family: "Saira", sans-serif;
   font-weight: 600;
-  font-size: 25px;
+  font-size: 1.5625rem;
   color: var(--secondary-color);
 }
 
 .home-two-solution .solution-wrrap .solution-overlay .solution-content p {
   font-family: "Outfit", sans-serif;
   font-weight: 300;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 30px;
   color: var(--secondary-color);
   margin-bottom: 25px;
@@ -4201,7 +4201,7 @@ header.style-2 .mobile-menu-btn .bx {
 
 .home-two-solution .solution-wrrap .solution-overlay .solution-content a {
   font-weight: 500;
-  font-size: 15px;
+  font-size: 1rem;
   padding: 6px 18px;
 }
 
@@ -4244,7 +4244,7 @@ header.style-2 .mobile-menu-btn .bx {
 .home-two-solution .counter-area .counter-item .counter h3 {
   font-family: "Saira", sans-serif;
   font-weight: 600;
-  font-size: 35px;
+  font-size: 2.1875rem;
   line-height: 32px;
   color: #101010;
 }
@@ -4284,7 +4284,7 @@ header.style-2 .mobile-menu-btn .bx {
           align-items: center;
   font-family: "Saira", sans-serif;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 30px;
   color: #0A0A0A;
   margin-bottom: 17px;
@@ -4330,14 +4330,14 @@ header.style-2 .mobile-menu-btn .bx {
 }
 
 .home-two-appointment .hotline .hotline-info span {
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 400;
   font-family: "Saira", sans-serif;
   color: var(--primary-color);
 }
 
 .home-two-appointment .hotline .hotline-info h6 {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 600;
   font-family: "Saira", sans-serif;
   color: #0A0A0A;
@@ -4366,7 +4366,7 @@ header.style-2 .mobile-menu-btn .bx {
 .home-two-appointment .appointment-form .form-inner label {
   font-family: "Saira", sans-serif;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 28px;
   color: #17161A;
   margin-bottom: 10px;
@@ -4380,7 +4380,7 @@ header.style-2 .mobile-menu-btn .bx {
   height: 58px;
   font-family: "Saira", sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 1rem;
   color: #545454;
   padding: 0px 18px;
 }
@@ -4397,14 +4397,14 @@ header.style-2 .mobile-menu-btn .bx {
   line-height: 58px;
   font-family: "Saira", sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 1rem;
   color: #545454;
 }
 
 .home-two-appointment .appointment-form .form-inner .nice-select .list {
   font-family: "Saira", sans-serif;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 0.875rem;
   color: #545454;
 }
 
@@ -4438,7 +4438,7 @@ header.style-2 .mobile-menu-btn .bx {
   padding: 8px;
   background: #ffffff;
   border-radius: 5px;
-  font-size: 18px;
+  font-size: 1.125rem;
   border: 1px solid #F0F0F0;
   -webkit-box-shadow: 0px 20px 40px rgba(59, 60, 56, 0.05);
           box-shadow: 0px 20px 40px rgba(59, 60, 56, 0.05);
@@ -4515,7 +4515,7 @@ header.style-2 .mobile-menu-btn .bx {
 
 .home-two-appointment .ui-datepicker-title {
   text-align: center;
-  font-size: 25px;
+  font-size: 1.5625rem;
 }
 
 .home-two-appointment .ui-datepicker-calendar {
@@ -4528,7 +4528,7 @@ header.style-2 .mobile-menu-btn .bx {
   width: 40px;
   color: #31639c;
   margin-bottom: 5px;
-  font-size: 18px;
+  font-size: 1.125rem;
 }
 
 .home-two-appointment .ui-state-default {
@@ -4536,7 +4536,7 @@ header.style-2 .mobile-menu-btn .bx {
   text-decoration: none;
   color: #333333;
   line-height: 40px;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .home-two-appointment .ui-state-default:hover {
@@ -4571,7 +4571,7 @@ header.style-2 .mobile-menu-btn .bx {
 .home-two-appointment .book-btn button {
   font-family: "Saira", sans-serif;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 1.125rem;
   color: #FFFFFF;
   border-radius: 10px;
   border: unset;
@@ -4610,7 +4610,7 @@ header.style-2 .mobile-menu-btn .bx {
 .why-choose .donate span {
   font-family: "Saira", sans-serif;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 0.875rem;
   color: #17161A;
   position: absolute;
   display: inline-block;
@@ -4658,7 +4658,7 @@ header.style-2 .mobile-menu-btn .bx {
 .why-choose .progress-items h6 {
   font-family: "Saira", sans-serif;
   font-weight: 600;
-  font-size: 15px;
+  font-size: 1rem;
   line-height: 24px;
   color: #17161A;
 }
@@ -4697,7 +4697,7 @@ header.style-2 .mobile-menu-btn .bx {
 .viwe-all-btn2 a {
   font-family: "Saira", sans-serif;
   font-weight: 500;
-  font-size: 20px;
+  font-size: 1.25rem;
   color: #E22454;
   -webkit-transition: 0.35s;
   transition: 0.35s;
@@ -4824,7 +4824,7 @@ header.style-2 .mobile-menu-btn .bx {
 }
 
 .quick-solution .portfolio-item3 .overlay .overlay-content p {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 500;
   color: var(--white);
   margin-bottom: 5px;
@@ -4835,7 +4835,7 @@ header.style-2 .mobile-menu-btn .bx {
 }
 
 .quick-solution .portfolio-item3 .overlay .overlay-content h4 a {
-  font-size: 25px;
+  font-size: 1.5625rem;
   font-weight: 600px;
   color: var(--white);
   line-height: 1.4;
@@ -4848,7 +4848,7 @@ header.style-2 .mobile-menu-btn .bx {
   border-radius: 50%;
   text-align: center;
   line-height: 50px;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 600;
   color: var(--primary-color3);
   cursor: pointer;
@@ -4967,7 +4967,7 @@ header.style-2 .mobile-menu-btn .bx {
 .testimonial-area2 .testomonial-wrrap2 .author-area .author-deatils h4 {
   font-family: "Saira", sans-serif;
   font-weight: 600;
-  font-size: 25px;
+  font-size: 1.5625rem;
   line-height: 30px;
   color: #0A0A0A;
   margin-bottom: 0;
@@ -4976,7 +4976,7 @@ header.style-2 .mobile-menu-btn .bx {
 .testimonial-area2 .testomonial-wrrap2 .author-area .author-deatils span {
   font-family: "Saira", sans-serif;
   font-weight: 400;
-  font-size: 17px;
+  font-size: 1rem;
   line-height: 30px;
   color: #5F6062;
 }
@@ -4984,7 +4984,7 @@ header.style-2 .mobile-menu-btn .bx {
 .testimonial-area2 .testomonial-wrrap2 .testimonial-content p {
   font-family: "Saira", sans-serif;
   font-weight: 200;
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 40px;
   color: #333333;
   margin-bottom: 0;
@@ -5025,7 +5025,7 @@ header.style-2 .mobile-menu-btn .bx {
 .fresh-tooth-area .fresh-tooth-content h4 {
   font-family: "Saira", sans-serif;
   font-weight: 600;
-  font-size: 25px;
+  font-size: 1.5625rem;
   line-height: 39px;
   color: #0A0A0A;
   margin-bottom: 5px;
@@ -5035,7 +5035,7 @@ header.style-2 .mobile-menu-btn .bx {
   font-family: "Outfit", sans-serif;
   font-style: normal;
   font-weight: 300;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 32px;
   color: #333333;
 }
@@ -5141,7 +5141,7 @@ header.style-2 .mobile-menu-btn .bx {
 .home-2-blog .blog-wrrap .blog-img .batch a {
   font-family: "Saira", sans-serif;
   font-weight: 500;
-  font-size: 15px;
+  font-size: 1rem;
   color: #FFFFFF;
   padding: 3px 10px;
   background: #E22454;
@@ -5177,7 +5177,7 @@ header.style-2 .mobile-menu-btn .bx {
 .home-2-blog .blog-wrrap .blog-content .publisher-date .publish-date span, .home-2-blog .blog-wrrap .blog-content .publisher-date .comments span {
   font-family: "Saira", sans-serif;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 0px;
   color: #5F6062;
   display: -webkit-box;
@@ -5200,7 +5200,7 @@ header.style-2 .mobile-menu-btn .bx {
 .home-2-blog .blog-wrrap .blog-content h4 a {
   font-family: "Saira", sans-serif;
   font-weight: 600;
-  font-size: 22px;
+  font-size: 1.375rem;
   line-height: 33px;
   color: #17161A;
   -webkit-transition: 0.35s;
@@ -5231,7 +5231,7 @@ header.style-2 .mobile-menu-btn .bx {
 .footer2 .footer-wrrap h4 {
   font-family: "Saira", sans-serif;
   font-weight: 700;
-  font-size: 25px;
+  font-size: 1.5625rem;
   color: #17161A;
   margin-bottom: 20px;
 }
@@ -5250,13 +5250,13 @@ header.style-2 .mobile-menu-btn .bx {
 
 .footer2 .footer-wrrap .number .num-icon i, .footer2 .footer-wrrap .number .mail-icon i, .footer2 .footer-wrrap .number .address-icon i, .footer2 .footer-wrrap .office-mail .num-icon i, .footer2 .footer-wrrap .office-mail .mail-icon i, .footer2 .footer-wrrap .office-mail .address-icon i, .footer2 .footer-wrrap .address .num-icon i, .footer2 .footer-wrrap .address .mail-icon i, .footer2 .footer-wrrap .address .address-icon i {
   color: #E22454;
-  font-size: 25px;
+  font-size: 1.5625rem;
 }
 
 .footer2 .footer-wrrap .number .phone a, .footer2 .footer-wrrap .number .email a, .footer2 .footer-wrrap .number .location a, .footer2 .footer-wrrap .office-mail .phone a, .footer2 .footer-wrrap .office-mail .email a, .footer2 .footer-wrrap .office-mail .location a, .footer2 .footer-wrrap .address .phone a, .footer2 .footer-wrrap .address .email a, .footer2 .footer-wrrap .address .location a {
   font-family: "Saira", sans-serif;
   font-weight: 500;
-  font-size: 17px;
+  font-size: 1rem;
   line-height: 27px;
   color: #333333;
   -webkit-transition: 0.35s;
@@ -5274,7 +5274,7 @@ header.style-2 .mobile-menu-btn .bx {
 .footer2 .footer-wrrap p {
   font-family: "Saira", sans-serif;
   font-weight: 300;
-  font-size: 15px;
+  font-size: 1rem;
   color: #333333;
   line-height: 30px;
   margin-bottom: 30px;
@@ -5283,7 +5283,7 @@ header.style-2 .mobile-menu-btn .bx {
 .footer2 .footer-wrrap .footer-btn {
   padding: 8px 30px !important;
   font-weight: 600 !important;
-  font-size: 16px !important;
+  font-size: 1rem !important;
 }
 
 .footer2 .footer-wrrap .footer-btn::before {
@@ -5314,7 +5314,7 @@ header.style-2 .mobile-menu-btn .bx {
 .footer2 .footer-wrrap1 .social-icon span {
   font-family: "Saira", sans-serif;
   font-weight: 500;
-  font-size: 15px;
+  font-size: 1rem;
   color: #17161A;
   margin-bottom: 0;
   line-height: 0;
@@ -5400,7 +5400,7 @@ header.style-2 .mobile-menu-btn .bx {
 .footer2 .footer-wrrap1 .footer-menu ul li a {
   font-family: "Saira", sans-serif;
   font-weight: 400;
-  font-size: 12px;
+  font-size: 0.75rem;
   color: #17161A;
   padding: 17px 0px;
   position: relative;
@@ -5458,7 +5458,7 @@ header.style-2 .mobile-menu-btn .bx {
   font-family: "Saira", sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 0.875rem;
   color: #959595;
 }
 
@@ -5580,14 +5580,14 @@ header.style-3 .nav-right .hotline .hotline-icon {
 }
 
 header.style-3 .nav-right .hotline .hotline-info span {
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 400;
   font-family: "Exo", sans-serif;
   color: #987750;
 }
 
 header.style-3 .nav-right .hotline .hotline-info h6 {
-  font-size: 15px;
+  font-size: 1rem;
   font-weight: 500;
   font-family: "Exo", sans-serif;
   color: #0A0A0A;
@@ -5606,7 +5606,7 @@ header.style-3 .nav-right .search-btn {
 }
 
 header.style-3 .nav-right .search-btn .bi {
-  font-size: 20px;
+  font-size: 1.25rem;
   color: #0A0A0A;
 }
 
@@ -5704,7 +5704,7 @@ header.style-3 .main-menu .menu-list > li {
 
 header.style-3 .main-menu .menu-list > li .dropdown-icon {
   color: #0A0A0A;
-  font-size: 25px;
+  font-size: 1.5625rem;
   -webkit-transition: 0.4s ease-in;
   transition: 0.4s ease-in;
   opacity: 0;
@@ -5720,7 +5720,7 @@ header.style-3 .main-menu .menu-list > li .dropdown-icon {
 }
 
 header.style-3 .main-menu .menu-list > li a {
-  font-size: 15px;
+  font-size: 1rem;
   font-weight: 500;
   color: #0A0A0A;
   padding: 30px 0px;
@@ -5835,7 +5835,7 @@ header.style-3 .main-menu .menu-list > li .submenu > li a {
   border-bottom: 1px solid rgba(51, 51, 51, 0.1);
   position: relative;
   z-index: 1;
-  font-size: 14px;
+  font-size: 0.875rem;
   color: #0A0A0A;
 }
 
@@ -5895,7 +5895,7 @@ header.style-3 .main-menu .menu-list > li.menu-item-has-children::after {
   position: absolute;
   top: 33px;
   right: 0px;
-  font-size: 13px;
+  font-size: 0.8125rem;
   color: #0A0A0A;
   -webkit-transition: all 0.42s ease-in-out;
   transition: all 0.42s ease-in-out;
@@ -5912,7 +5912,7 @@ header.style-3 .main-menu .menu-list > li.menu-item-has-children .dropdown-icon 
   position: absolute;
   top: 12px;
   right: 0;
-  font-size: 20px;
+  font-size: 1.25rem;
 }
 
 header.style-3 .main-menu .menu-list > li.menu-item-has-children:hover .submenu {
@@ -5959,7 +5959,7 @@ header.style-3 .main-menu .mobile-logo-area .menu-close-btn {
 
 header.style-3 .main-menu .mobile-logo-area .menu-close-btn .bi {
   color: #0A0A0A;
-  font-size: 18px;
+  font-size: 1.125rem;
 }
 
 header.style-3 .main-menu .mobile-logo-area .menu-close-btn .bi:hover {
@@ -5988,14 +5988,14 @@ header.style-3 .mobile-menu-form .hotline .hotline-info {
 }
 
 header.style-3 .mobile-menu-form .hotline .hotline-info span {
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 400;
   font-family: "Exo", sans-serif;
   color: #987750;
 }
 
 header.style-3 .mobile-menu-form .hotline .hotline-info h6 {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 600;
   font-family: "Exo", sans-serif;
   color: #0A0A0A;
@@ -6008,7 +6008,7 @@ header.style-3 .mobile-menu-btn {
 
 header.style-3 .mobile-menu-btn .bx {
   color: #0A0A0A;
-  font-size: 28px;
+  font-size: 1.75rem;
 }
 
 /*================================================
@@ -6054,7 +6054,7 @@ header.style-3 .mobile-menu-btn .bx {
 .hero-style3 .social-area ul li a {
   font-family: "Saira", sans-serif;
   font-weight: 500;
-  font-size: 15px;
+  font-size: 1rem;
   color: #0A0A0A;
   opacity: 0.5;
   -webkit-transition: 0.35s;
@@ -6136,14 +6136,14 @@ header.style-3 .mobile-menu-btn .bx {
 .hero-style3 .hero-content span {
   font-family: "Exo", sans-serif;
   font-weight: 500;
-  font-size: 25px;
+  font-size: 1.5625rem;
   color: #987750;
 }
 
 .hero-style3 .hero-content h1 {
   font-family: "Lora", serif;
   font-weight: 700;
-  font-size: 75px;
+  font-size: 4.6875rem;
   line-height: 100px;
   color: var(--secondary-color);
 }
@@ -6159,21 +6159,21 @@ header.style-3 .mobile-menu-btn .bx {
 
 @media (max-width: 1399px) {
   .hero-style3 .hero-content h1 {
-    font-size: 55px;
+    font-size: 3.4375rem;
     line-height: 65px;
   }
 }
 
 @media (max-width: 1199px) {
   .hero-style3 .hero-content h1 {
-    font-size: 60px;
+    font-size: 3.75rem;
     line-height: 75px;
   }
 }
 
 @media (max-width: 991px) {
   .hero-style3 .hero-content h1 {
-    font-size: 50px;
+    font-size: 1.67rem;
     line-height: 65px;
   }
 }
@@ -6181,7 +6181,7 @@ header.style-3 .mobile-menu-btn .bx {
 .hero-style3 .hero-content p {
   font-family: "Exo", sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 1rem;
   color: var(--secondary-color);
   padding-top: 15px;
   margin-bottom: 58px;
@@ -6191,7 +6191,7 @@ header.style-3 .mobile-menu-btn .bx {
   display: inline-block;
   font-family: "Exo", sans-serif;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 1.125rem;
 }
 
 .hero-style3 .hero-content .btn--primary::before {
@@ -6288,14 +6288,14 @@ header.style-3 .mobile-menu-btn .bx {
 .hero-style3 .hero-content-smd span {
   font-family: "Exo", sans-serif;
   font-weight: 500;
-  font-size: 25px;
+  font-size: 1.5625rem;
   color: #987750;
 }
 
 .hero-style3 .hero-content-smd h1 {
   font-family: "Lora", serif;
   font-weight: 700;
-  font-size: 75px;
+  font-size: 4.6875rem;
   line-height: 100px;
   color: var(--secondary-color);
 }
@@ -6311,21 +6311,21 @@ header.style-3 .mobile-menu-btn .bx {
 
 @media (max-width: 1399px) {
   .hero-style3 .hero-content-smd h1 {
-    font-size: 55px;
+    font-size: 3.4375rem;
     line-height: 65px;
   }
 }
 
 @media (max-width: 1199px) {
   .hero-style3 .hero-content-smd h1 {
-    font-size: 60px;
+    font-size: 3.75rem;
     line-height: 75px;
   }
 }
 
 @media (max-width: 991px) {
   .hero-style3 .hero-content-smd h1 {
-    font-size: 50px;
+    font-size: 1.67rem;
     line-height: 65px;
   }
 }
@@ -6333,7 +6333,7 @@ header.style-3 .mobile-menu-btn .bx {
 .hero-style3 .hero-content-smd p {
   font-family: "Exo", sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 1rem;
   color: var(--secondary-color);
   padding-top: 15px;
   margin-bottom: 58px;
@@ -6343,7 +6343,7 @@ header.style-3 .mobile-menu-btn .bx {
   display: inline-block;
   font-family: "Exo", sans-serif;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 1.125rem;
 }
 
 .hero-style3 .hero-content-smd .btn--primary::before {
@@ -6376,7 +6376,7 @@ header.style-3 .mobile-menu-btn .bx {
   margin-bottom: 0;
   font-family: "Lora", serif;
   font-weight: 700;
-  font-size: 25px;
+  font-size: 1.5625rem;
   letter-spacing: 0.05em;
   color: #162542;
   -webkit-transition: 0.35s;
@@ -6582,7 +6582,7 @@ header.style-3 .mobile-menu-btn .bx {
   margin-bottom: 0;
   font-family: "Lora", serif;
   font-weight: 700;
-  font-size: 60px;
+  font-size: 3.75rem;
   line-height: 77px;
   color: #162542;
   padding-top: 15px;
@@ -6592,7 +6592,7 @@ header.style-3 .mobile-menu-btn .bx {
   margin-bottom: 0;
   font-family: "Exo", sans-serif;
   font-weight: 400;
-  font-size: 22px;
+  font-size: 1.375rem;
   line-height: 29px;
   color: #636363;
   opacity: 0.7;
@@ -6624,7 +6624,7 @@ header.style-3 .mobile-menu-btn .bx {
 .home3-case-area .view-all-btn a {
   font-family: "Exo", sans-serif;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 24px;
 }
 
@@ -6667,7 +6667,7 @@ header.style-3 .mobile-menu-btn .bx {
 .home3-case-area .case-wrrap .case-img .overlay .catagory h6 {
   font-family: "Exo", sans-serif;
   font-weight: 500;
-  font-size: 15px;
+  font-size: 1rem;
   line-height: 20px;
   color: #FFFFFF;
   position: relative;
@@ -6687,7 +6687,7 @@ header.style-3 .mobile-menu-btn .bx {
 .home3-case-area .case-wrrap .case-img .overlay .catagory h4 {
   font-family: "Lora", serif;
   font-weight: 700;
-  font-size: 22px;
+  font-size: 1.375rem;
   line-height: 28px;
   color: #FFFFFF;
   margin-bottom: 0;
@@ -6937,7 +6937,7 @@ header.style-3 .mobile-menu-btn .bx {
   margin-bottom: 0;
   font-family: "Exo", sans-serif;
   font-weight: 400;
-  font-size: 22px;
+  font-size: 1.375rem;
   line-height: 40px;
   letter-spacing: 0.03em;
   color: #333333;
@@ -6965,7 +6965,7 @@ header.style-3 .mobile-menu-btn .bx {
   margin-bottom: 7px;
   font-family: "Lora", serif;
   font-weight: 700;
-  font-size: 30px;
+  font-size: 1.875rem;
   line-height: 30px;
   letter-spacing: 0.03em;
   color: #0A0A0A;
@@ -6974,7 +6974,7 @@ header.style-3 .mobile-menu-btn .bx {
 .home3-testimonial-area .testimonial-slider-top .testimonial-wraper .testimonial-author span {
   font-family: "Exo", sans-serif;
   font-weight: 400;
-  font-size: 17px;
+  font-size: 1rem;
   line-height: 30px;
   color: #987750;
 }
@@ -7005,7 +7005,7 @@ header.style-3 .mobile-menu-btn .bx {
 .home3-contact .contact-left .content h2 {
   font-family: "Lora", serif;
   font-weight: 700;
-  font-size: 55px;
+  font-size: 3.4375rem;
   line-height: 68px;
   color: var(--secondary-color);
   margin-top: -10px;
@@ -7014,7 +7014,7 @@ header.style-3 .mobile-menu-btn .bx {
 
 @media (max-width: 576px) {
   .home3-contact .contact-left .content h2 {
-    font-size: 40px;
+    font-size: 2.5rem;
     line-height: 55px;
   }
 }
@@ -7022,7 +7022,7 @@ header.style-3 .mobile-menu-btn .bx {
 .home3-contact .contact-left .content p {
   font-family: "Exo", sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 32px;
   color: var(--secondary-color);
 }
@@ -7031,7 +7031,7 @@ header.style-3 .mobile-menu-btn .bx {
   display: inline-block;
   font-family: "Exo", sans-serif;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 1.125rem;
   padding: 14px 38px;
 }
 
@@ -7083,7 +7083,7 @@ header.style-3 .mobile-menu-btn .bx {
 }
 
 .home3-contact .contact-right .play-icon a i {
-  font-size: 72px;
+  font-size: 4.5rem;
   color: var(--secondary-color);
 }
 
@@ -7104,7 +7104,7 @@ header.style-3 .mobile-menu-btn .bx {
 .home3-choose .choose-content ul li {
   font-family: "Lora", serif;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 23px;
   color: #333333;
   margin-bottom: 25px;
@@ -7137,7 +7137,7 @@ header.style-3 .mobile-menu-btn .bx {
   padding: 8px 50px;
   font-family: "Lora", serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 1rem;
   color: #162542;
   text-align: center;
 }
@@ -7177,7 +7177,7 @@ header.style-3 .mobile-menu-btn .bx {
 .home3-choose .choose-right .choose-img .experience-batch p {
   font-family: "Lora", serif;
   font-weight: 700;
-  font-size: 55px;
+  font-size: 3.4375rem;
   line-height: 70px;
   height: 82px;
   width: 82px;
@@ -7193,7 +7193,7 @@ header.style-3 .mobile-menu-btn .bx {
 .home3-choose .choose-right .choose-img .experience-batch span {
   font-family: "Exo", sans-serif;
   font-weight: 500;
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 30px;
   color: #636363;
 }
@@ -7220,7 +7220,7 @@ header.style-3 .mobile-menu-btn .bx {
 .home3-blog .view-all-btn a {
   font-family: "Exo", sans-serif;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 24px;
 }
 
@@ -7269,7 +7269,7 @@ header.style-3 .mobile-menu-btn .bx {
 .home3-blog .blog-card-stayle2 .blog-img .blog-batch > span {
   font-family: "Exo", sans-serif;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 0.875rem;
   color: var(--secondary-color);
   background: #987750;
   border-radius: 30px;
@@ -7355,21 +7355,21 @@ header.style-3 .mobile-menu-btn .bx {
 .home3-blog .blog-card-stayle2 .blog-content .publish-date-comment .publish-date {
   font-family: "Exo", sans-serif;
   font-weight: 500;
-  font-size: 15px;
+  font-size: 1rem;
   color: #5F6062;
 }
 
 .home3-blog .blog-card-stayle2 .blog-content .publish-date-comment .comment span {
   font-family: "Exo", sans-serif;
   font-weight: 500;
-  font-size: 15px;
+  font-size: 1rem;
   color: #5F6062;
 }
 
 .home3-blog .blog-card-stayle2 .blog-content .blog-title span {
   font-family: "Exo", sans-serif;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 24px;
   color: #987750;
 }
@@ -7381,7 +7381,7 @@ header.style-3 .mobile-menu-btn .bx {
 .home3-blog .blog-card-stayle2 .blog-content .blog-title a h4 {
   font-family: "Lora", serif;
   font-weight: 600;
-  font-size: 22px;
+  font-size: 1.375rem;
   line-height: 33px;
   color: #0A0A0A;
   -webkit-transition: .4s;
@@ -7413,7 +7413,7 @@ header.style-3 .mobile-menu-btn .bx {
 .footer3 .footer-wrrap h4 {
   font-family: "Lora", serif;
   font-weight: 700;
-  font-size: 25px;
+  font-size: 1.5625rem;
   color: var(--secondary-color);
   margin-bottom: 20px;
 }
@@ -7432,13 +7432,13 @@ header.style-3 .mobile-menu-btn .bx {
 
 .footer3 .footer-wrrap .number .num-icon i, .footer3 .footer-wrrap .number .mail-icon i, .footer3 .footer-wrrap .number .address-icon i, .footer3 .footer-wrrap .office-mail .num-icon i, .footer3 .footer-wrrap .office-mail .mail-icon i, .footer3 .footer-wrrap .office-mail .address-icon i, .footer3 .footer-wrrap .address .num-icon i, .footer3 .footer-wrrap .address .mail-icon i, .footer3 .footer-wrrap .address .address-icon i {
   color: #987750;
-  font-size: 25px;
+  font-size: 1.5625rem;
 }
 
 .footer3 .footer-wrrap .number .phone a, .footer3 .footer-wrrap .number .email a, .footer3 .footer-wrrap .number .location a, .footer3 .footer-wrrap .office-mail .phone a, .footer3 .footer-wrrap .office-mail .email a, .footer3 .footer-wrrap .office-mail .location a, .footer3 .footer-wrrap .address .phone a, .footer3 .footer-wrrap .address .email a, .footer3 .footer-wrrap .address .location a {
   font-family: "Exo", sans-serif;
   font-weight: 500;
-  font-size: 17px;
+  font-size: 1rem;
   line-height: 27px;
   color: var(--secondary-color);
   -webkit-transition: 0.35s;
@@ -7456,7 +7456,7 @@ header.style-3 .mobile-menu-btn .bx {
 .footer3 .footer-wrrap p {
   font-family: "Exo", sans-serif;
   font-weight: 300;
-  font-size: 15px;
+  font-size: 1rem;
   color: var(--secondary-color);
   line-height: 30px;
   margin-bottom: 30px;
@@ -7465,7 +7465,7 @@ header.style-3 .mobile-menu-btn .bx {
 .footer3 .footer-wrrap .footer-btn2 {
   padding: 8px 30px;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .footer3 .footer-wrrap .footer-btn2::before {
@@ -7496,7 +7496,7 @@ header.style-3 .mobile-menu-btn .bx {
 .footer3 .footer-wrrap1 .social-icon span {
   font-family: "Exo", sans-serif;
   font-weight: 500;
-  font-size: 15px;
+  font-size: 1rem;
   color: var(--secondary-color);
   margin-bottom: 0;
   line-height: 0;
@@ -7582,7 +7582,7 @@ header.style-3 .mobile-menu-btn .bx {
 .footer3 .footer-wrrap1 .footer-menu ul li a {
   font-family: "Exo", sans-serif;
   font-weight: 400;
-  font-size: 12px;
+  font-size: 0.75rem;
   color: var(--secondary-color);
   padding: 17px 0px;
   position: relative;
@@ -7640,7 +7640,7 @@ header.style-3 .mobile-menu-btn .bx {
   font-family: "Exo", sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 0.875rem;
   color: var(--secondary-color);
 }
 
@@ -7736,14 +7736,14 @@ header.style-4 .nav-right .hotline .hotline-icon {
 }
 
 header.style-4 .nav-right .hotline .hotline-info span {
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 400;
   font-family: "Saira", sans-serif;
   color: var(--primary-color);
 }
 
 header.style-4 .nav-right .hotline .hotline-info h6 {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 600;
   font-family: "Saira", sans-serif;
   color: #0A0A0A;
@@ -7762,7 +7762,7 @@ header.style-4 .nav-right .search-btn {
 }
 
 header.style-4 .nav-right .search-btn .bi {
-  font-size: 20px;
+  font-size: 1.25rem;
   color: #0A0A0A;
 }
 
@@ -7860,7 +7860,7 @@ header.style-4 .main-menu .menu-list > li {
 
 header.style-4 .main-menu .menu-list > li .dropdown-icon {
   color: #0A0A0A;
-  font-size: 25px;
+  font-size: 1.5625rem;
   -webkit-transition: 0.4s ease-in;
   transition: 0.4s ease-in;
   opacity: 0;
@@ -7875,7 +7875,7 @@ header.style-4 .main-menu .menu-list > li .dropdown-icon {
 }
 
 header.style-4 .main-menu .menu-list > li a {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 500;
   color: #0A0A0A;
   padding: 30px 0px;
@@ -7990,7 +7990,7 @@ header.style-4 .main-menu .menu-list > li .submenu > li a {
   border-bottom: 1px solid rgba(51, 51, 51, 0.1);
   position: relative;
   z-index: 1;
-  font-size: 14px;
+  font-size: 0.875rem;
   color: #0A0A0A;
 }
 
@@ -8050,7 +8050,7 @@ header.style-4 .main-menu .menu-list > li.menu-item-has-children::after {
   position: absolute;
   top: 33px;
   right: 0px;
-  font-size: 13px;
+  font-size: 0.8125rem;
   color: #0A0A0A;
   -webkit-transition: all 0.42s ease-in-out;
   transition: all 0.42s ease-in-out;
@@ -8067,7 +8067,7 @@ header.style-4 .main-menu .menu-list > li.menu-item-has-children .dropdown-icon 
   position: absolute;
   top: 12px;
   right: 0;
-  font-size: 20px;
+  font-size: 1.25rem;
 }
 
 header.style-4 .main-menu .menu-list > li.menu-item-has-children:hover .submenu {
@@ -8114,7 +8114,7 @@ header.style-4 .main-menu .mobile-logo-area .menu-close-btn {
 
 header.style-4 .main-menu .mobile-logo-area .menu-close-btn .bi {
   color: #0A0A0A;
-  font-size: 18px;
+  font-size: 1.125rem;
 }
 
 header.style-4 .main-menu .mobile-logo-area .menu-close-btn .bi:hover {
@@ -8143,14 +8143,14 @@ header.style-4 .mobile-menu-form .hotline .hotline-info {
 }
 
 header.style-4 .mobile-menu-form .hotline .hotline-info span {
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 400;
   font-family: "Saira", sans-serif;
   color: var(--primary-color);
 }
 
 header.style-4 .mobile-menu-form .hotline .hotline-info h6 {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 600;
   font-family: "Saira", sans-serif;
   color: #0A0A0A;
@@ -8190,7 +8190,7 @@ header.style-4 .mobile-menu-btn .bx {
 .inner-page-banner .inner-banner-top .inner-banner-title h2 {
   font-family: "Saira", sans-serif;
   font-weight: 700;
-  font-size: 80px;
+  font-size: 5rem;
   line-height: 120px;
   color: #020202;
 }
@@ -8201,14 +8201,14 @@ header.style-4 .mobile-menu-btn .bx {
 
 @media (max-width: 991px) {
   .inner-page-banner .inner-banner-top .inner-banner-title h2 {
-    font-size: 63px;
+    font-size: 3.9375rem;
     line-height: 92px;
   }
 }
 
 @media (max-width: 767px) {
   .inner-page-banner .inner-banner-top .inner-banner-title h2 {
-    font-size: 57px;
+    font-size: 3.5625rem;
     line-height: 80px;
   }
 }
@@ -8275,14 +8275,14 @@ margin-top: -130px;
 .inner-page-banner .breadcrumb-area .inner-breadcrumb h2 {
   font-family: "Saira", sans-serif;
   font-weight: 700;
-  font-size: 50px;
+  font-size: 1.67rem;
   line-height: 79px;
   color: #0A0A0A;
 }
 
 @media (max-width: 576px) {
   .inner-page-banner .breadcrumb-area .inner-breadcrumb h2 {
-    font-size: 35px;
+    font-size: 2.1875rem;
     line-height: 50px;
   }
 }
@@ -8304,7 +8304,7 @@ margin-top: -130px;
 .inner-page-banner .breadcrumb-area .inner-breadcrumb nav .breadcrumb .breadcrumb-item {
   font-family: "Saira", sans-serif;
   font-weight: 400;
-  font-size: 17px;
+  font-size: 1rem;
   color: #0A0A0A;
 }
 
@@ -8376,7 +8376,7 @@ margin-top: -130px;
   width: 100%;
   font-family: "Saira", sans-serif;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 25px;
   color: #0A0A0A;
 }
@@ -8413,7 +8413,7 @@ margin-top: -130px;
 .about-work .about-content .about-tab .about-details ul li span {
   font-family: "Outfit", sans-serif;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 1.125rem;
   color: #3d3d3d;
 }
 
@@ -8421,7 +8421,7 @@ margin-top: -130px;
 .about-work .about-content .about-tab .about-details ul li h5 {
   font-family: "Saira", sans-serif;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 1.25rem;
   color: #0A0A0A;
 }
 
@@ -8441,7 +8441,7 @@ margin-top: -130px;
 .about-work .donate span {
   font-family: "Saira", sans-serif;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 0.875rem;
   color: #17161A;
   position: absolute;
   display: inline-block;
@@ -8494,7 +8494,7 @@ margin-top: -130px;
 .about-work .progress-items h6 {
   font-family: "Saira", sans-serif;
   font-weight: 600;
-  font-size: 15px;
+  font-size: 1rem;
   line-height: 24px;
   color: #17161A;
 }
@@ -8522,7 +8522,7 @@ margin-top: -130px;
 }
 
 .aboutme .resume .resume-title {
-  font-size: 26px;
+  font-size: 1.625rem;
   font-weight: 700;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -8574,7 +8574,7 @@ margin-top: -130px;
 .about-design .about-design-content .section-title1 h3 {
   font-family: "Saira", sans-serif;
   font-weight: 600;
-  font-size: 30px;
+  font-size: 1.875rem;
   -webkit-text-stroke: 1px var(--primary-color);
   -webkit-text-fill-color: transparent;
   border: 1px solid rgba(255, 1, 79, 0.2);
@@ -8592,7 +8592,7 @@ margin-top: -130px;
 
 @media (max-width: 1399px) {
   .about-design .about-design-content .section-title1 h2 {
-    font-size: 45px;
+    font-size: 2.81rem;
   }
 }
 
@@ -8629,7 +8629,7 @@ margin-top: -130px;
 .about-design .about-design-wrrap .about-design-item .accordion-button {
   font-family: "Saira", sans-serif;
   font-weight: 600;
-  font-size: 30px;
+  font-size: 1.875rem;
   color: #5A5A5A;
   padding: unset;
   margin-bottom: 0;
@@ -8658,7 +8658,7 @@ margin-top: -130px;
   content: "\f4fe";
   -webkit-transition: unset;
   transition: unset;
-  font-size: 20px;
+  font-size: 1.25rem;
   color: #7D7D7D;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -8683,7 +8683,7 @@ margin-top: -130px;
 .about-design .about-design-wrrap .about-design-item .about-design-body {
   font-family: "Outfit", sans-serif;
   font-weight: 300;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 32px;
   color: #333333;
   padding-top: 10px;
@@ -8792,7 +8792,7 @@ margin-top: -130px;
 .service-process .service-process-content .service-process-item h3 {
   font-family: "Saira", sans-serif;
   font-weight: 600;
-  font-size: 30px;
+  font-size: 1.875rem;
   color: #000000;
   margin-bottom: 10px;
 }
@@ -8801,7 +8801,7 @@ margin-top: -130px;
   margin-bottom: 0;
   font-family: "Outfit", sans-serif;
   font-weight: 300;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 32px;
   color: #333333;
 }
@@ -8851,7 +8851,7 @@ margin-top: -130px;
 .service-feature .service-feature-content .about-design-item .accordion-button {
   font-family: "Saira", sans-serif;
   font-weight: 600;
-  font-size: 45px;
+  font-size: 2.81rem;
   color: #181818;
   padding: unset;
   margin-bottom: 28px;
@@ -8862,7 +8862,7 @@ margin-top: -130px;
 
 @media (max-width: 1399px) {
   .service-feature .service-feature-content .about-design-item .accordion-button {
-    font-size: 35px;
+    font-size: 2.1875rem;
   }
 }
 
@@ -8886,7 +8886,7 @@ margin-top: -130px;
   content: "\f4fe";
   -webkit-transition: .6s;
   transition: .6s;
-  font-size: 20px;
+  font-size: 1.25rem;
   color: #7D7D7D;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -8916,7 +8916,7 @@ margin-top: -130px;
 .service-feature .service-feature-content .about-design-item .about-design-body h3 {
   font-family: "Saira", sans-serif;
   font-weight: 600;
-  font-size: 30px;
+  font-size: 1.875rem;
   color: #181818;
 }
 
@@ -8924,7 +8924,7 @@ margin-top: -130px;
   margin-bottom: 25px;
   font-family: "Outfit", sans-serif;
   font-weight: 300;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 32px;
   color: #333333;
 }
@@ -8937,7 +8937,7 @@ margin-top: -130px;
 .service-feature .service-feature-content .about-design-item .about-design-body ul li {
   font-family: "Outfit", sans-serif;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 32px;
   color: #181818;
   display: -webkit-box;
@@ -8980,7 +8980,7 @@ margin-top: -130px;
 .services-details .service-details-wrrap h3 {
   font-family: "Saira", sans-serif;
   font-weight: 600;
-  font-size: 35px;
+  font-size: 2.1875rem;
   color: #0A0A0A;
   margin-bottom: 15px;
 }
@@ -8993,7 +8993,7 @@ margin-top: -130px;
 .services-details .service-details-wrrap .para {
   font-family: "Saira", sans-serif;
   font-weight: 400;
-  font-size: 15px;
+  font-size: 1rem;
   line-height: 32px;
   color: #272727;
 }
@@ -9007,7 +9007,7 @@ margin-top: -130px;
 .services-details .service-details-wrrap ul li {
   font-family: "Saira", sans-serif;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 32px;
   color: #181818;
   margin-bottom: 15px;
@@ -9087,7 +9087,7 @@ margin-top: -130px;
 .blog-standard .blog-st-wrrap .blog-st-content a h2 {
   font-family: "Saira", sans-serif;
   font-weight: 700;
-  font-size: 40px;
+  font-size: 2.5rem;
   color: #17161A;
   margin-bottom: 10px;
   text-transform: capitalize;
@@ -9103,7 +9103,7 @@ margin-top: -130px;
   margin-bottom: 0;
   font-family: "Outfit", sans-serif;
   font-weight: 300;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 32px;
   color: #333333;
 }
@@ -9135,7 +9135,7 @@ margin-top: -130px;
 .blog-standard .blog-st-wrrap .blog-st-content .publisher-area ul li {
   font-family: "Saira", sans-serif;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 25px;
   color: #5F6062;
 }
@@ -9193,7 +9193,7 @@ margin-top: -130px;
   font-family: "Outfit", sans-serif;
   width: 100%;
   font-weight: 400;
-  font-size: 12px;
+  font-size: 0.75rem;
 }
 
 .blog-sidebar .blog-widget-item .search-area .blog-widget-body1 .form-inner input::-webkit-input-placeholder {
@@ -9219,7 +9219,7 @@ margin-top: -130px;
 }
 
 .blog-sidebar .blog-widget-item .search-area .blog-widget-body1 .form-inner .search--btn i {
-  font-size: 25px;
+  font-size: 1.5625rem;
 }
 
 .blog-sidebar .blog-widget-item .sidebar-widget-title {
@@ -9241,7 +9241,7 @@ margin-top: -130px;
 .blog-sidebar .blog-widget-item .sidebar-widget-title h4 {
   font-family: "Outfit", sans-serif;
   font-weight: 500;
-  font-size: 22px;
+  font-size: 1.375rem;
 }
 
 .blog-sidebar .blog-widget-item .blog-widget-body {
@@ -9273,7 +9273,7 @@ margin-top: -130px;
   font-family: "Saira", sans-serif;
   font-style: normal;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 26px;
   text-transform: capitalize;
   color: #17161A;
@@ -9288,7 +9288,7 @@ margin-top: -130px;
 .blog-sidebar .blog-widget-item .blog-widget-body .recent-post .single-post .post-content span {
   font-family: "Saira", sans-serif;
   font-weight: 500;
-  font-size: 13px;
+  font-size: 0.8125rem;
   line-height: 20px;
   color: #5F6062;
 }
@@ -9323,7 +9323,7 @@ margin-top: -130px;
 .blog-sidebar .blog-widget-item .blog-widget-body .category-list li a span {
   font-family: "Saira", sans-serif;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 28px;
   color: #555;
   -webkit-transition: 0.35s;
@@ -9377,7 +9377,7 @@ margin-top: -130px;
 }
 
 .blog-sidebar .blog-widget-item .blog-widget-body .sidebar-social-list li a i {
-  font-size: 22px;
+  font-size: 1.375rem;
   color: var(--secondary-color);
 }
 
@@ -9393,7 +9393,7 @@ margin-top: -130px;
 .blog-sidebar .blog-widget-item .blog-widget-body .post-tag-list li a {
   font-family: "Outfit", sans-serif;
   font-weight: 500;
-  font-size: 12px;
+  font-size: 0.75rem;
   line-height: 170%;
   color: #8A8A8A;
   border: 1px solid rgba(10, 10, 10, 0.1);
@@ -9439,7 +9439,7 @@ margin-top: -130px;
 .blog-details .blog-dt-wrrap .blog-dt-content .publisher-area ul li {
   font-family: "Saira", sans-serif;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 1rem;
   color: #5F6062;
 }
 
@@ -9451,7 +9451,7 @@ margin-top: -130px;
 .blog-details .blog-dt-wrrap .blog-dt-content h2 {
   font-family: "Saira", sans-serif;
   font-weight: 700;
-  font-size: 40px;
+  font-size: 2.5rem;
   color: #17161A;
   margin-bottom: 10px;
 }
@@ -9459,7 +9459,7 @@ margin-top: -130px;
 .blog-details .blog-dt-wrrap .blog-dt-content .para {
   font-family: "Outfit", sans-serif;
   font-weight: 300;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 32px;
   color: #333333;
   margin-bottom: 15px;
@@ -9482,7 +9482,7 @@ margin-top: -130px;
 .blog-details .blog-dt-wrrap blockquote .blockquote-author h4 {
   font-family: "Saira", sans-serif;
   font-weight: 600;
-  font-size: 25px;
+  font-size: 1.5625rem;
   line-height: 37px;
   color: var(--primary-color);
   margin-bottom: 12px;
@@ -9492,7 +9492,7 @@ margin-top: -130px;
 .blog-details .blog-dt-wrrap blockquote > p {
   font-family: "Outfit", sans-serif;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 37px;
   color: #FFFFFF;
   text-align: center;
@@ -9507,7 +9507,7 @@ margin-top: -130px;
 .blog-details .blog-dt-wrrap .blog-tag h4 {
   font-family: "Outfit", sans-serif;
   font-weight: 600;
-  font-size: 22px;
+  font-size: 1.375rem;
   color: #17161A;
   margin-bottom: 0;
   margin-right: 15px;
@@ -9520,7 +9520,7 @@ margin-top: -130px;
 }
 
 .blog-details .blog-dt-wrrap .blog-tag .social-icon li a i {
-  font-size: 24px;
+  font-size: 1.5rem;
   color: #909090;
   -webkit-transition: 0.35s;
   transition: 0.35s;
@@ -9542,7 +9542,7 @@ margin-top: -130px;
 .blog-details .blog-dt-wrrap .blog-tag .tag-list li a {
   font-family: "Outfit", sans-serif;
   font-weight: 500;
-  font-size: 15px;
+  font-size: 1rem;
   color: rgba(10, 10, 10, 0.6);
   padding: 6px 20px;
   border: 1px solid rgba(10, 10, 10, 0.2);
@@ -9571,7 +9571,7 @@ margin-top: -130px;
 .blog-details .blog-dt-wrrap .page-navigation-area a {
   font-family: "Saira", sans-serif;
   font-weight: 500;
-  font-size: 15px;
+  font-size: 1rem;
   color: #888888;
   -webkit-transition: 0.35s;
   transition: 0.35s;
@@ -9602,7 +9602,7 @@ margin-top: -130px;
 .blog-details .blog-dt-wrrap .page-navigation-area h4 {
   font-family: "Saira", sans-serif;
   font-weight: 600;
-  font-size: 22px;
+  font-size: 1.375rem;
   color: #17161A;
   margin-bottom: 0;
 }
@@ -9614,7 +9614,7 @@ margin-top: -130px;
 .blog-details .blog-dt-wrrap .comments-area .comment-title h3 {
   font-family: "Saira", sans-serif;
   font-weight: 600;
-  font-size: 35px;
+  font-size: 2.1875rem;
   color: #111111;
 }
 
@@ -9640,7 +9640,7 @@ margin-top: -130px;
 .blog-details .blog-dt-wrrap .comments-area .comment-wrrap .comment-content .top-area .author-name h4 {
   font-family: "Saira", sans-serif;
   font-weight: 600;
-  font-size: 22px;
+  font-size: 1.375rem;
   color: #111111;
   margin-bottom: 0;
 }
@@ -9648,14 +9648,14 @@ margin-top: -130px;
 .blog-details .blog-dt-wrrap .comments-area .comment-wrrap .comment-content .top-area .date {
   font-family: "Saira", sans-serif;
   font-weight: 500;
-  font-size: 15px;
+  font-size: 1rem;
   color: #A4A4A4;
 }
 
 .blog-details .blog-dt-wrrap .comments-area .comment-wrrap .comment-content p {
   font-family: "Outfit", sans-serif;
   font-weight: 300;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 32px;
   color: #333333;
 }
@@ -9668,7 +9668,7 @@ margin-top: -130px;
   font-family: "Saira", sans-serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 1rem;
   color: var(--primary-color);
   border: 1px solid rgba(255, 1, 79, 0.5);
   padding: 6px 33px;
@@ -9695,7 +9695,7 @@ margin-top: -130px;
 .blog-details .blog-dt-wrrap .comments-area .comment-form form .form-inner label {
   font-family: "Saira", sans-serif;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 1rem;
   color: #17161A;
   margin-bottom: 10px;
 }
@@ -9708,35 +9708,35 @@ margin-top: -130px;
   padding: 25px;
   font-family: "Outfit", sans-serif;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 0.875rem;
   color: #545454;
 }
 
 .blog-details .blog-dt-wrrap .comments-area .comment-form form .form-inner input::-webkit-input-placeholder, .blog-details .blog-dt-wrrap .comments-area .comment-form form .form-inner textarea::-webkit-input-placeholder {
   font-family: "Outfit", sans-serif;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 0.875rem;
   color: #545454;
 }
 
 .blog-details .blog-dt-wrrap .comments-area .comment-form form .form-inner input:-ms-input-placeholder, .blog-details .blog-dt-wrrap .comments-area .comment-form form .form-inner textarea:-ms-input-placeholder {
   font-family: "Outfit", sans-serif;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 0.875rem;
   color: #545454;
 }
 
 .blog-details .blog-dt-wrrap .comments-area .comment-form form .form-inner input::-ms-input-placeholder, .blog-details .blog-dt-wrrap .comments-area .comment-form form .form-inner textarea::-ms-input-placeholder {
   font-family: "Outfit", sans-serif;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 0.875rem;
   color: #545454;
 }
 
 .blog-details .blog-dt-wrrap .comments-area .comment-form form .form-inner input::placeholder, .blog-details .blog-dt-wrrap .comments-area .comment-form form .form-inner textarea::placeholder {
   font-family: "Outfit", sans-serif;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 0.875rem;
   color: #545454;
 }
 
@@ -9801,7 +9801,7 @@ margin-top: -130px;
 
 .project-1 .gallery-item .single-gallery .overlay .sl-number h2 {
   font-family: "Saira", sans-serif;
-  font-size: 70px;
+  font-size: 4.375rem;
   font-weight: 700;
   line-height: 55px;
   color: #8A8A8A;
@@ -9818,7 +9818,7 @@ margin-top: -130px;
 .project-1 .gallery-item .single-gallery .overlay .content span {
   font-family: "Saira", sans-serif;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 28px;
   color: #E4E4E4;
 }
@@ -9826,14 +9826,14 @@ margin-top: -130px;
 .project-1 .gallery-item .single-gallery .overlay .content h3 {
   font-family: "Saira", sans-serif;
   font-weight: 600;
-  font-size: 35px;
+  font-size: 2.1875rem;
   line-height: 55px;
   color: #FFFFFF;
 }
 
 @media (max-width: 991px) {
   .project-1 .gallery-item .single-gallery .overlay .content h3 {
-    font-size: 30px;
+    font-size: 1.875rem;
     line-height: 37px;
   }
 }
@@ -9851,7 +9851,7 @@ margin-top: -130px;
     left: 20px;
     right: 20px;
     bottom: 70px;
-    font-size: 30px;
+    font-size: 1.875rem;
   }
 }
 
@@ -9870,7 +9870,7 @@ margin-top: -130px;
 .project-1 .gallery-item .single-gallery .overlay .case-button a {
   font-family: "Saira", sans-serif;
   font-weight: 500;
-  font-size: 13px;
+  font-size: 0.8125rem;
   line-height: 20px;
   color: #FFFFFF;
   border: 1px solid #FFFFFF;
@@ -9914,7 +9914,7 @@ margin-top: -130px;
 .project-2 .project-content .sl-number {
   font-family: "Saira", sans-serif;
   font-weight: 700;
-  font-size: 70px;
+  font-size: 4.375rem;
   line-height: 110px;
   color: #8A8A8A;
   opacity: 0.2;
@@ -9922,7 +9922,7 @@ margin-top: -130px;
 
 @media (max-width: 991px) {
   .project-2 .project-content .sl-number {
-    font-size: 60px;
+    font-size: 3.75rem;
     line-height: 95px;
     color: var(--secondary-color);
     opacity: .8;
@@ -9932,7 +9932,7 @@ margin-top: -130px;
 .project-2 .project-content span {
   font-family: "Saira", sans-serif;
   font-weight: 500;
-  font-size: 22px;
+  font-size: 1.375rem;
   color: #8A8A8A;
   margin-bottom: 5px;
 }
@@ -9946,7 +9946,7 @@ margin-top: -130px;
 .project-2 .project-content .title {
   font-family: "Saira", sans-serif;
   font-weight: 600;
-  font-size: 45px;
+  font-size: 2.81rem;
   color: #0A0A0A;
   white-space: nowrap;
   margin-bottom: 45px;
@@ -9954,7 +9954,7 @@ margin-top: -130px;
 
 @media (max-width: 1399px) {
   .project-2 .project-content .title {
-    font-size: 40px;
+    font-size: 2.5rem;
     margin-bottom: 35px;
   }
 }
@@ -10039,7 +10039,7 @@ margin-top: -130px;
 .project-2 .project-content a {
   padding: 12px 50px;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .project-2 .project-content.one {
@@ -10165,7 +10165,7 @@ margin-top: -130px;
 .project-details .Project1 .project1-slider-wrrap .project-img .batch span {
   font-family: "Saira", sans-serif;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 1.125rem;
   color: #FFFFFF;
   padding: 7px 30px;
   background: var(--primary-color);
@@ -10190,7 +10190,7 @@ margin-top: -130px;
 
 .project-details .Project1 .swiper-button-next-h i {
   color: var(--secondary-color);
-  font-size: 30px;
+  font-size: 1.875rem;
 }
 
 .project-details .Project1 .swiper-button-next-h:hover {
@@ -10216,7 +10216,7 @@ margin-top: -130px;
 
 .project-details .Project1 .swiper-button-prev-h i {
   color: var(--secondary-color);
-  font-size: 30px;
+  font-size: 1.875rem;
 }
 
 .project-details .Project1 .swiper-button-prev-h:hover {
@@ -10226,7 +10226,7 @@ margin-top: -130px;
 .project-details .main-title {
   font-family: "Saira", sans-serif;
   font-weight: 600;
-  font-size: 35px;
+  font-size: 2.1875rem;
   color: #17161A;
   margin-bottom: 15px;
   padding-top: 35px;
@@ -10235,7 +10235,7 @@ margin-top: -130px;
 .project-details .para1 {
   font-family: "Nunito", sans-serif;
   /* font-weight: 300; */
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 32px;
   color: #000030;
   margin-bottom: 18px;
@@ -10244,7 +10244,7 @@ margin-top: -130px;
 .project-details .para2 {
   font-family: "Nunito", sans-serif;
   /* font-weight: 300; */
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 32px;
   color: #000030;
   margin-bottom: 25px;
@@ -10253,7 +10253,7 @@ margin-top: -130px;
 .project-details .sub-title {
   font-family: "Saira", sans-serif;
   font-weight: 600;
-  font-size: 30px;
+  font-size: 1.875rem;
   color: #17161A;
   margin-bottom: 15px;
 }
@@ -10285,7 +10285,7 @@ margin-top: -130px;
 
 .project-details .project-video-area a i {
   color: var(--secondary-color);
-  font-size: 40px;
+  font-size: 2.5rem;
 }
 
 .project-details .project-sidebar .client-deatils {
@@ -10310,7 +10310,7 @@ margin-top: -130px;
   margin-bottom: 5px;
   font-family: "Saira", sans-serif;
   font-weight: 400;
-  font-size: 15px;
+  font-size: 1rem;
   color: #3d3d3d;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -10337,7 +10337,7 @@ margin-top: -130px;
   margin-bottom: 0px;
   font-family: "Saira", sans-serif;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 1.25rem;
   color: #0A0A0A;
 }
 
@@ -10370,7 +10370,7 @@ margin-top: -130px;
   margin-bottom: 7px;
   font-family: "Saira", sans-serif;
   font-weight: 600;
-  font-size: 35px;
+  font-size: 2.1875rem;
   color: #17161A;
   margin-top: -6px;
 }
@@ -10379,7 +10379,7 @@ margin-top: -130px;
   margin-bottom: 35px;
   font-family: "Saira", sans-serif;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 28px;
   color: #272727;
 }
@@ -10415,7 +10415,7 @@ margin-top: -130px;
 }
 
 .project-details .project-sidebar .commercial-area .sidebar-social-list li a i {
-  font-size: 22px;
+  font-size: 1.375rem;
   color: var(--secondary-color);
 }
 
@@ -10430,7 +10430,7 @@ margin-top: -130px;
 .project-details .related-project-area .section-title h3 {
   font-family: "Saira", sans-serif;
   font-weight: 600;
-  font-size: 35px;
+  font-size: 2.1875rem;
   color: #17161A;
   margin-bottom: 0;
 }
@@ -10452,7 +10452,7 @@ margin-top: -130px;
 
 .project-details .related-project-area .section-title .slider-btn .swiper-button-prev-i i, .project-details .related-project-area .section-title .slider-btn .swiper-button-next-i i {
   color: var(--secondary-color);
-  font-size: 30px;
+  font-size: 1.875rem;
 }
 
 .project-details .related-project-area .section-title .slider-btn .swiper-button-prev-i:hover, .project-details .related-project-area .section-title .slider-btn .swiper-button-next-i:hover {
@@ -10487,7 +10487,7 @@ margin-top: -130px;
 .project-details .related-project-area .related-project-slider .related-project-wrrap .overlay h2 {
   font-family: "Saira", sans-serif;
   font-weight: 700;
-  font-size: 70px;
+  font-size: 4.375rem;
   color: #8A8A8A;
   line-height: 50px;
   opacity: 0.4;
@@ -10496,7 +10496,7 @@ margin-top: -130px;
 
 @media (max-width: 1199px) {
   .project-details .related-project-area .related-project-slider .related-project-wrrap .overlay h2 {
-    font-size: 55px;
+    font-size: 3.4375rem;
   }
 }
 
@@ -10531,14 +10531,14 @@ margin-top: -130px;
 .project-details .related-project-area .related-project-slider .related-project-wrrap .overlay .catagory span {
   font-family: "Saira", sans-serif;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 1.125rem;
   color: #E4E4E4;
 }
 
 .project-details .related-project-area .related-project-slider .related-project-wrrap .overlay .catagory h3 {
   font-family: "Saira", sans-serif;
   font-weight: 600;
-  font-size: 30px;
+  font-size: 1.875rem;
   color: var(--secondary-color);
 }
 
@@ -10573,7 +10573,7 @@ margin-top: -130px;
 .project-details .related-project-area .related-project-slider .related-project-wrrap .overlay .case-btn a {
   font-family: "Saira", sans-serif;
   font-weight: 500;
-  font-size: 13px;
+  font-size: 0.8125rem;
   color: var(--secondary-color);
   border: 1px solid #FFFFFF;
   border-radius: 5px;
@@ -10602,7 +10602,7 @@ margin-top: -130px;
 .project-details .project-features li {
   font-family: "Saira", sans-serif;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 1.125rem;
   color: #0A0A0A;
   margin-bottom: 20px;
 }
@@ -10635,7 +10635,7 @@ margin-top: -130px;
 .error-pages .error-wrrap .sm-title {
   font-family: "Saira", sans-serif;
   font-weight: 700;
-  font-size: 55px;
+  font-size: 3.4375rem;
   color: var(--primary-color);
   margin-bottom: 45px;
 }
@@ -10643,7 +10643,7 @@ margin-top: -130px;
 .error-pages .error-wrrap .main-title {
   font-family: "Saira", sans-serif;
   font-weight: 700;
-  font-size: 50px;
+  font-size: 1.67rem;
   margin-bottom: 20px;
   color: #272727;
   padding-top: 60px;
@@ -10651,7 +10651,7 @@ margin-top: -130px;
 
 @media (max-width: 576px) {
   .error-pages .error-wrrap .main-title {
-    font-size: 40px;
+    font-size: 2.5rem;
     padding-top: 40px;
   }
 }
@@ -10661,7 +10661,7 @@ margin-top: -130px;
   width: 100%;
   font-family: "Saira", sans-serif;
   font-weight: 400;
-  font-size: 15px;
+  font-size: 1rem;
   line-height: 32px;
   color: #272727;
   margin: 0 auto;
@@ -10672,7 +10672,7 @@ margin-top: -130px;
   padding: 13px 20px;
   border-radius: 30px;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .error-pages .error-wrrap .back-btn a::after {
@@ -10778,7 +10778,7 @@ margin-top: -130px;
 }
 
 .photo-gallery .portfolio-item3 .overlay .overlay-content p {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 500;
   color: var(--white);
   margin-bottom: 5px;
@@ -10789,7 +10789,7 @@ margin-top: -130px;
 }
 
 .photo-gallery .portfolio-item3 .overlay .overlay-content h4 a {
-  font-size: 25px;
+  font-size: 1.5625rem;
   font-weight: 600px;
   color: var(--white);
   line-height: 1.4;
@@ -10802,7 +10802,7 @@ margin-top: -130px;
   border-radius: 50%;
   text-align: center;
   line-height: 50px;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 600;
   color: var(--primary-color3);
   cursor: pointer;
@@ -10898,7 +10898,7 @@ margin-top: -130px;
 }
 
 .contact-page .contact-address .single-contact .icon i {
-  font-size: 50px;
+  font-size: 1.67rem;
   color: #17161A;
   -webkit-transition: .35;
   transition: .35;
@@ -10915,7 +10915,7 @@ margin-top: -130px;
 .contact-page .contact-address .single-contact .content h3 {
   font-family: "Saira", sans-serif;
   font-weight: 600;
-  font-size: 30px;
+  font-size: 1.875rem;
   color: #17161A;
   margin-bottom: 12px;
 }
@@ -10923,7 +10923,7 @@ margin-top: -130px;
 .contact-page .contact-address .single-contact .content a {
   font-family: "Saira", sans-serif;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 32px;
   color: #272727;
   -webkit-transition: 0.35s;
@@ -10955,7 +10955,7 @@ margin-top: -130px;
 .contact-page .contact-form-area h2 {
   font-family: "Saira", sans-serif;
   font-weight: 600;
-  font-size: 35px;
+  font-size: 2.1875rem;
   color: var(--secondary-color);
 }
 
@@ -10983,7 +10983,7 @@ margin-top: -130px;
   width: 100%;
   font-family: "Outfit", sans-serif;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 0.875rem;
   /* color: #9A9999; */
   color: #181818;
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -10997,7 +10997,7 @@ margin-top: -130px;
   width: 100%;
   font-family: "Outfit", sans-serif;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 0.875rem;
   /* color: #9A9999; */
   color: #181818;
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -11008,7 +11008,7 @@ margin-top: -130px;
 }
 
 .contact-page .contact-form-area .form-inner button {
-  font-size: 18px;
+  font-size: 1.125rem;
   border: none;
 }
 
