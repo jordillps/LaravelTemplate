@@ -11052,4 +11052,18 @@ mark {
     background-position: 0 0;
   }
 }
+
+/* Cookies */
+#cookiescript_accept {
+  background-color: var(--primary-color) !important;
+}
+
+#cookiescript_injected_fsd #cookiescript_accept {
+  color: #ffffff !important;
+}
+
+#cookiescript_injected_fsd #cookiescript_save {
+  background-color: var(--primary-color) !important;
+  border: 1px solid var(--primary-color) !important;
+}
 /*# sourceMappingURL=style.css.map */
