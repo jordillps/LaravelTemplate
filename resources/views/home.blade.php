@@ -46,7 +46,7 @@
                 <div class="col-lg-6 p-0">
                     <div class="hero-img">
                         @foreach ($header->getMedia('images') as $media)
-                            <img class="img-fluid" src="{{ $media->getUrl() }}" alt="web developer freelance" title="web developer freelance">                 
+                            <img class="img-fluid" src="{{ $media->getUrl() }}" alt="aplicación web" title="aplicación web">                 
                         @endforeach
                     </div>
                 </div>

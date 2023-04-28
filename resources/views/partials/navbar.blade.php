@@ -3,7 +3,7 @@
 @endphp
 <!-- ========== header============= -->
 
-<header class="header-area style-1">
+<header tabindex="0" class="header-area style-1">
   <div class="header-logo">
       <a href="{{ route('home') }}" accesskey="h"><img alt="logo Formal Web" src="{{ asset('img/logoFormalWeb_8.png') }}" title="logo Formal Web"></a>
   </div>
