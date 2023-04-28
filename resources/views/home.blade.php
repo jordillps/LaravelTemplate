@@ -30,8 +30,9 @@
             <div class="row">
                 <div class="col-lg-6 d-flex align-items-center justify-content-end p-0">
                     <div class="hero-content">
-                        <h1>{{ $header->title }}<span>{!! $header->text !!}</span>
-                            <span>WEB Freelance</span></h1>
+                        <h1>{{ $header->title }}
+                        <span>{{ $header->{'text:'. app()->getLocale()} }}</span>
+                        <span>WEB Freelance</span></h1>
                         <div class="mb-5">
                             <ul>
                                 <li><img src="{{ asset('img/web/home/check-white.png') }}" alt="{{ __('web.web-sites-manageables') }}" title="{{ __('web.web-sites-manageables') }}"><p class="h5">{{ __('web.web-sites-manageables') }}</p></li>
@@ -86,7 +87,7 @@
                                 <div class="services-technologies">
                                     @foreach($service->getMedia('images') as $media)
                                         @if($loop->index != 0)
-                                            <img src="{{ $media->getUrl() }}" alt="lenguajes de programacion web" title="lenguajes de programacion web" width="50" height="auto">
+                                            <img src="{{ $media->getUrl() }}" alt="lenguajes de programacion web" title="lenguajes de programacion web" width="50">
                                         @endif
                                     @endforeach
                                 </div>

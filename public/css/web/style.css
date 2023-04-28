@@ -2997,6 +2997,7 @@ header.style-1 .mobile-menu-form .hotline .hotline-info h6 {
 
 .footer1 .footer-wrrap1 .footer-img {
   margin-block: 25px;
+  display: inline-block;
 }
 
 .footer1 .footer-wrrap1 .social-icon {

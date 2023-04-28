@@ -10,11 +10,11 @@
     @yield('seo')
     
     <!-- Favicons -->
-    <link href="{{ asset('img/logoformalweb.ico') }}" rel="icon" />
-    <link href="{{ asset('img/web/apple-touch-icon.png') }}" rel="apple-touch-icon" />
+    <link href="{{ asset('img/logoformalweb.ico') }}" rel="icon">
+    <link href="{{ asset('img/web/apple-touch-icon.png') }}" rel="apple-touch-icon">
 
     <!-- TEMPLATE CSS -->
-    <link rel="stylesheet" href="{{ asset('css/web/animate.css') }}">
+    {{-- <link rel="stylesheet" href="{{ asset('css/web/animate.css') }}"> --}}
     <!-- css file link -->
     {{-- <link rel="stylesheet" href="{{ asset('css/web/all.css') }}"> --}}
     <!-- bootstrap 5 -->
@@ -95,11 +95,11 @@
     
     @if(app()->getLocale() == 'ca')
         <!-- CAT -->
-        <script type="text/javascript" charset="UTF-8" src="//cdn.cookie-script.com/s/d02d0ed95868d190143820c514c08bbc.js"></script>
+        <script type="text/javascript" src="//cdn.cookie-script.com/s/d02d0ed95868d190143820c514c08bbc.js"></script>
         
     @else
         <!-- ES -->
-        <script type="text/javascript" charset="UTF-8" src="//cdn.cookie-script.com/s/44c211e6244e57f914141ca984d442a5.js"></script>
+        <script type="text/javascript"  src="//cdn.cookie-script.com/s/44c211e6244e57f914141ca984d442a5.js"></script>
     @endif
 
     <!-- js file link -->
