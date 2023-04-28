@@ -40,7 +40,7 @@
                                 <li><img src="{{ asset('img/web/home/check-white.png') }}" alt="{{ __('web.other-web-projects') }}" title="{{ __('web.other-web-projects') }}"><p class="h5">{{ __('web.other-web-projects') }}</p></li>
                             </ul>
                         </div>
-                        <a class="eg-btn btn--primary btn--lg" href="{{ route('about-me') }}">{{ __('web.about-me') }}</a>
+                        <a class="eg-btn btn--primary btn--lg" href="{{ route('about-me') }}" aria-label="{{ __('web.about-me') }}">{{ __('web.about-me') }}</a>
                     </div>
                 </div>
                 <div class="col-lg-6 p-0">
@@ -65,7 +65,7 @@
                         <h2>{{ __('web.myservices') }}</h2>
                     </div>
                     <div class="view-all-btn">
-                        <a class="eg-btn btn--primary btn--lg" href="{{ route('services') }}">{{ __('web.services-description') }}</a>
+                        <a class="eg-btn btn--primary btn--lg" href="{{ route('services') }}" aria-label="{{ __('web.services-description') }}">{{ __('web.services-description') }}</a>
                     </div>
                 </div>
             </div>
@@ -93,7 +93,7 @@
                                 </div>
                             @endif
                             <div class="read-more-btn d-flex justify-content-end mt-3">
-                                <a href="{{ route('services') }}">{{ __('web.read-more') }}
+                                <a href="{{ route('services') }}" aria-label="{{ __('web.services-description') }}">{{ __('web.read-more') }}
                                     <span><img src="{{ asset('img/web/icons/arrow-right.svg') }}" alt="{{ $service->{'title:'. app()->getLocale()} }}" title="{{ $service->{'title:'. app()->getLocale()} }}"></span>
                                 </a>
                             </div>
@@ -140,11 +140,11 @@
                                             <h3>{{ $project->title }}</h3>
                                         </div>
                                         <div class="case-button">
-                                            <a href="{{ route('projects') }}">{{ __('web.read-more') }}</a>
+                                            <a href="{{ route('projects') }}" aria-label="{{ $project->title }}">{{ __('web.read-more') }}</a>
                                         </div>
                                     </div>
                                     <div class="read-more-btn d-flex justify-content-end d-lg-none">
-                                        <a href="{{ route('services') }}">{{ __('web.read-more') }}
+                                        <a href="{{ route('services') }}" aria-label="{{ $project->title }}">{{ __('web.read-more') }}
                                             <span><img src="{{ asset('img/web/icons/arrow-right.svg') }}" alt="{{ $project->title }}" title="{{ $project->title }}"></span>
                                         </a>
                                     </div>
@@ -157,7 +157,7 @@
             <div class="row pt-50">
                 <div class="col-12 d-flex justify-content-center wow animate fadeInUp" data-wow-delay="300ms" data-wow-duration="1500ms">
                     <div class="view-all-btn">
-                        <a class="eg-btn btn--primary btn--lg" href="{{ route('projects') }}">{{ __('web.view-all') }}</a>
+                        <a class="eg-btn btn--primary btn--lg" href="{{ route('projects') }}" aria-label="{{ __('web.view-all') }}">{{ __('web.view-all') }}</a>
                     </div>
                 </div>
             </div>
