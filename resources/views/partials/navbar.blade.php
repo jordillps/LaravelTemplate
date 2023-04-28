@@ -5,12 +5,12 @@
 
 <header class="header-area style-1">
   <div class="header-logo">
-      <a href="{{ route('home') }}"><img alt="logo Formal Web" src="{{ asset('img/logoFormalWeb_8.png') }}" title="logo Formal Web"></a>
+      <a href="{{ route('home') }}" accesskey="h"><img alt="logo Formal Web" src="{{ asset('img/logoFormalWeb_8.png') }}" title="logo Formal Web"></a>
   </div>
   <div class="main-menu">
       <div class="mobile-logo-area d-lg-none d-flex justify-content-between align-items-center">
           <div class="mobile-logo-wrap ">
-              <a href="{{ route('home') }}"><img alt="logo Formal Web" src="{{ asset('img/logoFormalWebMobile.png') }}" title="logo Formal Web"></a>
+              <a href="{{ route('home') }}" accesskey="h"><img alt="logo Formal Web" src="{{ asset('img/logoFormalWebMobile.png') }}" title="logo Formal Web"></a>
 
           </div>
           <div class="menu-close-btn">
@@ -19,18 +19,18 @@
       </div>
       <ul class="menu-list">
           <li>
-              <a href="{{ route('about-me') }}">{{ __('web.about-me') }}</a>
+              <a href="{{ route('about-me') }}" accesskey="a">{{ __('web.about-me') }}</a>
           </li>
           <li>
-            <a href="{{ route('services') }}">{{ __('web.services') }}</a>
+            <a href="{{ route('services') }}" accesskey="s">{{ __('web.services') }}</a>
           </li>
           <li>
-            <a href="{{ route('projects') }}">{{ __('web.projects') }}</a>
+            <a href="{{ route('projects') }}" accesskey="p">{{ __('web.projects') }}</a>
           </li>
           <li>
-            <a href="{{ route('blog') }}">{{ __('web.blog') }}</a>
+            <a href="{{ route('blog') }}" accesskey="b">{{ __('web.blog') }}</a>
           </li>
-          <li><a href="{{ route('contact') }}">{{ __('web.contact') }}</a></li>
+          <li><a href="{{ route('contact') }}" accesskey="c">{{ __('web.contact') }}</a></li>
           @include('partials.language_switcher')
       </ul>
       <!-- mobile-search-area -->

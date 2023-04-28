@@ -27,12 +27,12 @@
                     </div>
                     <div class="footer-menu">
                         <ul>
-                            <li><a href="{{ route('home') }}">{{ __('web.home') }}</a></li>
-                            <li><a href="{{ route('about-me') }}">{{ __('web.about-me') }}</a></li>
-                            <li><a href="{{ route('services') }}">{{ __('web.services') }}</a></li>
-                            <li><a href="{{ route('projects') }}">{{ __('web.projects') }}</a></li>
-                            <li><a href="{{ route('blog') }}">{{ __('web.blog') }}</a></li>
-                            <li><a href="{{ route('contact') }}">{{ __('web.contact') }}</a></li>
+                            <li><a href="{{ route('home') }}" accesskey="h">{{ __('web.home') }}</a></li>
+                            <li><a href="{{ route('about-me') }}" accesskey="a">{{ __('web.about-me') }}</a></li>
+                            <li><a href="{{ route('services') }}" accesskey="s">{{ __('web.services') }}</a></li>
+                            <li><a href="{{ route('projects') }}" accesskey="p">{{ __('web.projects') }}</a></li>
+                            <li><a href="{{ route('blog') }}" accesskey="b">{{ __('web.blog') }}</a></li>
+                            <li><a href="{{ route('contact') }}" accesskey="c">{{ __('web.contact') }}</a></li>
                         </ul>
                     </div>
                     <div  class="devlper-area">
@@ -40,7 +40,7 @@
                             <span id="copyright"></span>
                             <span>{{ __('web.all-rights-reserved') }} </span>
                         </div>
-                        <span><a href="{{ route('legal-notice') }}">{{ __('web.legal-notice') }}</a> | <a href={{ route('privacy-policy') }}>{{ __('web.privacy-policy') }}</a> | <a href={{ route('cookies-policy') }}>{{ __('web.cookies-policy') }}</a></span>
+                        <span><a href="{{ route('legal-notice') }}" accesskey="l">{{ __('web.legal-notice') }}</a> | <a href={{ route('privacy-policy') }} accesskey="r">{{ __('web.privacy-policy') }}</a> | <a href={{ route('cookies-policy') }} accesskey="o">{{ __('web.cookies-policy') }}</a></span>
                         <div>
                             <span>{{__('web.developed-by') }} <a href="https://javajan.es/">Serveis d'Internet Javajan</a></span>
                         </div>

@@ -74,7 +74,7 @@
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe rel="dns-prefetch" src="https://www.googletagmanager.com/ns.html?id=GTM-WW8CBXL" height="0"
+  <noscript><iframe rel="dns-prefetch" title="Google Tag Manager" src="https://www.googletagmanager.com/ns.html?id=GTM-WW8CBXL" height="0"
     width="0" style="display: none; visibility: hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
