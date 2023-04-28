@@ -15,7 +15,7 @@
                     <a class="footer-btn eg-btn btn--primary btn--lg mb-30" href="{{ route('contact') }}">{{ __('web.lets-chat') }}</a>
                 </div>
             </div>
-            <div class="col-lg-6 col-sm-12 d-flex align-items-center text-center order-lg-2 order-3 wow animate fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
+            <div class="col-lg-6 col-sm-12 d-flex align-items-center justify-content-center text-center order-lg-2 order-3 wow animate fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
                 <div class="footer-wrrap1">
                     <div class="social-icon">
                         <span>{{ __('web.follow-me') }}:</span>
