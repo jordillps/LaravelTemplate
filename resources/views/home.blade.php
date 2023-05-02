@@ -18,12 +18,12 @@
 @section('content')
 
      <!-- ========== Home One Menu Start============= -->
-     <div class="hero-style1 mb-120">
+     <header class="hero-style1 mb-120">
         <div class="social-area">
             <ul>
-                <li><a href="{{ $setting->facebook_url }}" target="blank" aria-label="facebook">FACEBOOK</a></li>
-                <li><a href="{{ $setting->twitter_url }}" target="blank" aria-label="twitter">TWITTER</a></li>
-                <li><a href="{{ $setting->linkedin_url }}" target="blank" aria-label="linkedin">LINKEDIN</a></li>
+                <li><a href="{{ $setting->facebook_url }}" target="blank" aria-label="link to facebook">FACEBOOK</a></li>
+                <li><a href="{{ $setting->twitter_url }}" target="blank" aria-label="link to twitter">TWITTER</a></li>
+                <li><a href="{{ $setting->linkedin_url }}" target="blank" aria-label="link to linkedin">LINKEDIN</a></li>
             </ul>
         </div>
         <div class="container-fluid">
@@ -40,7 +40,7 @@
                                 <li><img src="{{ asset('img/web/home/check-white.png') }}" alt="{{ __('web.other-web-projects') }}" title="{{ __('web.other-web-projects') }}"><p class="h5">{{ __('web.other-web-projects') }}</p></li>
                             </ul>
                         </div>
-                        <a class="eg-btn btn--primary btn--lg" href="{{ route('about-me') }}" aria-label="{{ __('web.about-me') }}">{{ __('web.about-me') }}</a>
+                        <a class="eg-btn btn--primary btn--lg" href="{{ route('about-me') }}" aria-label="link to {{ __('web.about-me') }} page">{{ __('web.about-me') }}</a>
                     </div>
                 </div>
                 <div class="col-lg-6 p-0">
@@ -52,7 +52,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </header>
     <!-- ========== Home One Menu End============= -->
 
     <!-- ========== Home One Services Start============= -->
@@ -65,7 +65,7 @@
                         <h2>{{ __('web.myservices') }}</h2>
                     </div>
                     <div class="view-all-btn">
-                        <a class="eg-btn btn--primary btn--lg" href="{{ route('services') }}" aria-label="{{ __('web.services-description') }}">{{ __('web.services-description') }}</a>
+                        <a class="eg-btn btn--primary btn--lg" href="{{ route('services') }}" aria-label="link to {{ __('web.services-description') }} page">{{ __('web.services-description') }}</a>
                     </div>
                 </div>
             </div>
@@ -93,7 +93,7 @@
                                 </div>
                             @endif
                             <div class="read-more-btn d-flex justify-content-end mt-3">
-                                <a href="{{ route('services') }}" aria-label="{{ __('web.services-description') }}">{{ __('web.read-more') }}
+                                <a href="{{ route('services') }}" aria-label=" link to {{ __('web.services-description') }}">{{ __('web.read-more') }}
                                     <span><img src="{{ asset('img/web/icons/arrow-right.svg') }}" alt="{{ $service->{'title:'. app()->getLocale()} }}" title="{{ $service->{'title:'. app()->getLocale()} }}"></span>
                                 </a>
                             </div>
@@ -144,7 +144,7 @@
                                         </div>
                                     </div>
                                     <div class="read-more-btn d-flex justify-content-end d-lg-none">
-                                        <a href="{{ route('services') }}" aria-label="{{ $project->title }}">{{ __('web.read-more') }}
+                                        <a href="{{ route('projects') }}" aria-label="{{ $project->title }}">{{ $project->title }}
                                             <span><img src="{{ asset('img/web/icons/arrow-right.svg') }}" alt="{{ $project->title }}" title="{{ $project->title }}"></span>
                                         </a>
                                     </div>
@@ -157,7 +157,7 @@
             <div class="row pt-50">
                 <div class="col-12 d-flex justify-content-center wow animate fadeInUp" data-wow-delay="300ms" data-wow-duration="1500ms">
                     <div class="view-all-btn">
-                        <a class="eg-btn btn--primary btn--lg" href="{{ route('projects') }}" aria-label="{{ __('web.view-all') }}">{{ __('web.view-all') }}</a>
+                        <a class="eg-btn btn--primary btn--lg" href="{{ route('projects') }}" aria-label=" link to {{ __('web.view-all') }} page">{{ __('web.view-all') }}</a>
                     </div>
                 </div>
             </div>

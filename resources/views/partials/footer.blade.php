@@ -3,7 +3,7 @@
 @endphp
 
 <!-- ========== Home Footer Start============= -->
-<div class="footer1">
+<footer class="footer1">
     <div class="container">
         <div class="row">
             <div class="col-lg-3 col-sm-6 d-flex align-items-center wow animate fadeInLeft" data-wow-delay="300ms" data-wow-duration="1500ms">
@@ -27,7 +27,7 @@
                     </div>
                     <div class="footer-menu">
                         <ul>
-                            <li><a href="{{ route('home') }}" accesskey="h">{{ __('web.home') }}</a></li>
+                            <li><a href="{{ route('home') }}" accesskey="n">{{ __('web.home') }}</a></li>
                             <li><a href="{{ route('about-me') }}" accesskey="a">{{ __('web.about-me') }}</a></li>
                             <li><a href="{{ route('services') }}" accesskey="s">{{ __('web.services') }}</a></li>
                             <li><a href="{{ route('projects') }}" accesskey="p">{{ __('web.projects') }}</a></li>
@@ -78,7 +78,7 @@
                             <i class="bi bi-geo-alt"></i>
                         </div>
                         <div class="location">
-                            <a href="#" aria-label="{{ $setting->city }}">{{ $setting->city }}</a>
+                            <a href="#" aria-label="{{ $setting->city }}" role="button">{{ $setting->city }}</a>
                         </div>
                     </div>
                     
@@ -86,7 +86,7 @@
             </div>
         </div>
     </div>
-</div>
+</footer>
 <!-- ========== Home Footer End============= -->
 
 @push('scripts')

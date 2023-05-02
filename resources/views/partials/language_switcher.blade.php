@@ -3,7 +3,7 @@
     <ul class="submenu">
         @foreach($available_locales as $locale_name => $available_locale)
             @if($available_locale != $current_locale)
-            <li><a href="{{ route('setLocale', $available_locale) }}">
+            <li><a href="{{ route('setLocale', $available_locale) }}" role="button">
                     {{ __('global.'. $locale_name)}}
                 </a></li>
             @endif

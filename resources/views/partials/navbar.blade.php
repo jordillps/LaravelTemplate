@@ -5,12 +5,12 @@
 
 <header tabindex="0" class="header-area style-1">
   <div class="header-logo">
-      <a href="{{ route('home') }}" accesskey="h"><img alt="logo Formal Web" src="{{ asset('img/logoFormalWeb_8.png') }}" title="logo Formal Web"></a>
+      <a href="{{ route('home') }}" accesskey="h" aria-label="Página inicio Formal Web"><img alt="Página inicio Formal Web" src="{{ asset('img/logoFormalWeb_8.png') }}" title="Página inicio Formal Web"></a>
   </div>
   <div class="main-menu">
       <div class="mobile-logo-area d-lg-none d-flex justify-content-between align-items-center">
           <div class="mobile-logo-wrap ">
-              <a href="{{ route('home') }}" accesskey="h"><img alt="logo Formal Web" src="{{ asset('img/logoFormalWebMobile.png') }}" title="logo Formal Web"></a>
+              <a href="{{ route('home') }}" accesskey="m" aria-label="Página inicio Formal Web para móvil"><img alt="Página inicio Formal Web para móvil" src="{{ asset('img/logoFormalWebMobile.png') }}" title="Página inicio Formal Web para móvil"></a>
 
           </div>
           <div class="menu-close-btn">
@@ -19,18 +19,18 @@
       </div>
       <ul class="menu-list">
           <li>
-              <a href="{{ route('about-me') }}" accesskey="a">{{ __('web.about-me') }}</a>
+              <a href="{{ route('about-me') }}" accesskey="a" aria-label="{{ __('web.about-me') }}">{{ __('web.about-me') }}</a>
           </li>
           <li>
-            <a href="{{ route('services') }}" accesskey="s">{{ __('web.services') }}</a>
+            <a href="{{ route('services') }}" accesskey="s" aria-label="{{ __('web.services') }}">{{ __('web.services') }}</a>
           </li>
           <li>
-            <a href="{{ route('projects') }}" accesskey="p">{{ __('web.projects') }}</a>
+            <a href="{{ route('projects') }}" accesskey="p" aria-label="{{ __('web.projects') }}">{{ __('web.projects') }}</a>
           </li>
           <li>
-            <a href="{{ route('blog') }}" accesskey="b">{{ __('web.blog') }}</a>
+            <a href="{{ route('blog') }}" accesskey="b" aria-label="{{ __('web.blog') }}">{{ __('web.blog') }}</a>
           </li>
-          <li><a href="{{ route('contact') }}" accesskey="c">{{ __('web.contact') }}</a></li>
+          <li><a href="{{ route('contact') }}" accesskey="c" aria-label="{{ __('web.contact') }}">{{ __('web.contact') }}</a></li>
           @include('partials.language_switcher')
       </ul>
       <!-- mobile-search-area -->
@@ -42,7 +42,7 @@
                   </div>
                   <div class="hotline-info">
                       <span>{{ __('web.click-to-call') }}</span>
-                      <h6><a href="tel:{{ $phone[0] }}">{{ $phone[0] }}</a></h6>
+                      <h6><a href="tel:{{ $phone[0] }}" aria-label="phone mobile">{{ $phone[0] }}</a></h6>
                   </div>
               </div>
           </form>
@@ -55,7 +55,7 @@
               <img alt="image" src="{{ asset('img/web/icons/header-phone.svg') }}" >
           </div>
           <div class="hotline-info">
-              <h6><a href="tel:{{ $phone[0] }}">{{ $phone[0] }}</a></h6>
+              <h6><a href="tel:{{ $phone[0] }}" aria-label="phone">{{ $phone[0] }}</a></h6>
           </div>
       </div>
       <div class="mobile-menu-btn d-lg-none d-block">
