@@ -27,7 +27,7 @@
                         <div class="inner-breadcrumb" role="contentinfo">
                             <h1>{{ __('web.services') }}</h1>
                             <nav>
-                                <ol class="breadcrumb">
+                                <ol class="breadcrumb" role="navigation" aria-label="{{ __('web.services') }}">
                                   <li class="breadcrumb-item"><a href="{{ route('home') }}">{{ __('web.home') }}</a></li>
                                   <li class="breadcrumb-item active" aria-current="page">{{ __('web.services') }}</li>
                                 </ol>
@@ -47,7 +47,7 @@
         <div class="row">
             <div class="col-lg-8 order-lg-1 order-2 wow animate fadeInDown" data-wow-delay="400ms" data-wow-duration="1500ms">
                 @foreach ($services as $service)
-                    <div class="service-details-wrrap pb-60">
+                    <div class="service-details-wrrap pb-60" role="contentnfo" arial-label="descipción de los servicios">
                         @if(count($service->getMedia('images'))>0)
                             <div class="service-img-1">
                                 <img class="img-fluid" src="{{ $service->getMedia('images')[0]->getUrl() }}" alt="{{ $service->{'title:'. app()->getLocale()} }}" title="{{ $service->{'title:'. app()->getLocale()} }}">
@@ -62,12 +62,14 @@
                         <div class="service-body">
                             {!! $service->{'body:'. app()->getLocale()} !!}
                         </div>
-                        @if(count($service->getMedia('images'))>0)
-                            
+                        @if(count($service->getMedia('images'))>0) 
                             <div class="services-technologies">
                                 @foreach($service->getMedia('images') as $media)
+                                    @php
+                                       $technology_name=substr($media->name, strpos($media->name, "_") + 1); 
+                                    @endphp
                                     @if($loop->index != 0)
-                                        <img src="{{ $media->getUrl() }}" alt="html,css,javascript,php,laravel" title="html,css,javascript,php,laravel" width="70" height="70">
+                                        <img src="{{ $media->getUrl() }}" alt="{{ $technology_name }}" title="{{ $technology_name }}" width="70" height="70">
                                     @endif
                                 @endforeach
                             </div>
@@ -87,7 +89,7 @@
                             <div class="blog-widget-body">
                                 <ul class="category-list">
                                     @foreach ($services as $service)
-                                        <li><a href="#"><span>{{ $service->{'title:'. app()->getLocale()} }}</span></a></li>
+                                        <li><a href="#" role="button"><h4>{{ $service->{'title:'. app()->getLocale()} }}</h4></a></li>
                                     @endforeach
                                 </ul>
                             </div>

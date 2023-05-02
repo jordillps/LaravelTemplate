@@ -31,7 +31,7 @@
                         <div class="inner-breadcrumb" role="contentinfo">
                             <h1>{{ __('web.contact-now') }}</h1>
                             <nav>
-                                <ol class="breadcrumb">
+                                <ol class="breadcrumb" role="navigation" aria-label="{{ __('web.contact-now') }}">
                                   <li class="breadcrumb-item"><a href="{{ route('home') }}">{{ __('web.home') }}</a></li>
                                   <li class="breadcrumb-item active" aria-current="page">{{ __('web.contact-now') }}</li>
                                 </ol>

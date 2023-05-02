@@ -9333,7 +9333,8 @@ margin-top: -130px;
           justify-content: space-between;
 }
 
-.blog-sidebar .blog-widget-item .blog-widget-body .category-list li a span {
+.blog-sidebar .blog-widget-item .blog-widget-body .category-list li a span,
+.blog-sidebar .blog-widget-item .blog-widget-body .category-list li a h4 {
   font-family: "Saira", sans-serif;
   font-weight: 400;
   font-size: 1.125rem;
