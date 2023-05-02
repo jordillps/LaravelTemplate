@@ -84,15 +84,15 @@
                                         <ul>
                                             <li>
                                                 <span>{{ __('web.name') }}</span>
-                                                <p class="h5">{{ $about->name }}</p>
+                                                <p class="h5" role="heading" aria-level="2">{{ $about->name }}</p>
                                             </li>
                                             <li>
                                                 <span>{{ __('web.email') }}</span>
-                                                <p class="h5">{{ $about->email }}</p>
+                                                <p class="h5" role="heading" aria-level="2">{{ $about->email }}</p>
                                             </li>
                                             <li>
                                                 <span>{{ __('web.languages') }}</span>
-                                                <p class="h5">{{ $about->{'languages:'. app()->getLocale()} }}</p>
+                                                <p class="h5" role="heading" aria-level="2">{{ $about->{'languages:'. app()->getLocale()} }}</p>
                                             </li>
                                         </ul>
                                     </div>
@@ -102,11 +102,11 @@
                                         <ul>
                                             <li>
                                                 <span>{{ __('web.phone') }}</span>
-                                                <p class="h5">{{ $about->phone }}</p>
+                                                <p class="h5" role="heading" aria-level="2">{{ $about->phone }}</p>
                                             </li>
                                             <li>
                                                 <span>{{ __('web.city') }}</span>
-                                                <p class="h5">{{ $about->city }}</p>
+                                                <p class="h5" role="heading" aria-level="2">{{ $about->city }}</p>
                                             </li>
                                         </ul>
                                     </div>
@@ -120,18 +120,18 @@
                                             <h3 class="resume-title">{{ __('web.education') }}</h3>
                                             <div class="resume-item pb-0">
                                                 <h4>{{ __('web.degree-1') }}</h4>
-                                                <p class="h5">1987 - 1990</p>
+                                                <p class="h5" role="heading" aria-level="3">1987 - 1990</p>
                                                 <p><em>Universitat Politècnica de Catalunya</em></p>
                                             </div>
                                             <div class="resume-item pb-0">
                                                 <h4>{{ __('web.degree-2') }}</h4>
-                                                <p class="h5">2012 - 2016</p>
+                                                <p class="h5" role="heading" aria-level="3">2012 - 2016</p>
                                                 <p><em>Universitat Oberta de Catalunya</em></p>
                                             </div>
                                             <h3 class="resume-title">{{ __('web.experience') }}</h3>
                                             <div class="resume-item">
                                                 <h4>{{ $about->{'profession:'. app()->getLocale()} }}</h4>
-                                                <p class="h5">2019 - Actualitat</p>
+                                                <p class="h5" role="heading" aria-level="3">2019 - Actualitat</p>
                                                 {{-- <p><em>{{ __('web.text-about') }}</em></p> --}}
                                             </div>
                                         </div>
