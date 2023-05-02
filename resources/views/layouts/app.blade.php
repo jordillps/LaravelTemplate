@@ -39,6 +39,11 @@
     <!-- style css -->
     <link rel="stylesheet" href="{{ asset('css/web/style.css') }}">
 
+    <!-- Cookies -->
+    <!-- Load plugin css -->
+    <!-- Optimized css loading -->
+    <link rel="stylesheet" href="{{ asset('cookies/cookieconsent.css') }}" media="print" onload="this.media='all'">
+
     @stack('styles')
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -91,17 +96,19 @@
     {{-- <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a> --}}
 
 
-    <!-- Cookies component https://cookie-script.com/es/ -->
-    
+    <script defer src="{{ asset('cookies/cookieconsent.js') }}"></script>
+
     @if(app()->getLocale() == 'ca')
         <!-- CAT -->
-        <script tabindex="3" type="text/javascript" src="//cdn.cookie-script.com/s/d02d0ed95868d190143820c514c08bbc.js"></script>
-        
-    @else
+        <script defer src="{{ asset('cookies/cookieconsent-init-ca.js') }}"></script>
+    @elseif(app()->getLocale() == 'es')
         <!-- ES -->
-        <script  tabindex="3" type="text/javascript"  src="//cdn.cookie-script.com/s/44c211e6244e57f914141ca984d442a5.js"></script>
+        <script defer src="{{ asset('cookies/cookieconsent-init-es.js') }}"></script>
+    @else
+        <!-- EN -->
+        <script defer src="{{ asset('cookies/cookieconsent-init-en.js') }}"></script>
     @endif
-
+    
     <!-- js file link -->
     <script src="{{ asset('js/web/jquery-3.6.0.min.js') }}"></script>
     {{-- <script src="{{ asset('js/web/jquery-ui.js') }}"></script> --}}
