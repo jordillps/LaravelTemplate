@@ -1054,7 +1054,8 @@ header.style-1 .nav-right .hotline .hotline-info span {
   color: var(--primary-color);
 }
 
-header.style-1 .nav-right .hotline .hotline-info h6 {
+header.style-1 .nav-right .hotline .hotline-info h6,
+header.style-1 .nav-right .hotline .hotline-info h5 {
   font-size: 0.875rem;
   font-weight: 600;
   font-family: "Saira", sans-serif;
@@ -1469,6 +1470,7 @@ header.style-1 .mobile-menu-form .hotline .hotline-info span {
   color: var(--primary-color);
 }
 
+header.style-1 .mobile-menu-form .hotline .hotline-info h5,
 header.style-1 .mobile-menu-form .hotline .hotline-info h6 {
   font-size: 0.875rem;
   font-weight: 600;
@@ -2935,7 +2937,8 @@ header.style-1 .mobile-menu-form .hotline .hotline-info h6 {
   }
 }
 
-.footer1 .footer-wrrap h4 {
+.footer1 .footer-wrrap h4,
+.footer1 .footer-wrrap h3  {
   font-family: "Saira", sans-serif;
   font-weight: 700;
   font-size: 1.5625rem;

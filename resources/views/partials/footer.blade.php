@@ -58,7 +58,7 @@
             </div>
             <div class="col-lg-3 col-sm-6 d-flex align-items-center order-lg-3 order-2 wow animate fadeInRight" data-wow-delay="300ms" data-wow-duration="1500ms">
                 <div class="footer-wrrap">
-                    <h4>{{ __('web.contact') }}</h4>
+                    <h3>{{ __('web.contact') }}</h3>
                     <div class="number d-flex align-items-center">
                         <div class="num-icon">
                             <i class='bx bx-phone-call' role="presentation"></i>

@@ -43,7 +43,6 @@
                       <img alt="phone image" src="{{ asset('img/web/icons/header-phone.svg') }}" >
                   </div>
                   <div class="hotline-info">
-                      <span>{{ __('web.click-to-call') }}</span>
                       <h6><a href="tel:{{ $phone[0] }}" aria-label="phone mobile">{{ $phone[0] }}</a></h6>
                   </div>
               </div>
@@ -57,7 +56,7 @@
               <img alt="phone image" src="{{ asset('img/web/icons/header-phone.svg') }}" >
           </div>
           <div class="hotline-info">
-              <h6><a href="tel:{{ $phone[0] }}" aria-label="phone">{{ $phone[0] }}</a></h6>
+              <h5><a href="tel:{{ $phone[0] }}" aria-label="phone">{{ $phone[0] }}</a></h5>
           </div>
       </div>
       <div class="mobile-menu-btn d-lg-none d-block">
