@@ -59,7 +59,7 @@
                     <h4>{{ __('web.contact') }}</h4>
                     <div class="number d-flex align-items-center">
                         <div class="num-icon">
-                            <i class='bx bx-phone-call' ></i>
+                            <i class='bx bx-phone-call' role="presentation"></i>
                         </div>
                         <div class="phone">
                             <a href="tel:{{ $setting->phone }}">{{ $setting->phone }}</a>
@@ -67,7 +67,7 @@
                     </div>
                     <div class="office-mail d-flex align-items-center">
                         <div class="mail-icon">
-                            <i class='bx bx-envelope' ></i>
+                            <i class='bx bx-envelope' role="persentation"></i>
                         </div>
                         <div class="email">
                             <a href="mailto:{{ $setting->email }}">{{ $setting->email }}</a>

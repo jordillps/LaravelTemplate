@@ -53,7 +53,7 @@
                 <div class="contact-address">
                     <div class="single-contact mb-60 d-flex align-items-center wow animate fadeInUp" data-wow-delay="300ms" data-wow-duration="1500ms">
                         <div class="icon">
-                            <i class='bx bx-phone-call'></i>
+                            <i class='bx bx-phone-call' role="presentation"></i>
                         </div>
                         <div class="content">
                             <h3>{{ __('web.phone') }}</h3>
@@ -62,7 +62,7 @@
                     </div>
                     <div class="single-contact d-flex align-items-center wow animate fadeInUp" data-wow-delay="500ms" data-wow-duration="1500ms">
                         <div class="icon">
-                            <i class='bx bx-envelope' ></i>
+                            <i class='bx bx-envelope' role="presentation"></i>
                         </div>
                         <div class="content">
                             <h3>{{ __('web.email') }}</h3>

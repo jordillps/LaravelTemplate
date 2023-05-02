@@ -17,22 +17,24 @@
               <i class="bi bi-x-lg"></i>
           </div>
       </div>
-      <ul class="menu-list">
-          <li>
-              <a href="{{ route('about-me') }}" accesskey="a" aria-label="{{ __('web.about-me') }}">{{ __('web.about-me') }}</a>
-          </li>
-          <li>
-            <a href="{{ route('services') }}" accesskey="s" aria-label="{{ __('web.services') }}">{{ __('web.services') }}</a>
-          </li>
-          <li>
-            <a href="{{ route('projects') }}" accesskey="p" aria-label="{{ __('web.projects') }}">{{ __('web.projects') }}</a>
-          </li>
-          <li>
-            <a href="{{ route('blog') }}" accesskey="b" aria-label="{{ __('web.blog') }}">{{ __('web.blog') }}</a>
-          </li>
-          <li><a href="{{ route('contact') }}" accesskey="c" aria-label="{{ __('web.contact') }}">{{ __('web.contact') }}</a></li>
-          @include('partials.language_switcher')
-      </ul>
+      <nav>
+        <ul class="menu-list">
+            <li>
+                <a href="{{ route('about-me') }}" accesskey="a" aria-label="{{ __('web.about-me') }}">{{ __('web.about-me') }}</a>
+            </li>
+            <li>
+                <a href="{{ route('services') }}" accesskey="s" aria-label="{{ __('web.services') }}">{{ __('web.services') }}</a>
+            </li>
+            <li>
+                <a href="{{ route('projects') }}" accesskey="p" aria-label="{{ __('web.projects') }}">{{ __('web.projects') }}</a>
+            </li>
+            <li>
+                <a href="{{ route('blog') }}" accesskey="b" aria-label="{{ __('web.blog') }}">{{ __('web.blog') }}</a>
+            </li>
+            <li><a href="{{ route('contact') }}" accesskey="c" aria-label="{{ __('web.contact') }}">{{ __('web.contact') }}</a></li>
+            @include('partials.language_switcher')
+        </ul>
+      </nav>
       <!-- mobile-search-area -->
       <div class="d-lg-none d-block">
           <form class="mobile-menu-form">

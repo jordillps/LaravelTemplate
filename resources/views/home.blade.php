@@ -29,15 +29,15 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-6 d-flex align-items-center justify-content-end p-0">
-                    <div class="hero-content">
+                    <div class="hero-content" role="contentinfo">
                         <h1>{{ $header->title }}
                         <span>{{ $header->{'text:'. app()->getLocale()} }}</span>
                         <span>WEB Freelance</span></h1>
                         <div class="mb-5">
                             <ul>
-                                <li><img src="{{ asset('img/web/home/check-white.png') }}" alt="{{ __('web.web-sites-manageables') }}" title="{{ __('web.web-sites-manageables') }}"><p class="h5" role="heading" aria-level="2">{{ __('web.web-sites-manageables') }}</p></li>
-                                <li><img src="{{ asset('img/web/home/check-white.png') }}" alt="{{ __('web.web-applications') }}" title="{{ __('web.web-applications') }}"><p class="h5" role="heading" aria-level="2">{{ __('web.web-applications') }}</p></li>
-                                <li><img src="{{ asset('img/web/home/check-white.png') }}" alt="{{ __('web.other-web-projects') }}" title="{{ __('web.other-web-projects') }}"><p class="h5" role="heading" aria-level="2">{{ __('web.other-web-projects') }}</p></li>
+                                <li><img src="{{ asset('img/web/home/check-white.png') }}" alt="{{ __('web.web-sites-manageables') }}" title="{{ __('web.web-sites-manageables') }}"><p class="hero-categories">{{ __('web.web-sites-manageables') }}</p></li>
+                                <li><img src="{{ asset('img/web/home/check-white.png') }}" alt="{{ __('web.web-applications') }}" title="{{ __('web.web-applications') }}"><p class="hero-categories">{{ __('web.web-applications') }}</p></li>
+                                <li><img src="{{ asset('img/web/home/check-white.png') }}" alt="{{ __('web.other-web-projects') }}" title="{{ __('web.other-web-projects') }}"><p class="hero-categories">{{ __('web.other-web-projects') }}</p></li>
                             </ul>
                         </div>
                         <a class="eg-btn btn--primary btn--lg" href="{{ route('about-me') }}" aria-label="link to {{ __('web.about-me') }} page">{{ __('web.about-me') }}</a>
