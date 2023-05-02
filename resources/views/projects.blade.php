@@ -27,7 +27,7 @@
                         <div class="inner-breadcrumb" role="contentinfo">
                             <h1>{{ __('web.projects') }}</h1>
                             <nav>
-                                <ol class="breadcrumb">
+                                <ol class="breadcrumb" role="navigation" aria-label="{{ __('web.projects') }}">
                                   <li class="breadcrumb-item"><a href="{{ route('home') }}">{{ __('web.home') }}</a></li>
                                   <li class="breadcrumb-item active" aria-current="page">{{ __('web.projects') }}</li>
                                 </ol>
