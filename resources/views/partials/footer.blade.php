@@ -26,14 +26,16 @@
                         </ul>
                     </div>
                     <div class="footer-menu">
-                        <ul>
-                            <li><a href="{{ route('home') }}" accesskey="n">{{ __('web.home') }}</a></li>
-                            <li><a href="{{ route('about-me') }}" accesskey="a">{{ __('web.about-me') }}</a></li>
-                            <li><a href="{{ route('services') }}" accesskey="s">{{ __('web.services') }}</a></li>
-                            <li><a href="{{ route('projects') }}" accesskey="p">{{ __('web.projects') }}</a></li>
-                            <li><a href="{{ route('blog') }}" accesskey="b">{{ __('web.blog') }}</a></li>
-                            <li><a href="{{ route('contact') }}" accesskey="c">{{ __('web.contact') }}</a></li>
-                        </ul>
+                        <nav>
+                            <ul>
+                                <li><a href="{{ route('home') }}" accesskey="n">{{ __('web.home') }}</a></li>
+                                <li><a href="{{ route('about-me') }}" accesskey="a">{{ __('web.about-me') }}</a></li>
+                                <li><a href="{{ route('services') }}" accesskey="s">{{ __('web.services') }}</a></li>
+                                <li><a href="{{ route('projects') }}" accesskey="p">{{ __('web.projects') }}</a></li>
+                                <li><a href="{{ route('blog') }}" accesskey="b">{{ __('web.blog') }}</a></li>
+                                <li><a href="{{ route('contact') }}" accesskey="c">{{ __('web.contact') }}</a></li>
+                            </ul>
+                        </nav>
                     </div>
                     <div  class="devlper-area">
                         <div>

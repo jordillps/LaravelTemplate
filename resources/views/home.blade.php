@@ -29,7 +29,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-6 d-flex align-items-center justify-content-end p-0">
-                    <div class="hero-content" role="contentinfo">
+                    <div class="hero-content" role="contentinfo" aria-label="header">
                         <h1>{{ $header->title }}
                         <span>{{ $header->{'text:'. app()->getLocale()} }}</span>
                         <span>WEB Freelance</span></h1>
