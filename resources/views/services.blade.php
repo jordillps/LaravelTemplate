@@ -69,7 +69,7 @@
                                        $technology_name=substr($media->name, strpos($media->name, "_") + 1); 
                                     @endphp
                                     @if($loop->index != 0)
-                                        <img src="{{ $media->getUrl() }}" alt="{{ $technology_name }}" title="{{ $technology_name }}" width="70" height="70">
+                                        <img src="{{ $media->getUrl() }}" alt="Logo {{ $technology_name }}" title="Logo {{ $technology_name }}" width="70" height="70">
                                     @endif
                                 @endforeach
                             </div>

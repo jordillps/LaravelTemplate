@@ -86,8 +86,11 @@
                             @if(count($service->getMedia('images'))>0)
                                 <div class="services-technologies">
                                     @foreach($service->getMedia('images') as $media)
+                                        @php
+                                            $technology_name=substr($media->name, strpos($media->name, "_") + 1); 
+                                        @endphp
                                         @if($loop->index != 0)
-                                            <img src="{{ $media->getUrl() }}" alt="lenguajes de programacion web" title="lenguajes de programacion web" width="50">
+                                            <img src="{{ $media->getUrl() }}" alt="Logo {{ $technology_name }}" title="Logo {{ $technology_name }}" width="50">
                                         @endif
                                     @endforeach
                                 </div>
