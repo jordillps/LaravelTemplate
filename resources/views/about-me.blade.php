@@ -20,12 +20,12 @@
 <!-- ========== breadcump Start============= -->
 <div class="inner-page-banner">
     <div class="inner-banner-top">
-        <div class="breadcrumb-area">
+        <div class="breadcrumb-area" role="navigation" aria-label="{{ __('web.about-me') }}">
            <div class="container">
                <div class="row">
                    <div class="col-12 d-flex justify-content-end">
-                        <div class="inner-breadcrumb">
-                            <h2>{{ __('web.about-me') }}</h2>
+                        <div class="inner-breadcrumb" role="contentinfo">
+                            <h1>{{ __('web.about-me') }}</h1>
                             <nav>
                                 <ol class="breadcrumb">
                                   <li class="breadcrumb-item"><a href="{{ route('home') }}">{{ __('web.home') }}</a></li>

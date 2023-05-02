@@ -15,7 +15,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="form-inner">
-                        <input type="text" name="name" class="form-control" id="name" placeholder="{{ __('web.your-name') }}" value="{{ old('name') }}">
+                        <input type="text" name="name" aria-label="name" class="form-control" id="name" placeholder="{{ __('web.your-name') }}" value="{{ old('name') }}">
                         @error('name')
                             <small class="text-danger"> <strong>{{ $message }}</strong></small>
                         @enderror
@@ -23,7 +23,7 @@
                 </div>
                 <div class="col-12">
                     <div class="form-inner">
-                        <input type="email" class="form-control" name="email" id="email" placeholder="{{ __('web.your-email') }}" value="{{ old('email') }}">
+                        <input type="email" class="form-control" name="email" aria-label="email" id="email" placeholder="{{ __('web.your-email') }}" value="{{ old('email') }}">
                         @error('email')
                             <small class="text-danger"> <strong>{{ $message }}</strong></small>
                         @enderror
@@ -31,7 +31,7 @@
                 </div>
                 <div class="col-12">
                     <div class="form-inner">
-                        <input type="text" class="form-control" name="phone" id="phone" placeholder="{{ __('web.your-phone') }}" value="{{ old('phone') }}">
+                        <input type="text" class="form-control" name="phone" aria-label="phone" id="phone" placeholder="{{ __('web.your-phone') }}" value="{{ old('phone') }}">
                         @error('phone')
                             <small class="text-danger"><strong>{{ $message }}</strong></small>
                         @enderror
@@ -39,7 +39,7 @@
                 </div>
                 <div class="col-12">
                     <div class="form-inner">
-                        <input type="text" class="form-control" name="subject" id="subject" placeholder="{{ __('web.your-subject') }}" value="{{ old('subject') }}">
+                        <input type="text" class="form-control" name="subject" aria-label="subject" id="subject" placeholder="{{ __('web.your-subject') }}" value="{{ old('subject') }}">
                         @error('subject')
                             <small class="text-danger"> <strong>{{ $message }}</strong></small>
                         @enderror
@@ -47,7 +47,7 @@
                 </div>
                 <div class="col-12">
                     <div class="form-inner">
-                        <textarea class="form-control" name="message" rows="5"
+                        <textarea class="form-control" name="message" aria-label="message" rows="5"
                             placeholder="{{ __('web.your-message') }}"></textarea>
                         @error('message')
                             <small class="text-danger"> <strong>{{ $message }}</strong></small>

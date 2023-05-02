@@ -40,7 +40,7 @@
           <form class="mobile-menu-form">
               <div class="hotline">
                   <div class="hotline-icon">
-                      <img alt="image" src="{{ asset('img/web/icons/header-phone.svg') }}" >
+                      <img alt="phone image" src="{{ asset('img/web/icons/header-phone.svg') }}" >
                   </div>
                   <div class="hotline-info">
                       <span>{{ __('web.click-to-call') }}</span>
@@ -54,7 +54,7 @@
   <div class="nav-right d-flex align-items-center">
       <div class="hotline d-xl-flex d-none">
           <div class="hotline-icon">
-              <img alt="image" src="{{ asset('img/web/icons/header-phone.svg') }}" >
+              <img alt="phone image" src="{{ asset('img/web/icons/header-phone.svg') }}" >
           </div>
           <div class="hotline-info">
               <h6><a href="tel:{{ $phone[0] }}" aria-label="phone">{{ $phone[0] }}</a></h6>

@@ -20,12 +20,12 @@
 <!-- ========== breadcump Start============= -->
 <div class="inner-page-banner">
     <div class="inner-banner-top">
-        <div class="breadcrumb-area">
+        <div class="breadcrumb-area" role="navigation" aria-label="{{ __('web.services') }}">
            <div class="container">
                <div class="row">
                    <div class="col-12 d-flex justify-content-end">
-                        <div class="inner-breadcrumb">
-                            <h2>{{ __('web.services') }}</h2>
+                        <div class="inner-breadcrumb" role="contentinfo">
+                            <h1>{{ __('web.services') }}</h1>
                             <nav>
                                 <ol class="breadcrumb">
                                   <li class="breadcrumb-item"><a href="{{ route('home') }}">{{ __('web.home') }}</a></li>
@@ -57,7 +57,7 @@
                             <div class="icon">
                                 <img src="{{ asset('img/web/icons/'. $service->icon) }}" alt="{{ $service->{'title:'. app()->getLocale()} }}" title="{{ $service->{'title:'. app()->getLocale()} }}" width="60">
                             </div>
-                            <h3>{{ $service->{'title:'. app()->getLocale()} }}</h3>
+                            <h2>{{ $service->{'title:'. app()->getLocale()} }}</h2>
                         </div>
                         <div class="service-body">
                             {!! $service->{'body:'. app()->getLocale()} !!}
@@ -81,7 +81,7 @@
                     <div class="blog-widget-item wow animate fadeInUp" data-wow-delay="600ms" data-wow-duration="1500ms">
                         <div class="top-blog">
                             <div class="sidebar-widget-title">
-                                <h4>{{ __('web.categories') }}</h4>
+                                <h3>{{ __('web.categories') }}</h3>
                                 <span></span>
                             </div>
                             <div class="blog-widget-body">
@@ -96,7 +96,7 @@
                     <div class="blog-widget-item wow animate fadeInUp" data-wow-delay="800ms" data-wow-duration="1500ms">
                         <div class="tag-area">
                             <div class="sidebar-widget-title">
-                                <h4>{{ __('web.follow-me') }}</h4>
+                                <h3>{{ __('web.follow-me') }}</h3>
                                 <span></span>
                             </div>
                             <div class="blog-widget-body">

@@ -20,12 +20,12 @@
 <!-- ========== breadcump Start============= -->
 <div class="inner-page-banner">
     <div class="inner-banner-top">
-        <div class="breadcrumb-area">
+        <div class="breadcrumb-area" role="navigation" aria-label="{{ __('web.projects') }}">
            <div class="container">
                <div class="row">
                    <div class="col-12 d-flex justify-content-end">
-                        <div class="inner-breadcrumb">
-                            <h2>{{ __('web.projects') }}</h2>
+                        <div class="inner-breadcrumb" role="contentinfo">
+                            <h1>{{ __('web.projects') }}</h1>
                             <nav>
                                 <ol class="breadcrumb">
                                   <li class="breadcrumb-item"><a href="{{ route('home') }}">{{ __('web.home') }}</a></li>
@@ -71,7 +71,7 @@
                             <div class="swiper-button-prev-h"><i class="bi bi-arrow-left-short"></i></div>
                         </div>
                     </div>
-                    <h3 class="main-title">{{ $project->{'title:'. app()->getLocale()} }}</h3>
+                    <h2 class="main-title">{{ $project->{'title:'. app()->getLocale()} }}</h2>
                     <p>{!! $project->{'text:'. app()->getLocale()} !!}</p>
                 </div>   
                 <div class="col-lg-4">

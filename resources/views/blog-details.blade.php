@@ -20,12 +20,12 @@
 <!-- ========== breadcump Start============= -->
 <div class="inner-page-banner">
     <div class="inner-banner-top">
-        <div class="breadcrumb-area">
+        <div class="breadcrumb-area" role="navigation" aria-label="{{ $post->{'title:'. app()->getLocale()} }}">
            <div class="container">
                <div class="row">
                    <div class="col-12 d-flex justify-content-sm-end justify-content-center">
-                        <div class="inner-breadcrumb">
-                            <h2>Blog Details</h2>
+                        <div class="inner-breadcrumb" role="contentinfo">
+                            <h1>Blog Details</h1>
                             <nav>
                                 <ol class="breadcrumb">
                                   <li class="breadcrumb-item"><a href="{{ route('home') }}">{{ __('web.home') }}</a></li>
@@ -130,7 +130,7 @@
                                             <li class="single-post d-flex align-items-center">
                                                 @if(count($post->getMedia('images'))>2)
                                                     <div class="post-img">
-                                                        <img alt="image" src="{{ $post->getMedia('images')[2]->getUrl() }}"
+                                                        <img src="{{ $post->getMedia('images')[2]->getUrl() }}"
                                                         alt="{{ $post->{'title:'. app()->getLocale()} }}" title="{{ $post->{'title:'. app()->getLocale()} }}">
                                                     </div>
                                                 @endif
