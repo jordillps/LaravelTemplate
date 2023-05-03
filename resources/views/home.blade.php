@@ -35,9 +35,9 @@
                         <span>WEB Freelance</span></h1>
                         <div class="mb-5">
                             <ul>
-                                <li><img src="{{ asset('img/web/home/check-white.png') }}" alt="{{ __('web.web-sites-manageables') }}" title="{{ __('web.web-sites-manageables') }}"><p class="hero-categories">{{ __('web.web-sites-manageables') }}</p></li>
-                                <li><img src="{{ asset('img/web/home/check-white.png') }}" alt="{{ __('web.web-applications') }}" title="{{ __('web.web-applications') }}"><p class="hero-categories">{{ __('web.web-applications') }}</p></li>
-                                <li><img src="{{ asset('img/web/home/check-white.png') }}" alt="{{ __('web.other-web-projects') }}" title="{{ __('web.other-web-projects') }}"><p class="hero-categories">{{ __('web.other-web-projects') }}</p></li>
+                                <li><img src="{{ asset('img/web/home/check-white.png') }}" srcset="{{ asset('img/web/home/check-white-small.png') }} 480w, {{ asset('img/web/home/check-white.png') }} 1080w" sizes="50vw" alt="{{ __('web.web-sites-manageables') }}" title="{{ __('web.web-sites-manageables') }}"><p class="hero-categories">{{ __('web.web-sites-manageables') }}</p></li>
+                                <li><img src="{{ asset('img/web/home/check-white.png') }}" srcset="{{ asset('img/web/home/check-white-small.png') }} 480w, {{ asset('img/web/home/check-white.png') }} 1080w" sizes="50vw" alt="{{ __('web.web-applications') }}" title="{{ __('web.web-applications') }}"><p class="hero-categories">{{ __('web.web-applications') }}</p></li>
+                                <li><img src="{{ asset('img/web/home/check-white.png') }}" srcset="{{ asset('img/web/home/check-white-small.png') }} 480w, {{ asset('img/web/home/check-white.png') }} 1080w" sizes="50vw" alt="{{ __('web.other-web-projects') }}" title="{{ __('web.other-web-projects') }}"><p class="hero-categories">{{ __('web.other-web-projects') }}</p></li>
                             </ul>
                         </div>
                         <a class="eg-btn btn--primary btn--lg" href="{{ route('about-me') }}" aria-label="link to {{ __('web.about-me') }} page">{{ __('web.about-me') }}</a>

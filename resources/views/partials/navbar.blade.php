@@ -1,11 +1,13 @@
 @php
     $phone = \App\Models\Setting::pluck('phone');
+    const DIMENSIONS = [480, 1080, 50];
+
 @endphp
 <!-- ========== header============= -->
 
 <header tabindex="0" class="header-area style-1">
   <div class="header-logo">
-      <a href="{{ route('home') }}" accesskey="h" aria-label="Página inicio Formal Web"><img alt="Página inicio Formal Web" src="{{ asset('img/logoFormalWeb_8.png') }}" title="Página inicio Formal Web"></a>
+      <a href="{{ route('home') }}" accesskey="h" aria-label="Página inicio Formal Web"><img alt="Página inicio Formal Web" src="{{ asset('img/logoFormalWeb_8.png') }}" srcset="{{ asset('img/logoFormalWebMobile.png') }} 480w, {{ asset('img/logoFormalWeb_8.png') }} 1080w" sizes="50vw" title="Página inicio Formal Web"></a>
   </div>
   <div class="main-menu">
       <div class="mobile-logo-area d-lg-none d-flex justify-content-between align-items-center">
