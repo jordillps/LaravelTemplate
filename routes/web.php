@@ -129,11 +129,12 @@ Route::group(['middleware' => ['auth']], function () {
     });
 });
 
+//Redirects
+Route::redirect('/sobremi-diseño-web.html', '/', 301);
+Route::redirect('/index.es.html', '/', 301);
 
-// Route::resource('post', App\Http\Controllers\PostController::class)->only('index', 'store');
 
-// Route::resource('category', App\Http\Controllers\CategoryController::class)->only('index');
 
-// Route::resource('tag', App\Http\Controllers\TagController::class)->only('index');
+
 
 
