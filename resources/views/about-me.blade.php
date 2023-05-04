@@ -31,7 +31,7 @@
                                   <li class="breadcrumb-item"><a href="{{ route('home') }}">{{ __('web.home') }}</a></li>
                                   <li class="breadcrumb-item active" aria-current="page">{{ __('web.about-me') }}</li>
                                 </ol>
-                              </nav>
+                            </nav>
                         </div>
                    </div>
                </div>

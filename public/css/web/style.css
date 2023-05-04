@@ -2924,7 +2924,7 @@ header.style-1 .mobile-menu-form .hotline .hotline-info h6 {
 14. Home One Footer
 =================================================*/
 .footer1 {
-  background-image: url(../../img/web/footer-bg1.png);
+  background-image: url(../../img/web/footer-bg1.webp);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -8230,7 +8230,7 @@ header.style-4 .mobile-menu-btn .bx {
 }
 
 .inner-page-banner .breadcrumb-area {
-background-image: url(../../img/web/inner-banner-img-3.png);
+background-image: url(../../img/web/inner-banner-img-3.webp);
 /* background-image: linear-gradient(to bottom, #6d9f38, #599b45, #459650, #31915a, #1d8b63, #01846a, #007c6f, #007471, #086970, #1a5e6b, #275363, #2f4858); */
 background-blend-mode: soft-light, screen, overlay, overlay, difference, overlay, normal;
 background-size: cover;

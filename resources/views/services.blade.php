@@ -47,7 +47,7 @@
         <div class="row">
             <div class="col-lg-8 order-lg-1 order-2 wow animate fadeInDown" data-wow-delay="400ms" data-wow-duration="1500ms">
                 @foreach ($services as $service)
-                    <div class="service-details-wrrap pb-60" role="contentnfo" arial-label="descipción de los servicios">
+                    <div class="service-details-wrrap pb-60" role="contentinfo" arial-label="descipción de los servicios">
                         @if(count($service->getMedia('images'))>0)
                             <div class="service-img-1">
                                 <img class="img-fluid" src="{{ $service->getMedia('images')[0]->getUrl() }}" alt="{{ $service->{'title:'. app()->getLocale()} }}" title="{{ $service->{'title:'. app()->getLocale()} }}">
