@@ -10990,8 +10990,22 @@ margin-top: -130px;
   background-color: var(--primary-color);
 }
 
-.contact-page .contact-form-area .form-inner {
+.contact-page .contact-form-area .form-inner,
+.contact-page .contact-form-area .form-check {
   margin-bottom: 40px;
+}
+
+.contact-page .contact-form-area .form-check label{
+  color: #ffffff;
+}
+
+.contact-page .contact-form-area .form-check label span{
+  text-decoration: underline;
+}
+
+.form-check-input:checked {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
 }
 
 

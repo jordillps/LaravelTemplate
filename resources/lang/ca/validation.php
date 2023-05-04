@@ -155,6 +155,7 @@ return [
         'city' => 'ciutat',
         'subject' => 'assumpte',
         'message' => 'missatge',
+        'accept-privacy' => 'Política de Privacitat'
     ],
 
 ];

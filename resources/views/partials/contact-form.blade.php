@@ -54,6 +54,27 @@
                         @enderror
                     </div>
                 </div>
+                {{-- <div class="col-12">
+                    <div class="form-group">
+                        {!! RecaptchaV3::initJs() !!}
+                        {!! RecaptchaV3::field('contact-us') !!}
+                        @error('g-recaptcha-response')
+                            <small class="text-danger"> <strong>{{ $message }}</strong></small>
+                        @enderror
+                    </div>
+                </div> --}}
+                <div class="col-12">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" aria-label="accept privacy" name="accept-privacy" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            {{ __('web.accept-privacy-policy') }}
+                            <a href={{ route('privacy-policy') }} accesskey="r"><span>{{ __('web.privacy-policy') }}</span></a>
+                        </label>
+                        @error('accept-privacy')
+                            <p><small class="text-danger"> <strong>{{ $message }}</strong></small></p>
+                        @enderror
+                    </div>
+                </div>
                 <div class="col-12">
                     <div class="form-inner">
                         <button  class="eg-btn btn--primary btn--md form--btn" type="submit">{{ __('web.send-message') }}</button>

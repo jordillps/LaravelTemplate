@@ -73,6 +73,7 @@ return [
     'your-subject' => 'Asunto',
     'your-message' => 'Tu mensaje',
     'send-message' => 'Enviar mensaje',
+    'accept-privacy-policy' => 'Acepto su',
 
     //Footer
     'lets-chat' => 'Contact',

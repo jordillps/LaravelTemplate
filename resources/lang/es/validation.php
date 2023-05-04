@@ -155,6 +155,7 @@ return [
         'city' => 'ciudad',
         'subject' => 'asunto',
         'message' => 'mensaje',
+        'accept-privacy' => 'Política de Privacidad'
     ],
 
 ];

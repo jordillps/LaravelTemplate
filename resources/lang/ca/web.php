@@ -70,6 +70,7 @@ return [
     'your-subject' => 'Assumpte',
     'your-message' => 'El teu missatge',
     'send-message' => 'Enviar missatge',
+    'accept-privacy-policy' => 'Accepto la seva',
 
     //Footer, NavBar
     'lets-chat' => 'Contacte',

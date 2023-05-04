@@ -162,6 +162,7 @@ return [
         'phone' => 'phone',
         'subject' => 'subject',
         'message' => 'message',
+        'accept-privacy' => 'Privacy Policy'
     ],
 
 ];

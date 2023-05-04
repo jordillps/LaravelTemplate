@@ -8,6 +8,8 @@ use App\Models\Contact;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\ContactMail;
 use Illuminate\Support\Facades\Validator;
+use Lunaweb\RecaptchaV3;
+
 
 class ContactFormController extends Controller
 {
@@ -47,6 +49,8 @@ class ContactFormController extends Controller
             'phone' => 'required|digits:9',
             'subject' => 'required',
             'message' => 'required',
+            // 'g-recaptcha-response' => 'required|recaptchav3:contact-us,0.7'
+            'accept-privacy' => 'accepted'
         ]);
  
         if ($validator->fails()) {

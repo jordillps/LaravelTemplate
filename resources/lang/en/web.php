@@ -75,6 +75,7 @@ return [
     'your-subject' => 'Subject',
     'your-message' => 'Your message',
     'send-message' => 'Send message',
+    'accept-privacy-policy' => 'Accept your',
 
     //Footer
     'lets-chat' => 'Contact',
