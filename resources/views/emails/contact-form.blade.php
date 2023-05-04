@@ -86,7 +86,7 @@
         <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="600" style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; margin: 0 auto; border-spacing: 0; border-collapse: collapse; table-layout: fixed;" class="email-container">
 	        <!-- Email Header : BEGIN -->
           <tr>
-            <td align="center" style="padding:50px 10px 50px 10px;font-size:24px;line-height:28px;font-weight:bold;background: linear-gradient(135deg, #9ff669 0%, #31de79 100%);">
+            <td align="center" style="padding:50px 10px 50px 10px;font-size:24px;line-height:28px;font-weight:bold;background: #353535;">
                 <a href="https://formalweb.cat">
                     <img src="{{ asset('img/email-template/logoFormalWeb_8.png') }}" width="250" title="logo Formal Web" style="width:250px;height:auto;" />
                 </a>
@@ -131,7 +131,7 @@
 	    <!-- Email Body : END -->
 
 	    <!-- Email Footer : BEGIN -->
-        <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="600" style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; margin: 0 auto; border-spacing: 0; border-collapse: collapse; table-layout: fixed; background-color: #000000;" class="email-container">
+        <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="600" style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; margin: 0 auto; border-spacing: 0; border-collapse: collapse; table-layout: fixed; background-color: #353535;" class="email-container">
 	        <tr style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; font-family: sans-serif">
             <td align="center" style="padding:30px 10px 30px 10px;font-size:24px;font-weight:bold;color:#ffffff">
               <p style="margin:10px;font-size:14px;line-height:10px;"><a href="https://formalweb.cat" style="margin:0;font-size:22px;color:#ffffff; line-height:10px;">Formal Web</a></p>

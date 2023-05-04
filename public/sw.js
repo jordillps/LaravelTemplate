@@ -29,7 +29,9 @@ const checkResponse = function (request) {
 const addToCache = function (request) {
     return caches.open("offline").then(function (cache) {
         return fetch(request).then(function (response) {
-            return cache.put(request, response);
+            if((request.url.indexOf('http') === 0)){ 
+                return cache.put(request, response);
+            }
         });
     });
 };
