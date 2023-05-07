@@ -81,5 +81,21 @@
 @endsection
 
 @push('scripts')
+
+<script src="https://www.google.com/recaptcha/api.js?render={{ env('RECAPTCHA_SITE_KEY') }}"></script>
+    
+<script>
+    $('#contact-form').submit(function(event) {
+        event.preventDefault();
+        grecaptcha.ready(function() {
+            grecaptcha.execute("{{ env('RECAPTCHA_SITE_KEY') }}", {action: 'submit'}).then(function(token) {
+                $('#contact-form').prepend('<input type="hidden" name="token" value="' + token + '">');
+                $('#contact-form').unbind('submit').submit();
+            });
+        });
+    });
+</script>
+
+
   
 @endpush

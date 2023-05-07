@@ -2,7 +2,7 @@
     <div class="contact-form-area mb-120">
         <h2>{{ __('web.need-help-contact') }}</h2>
         <p>{{ __('web.need-help-contact-text') }} <span><a href="mailto:{{ $setting->email }}">{{ $setting->email }}</a></span></p>
-        <form method="POST" action="{{ route('contacts.store') }}">
+        <form method="POST" id="contact-form" action="{{ route('contacts.store') }}">
             {{ csrf_field() }}
             @if(Session::has('success'))
                 <div class="alert alert-success">
@@ -54,15 +54,6 @@
                         @enderror
                     </div>
                 </div>
-                {{-- <div class="col-12">
-                    <div class="form-group">
-                        {!! RecaptchaV3::initJs() !!}
-                        {!! RecaptchaV3::field('contact-us') !!}
-                        @error('g-recaptcha-response')
-                            <small class="text-danger"> <strong>{{ $message }}</strong></small>
-                        @enderror
-                    </div>
-                </div> --}}
                 <div class="col-12">
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" aria-label="accept privacy" name="accept-privacy" id="flexCheckDefault">
@@ -76,8 +67,14 @@
                     </div>
                 </div>
                 <div class="col-12">
+                    @error('token')
+                        <p><small class="text-danger"> <strong>{{ $message }}</strong></small></p>
+                    @enderror
+                </div>
+                <div class="col-12">
                     <div class="form-inner">
                         <button  class="eg-btn btn--primary btn--md form--btn" type="submit">{{ __('web.send-message') }}</button>
+                        {{-- <button class="eg-btn btn--primary btn--md form--btn g-recaptcha" data-sitekey="{{ env('RECAPTCHA_SITE_KEY') }}" data-callback="onSubmit" data-action="submit" type="submit">{{ __('web.send-message') }}</button> --}}
                     </div>
                 </div>
             </div>
