@@ -132,6 +132,7 @@ Route::group(['middleware' => ['auth']], function () {
 //Redirects
 Route::redirect('/sobremi-diseño-web.html', '/', 301);
 Route::redirect('/index.es.html', '/', 301);
+Route::redirect('/policy.html', '/', 301);
 
 
 
