@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\LegalPage;
 use Artesaos\SEOTools\Facades\SEOTools;
+use Artesaos\SEOTools\Facades\SEOMeta;
+
 
 class CookiesPolicyController extends Controller
 {
@@ -18,6 +20,8 @@ class CookiesPolicyController extends Controller
         SEOTools::setTitle('Política cookies');
 
         SEOTools::setDescription('Desarrollador web Freelance.Diseño web responsive. Lenguajes HTML,CSS,PHP,Javascript, Laravel, MySql. Política de cookies');
+
+        SEOMeta::setRobots('noindex,follow');
 
         $cookiesPolicy =  LegalPage::where('url','politica-cookies')->first();
 

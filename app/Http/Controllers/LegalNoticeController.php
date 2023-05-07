@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\LegalPage;
 use Artesaos\SEOTools\Facades\SEOTools;
+use Artesaos\SEOTools\Facades\SEOMeta;
+
 
 
 class LegalNoticeController extends Controller
@@ -19,6 +21,8 @@ class LegalNoticeController extends Controller
         SEOTools::setTitle('Aviso Legal');
 
         SEOTools::setDescription('Desarrollador web Freelance.Diseño web responsive. Optimización SEO. Lenguajes HTML,CSS,PHP,Javascript, Laravel, MySql. Aviso Legal');
+
+        SEOMeta::setRobots('noindex,follow');
 
         $legalNotice =  LegalPage::where('url','aviso-legal')->first();
         return view('legal-notice', compact('legalNotice')); 
