@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Mail;
 use App\Mail\ContactMail;
 use Illuminate\Support\Facades\Validator;
 use App\Rules\ReCaptcha;
+use App\Models\Setting;
 
 
 class ContactFormController extends Controller
@@ -67,7 +68,11 @@ class ContactFormController extends Controller
             'message' => $request->get('message'),
         ]);
 
-        Mail::to('hola@formalweb.cat')->send(new ContactMail($mailData));
+        $settingMail = Setting::first()->email_contacts;
+
+
+
+        Mail::to($settingMail)->send(new ContactMail($mailData));
 
         return redirect(url()->previous() .'#contact')->with(['success' => trans('global.contact-form-success')]);
     }
