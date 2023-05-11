@@ -51,3 +51,15 @@
     # ExpiresByType application/javascript A432000
     # ExpiresByType application/x-javascript A432000
 </IfModule>
+
+<IfModule mod_headers.c>
+    # WEEK
+    <FilesMatch "\.(jpg|jpeg|png|gif|swf|webp|svg|woff|woff2)$">
+        Header set Cache-Control "max-age=31536000, public"
+    </FilesMatch>
+
+    # WEEK
+    <FilesMatch "\.(js|css|swf)$">
+        Header set Cache-Control "max-age=31536000"
+    </FilesMatch>
+</IfModule>

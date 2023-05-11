@@ -129,6 +129,9 @@
     <script src="{{ asset('js/web/jquery.magnific-popup.min.js') }}"></script>
     <script src="{{ asset('js/web/main.js') }}"></script>
 
+    <script src="{{ asset('js/web/lazysizes.min.js') }}" async></script>
+   
+
     @stack('scripts')
 
     <script src="{{ asset('sw.js') }}"></script>

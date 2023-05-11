@@ -50,7 +50,7 @@
                     <div class="footer-img">
                         @if(count($setting->getMedia('images'))>0)
                             @foreach ($setting->getMedia('images') as $media)
-                            <img src="{{ $media->getUrl() }}" alt="logos Unión Europea" title="logos Unión Europea">
+                            <img class="lazyload" data-src="{{ $media->getUrl() }}" alt="logos Unión Europea" title="logos Unión Europea">
                             @endforeach
                         @endif
                     </div>
