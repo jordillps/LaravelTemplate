@@ -76,7 +76,7 @@ return [
     'accept-privacy-policy' => 'Acepto su',
 
     //Footer
-    'lets-chat' => 'Contact',
+    'lets-chat' => 'Contacto',
     'follow-me' => 'Sígueme',
     'home' => 'Inicio',
     'about-me' => 'Sobre mi',
