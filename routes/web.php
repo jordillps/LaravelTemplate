@@ -47,7 +47,7 @@ Route::get('/servicios-desarrollo-web-seo', [ServicesWebController::class,'index
 Route::get('/proyectos-desarrollo-web-seo', [ProjectsWebController::class,'index'])->name('projects');
 Route::get('/blog-desarrollo-web', [BlogWebController::class,'index'])->name('blog');
 Route::get('/blog-desarrollo-web/{post}', [BlogWebController::class,'show'])->name('blog.show');
-Route::get('/contacto', [ContactWebController::class,'index'])->name('contact');
+Route::get('/contacto-formal-web-lleida', [ContactWebController::class,'index'])->name('contact');
 
 //Legal Pages
 Route::get('/aviso-legal', [LegalNoticeController::class,'index'])->name('legal-notice');
@@ -130,9 +130,17 @@ Route::group(['middleware' => ['auth']], function () {
 });
 
 //Redirects
-Route::redirect('/sobremi-diseño-web.html', '/', 301);
+Route::redirect('/sobremi-diseño-web.html', '/sobre-mi-desarollador-web', 301);
+Route::redirect('/sobremi-diseño-web.es.html', '/sobre-mi-desarollador-web', 301);
 Route::redirect('/index.es.html', '/', 301);
 Route::redirect('/policy.html', '/', 301);
+Route::redirect('/proyectos-web-responsive-lleida.html', '/proyectos-desarrollo-web-seo', 301);
+Route::redirect('/servicios-diseño-web-posicionamiento-seo-lleida.html', '/servicios-desarrollo-web-seo', 301);
+Route::redirect('/contacto-formal-web-lleida.php', '/contacto-formal-web-lleida', 301);
+Route::redirect('/contacto-formal-web-lleida.es.php', '/contacto-formal-web-lleida', 301);
+Route::redirect('/contacto', '/contacto-formal-web-lleida', 301);
+
+
 
 
 
