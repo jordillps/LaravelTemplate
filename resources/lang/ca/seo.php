@@ -15,5 +15,7 @@ return [
     'projects-description' => 'Disseny i desenvolupament de projectes web per a la seva empresa. Disseny personalitzat a mida dels clients',
     'contact-title' => 'Disseny professional de pàgines  web a Lleida',
     'contact-description' => 'Disseny professional de pàgines web a Lleida, serà un plaer ajudar-vos en el vostre projecte web',
+    'blog-title' => 'Bloc de desenvolupament web',
+    'blog-description' => 'Desenvolupador web Freelance.Disseny web responsive. Publicacions sobre llenguatges de programació'
     
 ];
