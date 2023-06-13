@@ -9,10 +9,10 @@ return [
          * The default configurations to be used by the meta generator.
          */
         'defaults'       => [
-            'title'        => "Diseño web Lleida - Diseño de páginas web, SEO", // set false to total remove
-            'titleBefore'  => true, // Put defaults.title before page title, like 'It's Over 9000! - Dashboard'
-            'description'  => 'Diseño web responsive, adaptado a todos los dispositivos. Diseño personalizado. Optimitzación SEO. Anàlitica SEO. Diseño de aplicaciones web. ', // set false to total remove
-            'separator'    => ' - ',
+            'title'        => false, // set false to total remove
+            'titleBefore'  => false, // Put defaults.title before page title, like 'It's Over 9000! - Dashboard'
+            'description'  => false, // set false to total remove
+            'separator'    => false,
             'keywords'     => [],
             'canonical'    => false, // Set to null or 'full' to use Url::full(), set to 'current' to use Url::current(), set false to total remove
             'robots'       => 'index, follow', // Set to 'all', 'none' or any combination of index/noindex and follow/nofollow

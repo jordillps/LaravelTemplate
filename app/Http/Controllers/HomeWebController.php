@@ -27,9 +27,6 @@ class HomeWebController extends Controller
      */
     public function index()
     {
-        SEOTools::setTitle('Formal Web');
-
-        SEOTools::setDescription('Desarrollador web Freelance. Diseño web responsive. Optimización SEO. Lenguajes HTML,CSS,PHP,Javascript, Laravel, MySql.');
 
         $page = Page::where('name', 'home')->first('id');
 
@@ -42,7 +39,9 @@ class HomeWebController extends Controller
 
         $setting = Setting::first();
 
-        SEOMeta::setTitle('Home');
+        SEOMeta::setTitle(trans('seo.home-title'));
+
+        SEOMeta::setDescription(trans('seo.home-description'));
 
         return view('home', compact('header','services', 'projects', 'setting'));
     }
