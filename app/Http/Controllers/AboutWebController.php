@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\About;
 use Artesaos\SEOTools\Facades\SEOTools;
+use Artesaos\SEOTools\Facades\SEOMeta;
 
 
 class AboutWebController extends Controller
@@ -18,8 +19,9 @@ class AboutWebController extends Controller
     {
         $about = About::first();
 
-        SEOTools::setTitle('Sobre mi');
-        SEOTools::setDescription('Desarrollador web Freelance.Diseño web responsive. Lenguajes de programación HTML,CSS,PHP,Javascript, Laravel, MySql. Trabajo en remoto Git. Optimitzación SEO.');
+        SEOTools::setTitle(trans('seo.about-me-title'));
+
+        SEOTools::setDescription(trans('seo.about-me-description'));
 
         return view('about-me', compact('about'));
     }

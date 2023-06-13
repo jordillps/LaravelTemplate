@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Project;
 use Artesaos\SEOTools\Facades\SEOTools;
+use Artesaos\SEOTools\SEOMeta;
 
 class ProjectsWebController extends Controller
 {
@@ -15,9 +16,9 @@ class ProjectsWebController extends Controller
      */
     public function index()
     {
-        SEOTools::setTitle('Proyectos web');
+        SEOTools::setTitle(trans('seo.projects-title'));
 
-        SEOTools::setDescription('Desarrollador web Freelance.Diseño web responsive. Lenguajes HTML,CSS,PHP,Javascript, Laravel, MySql. Trabajo en remoto Git. Proyectos web. Aplicaciones web.');
+        SEOTools::setDescription(trans('seo.projects-description'));
 
         $projects = Project::where('isPublished', true)->get();
         

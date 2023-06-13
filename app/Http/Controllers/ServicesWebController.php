@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Service;
 use App\Models\Setting;
 use Artesaos\SEOTools\Facades\SEOTools;
+use Artesaos\SEOTools\SEOMeta;
 
 class ServicesWebController extends Controller
 {
@@ -16,13 +17,13 @@ class ServicesWebController extends Controller
      */
     public function index()
     {
-        SEOTools::setTitle('Servicios web');
-
-        SEOTools::setDescription('Desarrollador web Freelance. Diseño web responsive. Proyectos y Aplicaciones web. Proyectos de otras empresas. Lenguajes HTML,CSS,PHP,Javascript, Laravel, MySql');
-        
         $services = Service::all();
 
         $setting = Setting::first();
+
+        SEOTools::setTitle(trans('seo.services-title'));
+
+        SEOTools::setDescription(trans('seo.services-description'));
 
         return view('services', compact('services', 'setting'));
     }

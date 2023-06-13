@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Artesaos\SEOTools\Facades\SEOTools;
+use Artesaos\SEOTools\SEOMeta;
 
 
 class ContactWebController extends Controller
@@ -15,8 +16,10 @@ class ContactWebController extends Controller
      */
     public function index()
     {
-        SEOTools::setTitle('Contacto');
-        SEOTools::setDescription('Desarrollador web Freelance.Diseño web responsive. Lenguajes de programación HTML,CSS,PHP,Javascript, Laravel, MySql. Contacto con Formal Web.');
+        SEOTools::setTitle(trans('seo.contact-title'));
+
+        SEOTools::setDescription(trans('seo.contact-description'));
+
         return view('contact');
     }
 
