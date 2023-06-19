@@ -11,6 +11,7 @@ use App\Models\Media;
 use Illuminate\Http\Request;
 use App\Http\Requests\PostStoreRequest;
 use App\Http\Requests\PostUpdateRequest;
+use App\Models\PostTranslation;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
 
@@ -156,7 +157,13 @@ class PostController extends Controller
      */
     public function destroy(Post $post)
     {
-        $post ->delete();
+        $post->delete();
+
+        $postTranslations = PostTranslation::where('post_id', $post->id)->get();
+
+        foreach($postTranslations as $postTranslation){
+            $postTranslation->delete();
+        }
 
         flash()->overlay('"'. $post->title . '"' . trans('global.deleted-succesfully'), trans('global.deleted-post'));
 
