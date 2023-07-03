@@ -53052,5 +53052,29 @@ a.text-muted:hover {
 }
 
 
+/* Posts */
+pre {
+    color: rgba(255, 176, 0, 0.8);
+    font-size: 90%;
+    background-color: #2b2b2b;
+    border: .07em solid #222;
+    box-sizing: border-box;
+    padding: .5em 1em;
+    overflow: auto;
+    box-shadow: inset 0 0 4em rgba(0,0,0,.5);
+    border-radius: 1em;
+    min-height: 5em;
+    white-space: pre-wrap;
+    tab-size: 4;
+    position: relative;
+    overflow-y: hidden;
+    padding: 1em;
+}
+
+pre code {
+    color: rgba(255, 176, 0, 0.8);
+}
+
+
 
 
